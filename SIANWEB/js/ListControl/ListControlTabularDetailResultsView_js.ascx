@@ -1,0 +1,133 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ListControlTabularDetailResultsView_js.ascx.cs" Inherits="SIANWEB.js.ListControl.ListControlTabularDetailResultsView_js" %>
+<script type="text/html" id="tplListControlTabularDetailResultsViewDetailContainer">
+    <table class="table">
+        
+    </table>
+</script>
+<script type="text/html" id="tplListControlTabularDetailResultsViewElement">
+    <td data-content="Id_Prd" style="text-align: center;">
+    </td>
+    <td data-content="Prd_Descripcion">
+    </td>
+    <td data-content="Prd_Precio" data-numeraljs='"format" : "$0,0.00"' style="text-align: center">
+    </td>
+    <td data-content="Prd_Presentacion" style="text-align: center">
+    </td>
+    <td data-content="COP_ConsumoMensual" style="text-align: center">
+    </td>
+    <td data-content="ConsumoMensualLitros" style="text-align: center">
+    </td>
+    <td data-content="GastoMensual" data-numeraljs='"format" : "$0,0.00"' style="text-align: center">
+    </td>
+    <td data-content="DilucionCompuesta" style="text-align: center">
+    </td>
+    <td data-content="ConsumoMensualLtsDiluidos" style="text-align: center">
+    </td>
+    <td data-content="COP_CostoEnUso" data-numeraljs='"format" : "$0,0.00"' style="text-align: center">
+    </td>
+</script>
+<script type="text/javascript">
+    if (typeof (crm) == undefined || typeof (crm) == 'undefined') {
+        function crm() {
+        }
+    }
+
+    if (typeof (crm.ui) == undefined || typeof (crm.ui) == 'undefined') {
+        crm.ui = function () {
+        };
+    }
+
+    crm.ui.ListControlTabularDetailResultsView = function (options) {
+        this._$tableNode = $('<table class="table">');
+        this._$tableBody = $('<tbody>');
+        this._$tableNode.append(this._$tableBody);
+        if (typeof (options) != undefined && typeof (options) != 'undefined') {
+            //options.container: contenedor
+            if (typeof (options.container) != undefined && typeof (options.container) != 'undefined') {
+                this._$container = options.container;
+                this._$container.append(this._$tableNode);
+            } else {
+                this._$container = null;
+            }
+
+            //options.element: referencia al nodo de la plantilla del contenido de un elemento del detalle.
+            if (typeof (options.element) != undefined && typeof (options.element) != 'undefined') {
+                this._$element = options.element;
+            } else {
+                //default
+                this._$element = $('#tplListControlTabularDetailResultsViewElement');
+            }
+
+            //options.headers: mejor establécelos cuando definas una instancia.
+            if (typeof (options.headers) != undefined && typeof (options.headers) != 'undefined') {
+                this._tableHeaders = options.headers;
+                this.buildTableHeader();
+            }
+
+            //options.dataSource: fuente de datos.
+            if (typeof (options.dataSource) != undefined && typeof (options.dataSource) != 'undefined') {
+                this._ds = options.dataSource;
+                this.dataBind();
+            } else {
+                this._ds = null;
+            }
+        }
+    };
+
+    crm.ui.ListControlTabularDetailResultsView.prototype.set_TableHeaders = function (tableHeaders) {
+        this._tableHeaders = tableHeaders;
+    };
+
+    //somekind of setup
+    crm.ui.ListControlTabularDetailResultsView.prototype.buildTableHeader = function () {
+        var $tableHeader = $('<thead><tr></tr></thead>');
+        var $tableHeaderRow = $tableHeader.find('tr');
+        $.each(this._tableHeaders, function (index, element) {
+            var $headerDefinition = $('<th>' + element.title + '</th>');
+            $tableHeaderRow.append($headerDefinition);
+        });
+        this._$tableNode.append($tableHeader);
+    };
+
+    crm.ui.ListControlTabularDetailResultsView.prototype.set_Container = function (container) {
+        this._$container = container;
+        this._$container.append(this._$tableNode);
+    };
+
+    crm.ui.ListControlTabularDetailResultsView.prototype.set_DataSource = function (ds) {
+        this._ds = ds;
+    };
+
+    crm.ui.ListControlTabularDetailResultsView.prototype.dataBind = function () {
+        var _this = this;
+        this._$tableBody.empty();
+        $.each(this._ds, function (index, element) {
+            _this._$tableBody.append(_this._createItem(element));
+        });
+    };
+
+    crm.ui.ListControlTabularDetailResultsView.prototype._calcularCostoEnUso = function (dataItem, consumoMensual, dilucionConsecuente) {
+        var costoEnUso = 0.0;
+        if (consumoMensual != '') {
+            if (dataItem.COP_EsQuimico == true) {
+                if (dilucionConsecuente != '') {
+                    var precio = dataItem.CapValProyectoDet.Vap_Precio; //ProductoActual.Prd_Pesos;
+                    var unidadesPresentacion = dataItem.ProductoSerializable.Prd_UniEmp;
+                    var consumoMensualEnLitrosDiluidos = ((unidadesPresentacion * consumoMensual) * (dilucionConsecuente + 1));
+                    if (consumoMensualEnLitrosDiluidos != 0.0) {
+                        costoEnUso = (consumoMensual * precio) / consumoMensualEnLitrosDiluidos;
+                    }
+                }
+            }
+        }
+        return costoEnUso;
+    };
+
+    crm.ui.ListControlTabularDetailResultsView.prototype._createItem = function (dataItem) {
+        var row = $('<tr>');
+        $(row).loadTemplate(this._$element, dataItem);
+
+        $(row).numeraljs();
+        return row;
+    };
+</script>

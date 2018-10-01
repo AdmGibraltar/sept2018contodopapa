@@ -1,0 +1,3 @@
+﻿crm.ui.gestionpromocion = function () {
+
+};

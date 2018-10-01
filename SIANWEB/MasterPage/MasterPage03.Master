@@ -1,0 +1,577 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage03.Master.cs"
+    Inherits="SIANWEB.MasterPage03" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Import Namespace="CapaEntidad" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server">
+    </telerik:RadStyleSheetManager>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <title></title>
+    <link href="../Styles/Toolbar.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .html, body, form
+        {
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+        }
+        .menuPanes
+        {
+            overflow: visible !important;
+        }
+        .formulario
+        {
+            font-family: Arial;
+            font-size: 12px;
+        }
+        .dvstyle
+        {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+        div.RadGrid .rgRefresh, div.RadGrid .rgRefresh + a
+        {
+            display: none;
+        }
+        .AlignRight
+        {
+            text-align: right;
+        }
+        .pp1
+        {
+            min-width: 810px;
+            max-width: 1100px;
+        }
+    </style>
+    <link href="../Styles/Menu.Sian.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnableScriptGlobalization="True"
+        EnableScriptLocalization="True" EnableTheming="true">
+    </telerik:RadScriptManager>
+    <div id="ParentDivElement" class="dvstyle">
+        <telerik:RadFormDecorator ID="RadFormDecorator1" runat="server" DecoratedControls="All" />
+        <telerik:RadSkinManager ID="RadSkinManager1" runat="server" PersistenceMode="Session"
+            Skin="Outlook">
+        </telerik:RadSkinManager>
+        <asp:HiddenField ID="HiddenField1" runat="server" Visible="False" />
+        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+        <asp:ContentPlaceHolder ID="CPH" runat="server">
+        </asp:ContentPlaceHolder>
+        <div align="center" style="width: 100%">
+            <asp:Label runat="server" ID="lblFechaMod" ForeColor="White" Style="font-family: verdana;
+                font-size: 8pt"></asp:Label>
+        </div>
+    </div>
+    <telerik:RadWindowManager ID="RadWindowManager1" runat="server" Style="z-index: 7001">
+        <Windows>
+            <%--ProPedidoVI_InvIns--%>
+            <telerik:RadWindow ID="ProPedidoVI_InvIns" runat="server" Behaviors="Move" Opacity="100"
+                VisibleStatusbar="False" Width="800px" Height="460px" Animation="Fade" KeepInScreenBounds="True"
+                Overlay="True" Title="Inventario insuficiente" Modal="True" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%--REPORTES--%>
+            <telerik:RadWindow ID="RWReporte" runat="server" Behaviors="Move,Close,Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="920px" Height="600px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Reporte" Modal="True" ShowContentDuringLoad="False"
+                OnClientClose="CerrarWindow_Event">
+            </telerik:RadWindow>
+            <%--PREFERENCIAS--%>
+            <telerik:RadWindow ID="RadWindowContrasena" runat="server" Behaviors="Move" Opacity="100"
+                VisibleStatusbar="False" Width="380px" Height="250px" Animation="Fade" KeepInScreenBounds="True"
+                Overlay="True" Title="Modificar contraseña" Modal="True" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="RadWindowConfiguracionCorreo" runat="server" Behaviors="Move"
+                Opacity="100" VisibleStatusbar="False" Width="400px" Height="300px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Configuración de correo" Modal="True"
+                ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%-- REMISION ESPECIAL --%>
+            <telerik:RadWindow ID="AbrirVentana_RemisionEspecial" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="700px" Height="500px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Remisión especial" Modal="True"
+                InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- NOTA DE CARGO ESPECIAL --%>
+            <telerik:RadWindow ID="AbrirVentana_NotaCargoEspecial" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="700px" Height="500px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Nota de cargo especial" Modal="True"
+                InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- NOTA DE CREDITO ESPECIAL --%>
+            <telerik:RadWindow ID="AbrirVentana_NotaCreditoEspecial" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="700px" Height="500px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Nota de crédito especial" Modal="True"
+                InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="AbrirVentana_Buscar" runat="server" Behaviors="Move, Close"
+                Opacity="100" VisibleStatusbar="False" Width="600px" Height="415px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Buscar" Modal="True">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="AbrirVentana_BuscarPrecio" runat="server" Behaviors="Move, Close"
+                Opacity="100" VisibleStatusbar="False" Width="750px" Height="415px" Animation="Fade"
+                KeepInScreenBounds="true" Overlay="True" Title="Buscar" Modal="True">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="AbrirVentana_BuscarIndicadores" runat="server" Behaviors="Move, Close"
+                Opacity="100" VisibleStatusbar="False" Width="750px" Height="515px" Animation="Fade"
+                KeepInScreenBounds="true" Overlay="True" Title="Buscar" Modal="True">
+            </telerik:RadWindow>
+        </Windows>
+    </telerik:RadWindowManager>
+    <telerik:RadCodeBlock ID="RadCodeBlock2" runat="server">
+        
+        <script type="text/javascript">
+
+            Telerik.Web.UI.RadWindowUtils.Localization =
+            {
+                "Close": "Cerrar",
+                "Minimize": "Minimizar",
+                "Maximize": "Maximizar",
+                "Reload": "Recargar",
+                "PinOn": "Pin on",
+                "PinOff": "Pin off",
+                "Restore": "Restore",
+                "OK": "Aceptar",
+                "Cancel": "No",
+                "Yes": "Si",
+                "No": "No"
+            };
+
+            function AlertaFocus(mensaje, control) {
+                var oWnd = radalert(mensaje, 340, 150);
+                //oWnd.add_close(foco(control));
+                oWnd.add_close(function () {
+
+                    var target = $find(control);
+                    if (target != null && (target.enabled || target._enabled)) {
+                        target.focus();
+                    }
+                });
+            }
+            function AlertaFocus2(mensaje, control) {
+
+                var oWnd = radalert(mensaje, 600, 150);
+                //oWnd.add_close(foco(control));
+                oWnd.add_close(function () {
+                    var target = $find(control);
+                    if (target != null && target.enabled) {
+                        target.focus();
+                    }
+                });
+            }
+            function OpenPositionedWindow(oButton, url, windowName) {
+                var oWnd = window.radopen(url, windowName);
+            }
+
+            function AbrirContrasenas() {
+                var oWnd = radopen("Ventana_ModContrasena.aspx", "RadWindowContrasena");
+                oWnd.center();
+                return true;
+            }
+
+            //Hace un refresh completo de la ventana padre = F5
+            function RefreshParentPage() {
+                GetRadWindow().BrowserWindow.location.reload();
+            }
+
+            //**********************************************************************//
+            // funciones para evaluar datos numericos y decimales en cajas de texto //
+            //**********************************************************************//
+
+            function SoloNumerico(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if (c && c == 13)
+                    eventArgs.set_cancel(true);
+                if (c < 48 || c > 57) //si no es numero
+                    eventArgs.set_cancel(true);
+            }
+
+            function SoloNumericoYPunto(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if (c && c == 13)
+                    eventArgs.set_cancel(true);
+                if ((c < 48 || c > 57))//si no es numero
+                    if (c != 46) //si no es punto
+                        eventArgs.set_cancel(true);
+            }
+
+            function SoloNumericoYDiagonal(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+
+                if (c && c == 13)
+                    eventArgs.set_cancel(true);
+                if ((c < 48 || c > 57))//si no es numero
+                    if (c != 47) //si no es punto
+                        eventArgs.set_cancel(true);
+            }
+
+            function SoloAlfabetico(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if ((c < 32) || (c > 32 && c < 65) || (c > 90 && c < 97) || (c > 122 && c < 193) || (c > 193 && c < 201) || (c > 201 && c < 205) || (c > 205 && c < 209) || (c > 209 && c < 211) || (c > 211 && c < 218) || (c > 218 && c < 225) || (c > 225 && c < 233) || (c > 233 && c < 237) || (c > 237 && c < 241) || (c > 241 && c < 243) || (c > 243 && c < 250) || (c > 250))
+                    if (c != 95 && c != 124) //el guion bajo  y '|' tambien son permitidos
+                        eventArgs.set_cancel(true);
+            }
+
+
+            function SoloAlfanumerico(sender, eventArgs) {
+                if (eventArgs == null) {
+                    var c = event.keyCode;
+                    if ((c < 32) || (c > 32 && c < 46) || (c > 46 && c < 48) || (c > 57 && c < 65) || (c > 90 && c < 97) || (c > 122 && c < 124) || (c > 124 && c < 193) || (c > 193 && c < 201) || (c > 201 && c < 205) || (c > 205 && c < 209) || (c > 209 && c < 211) || (c > 211 && c < 218) || (c > 218 && c < 225) || (c > 225 && c < 233) || (c > 233 && c < 237) || (c > 237 && c < 241) || (c > 241 && c < 243) || (c > 243 && c < 250) || (c > 250))
+                        if (c != 95 && c != 124) //el guion bajo  y '|' tambien son permitidos
+                            return false;
+                }
+                else {
+                    var c = eventArgs.get_keyCode();
+                    if ((c < 32) || (c > 32 && c < 46) || (c > 46 && c < 48) || (c > 57 && c < 65) || (c > 90 && c < 97) || (c > 122 && c < 124) || (c > 124 && c < 193) || (c > 193 && c < 201) || (c > 201 && c < 205) || (c > 205 && c < 209) || (c > 209 && c < 211) || (c > 211 && c < 218) || (c > 218 && c < 225) || (c > 225 && c < 233) || (c > 233 && c < 237) || (c > 237 && c < 241) || (c > 241 && c < 243) || (c > 243 && c < 250) || (c > 250))
+                        if (c != 95 && c != 124) //el guion bajo  y '|' tambien son permitidos
+                            eventArgs.set_cancel(true);
+                }
+            }
+
+            function SinComillas(sender, eventArgs) {
+                var key = eventArgs.get_keyCode();
+
+                if (key && (key == 13 || key == 39 || key == 34)) {
+
+                    eventArgs.set_cancel(true);
+                }
+            }
+            function SoloAlfanumerico2(sender, eventArgs) {
+                //debugger;
+                if (eventArgs == null) {
+                    var c = event.keyCode;
+                    if ((c < 32) || (c > 32 && c < 46) || (c > 46 && c < 48) || (c > 57 && c < 65) || (c > 90 && c < 97) || (c > 122 && c < 124) || (c > 124 && c < 193) || (c > 193 && c < 201) || (c > 201 && c < 205) || (c > 205 && c < 209) || (c > 209 && c < 211) || (c > 211 && c < 218) || (c > 218 && c < 225) || (c > 225 && c < 233) || (c > 233 && c < 237) || (c > 237 && c < 241) || (c > 241 && c < 243) || (c > 243 && c < 250) || (c > 250))
+                        if (c != 95 && c != 124 && c != 45) //el guion bajo , '|' y guion medio tambien son permitidos
+                            return false;
+                }
+                else {
+                    var c = eventArgs.get_keyCode();
+                    if ((c < 32) || (c > 32 && c < 46) || (c > 46 && c < 48) || (c > 57 && c < 65) || (c > 90 && c < 97) || (c > 122 && c < 124) || (c > 124 && c < 193) || (c > 193 && c < 201) || (c > 201 && c < 205) || (c > 205 && c < 209) || (c > 209 && c < 211) || (c > 211 && c < 218) || (c > 218 && c < 225) || (c > 225 && c < 233) || (c > 233 && c < 237) || (c > 237 && c < 241) || (c > 241 && c < 243) || (c > 243 && c < 250) || (c > 250))
+                        if (c != 95 && c != 124 && c != 45) //el guion bajo , '|' y guion medio tambien son permitidos
+                            eventArgs.set_cancel(true);
+                }
+            }
+
+            function Email(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if ((c < 44) || (c > 46 && c < 48) || (c > 57 && c < 64) || (c > 90 && c < 95) || (c > 95 && c < 97) || (c > 122 && c < 209) || (c > 209 && c < 241) || (c > 241))
+                    eventArgs.set_cancel(true);
+            }
+
+            function handleClickEvent(sender, eventArgs) {
+                var key = eventArgs.get_keyCode();
+                if (key && key == 13)
+                    eventArgs.set_cancel(true);
+            }
+            function handleClickEventCliente(sender, eventArgs) {
+                var key = eventArgs.get_keyCode();
+                if (key && key == 13)
+                    eventArgs.set_cancel(true);
+            }
+            function handleClickEventProducto(sender, eventArgs) {
+                var key = eventArgs.get_keyCode();
+                if (key && key == 13)
+                    eventArgs.set_cancel(true);
+            }
+            //titulo de mensajes de alerta
+            var tituloMensajes = '';
+
+            //******************************************************************//
+            // funciones comunes para cadenas                                   //
+            //******************************************************************//
+
+            // Recortar los espacios del lado izquierdo de una cadena
+            function LTrim(str) {
+                if (str == null) {
+                    return null;
+                }
+                for (var i = 0; str.charAt(i) == " "; i++);
+                return str.substring(i, str.length);
+            }
+
+            // Recortar los espacios del lado derecho de una cadena
+            function RTrim(str) {
+                if (str == null) {
+                    return null;
+                }
+                for (var i = str.length - 1; str.charAt(i) == " "; i--);
+                return str.substring(0, i + 1);
+            }
+
+            // Recortar los espacios de los extremos de una cadena
+            function Trim(str) {
+                return LTrim(RTrim(str));
+            }
+
+            //******************************************************************//
+            // Las siguientes funciones limpian controles comunes de formulario //
+            //******************************************************************//
+
+            //Limpiar cajas de texto: radDatePicker
+            //param sender --> objeto a limpiar
+            function LimpiarDatePicker(sender) {
+                sender.clear()
+            }
+
+            //Limpiar cajas de texto: radTextBox, radNumericTextBox, radDatePicker
+            //param sender --> objeto a limpiar
+            function LimpiarTextBox(sender) {
+                sender.clear()
+                sender.enable()
+            }
+
+            //Limpiar radComboBox
+            //param sender --> objeto a limpiar
+            function LimpiarCombo(sender) {
+                sender.clearSelection()
+            }
+
+            //Limpiar radComboBox
+            //param sender --> objeto a limpiar
+            //NOTA: selecciona el primer item del combo que debe contener el texto '-- seleccionar --'
+            function LimpiarComboSelectIndex0(sender) {
+                //debugger;
+                if (sender.get_items().get_count() > 0) {
+                    sender.get_items().getItem(0).select();
+                    sender.set_value('-- Seleccionar --');
+                }
+                else {
+                    sender.clearSelection();
+                }
+            }
+
+            //Limpiar CheckBox
+            //param sender --> objeto a limpiar
+            function LimpiarCheckBox(sender) {
+                sender.checked = false
+            }
+
+            //Limpiar RadioButtonList
+            //param sender --> objeto a limpiar
+            //param: indexSelect --> recibe el indice del option que se desee que este seleccionado por default
+            function LimpiarRadioButtonGroup(sender, indexSelect) {
+                sender.getElementsByTagName('INPUT')[indexSelect].checked = true;
+            }
+
+            //--------------------------------------------------------------------------------------------------
+            //Cuando el combo pierde el foco
+            //Si el usuario escribió y no eligió un item correcto limpia el combo
+            //--------------------------------------------------------------------------------------------------
+            function Combo_ClientBlur(sender, args) {
+                //debugger;
+                var itemSelected = sender.findItemByText(sender.get_text())
+                if (itemSelected == null) {
+                    LimpiarComboSelectIndex0(sender);
+                }
+            }
+
+            function OnBlur(textbox, combo) {
+                //debugger;
+                if (combo == null) {
+                    return;
+                }
+                if (combo.get_items().getItem(0) == null) {
+                    return;
+                }
+
+                var itemSelect = false;
+                if (!txtFechaBandera) { //no ejecuta el siguiente bloque si la bandera de validacion de fecha de captura esta activada
+                    for (var i = 0; i < combo.get_items().get_count(); i++) {
+                        var item = combo.get_items().getItem(i);
+                        if (textbox.get_value() == item.get_value()) {
+                            itemSelect = true;
+                            if (textbox.get_value() != combo.get_value()) {
+                                combo.get_items().getItem(i).select();
+                            }
+                            break;
+                        }
+                    }
+                    if (!itemSelect) {
+                        if (combo.get_value() != '-1') {
+                            combo.get_items().getItem(0).select()
+                        }
+                        else {
+                            textbox.set_value('');
+                        }
+                    }
+
+                }
+            }
+
+            function ClientSelectedIndexChanged(item, txt) {
+                //debugger;
+                if (item != null)
+                    if (item.get_value() != '-1')
+                        txt.set_value(item.get_value());
+                    else
+                        txt.set_value('');
+            }
+
+
+            function obtenerrequest(UrlArchivo, Parametros) {
+                var url = UrlArchivo;
+                var pars = Parametros;
+                var respuesta;
+
+                new Ajax.Request(
+                            url, {
+                                method: 'post',
+                                asynchronous: false,
+                                parameters: pars,
+                                onSuccess: function (transport) { respuesta = transport.responseText; }, //actualizamos 
+                                onFailure: function (transport) { alert(transport.responseText); }
+                            });
+                return respuesta;
+            }
+
+            var txtFechaBandera = null;
+            function Calendar_Click(sender, eventArgs) {
+                //debugger;
+                var txtFecha = ObtenerControlFecha()
+                txtFecha.focus();
+            }
+
+            function _ValidarFechaEnPeriodo() {
+                //debugger;
+
+                var fecha = null;
+                var txtFecha = ObtenerControlFecha();
+                if (txtFecha != null) {
+
+                    fecha = txtFecha.get_selectedDate();
+
+                    var fechaPeriodoInicio = new Date('<%= AñoInicio %>', '<%= MesInicio %>', '<%= DiaInicio %>');
+
+                    var fechaPeriodoFin = new Date('<%= AñoFin %>', '<%= MesFin  %>', '<%= DiaFin %>');
+
+
+                    //si la fecha no esta dentro del periodo el foco se queda en el control y se manda alerta
+                    if (fecha == null || (fecha < fechaPeriodoInicio || fecha > fechaPeriodoFin)) {
+                        var mensage = 'La fecha se encuentra fuera del periodo</br></br>';
+                        var alerta = radalert(mensage, 350, 150, '');
+
+                        txtFechaBandera = true;
+
+                        alerta.add_close(
+                            function () {
+                                //debugger;
+                                txtFecha = ObtenerControlFecha();
+                                txtFecha.focus();
+                            });
+
+                        return false;
+                    }
+                }
+                txtFechaBandera = false;
+
+                return true;
+            }
+
+            //   REPORTES
+            function AbrirReporte() {
+                //debugger;
+                var oWnd = radopen("Ventana_ReportViewer.aspx", "RWReporte");
+                oWnd.center();
+                return true;
+            }
+
+            function CerrarWindow_Event(sender, eventArgs) {
+                //debugger;
+                refreshGrid();
+            }
+
+            //Deshabilita el regresar
+            window.history.forward(1);
+            //-----------------
+
+
+            //Deshabilita el F5
+            document.onkeydown = function () {
+                if (window.event && (window.event.keyCode == 113)) {
+                    window.event.keyCode = 000;
+                    try {
+
+                        var control = txtId_Prd;
+                        if (txtId_Prd._isInFocus) {
+                            abrirIndicadores();
+                        }
+                    } catch (e) {
+
+                    }
+
+                    return false;
+                }
+                if (window.event && window.event.keyCode == 115) {
+                    window.event.keyCode = 000;
+                    try {
+
+                        var control = txtId_Prd;
+                        if (txtId_Prd._isInFocus) {
+                            abrirBuscar();
+                        }
+                    } catch (e) {
+
+                    }
+
+                    return false;
+                }
+                if (window.event && (window.event.keyCode == 117)) {
+                    window.event.keyCode = 000;
+                    try {
+
+                        var control = txtId_Prd;
+                        if (txtId_Prd._isInFocus) {
+                            abrirEstadistica();
+                        }
+                    } catch (e) {
+
+                    }
+
+                    return false;
+                }
+                //alert('keycode='+event.keyCode + 'event.ctrlKey='+event.ctrlKey ); 
+                switch (event.keyCode) {
+                    case 116: //F5 
+                        event.returnValue = false;
+                        event.keyCode = 0;
+                        //window.status = 'Refresh is disabled';
+                        return false;
+                        break;
+                    case 78: //n 
+                        if (event.ctrlKey) {
+                            event.returnValue = false;
+                            event.keyCode = 0;
+                            //window.status = 'New window is disabled';
+                            return false;
+                        }
+                        break;
+                    case 82: //r 
+                        if (event.ctrlKey) {
+                            event.returnValue = false;
+                            event.keyCode = 0;
+                            return false;
+                        }
+                        break;
+                }
+            }
+            //-----------------
+
+            document.onmousedown = "if (event.button==2) return false";
+            document.oncontextmenu = new Function("return false");
+
+            
+        </script>
+    </telerik:RadCodeBlock>
+    </form>
+</body>
+</html>

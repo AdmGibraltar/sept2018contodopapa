@@ -1,0 +1,382 @@
+<script language="JavaScript1.1">
+function validacantidad() {
+	var NumPreguntas=document.programa.ocantidadsian.length;
+	var i=0;
+	while (i < NumPreguntas )
+	{
+		if (Number(document.programa.ocantidadsian(i).value) < (Number(document.programa.cantidad(i).value)+Number(document.programa.ocrecibida(i).value) )){
+			alert("La cantidad recibida no puede ser mayor que la cantidad remisionada para el producto "+ document.programa.ocprodescsian(i).value);
+			document.programa.cantidad(i).value = 0
+
+		}
+		i = i + 1;
+	}
+}
+</script>
+<html>
+<head>
+    <title>Trasmisión de remisiones</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta content="Microsoft FrontPage 4.0" name="GENERATOR">
+    <meta content="FrontPage.Editor.Document" name="ProgId">
+</head>
+<body bgcolor="#00a6d6">
+    <form name="programa" id="programa" method="post" action="CapBajaRemisionesSIAN.aspx">
+    <p align="center">
+        <input style="color: #ff0000; border-top-style: solid; font-family: Tahoma; border-right-style: solid;
+            border-left-style: solid; text-decoration: blink; border-bottom-style: solid"
+            type="submit" value="Baja REMISION a SIAN" name="Baja"></p>
+    <table align="center" bgcolor="#00a6d6">
+        <tbody>
+            <tr>
+                <td>
+                    <table cellspacing="0" cellpadding="0" width="100%" bordercolorlight="#ffffff" border="1">
+                        <tbody>
+                            <tr>
+                                <td width="100%">
+                                    <table height="1" cellspacing="0" cellpadding="0" width="100%" bgcolor="#f2f2f2"
+                                        border="0">
+                                        <tbody>
+                                            <tr>
+                                                <td width="120%" colspan="6" height="80">
+                                                    <table cellspacing="0" cellpadding="0" width="100%" bgcolor="#f2f2f2" bordercolorlight="#ffffff"
+                                                        border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%">
+                                                                    <p align="center">
+                                                                        <img height="40" src="ad_key.gif" width="88" border="0"></p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td bordercolor="#00a6d6" bordercolorlight="#00a6d6" width="100%" bgcolor="#00a6d6"
+                                                                    bordercolordark="#00a6d6">
+                                                                    <p align="center">
+                                                                        <b><font face="Tahoma" color="#ffffff" size="1">Remisión enviada correctamente</font></b><b><font
+                                                                            face="Tahoma" color="#ffffff" size="1"> 9/24/2010 12:56:24 PM</font></b></p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="10%" height="1">
+                                                </td>
+                                                <td width="30%" height="1">
+                                                    <table bordercolor="#00a6d6" cellspacing="0" bordercolordark="#00a6d6" cellpadding="0"
+                                                        width="100%" bgcolor="#ffffff" bordercolorlight="#00a6d6" border="1">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%">
+                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="50%">
+                                                                                    <font face="Tahoma" size="1">Sucursal :</font>
+                                                                                </td>
+                                                                                <td width="50%">
+                                                                                    <font face="Tahoma" size="1">110-KEY QUIMICA, S.A. (MTY)</font>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td width="20%" height="1">
+                                                </td>
+                                                <td width="20%" height="1">
+                                                </td>
+                                                <td width="20%" height="1">
+                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%">
+                                                                    <table bordercolor="#00a6d6" cellspacing="0" bordercolordark="#00a6d6" cellpadding="0"
+                                                                        width="100%" bgcolor="#ffffff" bordercolorlight="#00a6d6" border="1">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td align="middle" width="33%">
+                                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td width="100%">
+                                                                                                    <p align="center">
+                                                                                                        <font face="Tahoma" size="1">Día</font></p>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                                <td align="middle" width="33%">
+                                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td width="100%">
+                                                                                                    <p align="center">
+                                                                                                        <font face="Tahoma" size="1">Mes</font></p>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                                <td align="middle" width="34%">
+                                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td width="100%">
+                                                                                                    <p align="center">
+                                                                                                        <font face="Tahoma" size="1">Año</font></p>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="middle" width="33%">
+                                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td width="100%">
+                                                                                                    <p align="center">
+                                                                                                        <font face="Tahoma" size="1">24</font></p>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                                <td align="middle" width="33%">
+                                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td width="100%">
+                                                                                                    <p align="center">
+                                                                                                        <font face="Tahoma" size="1">9</font></p>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                                <td align="middle" width="34%">
+                                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td width="100%">
+                                                                                                    <p align="center">
+                                                                                                        <font face="Tahoma" size="1">2010</font></p>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td width="20%" height="1">
+                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%">
+                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="100%">
+                                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td width="50%">
+                                                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td width="100%">
+                                                                                                                    <p align="right">
+                                                                                                                        <b><font face="Tahoma" color="#ff0000" size="1">Folio :50003962</font></b></p>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                                <td width="50%">
+                                                                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td width="100%">
+                                                                                                                    <b><font face="Tahoma" color="#ff0000" size="1"></font></b>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td width="100%">
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td width="100%">
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td width="100%">
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" cellpadding="0" width="100%" bordercolorlight="#ffffff" border="1">
+                        <tbody>
+                            <tr>
+                                <td width="100%">
+                                    <table cellspacing="0" cellpadding="0" width="100%" bgcolor="#f2f2f2" border="0">
+                                        <tbody>
+                                            <tr>
+                                                <td width="3%">
+                                                </td>
+                                                <td width="94%">
+                                                    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%">
+                                                                    <table bordercolor="#00a6d6" height="124" cellspacing="0" bordercolordark="#00a6d6"
+                                                                        cellpadding="0" width="100%" bgcolor="#ffffff" bordercolorlight="#00a6d6" border="1">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td bordercolor="#ffffff" bordercolorlight="#ffffff" align="middle" width="10%" bgcolor="#00a6d6"
+                                                                                    bordercolordark="#ffffff" height="32">
+                                                                                    <font face="Tahoma" color="#ffffff" size="1"><b>Secuencia</b></font>
+                                                                                </td>
+                                                                                <td bordercolor="#ffffff" bordercolorlight="#ffffff" align="middle" width="10%" bgcolor="#00a6d6"
+                                                                                    bordercolordark="#ffffff" height="32">
+                                                                                    <font face="Tahoma" color="#ffffff" size="1"><b>Ordén de compra</b></font>
+                                                                                </td>
+                                                                                <td bordercolor="#ffffff" bordercolorlight="#ffffff" align="middle" width="10%" bgcolor="#00a6d6"
+                                                                                    bordercolordark="#ffffff" height="32">
+                                                                                    <font face="Tahoma" color="#ffffff" size="1"><b>Num. prod.</b></font>
+                                                                                </td>
+                                                                                <td bordercolor="#ffffff" bordercolorlight="#ffffff" align="middle" width="30%" bgcolor="#00a6d6"
+                                                                                    bordercolordark="#ffffff" height="32">
+                                                                                    <font face="Tahoma" color="#ffffff" size="1"><b>Desc. prod.</b></font>
+                                                                                </td>
+                                                                                <td bordercolor="#ffffff" bordercolorlight="#ffffff" align="middle" width="10%" bgcolor="#00a6d6"
+                                                                                    bordercolordark="#ffffff" height="32">
+                                                                                    <font face="Tahoma" color="#ffffff" size="1"><b>Presen.</b></font>
+                                                                                </td>
+                                                                                <td bordercolor="#ffffff" bordercolorlight="#ffffff" align="middle" width="10%" bgcolor="#00a6d6"
+                                                                                    bordercolordark="#ffffff" height="32">
+                                                                                    <font face="Tahoma" color="#ffffff" size="1"><b>Unidades</b></font>
+                                                                                </td>
+                                                                                <td bordercolor="#ffffff" bordercolorlight="#ffffff" align="middle" width="10%" bgcolor="#00a6d6"
+                                                                                    bordercolordark="#ffffff" height="32">
+                                                                                    <font face="Tahoma" color="#ffffff" size="1"><b>Cantidad remisión</b></font>
+                                                                                </td>
+                                                                                <td bordercolor="#ffffff" bordercolorlight="#ffffff" align="middle" width="10%" bgcolor="#00a6d6"
+                                                                                    bordercolordark="#ffffff" height="32">
+                                                                                    <font face="Tahoma" color="#ffffff" size="1"><b>Cantidad recibida</b></font>
+                                                                                </td>
+                                                                                <td bordercolor="#ffffff" bordercolorlight="#ffffff" align="middle" width="10%" bgcolor="#00a6d6"
+                                                                                    bordercolordark="#ffffff" height="32">
+                                                                                    <font face="Tahoma" color="#ffffff" size="1"><b>Cantidad por recibir</b></font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td width="10%" height="16">
+                                                                                    <p align="center">
+                                                                                        <font face="Tahoma" size="1">1</font></p>
+                                                                                </td>
+                                                                                <td width="10%" height="16">
+                                                                                    <p align="center">
+                                                                                        <font face="Tahoma" size="1">22</font></p>
+                                                                                </td>
+                                                                                <td width="10%" height="16">
+                                                                                    <p align="right">
+                                                                                        <font face="Tahoma" size="1">1</font></p>
+                                                                                </td>
+                                                                                <td width="30%" height="16">
+                                                                                    <p align="center">
+                                                                                        <font face="Tahoma" size="1">VANG._MULTIUSOS_PINO_4_LTS.</font></p>
+                                                                                </td>
+                                                                                <td width="10%" height="16">
+                                                                                    <p align="center">
+                                                                                        <font face="Tahoma" size="1">5</font></p>
+                                                                                </td>
+                                                                                <td width="10%" height="16">
+                                                                                    <p align="center">
+                                                                                        <font face="Tahoma" size="1">LT</font></p>
+                                                                                </td>
+                                                                                <td width="10%" height="16">
+                                                                                    <p align="right">
+                                                                                        <font face="Tahoma" size="1">12
+                                                                                            <input type="hidden" name="ocprocostosian" id="ocprocostosian" value="27.1">
+                                                                                            <input type="hidden" name="ocfechasian" id="ocfechasian" value="9/24/2010 12:56:24 PM">
+                                                                                            <input type="hidden" name="ocremsian" id="ocremsian" value="22">
+                                                                                            <input type="hidden" name="oczonnumsian" id="oczonnumsian" value="2">
+                                                                                            <input type="hidden" name="ocpronumsian" id="ocpronumsian" value="1">
+                                                                                            <input type="hidden" name="ocprodescsian" id="ocprodescsian" value="VANG._MULTIUSOS_PINO_4_LTS.">
+                                                                                            <input type="hidden" name="ocantidadsian" id="ocantidadsian" value="5">
+                                                                                            <input type="hidden" name="ocrecibida" id="ocrecibida" value="5">
+                                                                                        </font>
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td width="10%" height="16">
+                                                                                    <p align="right">
+                                                                                        <font face="Tahoma" size="1">5</font></p>
+                                                                                </td>
+                                                                                <td width="10%" height="16">
+                                                                                    <p align="right">
+                                                                                        <font face="Tahoma" size="1">
+                                                                                            <input type="text" size="10" name="cantidad" id="cantidad" value="0" style="font-family: Tahoma;
+                                                                                                font-size: 8 pt; text-align: right" onchange="validacantidad()"></font></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td width="3%">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+</body>
+</html>
+ 

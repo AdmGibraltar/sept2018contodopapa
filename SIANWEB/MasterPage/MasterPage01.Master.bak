@@ -1,0 +1,1008 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage01.Master.cs"
+    Inherits="SIANWEB.MasterPage01" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Import Namespace="CapaEntidad" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server">
+    </telerik:RadStyleSheetManager>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <title></title>
+    <link href="../Styles/Toolbar.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .html, body, form
+        {
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            height: auto;
+        }
+        .menuPanes
+        {
+            overflow: visible !important;
+        }
+        .formulario
+        {
+            font-family: Arial;
+            font-size: 12px;
+        }
+        .dvstyle
+        {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .hideMe
+        {
+            display: none !important;
+        }
+        
+        div.RadGrid .rgRefresh, div.RadGrid .rgRefresh + a
+        {
+            display: none;
+        }
+    </style>
+    <link href="../Styles/Menu.Sian.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" method="post" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnableScriptGlobalization="True"
+        EnableScriptLocalization="True" EnableTheming="true" AsyncPostBackTimeout="36000">
+    </telerik:RadScriptManager>
+    <div id="ParentDivElement" class="dvstyle">
+        <telerik:RadFormDecorator ID="RadFormDecorator1" runat="server" DecoratedControls="All" />
+        <telerik:RadSplitter ID="MainSplitter" runat="server" Orientation="Horizontal" VisibleDuringInit="False"
+            ResizeMode="AdjacentPane" Height="100%" Width="100%">
+            <telerik:RadPane ID="TopPane" runat="server" Height="100" MinHeight="100" MaxHeight="100"
+                Scrolling="none" CssClass="menuPanes">
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <asp:Image ID="ImgLogo" runat="server" Height="65px" ImageUrl="~/Imagenes/logo.jpg" />
+                        </td>
+                        <td align="right">
+                            <table id="TblEncabezadoMaster" runat="server" style="font-family: Verdana; font-size: 8pt">
+                                <tr>
+                                    <td rowspan="2">
+                                        <telerik:RadSkinManager ID="RadSkinManager1" runat="server" PersistenceMode="Session"
+                                            Skin="Outlook">
+                                        </telerik:RadSkinManager>
+                                        <asp:HiddenField ID="HiddenField1" runat="server" Visible="False" />
+                                        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+                                    </td>
+                                    <td>
+                                        &nbsp;&nbsp;
+                                    </td>
+                                    <td align="right">
+                                        <asp:LinkButton ID="LinkButton1" runat="server" Font-Underline="false" ForeColor="Black"
+                                            PostBackUrl="~/Login.aspx?Id=1">Salir</asp:LinkButton>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;&nbsp;
+                                    </td>
+                                    <td align="right">
+                                        &nbsp;&nbsp;<asp:Label ID="lblNombre" runat="server" Font-Bold="True"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <telerik:RadMenu ID="RadMenu1" runat="server" Width="100%" Style="text-align: left;
+                    float: none; z-index: 1000" EnableEmbeddedSkins="False" Skin="SIAN" EnableRoundedCorners="False">
+                </telerik:RadMenu>
+            </telerik:RadPane>
+            <telerik:RadSplitBar ID="RadSplitBar1" runat="server" CollapseMode="Forward" CollapseExpandPaneText="Colapsar/Expandir" />
+            <telerik:RadPane ID="RadPane2" runat="server" MinWidth="500" Scrolling="none">
+                <telerik:RadSplitter ID="RadSplitter2" runat="server" Height="100%" LiveResize="true">
+                    <telerik:RadPane ID="RadPane4" runat="server">
+                        <div class="header" style="vertical-align: middle; background-color: #d0c8c5">
+                            <table style="position: relative" width="100%">
+                                <tr>
+                                    <td align="left">
+                                        <asp:RadioButton ID="RadioButton1" runat="server" Checked="true" Font-Bold="true"
+                                            Font-Names="Verdana" Font-Size="9pt" ForeColor="#474D6F" Text="" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <asp:ContentPlaceHolder ID="CPH" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <div align="center" style="width: 100%">
+                            <asp:Label runat="server" ID="lblFechaMod" ForeColor="White" Style="font-family: verdana;
+                                font-size: 8pt"></asp:Label>
+                        </div>
+                    </telerik:RadPane>
+                </telerik:RadSplitter></telerik:RadPane>
+        </telerik:RadSplitter>
+    </div>
+    <telerik:RadWindowManager ID="RadWindowManagerMaster" runat="server" Style="z-index: 7001">
+        <Windows>
+            <%-- OBSERVACIONES POR PRODUCTO --%>
+            <telerik:RadWindow ID="AbrirVentana_Observaciones" runat="server" Behaviors="Move,Close"
+                Opacity="100" VisibleStatusbar="False" Width="570px" Height="400px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Seguimiento de productos" Modal="True"
+                OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%-- FACTURAS POR RUTA --%>
+            <telerik:RadWindow ID="AbrirVentana_EmbarqueImpresion" runat="server" Behaviors="Move,Close"
+                Opacity="100" VisibleStatusbar="False" Width="375px" Height="225px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Imprime embarques de factura por ruta"
+                Modal="True" OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%-- Crm promocion --%>
+            <telerik:RadWindow ID="AbrirVentana_promocion" runat="server" Behaviors="Move, Close"
+                Opacity="100" VisibleStatusbar="False" Width="840px" Height="500px" Animation="Fade"
+                KeepInScreenBounds="false" Overlay="True" Title="Catálogo de clientes" Modal="True"
+                OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+             <%--DEPURACION FACTURAS--%>
+          <telerik:RadWindow ID="AbrirVentana_FacturaD"
+             runat="server" Behaviors="Move,Close,Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="400px" Height="400px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Depuracion de facturas"
+                Modal="True" OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+
+              <%-- PRECIO ESPECIAL AUTORIZACION--%>
+              <telerik:RadWindow ID="AbrirVentana_PrecioEspAutorizacion" 
+             runat="server" Behaviors="Move,Close"
+                Opacity="100" VisibleStatusbar="False" Width="1200px" Height="1000px" 
+               Animation="Fade"
+                KeepInScreenBounds="true" Overlay="true"  
+                Title="Autorización de precio especial"
+             Modal="true" 
+                OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False" OnClientShow="OnClientShow">
+            </telerik:RadWindow>
+            <%-- Valuacion de proyectos (Ajuste de parametros de rentabilidad) --%>
+            <telerik:RadWindow ID="AbrirVentana_CentroDistParametrosRentabilidad" runat="server"
+                Behaviors="Move, Close" Opacity="100" VisibleStatusbar="False" Width="780px"
+                Height="570px" Animation="Fade" KeepInScreenBounds="True" Overlay="True" Title=""
+                Modal="True" OnClientClose="CerrarWindow" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%-- ORDEN DE COMPRA (Envio internet) --%>
+            <telerik:RadWindow ID="OrdenCompra_EnvioInternet" runat="server" Behaviors="Move, Close"
+                Opacity="100" VisibleStatusbar="False" Width="700px" Height="500px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Orden de compra" Modal="True"
+                ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%-- RECLAMACIONES --%>
+            <telerik:RadWindow ID="AbrirVentana_ProAsignPrdxPed" runat="server" Behaviors="Move,Close"
+                Opacity="100" VisibleStatusbar="False" Width="750px" Height="500px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Asignación de producto por pedido"
+                Modal="True" OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="AbrirVentana_ProAsignPedxPrd" runat="server" Behaviors="Move,Close"
+                Opacity="100" VisibleStatusbar="False" Width="800px" Height="500px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Asignación de pedido por producto"
+                Modal="True" OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%--REPORTES--%>
+            <telerik:RadWindow ID="RWReporte" runat="server" Behaviors="Move,Close,Resize,Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="920px" Height="600px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Reporte" Modal="true" ShowContentDuringLoad="False"
+                OnClientClose="CerrarWindow_Event">
+            </telerik:RadWindow>
+            <%--PREFERENCIAS--%>
+            <telerik:RadWindow ID="RadWindowContrasena" runat="server" Behaviors="Move" Opacity="100"
+                VisibleStatusbar="False" Width="380px" Height="250px" Animation="Fade" KeepInScreenBounds="True"
+                Overlay="True" Title="Modificar contraseña" Modal="True" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="RadWindowConfiguracionCorreo" runat="server" Behaviors="Move"
+                Opacity="100" VisibleStatusbar="False" Width="400px" Height="300px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Configuración de correo" Modal="True"
+                ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%--PRECIO ESPECIAL--%>
+            <telerik:RadWindow ID="AbrirVentana_PrecioEspecial"
+             runat="server" Behaviors="Move,Close,Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="850px" Height="610px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Solicitud de precio especial"
+                Modal="True" OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%-- Nota de credito (Impresion PDF) --%>
+            <telerik:RadWindow ID="AbrirVentana_ImpresionPDFNotaCredito" runat="server" Opacity="100"
+                Behaviors="Move,Close" VisibleStatusbar="False" Width="840px" Height="700px"
+                Animation="Fade" KeepInScreenBounds="True" Overlay="True" Title="Nota de crédito"
+                Modal="True" OnClientClose="CerrarWindow_Event" ReloadOnShow="true">
+            </telerik:RadWindow>
+            <%-- Nota de cargo (Impresion PDF) --%>
+            <telerik:RadWindow ID="AbrirVentana_ImpresionPDFNotaCargo" runat="server" Opacity="100"
+                Behaviors="Move, Close" VisibleStatusbar="False" Width="840px" Height="700px"
+                Animation="Fade" KeepInScreenBounds="True" Overlay="True" Title="Nota de cargo"
+                Modal="True" OnClientClose="CerrarWindow_Event" ReloadOnShow="true">
+            </telerik:RadWindow>
+            <%-- CONTRATO --%>
+            <telerik:RadWindow ID="AbrirVentana_Contrato" runat="server" Behaviors="Move, Close"
+                Opacity="100" VisibleStatusbar="False" Width="330px" Height="150px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Facturar remisiones" Modal="True"
+                OnClientClose="CerrarWindow_Event">
+            </telerik:RadWindow>
+            <%-- Factura (Impresion PDF) --%>
+            <telerik:RadWindow ID="AbrirVentana_ImpresionPDFFacturaVI" runat="server" Opacity="100"
+                Behaviors="Move, Close, maximize" VisibleStatusbar="False" Width="840px" Height="540px"
+                Animation="Fade" KeepInScreenBounds="True" Overlay="True" Title="Factura" Modal="True"
+                ReloadOnShow="true">
+            </telerik:RadWindow>
+            <%-- Ventana para Excel --%>
+            <telerik:RadWindow ID="AbrirVentana_vExcel" runat="server" Behaviors="Move, Close"
+                Opacity="100" VisibleStatusbar="False" Width="350px" Height="150px" Animation="Fade"
+                ShowContentDuringLoad="false" KeepInScreenBounds="True" Overlay="True" Title="Subir Excel"
+                Modal="True">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="AbrirVentana_Buscar" runat="server" Behaviors="Move, Close"
+                Opacity="100" VisibleStatusbar="False" Width="600px" Height="415px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Buscar" Modal="True">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="AbrirVentana_Acciones" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="800px" Height="500px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Acciones urgentes" Modal="True">
+            </telerik:RadWindow>
+            <%--VENTANAS MAXIMIZADAS--%>
+            <%-- FACTURAS POR RUTA --%>
+            <telerik:RadWindow ID="AbrirVentana_FacturasXRuta" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="670px" Height="400px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Embarque de facturas por ruta"
+                Modal="True" OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False"
+                OnClientPageLoad="LimpiarBandera" ShowOnTopWhenMaximized="true" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- RECLAMACIONES --%>
+            <telerik:RadWindow ID="AbrirVentana_Reclamaciones" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="700px" Height="450px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Reclamaciones de clientes" Modal="True"
+                OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False" OnClientPageLoad="LimpiarBandera"
+                ShowOnTopWhenMaximized="true" Localization-Restore="Restaurar" Localization-Maximize="Maximizar"
+                Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- Nota de Cargo (Detalle de Nota de cargo) --%>
+            <telerik:RadWindow ID="AbrirVentana_NotaCargo" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="900px" Height="560px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="" Modal="True" OnClientClose="CerrarWindow_Event"
+                ShowContentDuringLoad="false" OnClientPageLoad="LimpiarBandera" ShowOnTopWhenMaximized="true"
+                Localization-Restore="Restaurar" Localization-Maximize="Maximizar" Localization-Close="Cerrar"
+                InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- Nota de Credito (Detalle de Nota de crédito) --%>
+            <telerik:RadWindow ID="AbrirVentana_NotaCredito" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="860px" Height="560px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="" Modal="True" OnClientClose="CerrarWindow_Event"
+                ShowContentDuringLoad="false" OnClientPageLoad="LimpiarBandera" ShowOnTopWhenMaximized="true"
+                Localization-Restore="Restaurar" Localization-Maximize="Maximizar" Localization-Close="Cerrar"
+                InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="AbrirVentana_ImpresionPDFRemision" runat="server" Opacity="100"
+                Behaviors="Move, Close, Maximize" VisibleStatusbar="False" Width="850px" Height="560px"
+                Animation="Fade" KeepInScreenBounds="True" Overlay="True" Title="Factura" Modal="True"
+                ReloadOnShow="true" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- ACYS --%>
+            <telerik:RadWindow ID="AbrirVentana_Acys" runat="server" Behaviors="Move,Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="920px" Height="550px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Acuerdos comerciales y servicios"
+                Modal="True" OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False"
+                OnClientPageLoad="LimpiarBandera" ShowOnTopWhenMaximized="true" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- Devoluciones Parciales --%>
+            <telerik:RadWindow ID="AbrirVentana_devoluciones" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="840px" Height="500px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Devoluciones parciales" Modal="True"
+                OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False" ShowOnTopWhenMaximized="true"
+                Localization-Restore="Restaurar" Localization-Maximize="Maximizar" Localization-Close="Cerrar"
+                InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%--ENTRADA/SALIDA--%>
+            <telerik:RadWindow ID="AbrirVentana_EntSal" runat="server" Behaviors="Move,Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="850px" Height="470px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Entradas/Salidas" Modal="True"
+                OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- ORDEN DE COMPRA (Detalle de orden de compra) --%>
+            <telerik:RadWindow ID="AbrirVentana_OrdenCompra" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="800px" Height="450px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Orden de compra" Modal="True"
+                OnClientClose="CerrarWindow_Event" ShowContentDuringLoad="False" ShowOnTopWhenMaximized="true"
+                Localization-Restore="Restaurar" Localization-Maximize="Maximizar" Localization-Close="Cerrar"
+                InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- PAGOS --%>
+            <telerik:RadWindow ID="AbrirVentana_DifPago" runat="server" Behaviors="Move, Close"
+                Opacity="100" VisibleStatusbar="False" Width="400px" Height="320px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Diferencia en fichas de pago"
+                Modal="True" ShowContentDuringLoad="False" Localization-Restore="Restaurar" Localization-Close="Cerrar">
+            </telerik:RadWindow>
+            <%-- PAGOS DETALLE--%>
+            <telerik:RadWindow ID="AbrirVentana_Pago" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="850px" Height="550px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Pagos" Modal="True" OnClientClose="CerrarWindow_Event"
+                ShowContentDuringLoad="False" ShowOnTopWhenMaximized="true" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- REMISIONES --%>
+            <telerik:RadWindow ID="AbrirVentana_Remision" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="850px" Height="600px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Remisiones" Modal="True" OnClientClose="CerrarWindow_Event"
+                ShowContentDuringLoad="False" ShowOnTopWhenMaximized="True" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- REMISIONES --%>
+            <telerik:RadWindow ID="AbrirVentana_RemisionPedido" runat="server" Behaviors="Move,Close"
+                Opacity="100" VisibleStatusbar="False" Width="310px" Height="130px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="" Modal="True" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%-- Facturacion VI--%>
+            <telerik:RadWindow ID="AbrirVentana_FacturacionVi" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="840px" Height="645px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Factura" Modal="True" OnClientClose="CerrarWindow_Event"
+                ShowContentDuringLoad="False" ShowOnTopWhenMaximized="True" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- PEDIDOS --%>
+            <telerik:RadWindow ID="AbrirVentana_Pedido" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="850px" Height="550px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Pedido" Modal="True" OnClientClose="CerrarWindow_Event"
+                ShowContentDuringLoad="False" ShowOnTopWhenMaximized="True" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- PEDIDOS --%>
+            <telerik:RadWindow ID="AbrirRelacionGestor" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="850px" Height="550px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Configurar relación del gestor"
+                Modal="True" ShowContentDuringLoad="False" ShowOnTopWhenMaximized="True" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- PEDIDOS VENTA INSTALADA --%>
+            <telerik:RadWindow ID="AbrirVentana_PedidoVI" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="910px" Height="610px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="" Modal="True" OnClientClose="CerrarWindow_Event"
+                ShowContentDuringLoad="False" ShowOnTopWhenMaximized="True" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- Factura Revisión o Cobro (Detalle) --%>
+            <telerik:RadWindow ID="AbrirVentana_FacturaRevision" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="810px" Height="420px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="" Modal="True" OnClientClose="CerrarWindow_Event"
+                ShowContentDuringLoad="False" ShowOnTopWhenMaximized="True" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%-- Valuacion de proyectos (Captura) --%>
+            <telerik:RadWindow ID="AbrirVentana_ValProyecto" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="840px" Height="590px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="" Modal="True" OnClientClose="CerrarWindow_Event"
+                ShowContentDuringLoad="False" ShowOnTopWhenMaximized="True" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+            <%--AUTORIZACION--%>
+            <telerik:RadWindow ID="AbrirVentana_Autorizacion" runat="server" Behaviors="Move,Close"
+                Opacity="100" VisibleStatusbar="False" Width="400px" Height="200px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Autorización" Modal="True" ShowContentDuringLoad="False"
+                Localization-Restore="Restaurar" Localization-Maximize="Maximizar" Localization-Close="Cerrar">
+            </telerik:RadWindow>
+        </Windows>
+    </telerik:RadWindowManager>
+    <telerik:RadCodeBlock ID="RadCodeBlock2" runat="server">
+         
+        <script type="text/javascript">
+
+            function OnClientShow(radWindow) {
+
+                var delScrollbar = radWindow._name;
+                document.getElementsByName(delScrollbar)[0].setAttribute("scrolling", "yes");
+
+
+                var oTop = document.documentElement.scrollTop;
+                document.documentElement.scroll = "yes";
+                document.documentElement.style.overflow = "scroll";
+                document.documentElement.scrollTop = oTop;
+
+                if (document.documentElement && document.documentElement.scrollTop) {
+                    var oTop = document.documentElement.scrollTop;
+                    document.documentElement.scroll = "yes";
+                    document.documentElement.style.overflow = "scroll";
+                    document.documentElement.scrollTop = oTop;
+
+                }
+                else if (document.body) {
+                    var oTop = document.body.scrollTop;
+                    document.body.scroll = "yes";
+                    document.body.style.overflow = "scroll";
+                    document.body.scrollTop = oTop;
+                }
+            }  
+
+
+
+
+            Telerik.Web.UI.RadWindowUtils.Localization =
+            {
+                "Close": "Cerrar",
+                "Minimize": "Minimizar",
+                "Maximize": "Maximizar",
+                "Reload": "Recargar",
+                "PinOn": "Pin on",
+                "PinOff": "Pin off",
+                "Restore": "Restore",
+                "OK": "Aceptar",
+                "Cancel": "No",
+                "Yes": "Si",
+                "No": "No"
+            };
+
+            function AlertaFocus(mensaje, control) {
+                var oWnd = radalert(mensaje, 330, 150);
+                oWnd.add_close(function () { var target = $find(control); target.focus(); });
+            }
+
+            function LimpiarBandera() {
+                LimpiarBanderaRebind();
+            }
+
+            function OpenPositionedWindow(oButton, url, windowName) {
+                var oWnd = window.radopen(url, windowName);
+            }
+
+            function AbrirContrasenas() {
+                var oWnd = radopen("Ventana_ModContrasena.aspx", "RadWindowContrasena");
+                oWnd.center();
+                return true;
+            }
+
+            function IrALogin() {
+                //debugger;
+                window.location.href('Login.aspx');
+            }
+
+            //**********************************************************************//
+            // funciones para evaluar datos numericos y decimales en cajas de texto //
+            //**********************************************************************//
+            function SoloNumerico(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if (c && c == 13)
+                    eventArgs.set_cancel(true);
+                if (c < 48 || c > 57) //si no es numero
+                    eventArgs.set_cancel(true);
+            }
+
+            function SoloNumericoYPunto(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if (c && c == 13)
+                    eventArgs.set_cancel(true);
+                if ((c < 48 || c > 57))//si no es numero
+                    if (c != 46) //si no es punto
+                        eventArgs.set_cancel(true);
+            }
+
+            function SoloNumericoComaYGuion(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if (c && c == 13)
+                    eventArgs.set_cancel(true);
+                if ((c < 48 || c > 57))//si no es numero
+                    if (c != 44 && c != 45) //si no es guion (45) y coma (44)
+                        eventArgs.set_cancel(true);
+            }
+
+            function SoloNumericoYDiagonal(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if (c && c == 13)
+                    eventArgs.set_cancel(true);
+                if ((c < 48 || c > 57))//si no es numero
+                    if (c != 47) //si no es punto
+                        eventArgs.set_cancel(true);
+            }
+
+            function SoloAlfabetico(sender, eventArgs) {
+                //debugger;
+                var c = eventArgs.get_keyCode();
+                if ((c < 32) || (c > 32 && c < 65) || (c > 90 && c < 97) || (c > 122 && c < 193) || (c > 193 && c < 201) || (c > 201 && c < 205) || (c > 205 && c < 209) || (c > 209 && c < 211) || (c > 211 && c < 218) || (c > 218 && c < 225) || (c > 225 && c < 233) || (c > 233 && c < 237) || (c > 237 && c < 241) || (c > 241 && c < 243) || (c > 243 && c < 250) || (c > 250)) {
+                    if (c != 95 && c != 124) //el guion bajo  y '|' tambien son permitidos
+                        eventArgs.set_cancel(true);
+                }
+            }
+
+            function SoloAlfanumerico(sender, eventArgs) {
+                //debugger;
+                var c = eventArgs.get_keyCode();
+                if ((c < 32) || (c > 32 && c < 46) || (c > 46 && c < 48) || (c > 57 && c < 65) || (c > 90 && c < 97) || (c > 122 && c < 124) || (c > 124 && c < 193) || (c > 193 && c < 201) || (c > 201 && c < 205) || (c > 205 && c < 209) || (c > 209 && c < 211) || (c > 211 && c < 218) || (c > 218 && c < 225) || (c > 225 && c < 233) || (c > 233 && c < 237) || (c > 237 && c < 241) || (c > 241 && c < 243) || (c > 243 && c < 250) || (c > 250))
+                    if (c != 95 && c != 124) //el guion bajo  y '|' tambien son permitidos
+                        eventArgs.set_cancel(true);
+            }
+
+            //utilizado para los nombres de nodos en adendas
+            //ACEPTA: LETRAS, NUMEROS, GUION BAJO Y GUION MEDIO
+            function SoloAlfanumericoyGuiones(sender, eventArgs) {
+                //debugger;
+                var c = eventArgs.get_keyCode();
+                if ((c >= 32 && c < 45) || (c > 45 && c < 46) || (c > 46 && c < 48) || (c > 57 && c < 65) || (c > 90 && c < 97) || (c > 122 && c < 124) || (c > 124 && c < 193) || (c > 193 && c < 201) || (c > 201 && c < 205) || (c > 205 && c < 209) || (c > 209 && c < 211) || (c > 211 && c < 218) || (c > 218 && c < 225) || (c > 225 && c < 233) || (c > 233 && c < 237) || (c > 237 && c < 241) || (c > 241 && c < 243) || (c > 243 && c < 250) || (c > 250))
+                    if (c != 95 && c != 44) //el guion bajo medio y bajo
+                        eventArgs.set_cancel(true);
+            }
+
+            function SinComilla(sender, eventArgs) {
+                //debugger;
+                var c = eventArgs.get_keyCode();
+                //debugger;
+                if (c == 39) //el guion bajo  y '|' tambien son permitidos
+                    eventArgs.set_cancel(true);
+            }
+            function SinComillas(sender, eventArgs) {
+                var key = eventArgs.get_keyCode();
+
+                if (key && (key == 13 || key == 39 || key == 34)) {
+
+                    eventArgs.set_cancel(true);
+                }
+            }
+            function SoloNumericoComayGuion(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if (c && c == 13)
+                    eventArgs.set_cancel(true);
+                if ((c < 48 || c > 57) && (c != 44 && c != 45)) {//si no es numero, guionMedio y Coma       
+                    eventArgs.set_cancel(true);
+                }
+            }
+
+            // ------------------------------------------------------------------------------------
+            // Las sig. funcines validan que se capture en una caja de texto: NUMERO,NUMERO-NUMERO,NUMERO ej. 4,6,7-45,8
+            var ultimoSeparador = '';
+            function RangoEnterosSeparacionGuionYComas_OnKeyPress(sender, eventArgs) {
+                //debugger;
+                var texto = sender.get_textBoxValue() + eventArgs.get_keyCharacter();
+                var c = eventArgs.get_keyCode();
+                var key = eventArgs.get_keyCharacter();
+                //si es ENTER --> se cancela
+                if (c && c == 13) {
+                    eventArgs.set_cancel(true);
+                }
+                else {
+                    if ((c < 48 || c > 57) && (c != 44 && c != 45)) {//si no es numero, guionMedio y Coma --> se Cancela
+                        eventArgs.set_cancel(true);
+                    }
+                    else {
+                        if ((c < 48 || c > 57) && texto.length == 1) {//si no es numero y solamente es el primer caracter --> se Cancela
+                            eventArgs.set_cancel(true);
+                        }
+                        else {
+                            if (texto.length > 1) {
+                                var caracter = texto.charAt(texto.length - 2);
+                                var digitos = '0123456789';
+                                if (digitos.indexOf(key) != -1) {
+                                    //debugger;
+                                    if (!EsEnteroValido(texto)) {
+                                        eventArgs.set_cancel(true);
+                                    }
+                                    return;
+                                }
+                                if (caracter == ',' || caracter == '-') {
+                                    if (digitos.indexOf(key) == -1) {
+                                        eventArgs.set_cancel(true);
+                                        return;
+                                    }
+                                }
+                                if (digitos.indexOf(caracter) != -1) {
+                                    if (key != ',' && key != '-') {
+                                        eventArgs.set_cancel(true);
+                                        return;
+                                    }
+                                }
+                                //debugger;
+                                if (key == '-' && ObtenerUltimoSeparador(texto) == '-') {
+                                    eventArgs.set_cancel(true);
+                                    return;
+                                }
+                                if (key == ',' || key == '-') {
+                                    ultimoSeparador = key;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            function EsEnteroValido(texto) {
+                var digitos = '0123456789';
+                if (texto.length >= 10) {
+                    for (i = texto.length - 1; i >= texto.length - 10; i--) {
+                        if (digitos.indexOf(texto.charAt(i)) == -1) {
+                            return true
+                        }
+                    }
+                }
+                else {
+                    return true
+                }
+                return false
+            }
+
+            function ObtenerUltimoSeparador(texto) {
+                var digitos = '0123456789';
+                for (i = texto.length - 2; i >= 0; i--) {
+                    if (digitos.indexOf(texto.charAt(i)) == -1) {
+                        return texto.charAt(i);
+                    }
+                }
+                return '';
+            }
+
+            function RangoEnterosSeparacionGuionYComas_OnBlur(sender, eventArgs) {
+                //debugger;
+                var i = 0;
+                var continuar = true;
+                var alerta = null;
+                var texto = sender.get_textBoxValue();
+                if (texto.charAt(texto.length - 1) == ',' || texto.charAt(texto.length - 1) == '-') {
+                    texto = texto.substring(0, texto.length - 1);
+                    sender.set_value(texto)
+                }
+                var array = texto.split(',');
+
+                for (i = 0; i < array.length; i++) {
+                    var rango = array[i].split('-');
+                    if (rango.length == 2) {
+                        if (parseInt(rango[0]) > parseInt(rango[1])) {
+                            alerta = radalert('El rango del campo no es correcto. El número a la izquierda del guión debe ser menor al número de la derecha', 330, 150, tituloMensajes);
+                            break;
+                        }
+                    }
+                }
+                if (alerta != null) {
+                    continuar = false;
+                }
+                return continuar;
+            }
+
+            function RangoEnterosSeparacionGuion_OnKeyPress(sender, eventArgs) {
+                //debugger;
+                var texto = sender.get_textBoxValue() + eventArgs.get_keyCharacter();
+                if (/^\d{1,9}$/.test(texto)) {
+                    return;
+                }
+                else {
+                    if (/^\d{1,9}\-$/.test(texto)) {
+                        return;
+                    }
+                    else {
+                        if (!(/^\d{1,9}\-\d{1,9}$/.test(texto))) {
+                            eventArgs.set_cancel(true);
+                        }
+                    }
+                }
+            }
+
+            function RangoEnterosSeparacionGuion_OnBlur(sender, eventArgs) {
+                //debugger;
+                var alerta = null;
+                var texto = sender.get_textBoxValue().split('-');
+                if (texto.length != 2) {
+                    alerta = radalert('El rango del producto no tiene un formato correcto', 330, 150, tituloMensajes);
+                }
+                else {
+                    if (texto[0] == '' || texto[1] == '') {
+                        alerta = radalert('El rango del producto no tiene un formato correcto', 330, 150, tituloMensajes);
+                    }
+                    else {
+                        if (parseInt(texto[0]) > parseInt(texto[1])) {
+                            alerta = radalert('El rango del producto no es correcto. El número a la izquierda del guión debe ser menor al número de la derecha', 330, 150, tituloMensajes);
+                        }
+                    }
+                }
+                if (alerta != null) {
+                }
+            }
+            // ------------------------------------------------------------------------------------
+            function Email(sender, eventArgs) {
+
+                var c = eventArgs.get_keyCode();
+
+                if ((c < 44) || (c > 46 && c < 48) || (c > 57 && c < 59) || (c > 59 && c < 64) || (c > 90 && c < 95) || (c > 95 && c < 97) || (c > 122 && c < 209) || (c > 209 && c < 241) || (c > 241))
+                    eventArgs.set_cancel(true);
+            }
+            function EmailMultiple(sender, eventArgs) {
+
+                var c = eventArgs.get_keyCode();
+                if ((c < 44) || (c > 46 && c < 48) || (c > 57 && c < 64) || (c > 90 && c < 95) || (c > 95 && c < 97) || (c > 122 && c < 124) || (c > 124 && c < 209) || (c > 209 && c < 241) || (c > 241))
+                    eventArgs.set_cancel(true);
+            }
+            function handleClickEvent(sender, eventArgs) {
+                var key = eventArgs.get_keyCode();
+                if (key && key == 13)
+                    eventArgs.set_cancel(true);
+            }
+
+            //titulo de mensajes de alerta
+            var tituloMensajes = '';
+            //******************************************************************//
+            // funciones comunes para cadenas                                   //
+            //******************************************************************//
+            // Recortar los espacios del lado izquierdo de una cadena
+            function LTrim(str) {
+                if (str == null) {
+                    return null;
+                }
+                for (var i = 0; str.charAt(i) == " "; i++);
+                return str.substring(i, str.length);
+            }
+
+            // Recortar los espacios del lado derecho de una cadena
+            function RTrim(str) {
+                if (str == null) {
+                    return null;
+                }
+                for (var i = str.length - 1; str.charAt(i) == " "; i--);
+                return str.substring(0, i + 1);
+            }
+
+            // Recortar los espacios de los extremos de una cadena
+            function Trim(str) {
+                return LTrim(RTrim(str));
+            }
+
+            //******************************************************************//
+            // Las siguientes funciones limpian controles comunes de formulario //
+            //******************************************************************//
+
+            //Limpiar cajas de texto: radDatePicker
+            //param sender --> objeto a limpiar
+            function LimpiarDatePicker(sender) {
+                sender.clear()
+            }
+
+            //Limpiar cajas de texto: radTextBox, radNumericTextBox, radDatePicker
+            //param sender --> objeto a limpiar
+            function LimpiarTextBox(sender) {
+                sender.clear()
+                sender.enable()
+            }
+
+            //Limpiar radComboBox
+            //param sender --> objeto a limpiar
+            function LimpiarCombo(sender) {
+                sender.clearSelection()
+            }
+
+            //Limpiar radComboBox
+            //param sender --> objeto a limpiar
+            //NOTA: selecciona el primer item del combo que debe contener el texto '-- seleccionar --'
+            function LimpiarComboSelectIndex0(sender) {
+                //debugger;
+                if (sender.get_items().get_count() > 0) {
+                    sender.get_items().getItem(0).select();
+                    sender.set_value('-- Seleccionar --');
+                }
+                else {
+                    sender.set_value('');
+                }
+            }
+
+            //Limpiar CheckBox
+            //param sender --> objeto a limpiar
+            function LimpiarCheckBox(sender, isChecked) {
+                sender.checked = isChecked;
+            }
+
+            //Limpiar RadioButtonList
+            //param sender --> objeto a limpiar
+            //param: indexSelect --> recibe el indice del option que se desee que este seleccionado por default
+            function LimpiarRadioButtonGroup(sender, indexSelect) {
+                sender.getElementsByTagName('INPUT')[indexSelect].checked = true;
+            }
+
+            //--------------------------------------------------------------------------------------------------
+            //Cuando el combo pierde el foco
+            //Si el usuario escribió y no eligió un item correcto limpia el combo
+            //--------------------------------------------------------------------------------------------------
+            function Combo_ClientBlur(sender, args) {
+                //debugger;
+                var itemSelected = sender.findItemByText(sender.get_text())
+                if (itemSelected == null) {
+                    LimpiarComboSelectIndex0(sender);
+                }
+            }
+
+            function OnBlur(textbox, combo) {
+                //debugger;
+                if (combo.get_items().getItem(0) == null) {
+                    return;
+                }
+
+                var itemSelect = false;
+                if (!txtFechaBandera) { //no ejecuta el siguiente bloque si la bandera de validacion de fecha de captura esta activada
+
+                    for (var i = 0; i < combo.get_items().get_count(); i++) {
+                        var item = combo.get_items().getItem(i);
+                        if (textbox.get_value() == item.get_value()) {
+                            itemSelect = true;
+                            if (textbox.get_value() != combo.get_value()) {
+                                combo.get_items().getItem(i).select();
+                            }
+                            break;
+                        }
+                    }
+
+                    if (!itemSelect) {
+                        if (combo.get_value() != '-1') {
+                            combo.get_items().getItem(0).select()
+                        }
+                        else {
+                            textbox.set_value('');
+                        }
+                    }
+                }
+            }
+
+            function ClientSelectedIndexChanged(item, txt) {
+                //debugger;
+                if (item != null)
+                    if (item.get_value() != '-1')
+                        txt.set_value(item.get_value());
+                    else
+                        txt.set_value('');
+            }
+
+            function obtenerrequest(UrlArchivo, Parametros) {
+                var url = UrlArchivo;
+                var pars = Parametros;
+                var respuesta;
+                new Ajax.Request(
+                            url, {
+                                method: 'post',
+                                asynchronous: false,
+                                parameters: pars,
+                                onSuccess: function (transport) { respuesta = transport.responseText; }, //actualizamos 
+                                onFailure: function (transport) { alert(transport.responseText); }
+                            });
+                return respuesta;
+            }
+
+            var txtFechaBandera = null;
+            function Calendar_Click(sender, eventArgs) {
+                //debugger;
+                var txtFecha = ObtenerControlFecha()
+                txtFecha.focus();
+            }
+
+            function _ValidarFechaEnPeriodo() {
+                //debugger;
+                var fecha = null;
+                var txtFecha = ObtenerControlFecha();
+                if (txtFecha != null) {
+                    fecha = txtFecha.get_selectedDate();
+                    var fechaPeriodoInicio = new Date('<%= AñoInicio %>', '<%= MesInicio %>', '<%= DiaInicio %>');
+                    var fechaPeriodoFin = new Date('<%= AñoFin %>', '<%= MesFin  %>', '<%= DiaFin %>');
+
+                    //si la fecha no esta dentro del periodo el foco se queda en el control y se manda alerta
+                    if (fecha == null || (fecha < fechaPeriodoInicio || fecha > fechaPeriodoFin)) {
+                        var mensage = 'La fecha se encuentra fuera del periodo</br></br>';
+                        var alerta = radalert(mensage, 350, 150, '');
+
+                        txtFechaBandera = true;
+                        alerta.add_close(
+                            function () {
+                                //debugger;
+                                txtFecha = ObtenerControlFecha();
+                                txtFecha.focus();
+                            });
+                        return false;
+                    }
+                }
+                txtFechaBandera = false;
+                return true;
+            }
+            //   REPORTES
+            function AbrirReporte() {
+                //debugger;
+                var oWnd = radopen("Ventana_ReportViewer.aspx", "RWReporte");
+                oWnd.center();
+                //                window.open("Ventana_ReportViewer.aspx", "WindowPopup", "Width=900px Height=600px, resizable");
+                return true;
+            }
+            function AbrirReporteCve(cve) {
+                //debugger;
+                var oWnd = radopen("Ventana_ReportViewer.aspx?cve=" + cve + "&Id='" + Math.random() + "'", "RWReporte");
+                oWnd.center();
+                return true;
+            }
+            function AbrirVentana_PagoDif() {
+                var oWnd = radopen("CapPago_Dif.aspx", "AbrirVentana_DifPago");
+                oWnd.center();
+                return true;
+            }
+
+            function CerrarWindow_Event(sender, eventArgs) {
+                refreshGrid();
+            }
+            function CerrarWindow(sender, eventArgs) {
+                //debugger;
+            }
+            //Deshabilita el regresar
+            window.history.forward(1);
+            //-----------------
+            //Deshabilita el F5
+            document.onkeydown = function () {
+                //alert('keycode='+event.keyCode + 'event.ctrlKey='+event.ctrlKey ); 
+                switch (event.keyCode) {
+                    case 116: //F5 
+                        event.returnValue = false;
+                        event.keyCode = 0;
+                        //window.status = 'Refresh is disabled';
+                        return false;
+                        break;
+                    case 78: //n 
+                        if (event.ctrlKey) {
+                            event.returnValue = false;
+                            event.keyCode = 0;
+                            //window.status = 'New window is disabled';
+                            return false;
+                        }
+                        break;
+                    case 82: //r 
+                        if (event.ctrlKey) {
+                            event.returnValue = false;
+                            event.keyCode = 0;
+                            //window.status = 'Refresh is disabled';
+                            return false;
+                        }
+                        break;
+                    //                    case 86: //v                                  
+
+                    //                        if (event.ctrlKey) {                                 
+                    //                            event.returnValue = false;                                 
+                    //                            event.keyCode = 0;                                 
+                    //                            //window.status = 'Paste is disabled';                                 
+                    //                            return false;                                 
+                    //                        }                                 
+                    //                        break;                                 
+                   /* case 45: //insert
+                    
+                        event.returnValue = false;
+                        event.keyCode = 0;
+                        //window.status = 'Paste is disabled';
+                        return false;
+                        break;*/
+                }
+            }
+            //-----------------
+
+            //disable right mouse click Script 
+            document.onmousedown = "if (event.button==2) return false";
+            document.oncontextmenu = new Function("return false");
+
+            function ObtenerCentroVer(cd) {
+                //debugger;
+                var urlArchivo = 'ObtenerCentroVer.aspx';
+                parametros = "cd=" + cd;
+
+                var resultado = obtenerrequest(urlArchivo, parametros)
+                if (resultado == 'NO') {
+                    window.location.href("Login.aspx");
+                }
+                else if (resultado != 'OK') {
+                    radalert(resultado, 330, 150);
+                }
+            }
+
+
+
+            function startDownload(url) {
+
+                window.open("Reportes/" + url + "?random='" + Math.random() + "'", "_self");
+            }
+
+            var bandera = null;
+            function ExportReport(argumento) {
+                bandera = argumento;
+            }
+        </script>
+    </telerik:RadCodeBlock>
+    </form>
+</body>
+</html>

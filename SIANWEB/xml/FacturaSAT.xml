@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Comprobante serie="CEE" folio="806" fecha="2010-04-21T17:30:06" formaDePago="PAGO EN UNA SOLA EXHIBICION" subTotal="3237.2" total="3755.15" tipoDeComprobante="ingreso">
+  <Receptor rfc="CME720930GM9" nombre="CHRYSLER DE MEXICO S.A. DE C.V." Domiciliocalle="PROLONGACION PASEO DE LA REFORMA" noExterior="1240" colonia="SANTA FE" municipio="DISTRITO FEDERAL" estado="DF" pais="MEXICO" codigoPostal="05109">
+  </Receptor>
+  <Conceptos>
+    <Concepto cantidad="200.00" noIdentificacion="122660597" descripcion="BIOACTIV 300" valorUnitario="13.25" importe="2650.00" />
+  </Conceptos>
+  <Impuestos totalImpuestosTrasladados="517.95">
+    <Traslados>
+      <Traslado impuesto="IVA" tasa="16.00" importe="517.95" />
+    </Traslados>
+  </Impuestos>
+  <Addenda>
+    <cabecera Pedido="" Requisicion="" consignarRenglon1="" consignarRenglon2="" consignarRenglon3="" consignarRenglon4="" consignarRenglon5="" Conducto="" CondicionesPago="" NumeroGuia="" ControlPedido="" OrdenEmbarque="" Zona="" Territorio="" Agente="" NumeroDocumentoAduanero="" Formulo="" Autorizo="" />
+    <Detalle noProducto="122660597" UnidadMedida="" />
+  </Addenda>
+</Comprobante>

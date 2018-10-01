@@ -1,0 +1,300 @@
+/* CSS Document */
+body {margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#142F6D; background:#f2f2f2;  text-align:center;}
+img {border:0px;}
+form, td, tr, table, p, ul, h1, h2, h3, h4, h5, h6, h7, div, select, imput{padding:0px; margin:0px; font-size:12px;  font-family:Arial, Helvetica, sans-serif;}
+
+select { font-size:12px;color:#000; background:#fff; border:#ccc 1px solid;padding:2px; font-weight:normal; }
+textarea, input {font-size:12px; color:#000; background:#fff; border:#ccc 1px solid; font-weight:normal; }
+
+.ic_tool{ width:25px; float:left; text-align:center;}
+
+.sel1{ width:210px; margin:9px;}
+.sel2{ width:210px; margin:4px;}
+.inp1{ width:210px; margin:9px;}
+.inp2{ width:250px; margin:9px;}
+.inp3{
+	width:350px;
+	margin:9px;
+}
+.inp4{ width:150px; margin:9px;}
+.inp5{ width:90px; margin:3px;}
+
+.btn_exp {
+	background:url(../img/ic_1.gif) 0px 0px no-repeat;
+	padding: 5px 0px 0px 30px; height:22px;
+	float: right;
+}.btn_add{
+	background:url(../img/ic_2.jpg) 0px 0px no-repeat;
+	padding: 5px 0px 0px 30px; height:22px;
+	float: right;
+}
+.btn_add_conts{
+	background:url(../img/ic_conts.gif) 0px 0px no-repeat;
+	padding: 5px 0px 0px 40px; height:22px; font-size:11px;
+	text-align: left;
+	height:27px;font-weight: bold; color:#000; text-decoration:none;
+	float: right;
+}
+.btn_add_conts:hover{color:#00AEEF;}
+
+.btn_apl_filt {
+	background:url(../img/btn_filtro.jpg) 0px 0px no-repeat; font-size:11px;
+	padding: 5px 0px 0px 10px;
+	height:27px;
+	width:131px;
+	float: right;font-weight: bold; color:#000; text-decoration:none;
+}
+.btn_apl_filt:hover{color:#00AEEF;}
+
+.btn_guardar{ background:url(../img/btn_guardar.jpg) no-repeat;
+	font-size:11px;
+	padding: 7px 0px 0px 10px; text-align: left;margin:10px;
+	height:27px;
+	width:99px;
+	float: right;font-weight: bold; color:#000; text-decoration:none;
+}
+.btn_guardar:hover{color:#00AEEF;}
+
+.btn_regresar{ background: url(../img/btn_regresar.jpg) no-repeat;
+	font-size:11px;
+	padding: 7px 0px 0px 10px; text-align:left; margin:10px;
+	height:27px;
+	width:106px;
+	float: right;font-weight: bold; color:#000; text-decoration:none;
+}
+.btn_regresar:hover{color:#00AEEF;}
+
+
+.filtro_t1{
+	width: 332px;
+	height: 132px;
+	margin: 57px 40px 30px 54px;
+	background: #f1f1f7;
+	float: left;
+}
+.filtro_t2{
+	width: 332px;
+	height: 132px;
+	margin: 0px 0px 0px 54px;
+	background: #f1f1f7;
+	float: left;
+}
+.filtro_busqueda{
+	height: 40px;
+	margin: 16px 0px 0px 54px;
+	float: left;
+}
+.lupa{height:40px; background:url(../img/lupa.jpg)  right no-repeat;}
+.lupa2{
+	height:40px;
+	background:url(../img/lupa2.jpg) 600px 0px no-repeat;
+	width:900px;
+}
+.alta_cientes{
+	width: 900px;
+	height: 40px;
+	margin: 16px 0px 30px 55px;
+	background: url(../img/bg_lupa2.gif);
+	text-align: center;
+}
+.detalle_cliente{
+	width: 884px;
+	height: 214px;
+	margin: 16px 0px 30px 55px;
+	background: url(../img/bg_detalle.jpg);
+	text-align: center;
+}
+.detalle{
+	width: 884px;
+	height: 214px;
+	margin: 16px 0px 30px 55px;
+	text-align: center;
+}
+
+.filtro_boton{
+	width: 332px;
+	margin: 8px 0px 0px 54px;
+	font-weight: bold;
+	float: left;
+}
+
+.alta{
+	width: 332px;
+	height: 132px;
+	margin: 57px 40px 30px 54px;
+	float: left;
+	background: #183987;
+}
+.alta_cliente{
+	width: 342px;
+	height: 40px;
+	margin: 16px 0px 0px 54px;
+	background: url(../img/bg_lupa.jpg);
+	float: left;
+}
+
+.blanco{color:#FFF;}
+
+#centrador{ margin-left:auto; margin-right:auto; }
+
+.logo{
+	float:left;
+	padding-left: 50px;
+}
+
+.menu{
+	float: right;
+	padding:29px 0px 0px 0px;
+}
+
+.menu_sesion {
+	float:right;
+	height:15px;
+	padding:0px 30px 0px auto;
+	text-align:right;
+	width: 920px;
+} 
+
+.header{
+	margin: 0px auto 0px auto;
+	width: 1000px;
+	height: 131px;
+	border-top: 5px solid #116DBC;
+	background: #00AEEF;
+}
+.header_log{
+	margin: 0px auto 0px auto;
+	width: 1000px;
+	height: 131px;
+	background: #00AEEF;
+}
+
+.contenido{
+	margin: 0px auto 0px auto;
+	background:#FFFFFF url(../img/bg_cont.jpg) repeat-x;
+	width: 1000px;
+	border-top: 2px solid #fff;
+	text-align: left;
+}
+
+.sesion_tools{
+	font-size:11px;
+	color: 666;
+}
+
+.sesion_tools a{font-size:11px; color:#00aeef;}
+.sesion_tools a:hover{font-size:11px; color:#00aeef; text-decoration:none;}
+
+.tit_secc{
+	padding:35px 0px 35px 50px;
+	margin: 0px auto 0px auto;
+	text-align: left;
+}
+.filto_proyectos{
+	background:url(../img/bg_filtro.jpg);
+	width:883px;
+	height:227px;
+	margin: 0px 0px 30px 55px;
+}
+.alta_proyectos{
+	background:url(../img/bg_datos.jpg);
+	width:883px;
+	height:211px;
+	margin: 0px 0px 30px 55px;
+}
+
+.tit_rojo{
+	background:url(../img/bg_tit_1.gif);
+	width:884px;
+	height:26px;
+	text-align: left;
+	margin-bottom: 3px;
+}
+.botones_tabla{
+	width:884px;
+	height:26px;
+	margin-bottom: 3px;
+	text-align: right;
+}
+
+.botones_tabla a{font-size:11px;  margin-left:30px; text-align: left;font-weight: bold; color:#000; text-decoration:none;}
+.botones_tabla a:hover{color:#00AEEF;}
+
+.tit_rojo2{
+	text-align: left;
+	margin-bottom: 2px;
+	background: #ae0000;
+}
+.tit_azul{
+	text-align: center;
+	font-size:12px;
+	font-weight:bold;
+	padding-top:5px;
+	color:#fff;
+	margin-bottom: 2px;
+	background: #5779BC;
+	height: 23px;
+	width: 894px;
+}
+.tabla1{
+	width:910px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 250px;
+}
+.tabla_control_promocion{
+	width:900px;
+	text-align: left;
+	margin-left: 55px;
+}
+.tabla_detalles{
+	width:894px;
+	text-align: left;
+	margin: 0px 0px 20px 55px;
+}
+.tabla_totales{
+
+}
+
+.tr_tot1{background:#f3f4f8; font-size:12px; text-align:center; padding:10px;}
+.tr_tot1 p{padding:2px;font-size: 11px;}
+.tr_tot2 {background:#183987; color:#FFF; font-size:11px; font-weight:bold; text-align:center;}
+.tr_tot2 p{ padding:5px;font-size: 11px;}
+.tr_tit{background:#183987; color:#FFF; font-size:11px; font-weight:bold; text-align:center;}
+.tr_2{background:#f3f4f8; font-size:12px; text-align:center; padding:10px;}
+.tr_1{background:#fff; font-size:12px;text-align:center; padding:10px;}
+
+.tr_1 p{padding:5px;}
+.tr_2 p{padding:5px;}
+.tr_tit p{
+	padding:5px;
+	font-size: 11px;
+}
+.rojo{ color:#F00;}
+.td_bg1{background:#bec8e8;}
+
+
+.footer{
+	background:#00AEEF;
+	height:27px;
+	width: 1000px;
+	color: #fff;
+	text-align: left;
+	margin: 0px auto 0px auto;
+}
+
+.footer td{	font-size: 11px; color: #fff;}
+.footer a{font-size: 11px; color: #fff; padding-left:30px; text-decoration:none; font-weight:bold;}
+.footer a:hover{ text-decoration:underline;}
+
+.contacto{width:700px; text-align:left; padding:10px 0px 0px 20px;}
+
+.contacto h3 { color:#689e17; font-size:16px; font-weight:bold; padding: 10px 0px 10px 0px}
+.bolder{ font-weight:bold;}
+
+.ModalBackground
+{
+	background-color:#fffffd;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}

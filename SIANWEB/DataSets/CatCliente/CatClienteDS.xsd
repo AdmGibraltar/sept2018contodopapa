@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CatClienteDS" targetNamespace="http://tempuri.org/CatClienteDS.xsd" xmlns:mstns="http://tempuri.org/CatClienteDS.xsd" xmlns="http://tempuri.org/CatClienteDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CatClienteDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CatClienteDS" msprop:Generator_UserDSName="CatClienteDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CatClienteDet" msprop:Generator_TableClassName="CatClienteDetDataTable" msprop:Generator_TableVarName="tableCatClienteDet" msprop:Generator_RowChangedName="CatClienteDetRowChanged" msprop:Generator_TablePropName="CatClienteDet" msprop:Generator_RowDeletingName="CatClienteDetRowDeleting" msprop:Generator_RowChangingName="CatClienteDetRowChanging" msprop:Generator_RowEvHandlerName="CatClienteDetRowChangeEventHandler" msprop:Generator_RowDeletedName="CatClienteDetRowDeleted" msprop:Generator_RowClassName="CatClienteDetRow" msprop:Generator_UserTableName="CatClienteDet" msprop:Generator_RowEvArgName="CatClienteDetRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_CteDet" msprop:Generator_ColumnVarNameInTable="columnId_CteDet" msprop:Generator_ColumnPropNameInRow="Id_CteDet" msprop:Generator_ColumnPropNameInTable="Id_CteDetColumn" msprop:Generator_UserColumnName="Id_CteDet" type="xs:string" minOccurs="0" />
+              <xs:element name="Tradicional" msprop:Generator_ColumnVarNameInTable="columnTradicional" msprop:Generator_ColumnPropNameInRow="Tradicional" msprop:Generator_ColumnPropNameInTable="TradicionalColumn" msprop:Generator_UserColumnName="Tradicional" type="xs:string" minOccurs="0" />
+              <xs:element name="Garantia" msprop:Generator_ColumnVarNameInTable="columnGarantia" msprop:Generator_ColumnPropNameInRow="Garantia" msprop:Generator_ColumnPropNameInTable="GarantiaColumn" msprop:Generator_UserColumnName="Garantia" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CatClienteDetGarantia" msprop:Generator_TableClassName="CatClienteDetGarantiaDataTable" msprop:Generator_TableVarName="tableCatClienteDetGarantia" msprop:Generator_RowChangedName="CatClienteDetGarantiaRowChanged" msprop:Generator_TablePropName="CatClienteDetGarantia" msprop:Generator_RowDeletingName="CatClienteDetGarantiaRowDeleting" msprop:Generator_RowChangingName="CatClienteDetGarantiaRowChanging" msprop:Generator_RowEvHandlerName="CatClienteDetGarantiaRowChangeEventHandler" msprop:Generator_RowDeletedName="CatClienteDetGarantiaRowDeleted" msprop:Generator_RowClassName="CatClienteDetGarantiaRow" msprop:Generator_UserTableName="CatClienteDetGarantia" msprop:Generator_RowEvArgName="CatClienteDetGarantiaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_Emp" msprop:Generator_ColumnVarNameInTable="columnId_Emp" msprop:Generator_ColumnPropNameInRow="Id_Emp" msprop:Generator_ColumnPropNameInTable="Id_EmpColumn" msprop:Generator_UserColumnName="Id_Emp" type="xs:string" minOccurs="0" />
+              <xs:element name="Id_Cd" msprop:Generator_ColumnVarNameInTable="columnId_Cd" msprop:Generator_ColumnPropNameInRow="Id_Cd" msprop:Generator_ColumnPropNameInTable="Id_CdColumn" msprop:Generator_UserColumnName="Id_Cd" type="xs:string" minOccurs="0" />
+              <xs:element name="Id_Cte" msprop:Generator_ColumnVarNameInTable="columnId_Cte" msprop:Generator_ColumnPropNameInRow="Id_Cte" msprop:Generator_ColumnPropNameInTable="Id_CteColumn" msprop:Generator_UserColumnName="Id_Cte" type="xs:string" minOccurs="0" />
+              <xs:element name="Id_CteDet" msprop:Generator_ColumnVarNameInTable="columnId_CteDet" msprop:Generator_ColumnPropNameInRow="Id_CteDet" msprop:Generator_ColumnPropNameInTable="Id_CteDetColumn" msprop:Generator_UserColumnName="Id_CteDet" type="xs:string" minOccurs="0" />
+              <xs:element name="Id_TG" msprop:Generator_ColumnVarNameInTable="columnId_TG" msprop:Generator_ColumnPropNameInRow="Id_TG" msprop:Generator_ColumnPropNameInTable="Id_TGColumn" msprop:Generator_UserColumnName="Id_TG" type="xs:string" minOccurs="0" />
+              <xs:element name="Id_CteDetGtia" msprop:Generator_ColumnVarNameInTable="columnId_CteDetGtia" msprop:Generator_ColumnPropNameInRow="Id_CteDetGtia" msprop:Generator_ColumnPropNameInTable="Id_CteDetGtiaColumn" msprop:Generator_UserColumnName="Id_CteDetGtia" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="CatClienteDet_CatClienteDetGarantia" msdata:parent="CatClienteDet" msdata:child="CatClienteDetGarantia" msdata:parentkey="Id_CteDet" msdata:childkey="Id_CteDet" msprop:Generator_UserChildTable="CatClienteDetGarantia" msprop:Generator_ChildPropName="GetCatClienteDetGarantiaRows" msprop:Generator_UserRelationName="CatClienteDet_CatClienteDetGarantia" msprop:Generator_RelationVarName="relationCatClienteDet_CatClienteDetGarantia" msprop:Generator_UserParentTable="CatClienteDet" msprop:Generator_ParentPropName="CatClienteDetRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

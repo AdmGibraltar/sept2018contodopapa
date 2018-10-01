@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5972D00B-0C01-4370-B7D4-1CAC3A4338FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaModelo_CC</RootNamespace>
+    <AssemblyName>CapaModelo_CC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\SIANWEB\bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\SIANWEB\bin\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buddy\Class1.cs" />
+    <Compile Include="CuentasCoorporativas\CapAcy.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CapAcysDatosGarantia.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CapAcysDet.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CapAcysExt.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CapAcys_CNacCondPago.cs" />
+    <Compile Include="CuentasCoorporativas\CapACYS_CNacRecPedido.cs" />
+    <Compile Include="CuentasCoorporativas\CapAcys_CNacServValor.cs" />
+    <Compile Include="CuentasCoorporativas\CapConfiguracionGlobal.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CapNotificacionExcesoMeta.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CapRemision.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatACYSProductos_DatosGar.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatACYS_Cliente.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatACYS_CondPago.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatACYS_DirFiscales.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatACYS_OtrosApoyos.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatAcys_Productos.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatACYS_Productos_DatosGar.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatACYS_Productos_DatosGar_Fechas.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatACYS_RecPedido.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatACYS_ServValor.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatACYS_SIANCENTRAL.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatCliente.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatClienteDet.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatClienteDetGarantia.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatCNac_ACYS.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatCNac_EstatusSolicitudes.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatCNac_Estructura.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatCNac_Matriz.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatCNac_PermisosCamposACYS.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatCNac_RemisionesMov80.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatCNac_Solicitudes.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatCNac_Solicitudes_DirFiscal.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatCNac_Usuario.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatTerritorio.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatTipoGarantia.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CatTipoVenta.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\CrmOportunidade.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\Intra_CFD_CuentaNacional.cs" />
+    <Compile Include="CuentasCoorporativas\SIANWEBMTY_CC.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIANWEBMTY_CC.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\SIANWEBMTY_CC1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\SIANWebMTY_CC1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIANWebMTY_CC.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\spCapRemision_CalcularUtilidadPrimaReal_Result.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\spCatCNac_DireccionesFiscales_Result.cs">
+      <DependentUpon>SIANWEBMTY_CC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasCoorporativas\spCNac_DatosACYSCN_Result.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="CuentasCoorporativas\SIANWEBMTY_CC.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SIANWEBMTY_CC.Context1.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="CuentasCoorporativas\SIANWebMTY_CC.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SIANWebMTY_CC1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CuentasCoorporativas\SIANWEBMTY_CC.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SIANWEBMTY_CC1.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

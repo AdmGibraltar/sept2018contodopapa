@@ -1,0 +1,20 @@
+nav .nombre-plugin {font-size: 20px}
+nav .link-post {padding-top: 5px}
+.navbar {margin-bottom:0}
+
+.container.container-nav {padding:0}
+.container .menu-onepage {background:#20368A; border:none}
+#onepage-nav li a {font-size:17px; color:#FFF}
+#onepage-nav li a:hover, #onepage-nav li.active a, #onepage-nav li.current a {background:#0072C6}
+
+#onepage-intro {background: #1A3E7B}
+#onepage-menu {background: #1F5F9F}
+#onepage-secciones {background: #3591CA}
+#onepage-script {background: #52B5D5}
+#onepage-adv-script {background: #5AC3E6}
+
+.container .section {padding:100px 60px; border-top:2px solid #fff}
+.container .section p {font-size:30px; color:#FFF; text-shadow: 3px 0px 5px rgba(150, 150, 150, 1);}
+.container .section p .html-code {color:#C2C2C2}
+.container .section ul {list-style: none}
+.container .section h2 {font-size:55px; color:#CCC;text-shadow: 3px 0px 5px rgba(150, 150, 150, 1); margin:0}

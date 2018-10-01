@@ -1,0 +1,482 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CMasterPage01.Master.cs"
+    Inherits="SIANWEB.CMasterPage01" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Import Namespace="CapaEntidad" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server">
+    </telerik:RadStyleSheetManager>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <title></title>
+    <%--    <link href="../Styles/styles.css" rel="stylesheet" type="text/css" />--%>
+    <link href="../Styles/Toolbar.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .html, body, form
+        {
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            height: auto;
+        }
+        .menuPanes
+        {
+            overflow: visible !important;
+        }
+        .formulario
+        {
+            font-family: Arial;
+            font-size: 12px;
+        }
+        
+        .dvstyle
+        {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <link href="../Styles/Menu.Sian2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnableScriptGlobalization="True"
+        EnableScriptLocalization="True" EnableTheming="true">
+    </telerik:RadScriptManager>
+    <div id="ParentDivElement" class="dvstyle">
+        <telerik:RadFormDecorator ID="RadFormDecorator1" runat="server" DecoratedControls="All" />
+        <telerik:RadSplitter ID="MainSplitter" runat="server" Orientation="Horizontal" VisibleDuringInit="False"
+            ResizeMode="AdjacentPane" Height="100%" Width="100%">
+            <telerik:RadPane ID="TopPane" runat="server" Height="100" MinHeight="100" MaxHeight="100"
+                Scrolling="none" CssClass="menuPanes">
+                <!--COntenido-->
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <asp:Image ID="ImgLogo" runat="server" ImageUrl="~/Imagenes/logo.jpg" Height="65px" />
+                        </td>
+                        <td align="right">
+                            <table id="TblEncabezadoMaster" runat="server" style="font-family: Verdana; font-size: 8pt">
+                                <tr>
+                                    <td rowspan="2">
+                                        <telerik:RadSkinManager ID="RadSkinManager1" runat="server" PersistenceMode="Session"
+                                            Skin="Outlook">
+                                        </telerik:RadSkinManager>
+                                        <asp:HiddenField ID="HiddenField1" runat="server" Visible="False" />
+                                        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td align="right">
+                                        <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="Black" Font-Underline="false"
+                                            PostBackUrl="~/Login.aspx?Id=1">Salir</asp:LinkButton>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td align="right">
+                                        &nbsp;
+                                        <asp:Label ID="lblNombre" runat="server" Font-Bold="True"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <telerik:RadMenu ID="RadMenu1" runat="server" Width="100%" Style="text-align: left;
+                    float: none; z-index: 1" EnableEmbeddedSkins="False" Skin="SIAN2" EnableRoundedCorners="True">
+                </telerik:RadMenu>
+            </telerik:RadPane>
+            <telerik:RadSplitBar ID="RadSplitBar1" runat="server" CollapseMode="Forward" CollapseExpandPaneText="Colapsar/Expandir" />
+            <telerik:RadPane ID="RadPane2" runat="server" MinWidth="500" Scrolling="none">
+                <telerik:RadSplitter ID="RadSplitter2" runat="server" LiveResize="true">
+                    <telerik:RadPane ID="RadPane4" runat="server">
+                        <div class="header" style="vertical-align: middle; background-color: #d0c8c5">
+                            <table width="100%" style="position: relative">
+                                <tr>
+                                    <td align="left">
+                                        <asp:RadioButton ID="RadioButton1" runat="server" Checked="true" Font-Bold="true"
+                                            Font-Size="9pt" Font-Names="Verdana" Text="" ForeColor="#474D6F" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <asp:ContentPlaceHolder ID="CPH" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </telerik:RadPane>
+                    <telerik:RadPane ID="EndPane" runat="server" Width="22" Scrolling="none">
+                        <telerik:RadSlidingZone ID="Radslidingzone1" runat="server" Width="24" DockedPaneId="Radslidingpane2"
+                            SlideDirection="Left" ClickToOpen="True">
+                            <telerik:RadSlidingPane ID="Radslidingpane1" Title="Herramientas" runat="server"
+                                Width="130" CollapseText="Cerrar" DockText="Fijo" UndockText="Móvil" IconUrl="~/Imagenes/AccesosRapidos/herr2.png">
+                                <%----%>
+                                <div align="center">
+                                    <telerik:RadPanelBar runat="server" ID="RadPanelBar1" Height="95%" Width="123px">
+                                        <Items>
+                                            <telerik:RadPanelItem Text="Preferencias">
+                                                <Items>
+                                                    <telerik:RadPanelItem>
+                                                        <ItemTemplate>
+                                                            <table>
+                                                                <tr>
+                                                                    <td valign="middle" align="center">
+                                                                        <asp:ImageButton ID="imgPassword" runat="server" OnClientClick="AbrirContrasenas(); return false;"
+                                                                            ToolTip="Modificar contraseña" Style="cursor: hand" CssClass="passwordH" ImageUrl="../Imagenes/blank.png" />
+                                                                        <%--ImageUrl="~/Imagenes/AccesosRapidos/message_add.png"--%>
+                                                                    </td>
+                                                                    <td style="width: 60px">
+                                                                        Contraseña
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </ItemTemplate>
+                                                    </telerik:RadPanelItem>
+                                                    <telerik:RadPanelItem>
+                                                        <ItemTemplate>
+                                                            <table>
+                                                                <tr>
+                                                                    <td valign="middle" align="center">
+                                                                        <asp:ImageButton ID="imgConfCorreo" runat="server" ToolTip="Configurar opciones de correo"
+                                                                            OnClientClick="AbrirConfiguracionCorreo(); return false;" Style="cursor: hand"
+                                                                            ImageUrl="../Imagenes/blank.png" CssClass="confH" /><%--ImageUrl="~/Imagenes/AccesosRapidos/messagebox_info.png"--%>
+                                                                    </td>
+                                                                    <td style="width: 60px">
+                                                                        Correo
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </ItemTemplate>
+                                                    </telerik:RadPanelItem>
+                                                    <telerik:RadPanelItem>
+                                                        <ItemTemplate>
+                                                            <table>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">
+                                                                        <asp:ImageButton ID="imgConfCorreo" runat="server" CssClass="confH" ImageUrl="../Imagenes/blank.png"
+                                                                            OnClientClick="AbrirConfiguracionExpCli(); return false;" Style="cursor: hand"
+                                                                            ToolTip="Configurar filtro de búsqueda" />
+                                                                        <%--ImageUrl="~/Imagenes/AccesosRapidos/confCorreo.png"--%>
+                                                                    </td>
+                                                                    <td style="width: 60px">
+                                                                        Clientes
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </ItemTemplate>
+                                                    </telerik:RadPanelItem>
+                                                </Items>
+                                            </telerik:RadPanelItem>
+                                        </Items>
+                                    </telerik:RadPanelBar>
+                                </div>
+                            </telerik:RadSlidingPane>
+                        </telerik:RadSlidingZone>
+                    </telerik:RadPane>
+                </telerik:RadSplitter>
+            </telerik:RadPane>
+        </telerik:RadSplitter>
+    </div>
+    <telerik:RadCodeBlock ID="RadCodeBlock2" runat="server">
+        <script src="Scripts/prototype.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function OpenPositionedWindow(oButton, url, windowName) {
+                var oWnd = window.radopen(url, windowName);
+            }
+
+            function AbrirContrasenas() {
+                var oWnd = radopen("Ventana_ModContrasena.aspx", "RadWindowContrasena");
+                oWnd.center();
+                return true;
+            }
+
+            //**********************************************************************//
+            // funciones para evaluar datos numericos y decimales en cajas de texto //
+            //**********************************************************************//
+
+            function SoloNumerico(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if (c < 48 || c > 57) //si no es numero
+                    eventArgs.set_cancel(true);
+            }
+
+            function SoloNumericoYPunto(sender, eventArgs) {
+                var c = eventArgs.get_keyCode();
+                if ((c < 48 || c > 57))//si no es numero
+                    if (c != 46) //si no es punto
+                        eventArgs.set_cancel(true);
+            }
+
+            function SoloAlfabetico(sender, eventArgs) {
+                //debugger;
+                var c = eventArgs.get_keyCode();
+                if ((c < 32) || (c > 32 && c < 65) || (c > 90 && c < 97) || (c > 122 && c < 193) || (c > 193 && c < 201) || (c > 201 && c < 205) || (c > 205 && c < 209) || (c > 209 && c < 211) || (c > 211 && c < 218) || (c > 218 && c < 225) || (c > 225 && c < 233) || (c > 233 && c < 237) || (c > 237 && c < 241) || (c > 241 && c < 243) || (c > 243 && c < 250) || (c > 250))
+                    eventArgs.set_cancel(true);
+            }
+
+            function SoloAlfanumerico(sender, eventArgs) {
+                //debugger;
+                var c = eventArgs.get_keyCode();
+                if ((c < 32) || (c > 32 && c < 46) || (c > 46 && c < 48) || (c > 57 && c < 65) || (c > 90 && c < 97) || (c > 122 && c < 124) || (c > 124 && c < 193) || (c > 193 && c < 201) || (c > 201 && c < 205) || (c > 205 && c < 209) || (c > 209 && c < 211) || (c > 211 && c < 218) || (c > 218 && c < 225) || (c > 225 && c < 233) || (c > 233 && c < 237) || (c > 237 && c < 241) || (c > 241 && c < 243) || (c > 243 && c < 250) || (c > 250))
+                    eventArgs.set_cancel(true);
+
+            }
+
+            function Email(sender, eventArgs) {
+
+                var c = eventArgs.get_keyCode();
+                if ((c < 44) || (c > 46 && c < 48) || (c > 57 && c < 59) || (c > 59 && c < 64) || (c > 90 && c < 95) || (c > 95 && c < 97) || (c > 122 && c < 209) || (c > 209 && c < 241) || (c > 241))
+                    eventArgs.set_cancel(true);
+            }
+            function EmailMultiple(sender, eventArgs) {
+
+                var c = eventArgs.get_keyCode();
+                if ((c < 44) || (c > 46 && c < 48) || (c > 57 && c < 64) || (c > 90 && c < 95) || (c > 95 && c < 97) || (c > 122 && c < 124) || (c > 124 && c < 209) || (c > 209 && c < 241) || (c > 241))
+                    eventArgs.set_cancel(true);
+            }
+            function handleClickEvent(sender, eventArgs) {
+                var key = eventArgs.get_keyCode();
+                if (key && key == 13)
+                    eventArgs.set_cancel(true);
+            }
+
+            //titulo de mensajes de alerta
+            var tituloMensajes = '';
+
+            //******************************************************************//
+            // funciones comunes para cadenas                                   //
+            //******************************************************************//
+
+            // Recortar los espacios del lado izquierdo de una cadena
+            function LTrim(str) {
+                if (str == null) {
+                    return null;
+                }
+                for (var i = 0; str.charAt(i) == " "; i++);
+                return str.substring(i, str.length);
+            }
+
+            // Recortar los espacios del lado derecho de una cadena
+            function RTrim(str) {
+                if (str == null) {
+                    return null;
+                }
+                for (var i = str.length - 1; str.charAt(i) == " "; i--);
+                return str.substring(0, i + 1);
+            }
+
+            // Recortar los espacios de los extremos de una cadena
+            function Trim(str) {
+                return LTrim(RTrim(str));
+            }
+
+
+
+            //******************************************************************//
+            // Las siguientes funciones limpian controles comunes de formulario //
+            //******************************************************************//
+
+            //Limpiar cajas de texto: radDatePicker
+            //param sender --> objeto a limpiar
+            function LimpiarDatePicker(sender) {
+                sender.clear()
+            }
+
+            //Limpiar cajas de texto: radTextBox, radNumericTextBox, radDatePicker
+            //param sender --> objeto a limpiar
+            function LimpiarTextBox(sender) {
+                sender.clear()
+                sender.enable()
+            }
+
+            //Limpiar radComboBox
+            //param sender --> objeto a limpiar
+            function LimpiarCombo(sender) {
+                sender.clearSelection()
+            }
+
+            //Limpiar radComboBox
+            //param sender --> objeto a limpiar
+            //NOTA: selecciona el primer item del combo que debe contener el texto '-- seleccionar --'
+            function LimpiarComboSelectIndex0(sender) {
+                if (sender.get_items().get_count() > 0) {
+                    sender.get_items().getItem(0).select();
+                    sender.set_value('-- Seleccionar --');
+                }
+            }
+
+            //Limpiar CheckBox
+            //param sender --> objeto a limpiar
+            function LimpiarCheckBox(sender, isChecked) {
+                sender.checked = isChecked;
+            }
+
+            //Limpiar RadioButtonList
+            //param sender --> objeto a limpiar
+            //param: indexSelect --> recibe el indice del option que se desee que este seleccionado por default
+            function LimpiarRadioButtonGroup(sender, indexSelect) {
+                sender.getElementsByTagName('INPUT')[indexSelect].checked = true;
+            }
+
+
+
+            //--------------------------------------------------------------------------------------------------
+            //Cuando el combo pierde el foco
+            //Si el usuario escribió y no eligió un item correcto limpia el combo
+            //--------------------------------------------------------------------------------------------------
+            function Combo_ClientBlur(sender, args) {
+                //debugger;
+                var itemSelected = sender.findItemByText(sender.get_text())
+                if (itemSelected == null) {
+                    LimpiarComboSelectIndex0(sender);
+                }
+            }
+
+            function OnBlur(textbox, combo) {
+                //debugger;
+
+                if (combo.get_items().getItem(0) == null) {
+                    return;
+                }
+
+                var itemSelect = false;
+                if (!txtFechaBandera) { //no ejecuta el siguiente bloque si la bandera de validacion de fecha de captura esta activada
+
+                    for (var i = 0; i < combo.get_items().get_count(); i++) {
+                        var item = combo.get_items().getItem(i);
+                        if (textbox.get_value() == item.get_value()) {
+                            itemSelect = true;
+                            if (textbox.get_value() != combo.get_value()) {
+                                combo.get_items().getItem(i).select();
+                            }
+                            break;
+                        }
+                    }
+
+                    if (!itemSelect) {
+                        if (combo.get_value() != '-1') {
+                            combo.get_items().getItem(0).select()
+                        }
+                        else {
+                            textbox.set_value('');
+                        }
+                    }
+
+                }
+            }
+
+            function ClientSelectedIndexChanged(item, txt) {
+                //debugger;
+                if (item != null)
+                    if (item.get_value() != '-1')
+                        txt.set_value(item.get_value());
+                    else
+                        txt.set_value('');
+            }
+
+
+            function obtenerrequest(UrlArchivo, Parametros) {
+                var url = UrlArchivo;
+                var pars = Parametros;
+                var respuesta;
+
+                new Ajax.Request(
+                            url,
+                            {
+                                method: 'post',
+                                asynchronous: false,
+                                parameters: pars,
+                                onSuccess: function (transport) { respuesta = transport.responseText; }, //actualizamos 
+                                onFailure: function (transport) { alert(transport.responseText); }
+                            });
+
+                return respuesta;
+            }
+
+            var txtFechaBandera = null;
+            function Calendar_Click(sender, eventArgs) {
+                //debugger;
+                var txtFecha = ObtenerControlFecha()
+                txtFecha.focus();
+            }
+
+            function _ValidarFechaEnPeriodo() {
+                //debugger;
+
+                var fecha = null;
+                var txtFecha = ObtenerControlFecha();
+
+                if (txtFecha != null) {
+
+                    fecha = txtFecha.get_selectedDate();
+
+                    var fechaPeriodoInicio = new Date('<%= AñoInicio %>', '<%= MesInicio %>', '<%= DiaInicio %>');
+
+                    var fechaPeriodoFin = new Date('<%= AñoFin %>', '<%= MesFin  %>', '<%= DiaFin %>');
+
+
+                    //si la fecha no esta dentro del periodo el foco se queda en el control y se manda alerta
+                    if (fecha == null || (fecha < fechaPeriodoInicio || fecha > fechaPeriodoFin)) {
+                        var mensage = 'La fecha se encuentra fuera del periodo</br></br>';
+                        var alerta = radalert(mensage, 600, 10, tituloMensajes);
+
+                        txtFechaBandera = true;
+
+                        alerta.add_close(
+                            function () {
+                                //debugger;
+                                txtFecha = ObtenerControlFecha();
+                                txtFecha.focus();
+                            });
+
+                        return false;
+                    }
+                }
+                txtFechaBandera = false;
+                return true;
+            }
+            //   REPORTES
+            function AbrirReporte() {
+                var oWnd = radopen("Ventana_ReportViewer.aspx", "RWReporte");
+                oWnd.center();
+                return true;
+            }
+
+
+        </script>
+    </telerik:RadCodeBlock>
+    <telerik:RadWindowManager ID="RadWindowManager0" runat="server" Style="z-index: 7001">
+        <Windows>
+            <%--REPORTES--%>
+            <telerik:RadWindow ID="RWReporte" runat="server" Behaviors="Move,Close,Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="920px" Height="600px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Reporte" Modal="True" ShowContentDuringLoad="False">
+            </telerik:RadWindow>
+            <%--PREFERENCIAS--%>
+            <telerik:RadWindow ID="RadWindowContrasena" runat="server" Behaviors="Move" Opacity="100"
+                VisibleStatusbar="False" Width="380px" Height="250px" Animation="Fade" KeepInScreenBounds="True"
+                Overlay="True" Title="Modificar contraseña" Modal="True">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="RadWindowConfiguracionCorreo" runat="server" Behaviors="Move"
+                Opacity="100" VisibleStatusbar="False" Width="400px" Height="300px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Configuración de correo" Modal="True">
+            </telerik:RadWindow>
+               <%-- TRANSFERENCIA --%>
+            <telerik:RadWindow ID="AbrirVentana_Recepcion" runat="server" Behaviors="Move, Close, Maximize"
+                Opacity="100" VisibleStatusbar="False" Width="850px" Height="600px" Animation="Fade"
+                KeepInScreenBounds="True" Overlay="True" Title="Recepción transferencia" Modal="True" OnClientClose="CerrarWindow_Event"
+                ShowContentDuringLoad="False" ShowOnTopWhenMaximized="True" Localization-Restore="Restaurar"
+                Localization-Maximize="Maximizar" Localization-Close="Cerrar" InitialBehaviors="Maximize">
+            </telerik:RadWindow>
+        </Windows>
+    </telerik:RadWindowManager>
+    </form>
+</body>
+</html>

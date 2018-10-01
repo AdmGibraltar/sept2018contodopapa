@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIANWEB", "SIANWEB\SIANWEB.csproj", "{7F8B6093-0045-4FC7-8566-DB8B2956AED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidad", "CapaEntidad\CapaEntidad.csproj", "{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocios", "CapaNegocios\CapaNegocios.csproj", "{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaReportes", "LibreriaReportes\LibreriaReportes.csproj", "{F7536F05-1224-4663-88D8-7B7539698D4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaModelo", "CapaModelo\CapaModelo.csproj", "{2BC31D08-F359-413A-B104-C24BAB47E81B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaModelo_CC", "CapaModelo_CC\CapaModelo_CC.csproj", "{5972D00B-0C01-4370-B7D4-1CAC3A4338FE}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.1.0.111:8080/tfs/informaticaycomunicaciones
+		SccProjectUniqueName0 = SIANWEB\\SIANWEB.csproj
+		SccProjectName0 = SIANWEB
+		SccAuxPath0 = http://10.1.0.111:8080/tfs/informaticaycomunicaciones
+		SccLocalPath0 = SIANWEB
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = CapaDatos\\CapaDatos.csproj
+		SccProjectName1 = CapaDatos
+		SccAuxPath1 = http://10.1.0.111:8080/tfs/informaticaycomunicaciones
+		SccLocalPath1 = CapaDatos
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = CapaEntidad\\CapaEntidad.csproj
+		SccProjectName2 = CapaEntidad
+		SccAuxPath2 = http://10.1.0.111:8080/tfs/informaticaycomunicaciones
+		SccLocalPath2 = CapaEntidad
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = CapaNegocios\\CapaNegocios.csproj
+		SccProjectName3 = CapaNegocios
+		SccAuxPath3 = http://10.1.0.111:8080/tfs/informaticaycomunicaciones
+		SccLocalPath3 = CapaNegocios
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = LibreriaReportes\\LibreriaReportes.csproj
+		SccProjectName4 = LibreriaReportes
+		SccAuxPath4 = http://10.1.0.111:8080/tfs/informaticaycomunicaciones
+		SccLocalPath4 = LibreriaReportes
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F8B6093-0045-4FC7-8566-DB8B2956AED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F8B6093-0045-4FC7-8566-DB8B2956AED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F8B6093-0045-4FC7-8566-DB8B2956AED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F8B6093-0045-4FC7-8566-DB8B2956AED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7536F05-1224-4663-88D8-7B7539698D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7536F05-1224-4663-88D8-7B7539698D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7536F05-1224-4663-88D8-7B7539698D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7536F05-1224-4663-88D8-7B7539698D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC31D08-F359-413A-B104-C24BAB47E81B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC31D08-F359-413A-B104-C24BAB47E81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC31D08-F359-413A-B104-C24BAB47E81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC31D08-F359-413A-B104-C24BAB47E81B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5972D00B-0C01-4370-B7D4-1CAC3A4338FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5972D00B-0C01-4370-B7D4-1CAC3A4338FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5972D00B-0C01-4370-B7D4-1CAC3A4338FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5972D00B-0C01-4370-B7D4-1CAC3A4338FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

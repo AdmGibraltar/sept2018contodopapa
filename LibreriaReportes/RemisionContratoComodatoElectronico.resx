@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="textBox52.Value" xml:space="preserve">
+    <value>3. EL COMODATARIO se da por recibido de los expresados equipos, y se obliga a devolverlos a KEY QUÍMICA, S.A. de C.V. en el mismo estado en el que se recibe, salvo el deterioro 
+   normal que por uso puedan llegar a tener. EL COMODATARIO está de acuerdo en no alterar el funcionamiento de los equipos ya sea añadiendo, quitando o rompiendo cualquiera de 
+   sus componentes.</value>
+  </data>
+  <data name="textBox53.Value" xml:space="preserve">
+    <value>4. La duracion de este contrato será por un (1) año con derecho de preferencia para renovación del contrato. Por lo tanto, cualquiera de las dos partes podrá darlo por terminado 
+   mediante simple aviso por escrito que la parte interesada en la terminacion dé a la otra, por lo menos con treinta (30) días de anticipaciíon.</value>
+  </data>
+  <data name="textBox57.Value" xml:space="preserve">
+    <value>6. En los sistemas: LÍQUIDO GOTEADOR, ODOCONTROL Y BIODIGESTOR, el comodatario se obliga a entregar al comodante una orden de compra abierta por 12 meses que
+   contemple el costo del servicio mensual correspondiente. Si por políticas internas del comodatario no fuera posible la expedición de una orden de compra abierta, con
+   la firma de este contrato se asume que éste acepta la facturación mensual del servicio.</value>
+  </data>
+  <data name="textBox58.Value" xml:space="preserve">
+    <value>7. EL COMODATARIO se obliga a permitir durante cualquier día y en horas hábiles, el acceso a cualquier representante de KEY QUÍMICA, S.A. de C.V.,previa
+   identificación, para que éste verifique la existencia de los equipos en el domicilio que se indica al calce y para que audite que dichos equipos sean utilizados de
+   acuerdo con el presente contrato.</value>
+  </data>
+  <data name="textBox60.Value" xml:space="preserve">
+    <value>10. En caso de vandalismo, el COMODATARIO se obliga a cubrir el costo de las refacciones necesarias para reparar dicho equipo, y si es necesario, a cubrir el PRECIO DE
+   REPOSICIÓN que para ese equipo está establecido en este contrato.</value>
+  </data>
+  <data name="textBox62.Value" xml:space="preserve">
+    <value>11. El COMODATARIO se compromete a utilizar todos los equipos exclusivamente dentro de la institucióno negocio cuya ubicación aparece al calce. En caso de que
+   cambie la ubicación de la institución o negocio, se deberá avisar a KEY QUÍMICA, S.A. de C.V. por escrito, por lo menos con treinta (30) días de anticipación.</value>
+  </data>
+  <data name="textBox63.Value" xml:space="preserve">
+    <value>Para la interpretación y cumplimiento de este contrato las partes se someten a los tribunales competentes de la Ciudad de monterrey, N.L., renunciando al fuero que 
+pudiera corresponderles en vistud de cualquier otro domicilio presente o futuro.</value>
+  </data>
+  <metadata name="sqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+</root>

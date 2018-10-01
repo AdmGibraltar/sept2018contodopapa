@@ -1,0 +1,2 @@
+﻿crm.sys = function () {
+};

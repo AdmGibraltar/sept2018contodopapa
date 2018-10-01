@@ -1,0 +1,8 @@
+﻿/* Estilo de los mensajes de error en validación de controles*/
+.labelValidacionForm
+{
+    font-size: 12px;
+    font-family: arial, sans-serif, "trebuchet ms";
+    color: #FF0000;            
+}
+

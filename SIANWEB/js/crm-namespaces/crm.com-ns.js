@@ -1,0 +1,2 @@
+﻿crm.com = function () {
+};

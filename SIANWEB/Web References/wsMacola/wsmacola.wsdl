@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="insGasto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLoginKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gasto" type="tns:ArrayOfGasto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGasto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Gasto" nillable="true" type="tns:Gasto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Gasto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id_trx" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cus_type_cd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vend_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="inv_no" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="amt" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="trx_dt" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="dwn" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="dwn_dt" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="vchr_no" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="account_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mov_type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SAT_no" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="flg_test" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="no_ref" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="sub_amt" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="tax_amt" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ret_amt" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="iva_ret" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="bank_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bank_account" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mail_usu" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insGastoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insGastoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insGastoViaje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLoginKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gasto" type="tns:ArrayOfGasto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insGastoViajeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insGastoViajeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Valida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKey">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insGastoSoapIn">
+    <wsdl:part name="parameters" element="tns:insGasto" />
+  </wsdl:message>
+  <wsdl:message name="insGastoSoapOut">
+    <wsdl:part name="parameters" element="tns:insGastoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insGastoViajeSoapIn">
+    <wsdl:part name="parameters" element="tns:insGastoViaje" />
+  </wsdl:message>
+  <wsdl:message name="insGastoViajeSoapOut">
+    <wsdl:part name="parameters" element="tns:insGastoViajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaSoapIn">
+    <wsdl:part name="parameters" element="tns:Valida" />
+  </wsdl:message>
+  <wsdl:message name="ValidaSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKeySoapIn">
+    <wsdl:part name="parameters" element="tns:GetKey" />
+  </wsdl:message>
+  <wsdl:message name="GetKeySoapOut">
+    <wsdl:part name="parameters" element="tns:GetKeyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsMacolaSoap">
+    <wsdl:operation name="insGasto">
+      <wsdl:input message="tns:insGastoSoapIn" />
+      <wsdl:output message="tns:insGastoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insGastoViaje">
+      <wsdl:input message="tns:insGastoViajeSoapIn" />
+      <wsdl:output message="tns:insGastoViajeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Valida">
+      <wsdl:input message="tns:ValidaSoapIn" />
+      <wsdl:output message="tns:ValidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <wsdl:input message="tns:GetKeySoapIn" />
+      <wsdl:output message="tns:GetKeySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsMacolaSoap" type="tns:wsMacolaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insGasto">
+      <soap:operation soapAction="http://tempuri.org/insGasto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insGastoViaje">
+      <soap:operation soapAction="http://tempuri.org/insGastoViaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Valida">
+      <soap:operation soapAction="http://tempuri.org/Valida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <soap:operation soapAction="http://tempuri.org/GetKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsMacolaSoap12" type="tns:wsMacolaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insGasto">
+      <soap12:operation soapAction="http://tempuri.org/insGasto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insGastoViaje">
+      <soap12:operation soapAction="http://tempuri.org/insGastoViaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Valida">
+      <soap12:operation soapAction="http://tempuri.org/Valida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <soap12:operation soapAction="http://tempuri.org/GetKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsMacola">
+    <wsdl:port name="wsMacolaSoap" binding="tns:wsMacolaSoap">
+      <soap:address location="http://207.248.253.104/wsmacola/wsmacola.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsMacolaSoap12" binding="tns:wsMacolaSoap12">
+      <soap12:address location="http://207.248.253.104/wsmacola/wsmacola.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

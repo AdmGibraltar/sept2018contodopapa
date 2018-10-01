@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ObtenerProducto_ES.aspx.cs"  Inherits="SIANWEB.ObtenerProducto_ES" %>

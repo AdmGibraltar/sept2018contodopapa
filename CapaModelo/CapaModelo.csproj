@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2BC31D08-F359-413A-B104-C24BAB47E81B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaModelo</RootNamespace>
+    <AssemblyName>CapaModelo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CapAcy.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapAcyExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CapAcysDatosGarantia.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapAcysDet.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapAcysExt.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapAplicacionProducto.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapAplicacionProductoExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CapBibliotecaNodo.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapBibliotecaUsuario.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapConfiguracionGlobal.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapNotasProspecto.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapNotasProspectoExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CapNotificacionExcesoMeta.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapProyectoBiblioNodo.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapProyectoFaseBiblioNodo.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapProyectoFaseEvidencia.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapRemision.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapRIKNotificacion.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapUsuarioNotificacion.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapValProyecto.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapValProyectoDet.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapValProyectoDetExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CapValProyectoExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CapValProyecto_Parametros.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapValProyecto_Params.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapValuacionGlobalCliente.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatACYS_Cliente.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatACYS_CondPago.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatACYS_DirFiscales.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatACYS_OtrosApoyos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatAcys_Productos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatACYS_Productos_DatosGar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatACYS_Productos_DatosGar_Fechas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatACYS_RecPedido.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatACYS_ServValor.cs" />
+    <Compile Include="CatACYS_SIANCENTRAL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatAplicacion.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatAplicacionExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatArea.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatAreaExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatBiblioteca.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatCalendario.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatCentroDistribucion.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatCentroDistribucionExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatCliente.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatClienteDet.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatClienteDetContactoExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatClienteDetExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatClienteDetGarantia.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatCNac_ACYS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatCNac_EstatusSolicitudes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatCNac_Estructura.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatCNac_Matriz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatCNac_PermisosCamposACYS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatCNac_RemisionesMov80.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatCNac_Solicitudes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatCNac_Solicitudes_DirFiscal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatCNac_Usuario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatEmpresa.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatMensaje.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatNota.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatNotificacion.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatPagoElectronicoEstatu.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatProducto.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatRecurso.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatRecursoArchivo.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatRecursoURL.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatRik.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatRikExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatSegmento.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatSolucion.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatSolucionExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatTerritorio.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatTerritorioExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatTipoGarantia.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatTipoRecurso.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatTipoVenta.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatUEN.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatUsuario.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmCatalogoUnico.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmCatalogoUnicoExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="crmCausasCancelacion.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmCausasCancelacionExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CRMControlEntrada.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRMEstructuraSegmentoProyecto.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmOportunidade.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmOportunidadeExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrmOportunidadesAplicacion.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmOportunidadesAplicacionExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrmOportunidadesProducto.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmOportunidadesProductosExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrmPropuestaEconomica.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmPropuestaEconomicaExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrmPropuestaTecnica.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmPropuestaTecnicaExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrmProspecto.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmProspectoExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrmValuacionOportunidade.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmValuacionOportunidadeExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDBContextHolder.cs" />
+    <Compile Include="ProductoPrecio.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIANCentral\CatCDI.cs">
+      <DependentUpon>SIANCentral.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIANCentral\CatCuotasCrm.cs">
+      <DependentUpon>SIANCentral.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIANCentral\Cat_CDIExtension.cs" />
+    <Compile Include="SIANCentral\SIANCentral.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIANCentral.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIANCentral\SIANCentral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIANCentral.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIANWebCentral\SIANWebCentral.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIANWebCentral.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIANWebCentral\SIANWebCentral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIANWebCentral.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIANWebMTY_G.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIANWebMTY_G.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIANWebMTY_G.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sianwebmty_gEntities.cs" />
+    <Compile Include="spCapRemision_CalcularUtilidadPrimaReal_Result.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SysConfiguracion.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SysTipoUsuario.cs">
+      <DependentUpon>SIANWebMTY_G.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="SIANWebMTY_G.edmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CapAcy.cs.bak" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="SIANCentral\SIANCentral.edmx" />
+    <EntityDeploy Include="SIANWebCentral\SIANWebCentral.edmx" />
+    <None Include="SIANWebMTY_G.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SIANWebMTY_G.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SIANWebMTY_G.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SIANWebMTY_G.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SIANCentral\SIANCentral.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SIANCentral.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SIANCentral\SIANCentral.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SIANCentral.cs</LastGenOutput>
+    </Content>
+    <Content Include="SIANWebCentral\SIANWebCentral.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SIANWebCentral.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SIANWebCentral\SIANWebCentral.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SIANWebCentral.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

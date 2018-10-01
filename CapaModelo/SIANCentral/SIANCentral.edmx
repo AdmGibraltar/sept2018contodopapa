@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SIANCentralModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SIANCentralModelStoreContainer">
+          <EntitySet Name="CatCDI" EntityType="SIANCentralModel.Store.CatCDI" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CatCuotasCrm" EntityType="SIANCentralModel.Store.CatCuotasCrm" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="CatCDI">
+          <Key>
+            <PropertyRef Name="Id_Cd" />
+          </Key>
+          <Property Name="Id_Cd" Type="int" Nullable="false" />
+          <Property Name="Cd_Nombre" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cd_DescCorta" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cd_Tipo" Type="int" />
+          <Property Name="Cd_Region" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CatCuotasCrm">
+          <Key>
+            <PropertyRef Name="Id_Cd" />
+            <PropertyRef Name="Id_rik" />
+            <PropertyRef Name="Cuo_Anio" />
+            <PropertyRef Name="Cuo_Mes" />
+          </Key>
+          <Property Name="Id_Cd" Type="int" Nullable="false" />
+          <Property Name="Id_rik" Type="int" Nullable="false" />
+          <Property Name="Cuo_Anio" Type="int" Nullable="false" />
+          <Property Name="Cuo_Mes" Type="int" Nullable="false" />
+          <Property Name="Cuo_MontoProy" Type="float" />
+          <Property Name="Cuo_MontoCierre" Type="float" />
+          <Property Name="Cuo_NumProy" Type="int" />
+          <Property Name="Cuo_NumProyCierre" Type="int" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SIANCentralModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SIANCentralEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CatCuotasCrms" EntityType="SIANCentralModel.CatCuotasCrm" />
+          <EntitySet Name="CatCDIs" EntityType="SIANCentralModel.CatCDI" />
+        </EntityContainer>
+        <EntityType Name="CatCuotasCrm">
+          <Key>
+            <PropertyRef Name="Id_Cd" />
+            <PropertyRef Name="Id_rik" />
+            <PropertyRef Name="Cuo_Anio" />
+            <PropertyRef Name="Cuo_Mes" />
+          </Key>
+          <Property Name="Id_Cd" Type="Int32" Nullable="false" />
+          <Property Name="Id_rik" Type="Int32" Nullable="false" />
+          <Property Name="Cuo_Anio" Type="Int32" Nullable="false" />
+          <Property Name="Cuo_Mes" Type="Int32" Nullable="false" />
+          <Property Name="Cuo_MontoProy" Type="Double" />
+          <Property Name="Cuo_MontoCierre" Type="Double" />
+          <Property Name="Cuo_NumProy" Type="Int32" />
+          <Property Name="Cuo_NumProyCierre" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CatCDI">
+          <Key>
+            <PropertyRef Name="Id_Cd" />
+          </Key>
+          <Property Type="Int32" Name="Id_Cd" Nullable="false" />
+          <Property Type="String" Name="Cd_Nombre" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Cd_DescCorta" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Cd_Tipo" />
+          <Property Type="String" Name="Cd_Region" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SIANCentralModelStoreContainer" CdmEntityContainer="SIANCentralEntities1">
+          <EntitySetMapping Name="CatCuotasCrms">
+            <EntityTypeMapping TypeName="SIANCentralModel.CatCuotasCrm">
+              <MappingFragment StoreEntitySet="CatCuotasCrm">
+                <ScalarProperty Name="Id_Cd" ColumnName="Id_Cd" />
+                <ScalarProperty Name="Id_rik" ColumnName="Id_rik" />
+                <ScalarProperty Name="Cuo_Anio" ColumnName="Cuo_Anio" />
+                <ScalarProperty Name="Cuo_Mes" ColumnName="Cuo_Mes" />
+                <ScalarProperty Name="Cuo_MontoProy" ColumnName="Cuo_MontoProy" />
+                <ScalarProperty Name="Cuo_MontoCierre" ColumnName="Cuo_MontoCierre" />
+                <ScalarProperty Name="Cuo_NumProy" ColumnName="Cuo_NumProy" />
+                <ScalarProperty Name="Cuo_NumProyCierre" ColumnName="Cuo_NumProyCierre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CatCDIs">
+            <EntityTypeMapping TypeName="SIANCentralModel.CatCDI">
+              <MappingFragment StoreEntitySet="CatCDI">
+                <ScalarProperty Name="Cd_Region" ColumnName="Cd_Region" />
+                <ScalarProperty Name="Cd_Tipo" ColumnName="Cd_Tipo" />
+                <ScalarProperty Name="Cd_DescCorta" ColumnName="Cd_DescCorta" />
+                <ScalarProperty Name="Cd_Nombre" ColumnName="Cd_Nombre" />
+                <ScalarProperty Name="Id_Cd" ColumnName="Id_Cd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="SIANCentral">
+        <EntityTypeShape EntityType="SIANCentralModel.CatCuotasCrm" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIANCentralModel.CatCDI" Width="1.5" PointX="3.375" PointY="0.75" Height="1.9802864583333335" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

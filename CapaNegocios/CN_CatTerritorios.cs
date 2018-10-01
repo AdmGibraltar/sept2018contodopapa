@@ -1,0 +1,271 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using CapaEntidad;
+using CapaDatos;
+using System.Data;
+using CapaModelo;
+
+namespace CapaNegocios
+{
+    public class CN_CatTerritorios
+    {
+
+        public DataTable ObtenerRepPendientesAct(string Conexion, int Id_Emp, int Id_Cd)
+        {
+            try
+            {
+                DataTable D = new DataTable();
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                
+                claseCapaDatos.ObtenerRepPendientesAct(Conexion, Id_Emp, Id_Cd, ref D);
+                return D;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ConsultaTerritorios(Territorios territorio, string Conexion, ref List<Territorios> List)
+        {
+            try
+            {
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                claseCapaDatos.ConsultaTerritorios(territorio, Conexion, ref List);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void InsertarTerritorios(Territorios territorio, string Conexion, ref int verificador)
+        {
+            try
+            {
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                claseCapaDatos.InsertarTerritorios(territorio, Conexion, ref verificador);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ModificarTerritorios(Territorios territorio, string Conexion, ref int verificador)
+        {
+            try
+            {
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                claseCapaDatos.ModificarTerritorios(territorio, Conexion, ref verificador);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ModificarTerritoriosActID(Territorios territorio,DataTable dt,string Conexion, ref int verificador)
+        {
+            try
+            {
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                claseCapaDatos.ModificarTerritoriosActID(territorio,dt, Conexion, ref verificador);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ConsultaTerritoriosDet(TerritorioDet territorio, string Conexion, ref DataTable dt)
+        {
+            try
+            {
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                claseCapaDatos.ConsultaTerritoriosDet(territorio, Conexion, ref dt);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void InsertarTerritoriosDet(Territorios territorio, DataTable dt, string Conexion, ref int verificador)
+        {
+            try
+            {
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                claseCapaDatos.InsertarTerritoriosDet(territorio, dt, Conexion, ref verificador);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ModificarTerritoriosDet(Territorios territorio, DataTable dt, string Conexion, ref int verificador)
+        {
+            try
+            {
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                claseCapaDatos.ModificarTerritoriosDet(territorio, dt, Conexion, ref verificador);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ConsultaTerritorios(ref Territorios catterr, string Conexion)
+        {
+            try
+            {
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                claseCapaDatos.ConsultaTerritorios(ref catterr, Conexion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ConsultaTerritoriosCombo(ref Territorios catterr, string Conexion)
+        {
+            try
+            {
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                claseCapaDatos.ConsultaTerritoriosCombo(ref catterr, Conexion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ConsultaTerritorio(ref Territorios catterr, string Conexion)
+        {
+            try
+            {
+                CD_CatTerritorios claseCapaDatos = new CD_CatTerritorios();
+                claseCapaDatos.ConsultaTerritorio(ref catterr, Conexion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Devuelve el conjunto de territorios resultado de la intersección de los territorios asociados al prospecto idCrmProspecto y los territorios asociados al RIK inferido de la sesión.
+        /// </summary>
+        /// <param name="s">Sesión de usuario en operación</param>
+        /// <param name="idCrmProspecto">Identificador del prospecto de interés</param>
+        /// <returns>IEnumerable[CatTerritorio] en una llamada satisfactoria; null en caso contrario</returns>
+        /// EF
+        public IEnumerable<CatTerritorio> ObtenerTerritoriosPorProspecto(Sesion s, int idCrmProspecto)
+        {
+            CD_CatTerritorios cdCatTerritorios = new CD_CatTerritorios();
+            CN_CrmProspecto cnCrmProspecto = new CN_CrmProspecto();
+            var prospecto = cnCrmProspecto.ObtenerProspecto(s.Id_Emp, s.Id_Cd, s.Id_Rik, idCrmProspecto, s);
+            return cdCatTerritorios.ConsultarTerritoriosPorClienteYRIK(s.Id_Emp, s.Id_Cd, prospecto.Id_Cte, s.Id_Rik, s.Emp_Cnx_EF);
+        }
+
+        //
+        // No hay referencias a este metodo
+        //
+        // EF
+        public List<CatTerritorio> ObtenerTerritorios_PorProspecto(Sesion s, int idCrmProspecto)
+        {
+            List<CatTerritorio> Lst = new List<CatTerritorio>(); 
+
+            CD_CatTerritorios cdCatTerritorios = new CD_CatTerritorios();
+            CN_CrmProspecto cnCrmProspecto = new CN_CrmProspecto();
+            var prospecto = cnCrmProspecto.ObtenerProspecto(s.Id_Emp, s.Id_Cd, s.Id_Rik, idCrmProspecto, s);
+            Lst = cdCatTerritorios.ConsultarTerritorios_PorClienteYRIK(s.Id_Emp, s.Id_Cd, prospecto.Id_Cte, s.Id_Rik, s.Emp_Cnx);
+            return Lst;
+        }
+        
+        /// <summary>
+        /// Devuelve el conjunto de territorios resultado de la intersección de los territorios asociados al cliente idCte y los territorios asociados al RIK inferido de la sesión.
+        /// </summary>
+        /// <param name="s">Sesión de usuario en operación</param>
+        /// <param name="idCte">Identificador del cliente de interés</param>
+        /// <returns>IEnumerable[CatTerritorio] en una llamada satisfactoria; null en caso contrario</returns>
+        /// EF
+        public IEnumerable<CatTerritorio> ObtenerTerritoriosPorCliente(Sesion s, int idCte)
+        {
+            CD_CatTerritorios cdCatTerritorios = new CD_CatTerritorios();
+            return cdCatTerritorios.ConsultarTerritoriosPorClienteYRIK(s.Id_Emp, s.Id_Cd, idCte, s.Id_Rik, s.Emp_Cnx_EF);
+        }
+
+        /// <summary>
+        /// Devuelve el conjunto de territorios resultado de la intersección de los territorios asociados al cliente idCte y los territorios asociados al RIK inferido de la sesión.
+        /// </summary>
+        /// <param name="s">Sesión de usuario en operación</param>
+        /// <param name="idCte">Identificador del cliente de interés</param>
+        /// <param name="ibt">Transaccion de capa de negocio</param>
+        /// <returns>IEnumerable[CatTerritorio] en una llamada satisfactoria; null en caso contrario</returns>
+        /// EF
+        public IEnumerable<CatTerritorio> ObtenerTerritoriosPorCliente(Sesion s, int idCte, IBusinessTransaction ibt)
+        {
+            CD_CatTerritorios cdCatTerritorios = new CD_CatTerritorios();
+            return cdCatTerritorios.ConsultarTerritoriosPorClienteYRIK(s.Id_Emp, s.Id_Cd, idCte, s.Id_Rik, ibt.DataContext);
+        }
+
+        /// <summary>
+        /// Devuelve los territorios asociados al RIK. 
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución</param>
+        /// <param name="idRik">Identificador del representante</param>
+        /// <param name="sesion">Sesión del usuario en operación</param>
+        /// <returns>IEnumerable[CatTerritorio]</returns>
+        /// Ef
+        public IEnumerable<CatTerritorio> ObtenerTerritoriosPorRik(int idEmp, int idCd, int idRik, Sesion sesion)
+        {
+            CD_CatTerritorios cdCatTerritorios = new CD_CatTerritorios();
+            return cdCatTerritorios.ConsultarTerritoriosPorRik(idEmp, idCd, idRik, sesion.Emp_Cnx_EF);
+        }
+
+        //version para SP  
+        // 
+        public List<eTerritorio> ObtenerTerritorios_PorRik(int idEmp, int idCd, int idRik, Sesion sesion)
+        {
+            CD_CatTerritorios cdCatTerritorios = new CD_CatTerritorios();
+            return cdCatTerritorios.ObtenerTerritorios_PorRik(idEmp, idCd, idRik, sesion.Emp_Cnx);
+        }
+
+        public List<eTerritorio> ObtenerTerritorios_PorClienteYRik(int idEmp, int idCd, int idCte, int idRik, Sesion sesion)
+        {
+            CD_CatTerritorios cdCatTerritorios = new CD_CatTerritorios();
+            return cdCatTerritorios.ObtenerTerritorios_PorClienteYRik(idEmp, idCd, idCte, idRik, sesion.Emp_Cnx);
+        }
+                
+
+        /// <summary>
+        /// Devuelve los territorios asociados al RIK. 
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución</param>
+        /// <param name="idRik">Identificador del representante</param>
+        /// <param name="sesion">Sesión del usuario en operación</param>
+        /// <param name="ibt">Transacción de la capa de negocio</param>
+        /// <returns>IEnumerable[CatTerritorio]</returns>
+        /// EF
+        public IEnumerable<CatTerritorio> ObtenerTerritoriosPorRik(int idEmp, int idCd, int idRik, Sesion sesion, IBusinessTransaction ibt)
+        {
+            CD_CatTerritorios cdCatTerritorios = new CD_CatTerritorios();
+            return cdCatTerritorios.ConsultarTerritoriosPorRik(idEmp, idCd, idRik, ibt.DataContext);
+        }
+
+        // EF
+        public IEnumerable<CatTerritorio> ObtenerTerritoriosPorRikYSegmento(int idEmp, int idCd, int idRik, int idSeg, Sesion sesion)
+        {
+            CD_CatTerritorios cdCatTerritorios = new CD_CatTerritorios();
+            return cdCatTerritorios.ConsultarTerritoriosPorRikYSegmento(idEmp, idCd, idRik, idSeg, sesion.Emp_Cnx_EF);
+        }
+    }
+}

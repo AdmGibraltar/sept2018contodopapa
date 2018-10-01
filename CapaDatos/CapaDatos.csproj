@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaDatos</RootNamespace>
+    <AssemblyName>CapaDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CD_CapAcysDatosGarantia.cs" />
+    <Compile Include="CD_CapAcysDet.cs" />
+    <Compile Include="CD_CapAcysExt.cs" />
+    <Compile Include="CD_CapAjusteBaseInstalada.cs" />
+    <Compile Include="CD_CapAplicacionProducto.cs" />
+    <Compile Include="CD_CapBibliotecaNodo.cs" />
+    <Compile Include="CD_CapConfiguracionGlobal.cs" />
+    <Compile Include="CD_CapDevolucionRemision.cs" />
+    <Compile Include="CD_CapFacturaAlmacenCobro.cs" />
+    <Compile Include="CD_CapFacturaRevisionCobro.cs" />
+    <Compile Include="CD_CapFacturaSvtaAlmacen.cs" />
+    <Compile Include="CD_CapGastoViaje.cs" />
+    <Compile Include="CD_CapGastoViajeComprobante.cs" />
+    <Compile Include="CD_CapNotasProspecto.cs" />
+    <Compile Include="CD_CapNotificacionesExcesoMeta.cs" />
+    <Compile Include="CD_CapPagoElectronico.cs" />
+    <Compile Include="CD_CapPedidoVtaInst.cs" />
+    <Compile Include="CD_CapPedido_Internet.cs" />
+    <Compile Include="CD_CapPedido_Internet_Detalle.cs" />
+    <Compile Include="CD_CapProyectoBiblioNodo.cs" />
+    <Compile Include="CD_CapProyectoFaseEvidencia.cs" />
+    <Compile Include="CD_CapProyectoFasesBiblioNodo.cs" />
+    <Compile Include="CD_CapRemisionSvtaAlmacen.cs" />
+    <Compile Include="CD_CapRIKNotificacion.cs" />
+    <Compile Include="CD_CapRutaServicio.cs" />
+    <Compile Include="CD_Amortizacion.cs" />
+    <Compile Include="CD_CapAcys.cs" />
+    <Compile Include="CD_CapDevolucion.cs" />
+    <Compile Include="CD_CapEntradaSalida.cs" />
+    <Compile Include="CD_CapFactura.cs" />
+    <Compile Include="CD_CapFacturaDet.cs" />
+    <Compile Include="CD_CapFisico.cs" />
+    <Compile Include="CD_CapNotaCargo.cs" />
+    <Compile Include="CD_CapNotaCredito.cs" />
+    <Compile Include="CD_CapOrdenCompra.cs" />
+    <Compile Include="CD_CapOrdenCompraDet.cs" />
+    <Compile Include="CD_CapPago.cs" />
+    <Compile Include="CD_CapPedido.cs" />
+    <Compile Include="CD_CapRemision.cs" />
+    <Compile Include="CD_CapUsuarioNotificacion.cs" />
+    <Compile Include="CD_CapValProyectoDet.cs" />
+    <Compile Include="CD_CapValProyectoParams.cs" />
+    <Compile Include="CD_CapValProyecto_Parametros.cs" />
+    <Compile Include="CD_CapValuacionGlobalCliente.cs" />
+    <Compile Include="CD_CapValuacionProyecto.cs" />
+    <Compile Include="CD_CapValuacionProyectoCtasMarg.cs" />
+    <Compile Include="CD_CatAcreedor.cs" />
+    <Compile Include="CD_CatAdenda.cs" />
+    <Compile Include="CD_CatAplicacion.cs" />
+    <Compile Include="CD_CatArea.cs" />
+    <Compile Include="CD_CatAsesoria.cs" />
+    <Compile Include="CD_CatBanco.cs" />
+    <Compile Include="CD_CatBiblioteca.cs" />
+    <Compile Include="CD_CatCalendario.cs" />
+    <Compile Include="CD_CatCalendarioControl.cs" />
+    <Compile Include="CD_CatCampanas.cs" />
+    <Compile Include="CD_CatCentroDistribucion.cs" />
+    <Compile Include="CD_CatCliente.cs" />
+    <Compile Include="CD_CatClienteDet.cs" />
+    <Compile Include="CD_CatClienteDetContacto.cs" />
+    <Compile Include="CD_CatClienteDetGarantia.cs" />
+    <Compile Include="CD_CatClienteDirEntrega.cs" />
+    <Compile Include="CD_CatClienteMatriz.cs" />
+    <Compile Include="CD_CatClienteProd.cs" />
+    <Compile Include="CD_CatCNac_ACYS.cs" />
+    <Compile Include="CD_CatCNac_Matriz.cs" />
+    <Compile Include="CD_CatCNac_Solicitudes.cs" />
+    <Compile Include="CD_CatCriterioCitas.cs" />
+    <Compile Include="CD_CatCuentasCorp.cs" />
+    <Compile Include="CD_CatEmpresa.cs" />
+    <Compile Include="CD_CatEstatus.cs" />
+    <Compile Include="CD_CatFamProducto.cs" />
+    <Compile Include="CD_CatGasto.cs" />
+    <Compile Include="CD_CatMensaje.cs" />
+    <Compile Include="CD_CatMeta.cs" />
+    <Compile Include="CD_CatMovimientos.cs" />
+    <Compile Include="CD_CatNoConformidades.cs" />
+    <Compile Include="CD_CatNotas.cs" />
+    <Compile Include="CD_CatNotificacion.cs" />
+    <Compile Include="CD_CatPagoElectronicoCuenta.cs" />
+    <Compile Include="CD_CatPosicion.cs" />
+    <Compile Include="CD_CatProducto.cs" />
+    <Compile Include="CD_CatProducto_Categoria.cs" />
+    <Compile Include="CD_CatProducto_Segmento.cs" />
+    <Compile Include="CD_CatProveedores.cs" />
+    <Compile Include="CD_CatRecurso.cs" />
+    <Compile Include="CD_CatRecursoArchivo.cs" />
+    <Compile Include="CD_CatRecursoURL.cs" />
+    <Compile Include="CD_CatRegion.cs" />
+    <Compile Include="CD_CatRentabilidad.cs" />
+    <Compile Include="CD_CatRepresentantes.cs" />
+    <Compile Include="CD_CatRequisitoCitas.cs" />
+    <Compile Include="CD_CatRutaEntrega.cs" />
+    <Compile Include="CD_CatRutas.cs" />
+    <Compile Include="CD_CatSegmentos.cs" />
+    <Compile Include="CD_CatSemana.cs" />
+    <Compile Include="CD_CatSisPropietarios.cs" />
+    <Compile Include="CD_CatSistemasPropietarios.cs" />
+    <Compile Include="CD_CatSolucion.cs" />
+    <Compile Include="CD_CatSubFamProducto.cs" />
+    <Compile Include="CD_CatTerritorios.cs" />
+    <Compile Include="CD_CatTipoCliente.cs" />
+    <Compile Include="CD_CatTipoCosto.cs" />
+    <Compile Include="CD_CatTipoGarantia.cs" />
+    <Compile Include="CD_CatTipoMoneda.cs" />
+    <Compile Include="CD_CatTipoPrecio.cs" />
+    <Compile Include="CD_CatTipoProducto.cs" />
+    <Compile Include="CD_CatTipoRecurso.cs" />
+    <Compile Include="CD_CatTiposUsuario.cs" />
+    <Compile Include="CD_CatTipoVenta.cs" />
+    <Compile Include="CD_CatUen.cs" />
+    <Compile Include="CD_CatUnidad.cs" />
+    <Compile Include="CD_CatUsuario.cs" />
+    <Compile Include="CD_CatZonas.cs" />
+    <Compile Include="CD_CierreMes.cs" />
+    <Compile Include="CD_Configuracion.cs" />
+    <Compile Include="CD_ConfiguracionCobranza.cs" />
+    <Compile Include="CD_ConsecutivoFE.cs" />
+    <Compile Include="CD_ContextoDefault.cs" />
+    <Compile Include="CD_ContextoSIANCentral.cs" />
+    <Compile Include="CD_Contraseña.cs" />
+    <Compile Include="CD_ContratoComodato.cs" />
+    <Compile Include="CD_Convenio.cs" />
+    <Compile Include="CD_Correos.cs" />
+    <Compile Include="CD_CRMArchivosCargados.cs" />
+    <Compile Include="CD_CrmCatalogoUnico.cs" />
+    <Compile Include="CD_CrmCatAplicacion.cs" />
+    <Compile Include="CD_CrmCatSoluciones.cs" />
+    <Compile Include="CD_CrmCausasCancelacion.cs" />
+    <Compile Include="CD_CrmContacto.cs" />
+    <Compile Include="CD_CrmControlEntrada.cs" />
+    <Compile Include="CD_CRMDinamo.cs" />
+    <Compile Include="CD_CRMGraficas.cs" />
+    <Compile Include="CD_CrmInforme1.cs" />
+    <Compile Include="CD_CrmInformes.cs" />
+    <Compile Include="CD_CrmOportunidad.cs" />
+    <Compile Include="CD_CrmOportunidadesAplicacion.cs" />
+    <Compile Include="CD_CrmOportunidadesProductos.cs" />
+    <Compile Include="CD_CrmPromocion.cs" />
+    <Compile Include="CD_CrmPropuestaEconomica.cs" />
+    <Compile Include="CD_CrmPropuestaTecnica.cs" />
+    <Compile Include="CD_CrmProspecto.cs" />
+    <Compile Include="CD_CrmValuacionOportunidades.cs" />
+    <Compile Include="CD_Ctrl.cs" />
+    <Compile Include="CD_CumpVentaInstalada.cs" />
+    <Compile Include="CD_Datos.cs" />
+    <Compile Include="CD_DBCtxTransaction.cs" />
+    <Compile Include="CD_DevParcial_Detalle.cs" />
+    <Compile Include="CD_Embarques.cs" />
+    <Compile Include="CD_EmbarquesDet.cs" />
+    <Compile Include="CD_EmbarquesRemision.cs" />
+    <Compile Include="CD_EntSalSolicitud.cs" />
+    <Compile Include="CD_FabricaContexto.cs" />
+    <Compile Include="CD_FacturasEntrega.cs" />
+    <Compile Include="CD_FacturasRutaEntrega.cs" />
+    <Compile Include="CD_GestionRentabilidad.cs" />
+    <Compile Include="CD_GestionRentabilidadSeguimiento.cs" />
+    <Compile Include="CD_GestionRentabilidadSimulador.cs" />
+    <Compile Include="CD_GestorCobranza.cs" />
+    <Compile Include="CD_InvExcesoInventario.cs" />
+    <Compile Include="CD_ITransaction.cs" />
+    <Compile Include="CD_Login.cs" />
+    <Compile Include="CD_Menu.cs" />
+    <Compile Include="CD_MenuItem.cs" />
+    <Compile Include="CD_MonitoreoIndicadoresUtilidad.cs" />
+    <Compile Include="CD_Pagina.cs" />
+    <Compile Include="CD_PermisosTU.cs" />
+    <Compile Include="CD_PermisosU.cs" />
+    <Compile Include="CD_PolizaContable.cs" />
+    <Compile Include="CD_ProCancelaMenores.cs" />
+    <Compile Include="CD_ProCompraLocal.cs" />
+    <Compile Include="CD_ProDesasignaPedido_Aut.cs" />
+    <Compile Include="CD_ProductoPrecios.cs" />
+    <Compile Include="CD_ProEntradaVirtual.cs" />
+    <Compile Include="CD_ProFacturaRuta_Embarque.cs" />
+    <Compile Include="CD_ProFactura_Embarque.cs" />
+    <Compile Include="CD_ProGenPoliza_Compaq.cs" />
+    <Compile Include="CD_ProPrecioEspecial.cs" />
+    <Compile Include="CD_CapReclamaciones.cs" />
+    <Compile Include="CD_ProSeguimientoPrd.cs" />
+    <Compile Include="CD_Rastreo.cs" />
+    <Compile Include="CD_RemisionesEntrega.cs" />
+    <Compile Include="CD_Rendimientos.cs" />
+    <Compile Include="CD_Rep_VenEstadisticaVentas.cs" />
+    <Compile Include="CD_SerAmortizacionSisP.cs" />
+    <Compile Include="CD_SerRutaServicio.cs" />
+    <Compile Include="CD_SolConvenio.cs" />
+    <Compile Include="CD_CatTerritorializacion.cs" />
+    <Compile Include="CD_SysTipoUsuario.cs" />
+    <Compile Include="CD_TipoGarantia.cs" />
+    <Compile Include="CD_TipoRepresentante.cs" />
+    <Compile Include="CD_TransferenciasAlm.cs" />
+    <Compile Include="CD_UsuarioRik.cs" />
+    <Compile Include="CD_wfrmCampanas.cs" />
+    <Compile Include="CD__Comun.cs" />
+    <Compile Include="CD_DevParcial_Lista.cs" />
+    <Compile Include="CD_CatFormaPago.cs" />
+    <Compile Include="CD_Rep_InvValorizacionInventario.cs" />
+    <Compile Include="CD_Rep_InvExceso.cs" />
+    <Compile Include="CD_RepCfd.cs" />
+    <Compile Include="CD_CapTransferenciaAlmacen.cs" />
+    <Compile Include="CD_CapTransferenciaAlmacenDet.cs" />
+    <Compile Include="clsCrypto.BlowFish.cs" />
+    <Compile Include="clsCrypto.MD5.cs" />
+    <Compile Include="dbAccess.cs" />
+    <Compile Include="Funciones.cs" />
+    <Compile Include="ICD_Contexto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIANCentral\CD_CatCDI.cs" />
+    <Compile Include="SIANCentral\CD_CatCuotasCRM.cs" />
+    <Compile Include="SIANWebCentral\CD_CatCDI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaModelo\CapaModelo.csproj">
+      <Project>{2BC31D08-F359-413A-B104-C24BAB47E81B}</Project>
+      <Name>CapaModelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaModelo_CC\CapaModelo_CC.csproj">
+      <Project>{5972D00B-0C01-4370-B7D4-1CAC3A4338FE}</Project>
+      <Name>CapaModelo_CC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

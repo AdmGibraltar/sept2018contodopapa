@@ -1,0 +1,3465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F7536F05-1224-4663-88D8-7B7539698D4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibreriaReportes</RootNamespace>
+    <AssemblyName>LibreriaReportes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=7.1.13.802, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SIANWEB\bin\Telerik.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=4.1.10.921, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SIANWEB\bin\Telerik.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcuerdoImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AcuerdoImpresion.Designer.cs">
+      <DependentUpon>AcuerdoImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CedulaVisita_RSC_Asesor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CedulaVisita_RSC_Asesor.Designer.cs">
+      <DependentUpon>CedulaVisita_RSC_Asesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CedulaVisita_RSC_Asesor_F01.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CedulaVisita_RSC_Asesor_F01.Designer.cs">
+      <DependentUpon>CedulaVisita_RSC_Asesor_F01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CedulaVisita_RSC_Asesor_F02.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CedulaVisita_RSC_Asesor_F02.Designer.cs">
+      <DependentUpon>CedulaVisita_RSC_Asesor_F02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component1.Designer.cs">
+      <DependentUpon>Component1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContratoComodatoImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContratoComodatoImpresion.Designer.cs">
+      <DependentUpon>ContratoComodatoImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRepTransitoKardex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRepTransitoKardex.designer.cs">
+      <DependentUpon>ExpRepTransitoKardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CargosPdtesxRik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CargosPdtesxRik.Designer.cs">
+      <DependentUpon>ExpRep_CargosPdtesxRik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_ContribucionCOB12.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_ContribucionCOB12.Designer.cs">
+      <DependentUpon>ExpRep_ContribucionCOB12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_FacRegistroFacturacionB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_FacRegistroFacturacionB.designer.cs">
+      <DependentUpon>ExpRep_FacRegistroFacturacionB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvKardex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvKardex.Designer.cs">
+      <DependentUpon>ExpRep_InvKardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion4Consig.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion4Consig.designer.cs">
+      <DependentUpon>ExpRep_InvRotacion4Consig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion5.Designer.cs">
+      <DependentUpon>ExpRep_InvRotacion5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RCitasAgendadas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RCitasAgendadas.designer.cs">
+      <DependentUpon>ExpRep_RCitasAgendadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RemisionVencidaBCENTRAL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RemisionVencidaBCENTRAL.designer.cs">
+      <DependentUpon>ExpRep_RemisionVencidaBCENTRAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RPlaneacionCteA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RPlaneacionCteA.designer.cs">
+      <DependentUpon>ExpRep_RPlaneacionCteA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RPlaneacionCteTodos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RPlaneacionCteTodos.designer.cs">
+      <DependentUpon>ExpRep_RPlaneacionCteTodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb1Rik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb1Rik.Designer.cs">
+      <DependentUpon>ExpRep_VenEstadisticaUb1Rik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilidadBruta3Rik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilidadBruta3Rik.Designer.cs">
+      <DependentUpon>ExpRep_VenUtilidadBruta3Rik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaAlmacenCobroImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FacturaAlmacenCobroImpresion.Designer.cs">
+      <DependentUpon>FacturaAlmacenCobroImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaSvtaImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FacturaSvtaImpresion.Designer.cs">
+      <DependentUpon>FacturaSvtaImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemisionSvtaImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RemisionSvtaImpresion.Designer.cs">
+      <DependentUpon>RemisionSvtaImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobEstCarteraDetalle_SW.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobEstCarteraDetalle_SW.designer.cs">
+      <DependentUpon>RepCobEstCarteraDetalle_SW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobEstCarteraResumenCte_SW.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobEstCarteraResumenCte_SW.designer.cs">
+      <DependentUpon>RepCobEstCarteraResumenCte_SW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobEstCartera_SW.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobEstCartera_SW.designer.cs">
+      <DependentUpon>RepCobEstCartera_SW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobEstDetalleBitacora_SW.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobEstDetalleBitacora_SW.designer.cs">
+      <DependentUpon>RepCobEstDetalleBitacora_SW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobEstDetalleDocumento_SW.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobEstDetalleDocumento_SW.designer.cs">
+      <DependentUpon>RepCobEstDetalleDocumento_SW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobEstDetalleRastreo_SW.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobEstDetalleRastreo_SW.designer.cs">
+      <DependentUpon>RepCobEstDetalleRastreo_SW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepComisiones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepComisiones.designer.cs">
+      <DependentUpon>RepComisiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepComisionesCob.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepComisionesCob.designer.cs">
+      <DependentUpon>RepComisionesCob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepComisionesEA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepComisionesEA.designer.cs">
+      <DependentUpon>RepComisionesEA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepComisionesEdoCon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepComisionesEdoCon.designer.cs">
+      <DependentUpon>RepComisionesEdoCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepComisionesEdoConEA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepComisionesEdoConEA.designer.cs">
+      <DependentUpon>RepComisionesEdoConEA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepComisionesEdoRes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepComisionesEdoRes.designer.cs">
+      <DependentUpon>RepComisionesEdoRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepComisionesPPP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepComisionesPPP.designer.cs">
+      <DependentUpon>RepComisionesPPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCumplimientoVIDet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCumplimientoVIDet.designer.cs">
+      <DependentUpon>RepCumplimientoVIDet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCumplimientoVIDet_Pdcto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCumplimientoVIDet_Pdcto.designer.cs">
+      <DependentUpon>RepCumplimientoVIDet_Pdcto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCumplimientoVIGnral.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCumplimientoVIGnral.designer.cs">
+      <DependentUpon>RepCumplimientoVIGnral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCumplimientoVISemanal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCumplimientoVISemanal.designer.cs">
+      <DependentUpon>RepCumplimientoVISemanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCumplimientoVISemDeta.cs" />
+    <Compile Include="RepCumplimientoVISemDeta.designer.cs">
+      <DependentUpon>RepCumplimientoVISemDeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepEstadisticaAnticipada.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepEstadisticaAnticipada.Designer.cs">
+      <DependentUpon>RepEstadisticaAnticipada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepFacturasSAT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepFacturasSAT.Designer.cs">
+      <DependentUpon>RepFacturasSAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepKardexAmortizacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepKardexAmortizacion.Designer.cs">
+      <DependentUpon>RepKardexAmortizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepKardexAmortizacionAnticipada.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepKardexAmortizacionAnticipada.Designer.cs">
+      <DependentUpon>RepKardexAmortizacionAnticipada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepKardexInversion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepKardexInversion.Designer.cs">
+      <DependentUpon>RepKardexInversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepListaPrecios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepListaPrecios.Designer.cs">
+      <DependentUpon>RepListaPrecios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepPedidoVI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepPedidoVI.Designer.cs">
+      <DependentUpon>RepPedidoVI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepPrecioConvenio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepPrecioConvenio.designer.cs">
+      <DependentUpon>RepPrecioConvenio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepPrecioConvenioLista.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepPrecioConvenioLista.designer.cs">
+      <DependentUpon>RepPrecioConvenioLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepPrecioConvenioListaDet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepPrecioConvenioListaDet.designer.cs">
+      <DependentUpon>RepPrecioConvenioListaDet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepTransitoKardex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepTransitoKardex.designer.cs">
+      <DependentUpon>RepTransitoKardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CargosPdtesxRik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CargosPdtesxRik.Designer.cs">
+      <DependentUpon>Rep_CargosPdtesxRik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CCG_DetalleRemisiones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CCG_DetalleRemisiones.Designer.cs">
+      <DependentUpon>Rep_CCG_DetalleRemisiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CCG_MonitoreoDesviaciones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CCG_MonitoreoDesviaciones.Designer.cs">
+      <DependentUpon>Rep_CCG_MonitoreoDesviaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_ContribucionCOB12.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_ContribucionCOB12.Designer.cs">
+      <DependentUpon>Rep_ContribucionCOB12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_excesosInventarios2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_excesosInventarios2.Designer.cs">
+      <DependentUpon>Rep_excesosInventarios2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvKardex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvKardex.Designer.cs">
+      <DependentUpon>Rep_InvKardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvRotacion5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvRotacion5.Designer.cs">
+      <DependentUpon>Rep_InvRotacion5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RemisionVencidaB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RemisionVencidaB.Designer.cs">
+      <DependentUpon>ExpRep_RemisionVencidaB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RemisionVencidaA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RemisionVencidaA.Designer.cs">
+      <DependentUpon>ExpRep_RemisionVencidaA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvTipoMovimiento.Designer2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvTipoMovimiento2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_PickingListCliente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_PickingListCliente.Designer.cs">
+      <DependentUpon>Rep_PickingListCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_PickingListCompleto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_PickingListCompleto.Designer.cs">
+      <DependentUpon>Rep_PickingListCompleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_PickingListConcentrado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_PickingListConcentrado.Designer.cs">
+      <DependentUpon>Rep_PickingListConcentrado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_ProgramaReparto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_ProgramaReparto.Designer.cs">
+      <DependentUpon>Rep_ProgramaReparto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_RCitasAgendadas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_RCitasAgendadas.designer.cs">
+      <DependentUpon>Rep_RCitasAgendadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_RemisionVencidaB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_RemisionVencidaB.Designer.cs">
+      <DependentUpon>Rep_RemisionVencidaB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion4a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion4a.Designer.cs">
+      <DependentUpon>ExpRep_InvRotacion4a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_NcreditoTipo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_NcreditoTipo.Designer.cs">
+      <DependentUpon>Rep_NcreditoTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RelacionFacturacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RelacionFacturacion.Designer.cs">
+      <DependentUpon>ExpRep_RelacionFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RelacionFacturacionTer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RelacionFacturacionTer.Designer.cs">
+      <DependentUpon>ExpRep_RelacionFacturacionTer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_RelacionFacturacionTer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_RelacionFacturacionTer.Designer.cs">
+      <DependentUpon>Rep_RelacionFacturacionTer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_NcreditoTipo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_NcreditoTipo.Designer.cs">
+      <DependentUpon>ExpRep_NcreditoTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_RemisionVencidaA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_RemisionVencidaA.Designer.cs">
+      <DependentUpon>Rep_RemisionVencidaA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_RelacionFacturacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_RelacionFacturacion.Designer.cs">
+      <DependentUpon>Rep_RelacionFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_ProductosAsignados.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_ProductosAsignados.Designer.cs">
+      <DependentUpon>Rep_ProductosAsignados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_ProductosAsignados.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_ProductosAsignados.Designer.cs">
+      <DependentUpon>ExpRep_ProductosAsignados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_FacRegistroFacturacionBts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_FacRegistroFacturacionBts.Designer.cs">
+      <DependentUpon>ExpRep_FacRegistroFacturacionBts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_FacRegistroFacturacionBts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_FacRegistroFacturacionBts.Designer.cs">
+      <DependentUpon>Rep_FacRegistroFacturacionBts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_FacturacionxCte.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_FacturacionxCte.Designer.cs">
+      <DependentUpon>ExpRep_FacturacionxCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos1bBts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos1bBts.Designer.cs">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos1bBts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos1aBts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos1aBts.Designer.cs">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos1aBts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos1bBts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos1bBts.Designer.cs">
+      <DependentUpon>Rep_CobAntiguedadSaldos1bBts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos1aBts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos1aBts.Designer.cs">
+      <DependentUpon>Rep_CobAntiguedadSaldos1aBts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_FacturacionxCte.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_FacturacionxCte.Designer.cs">
+      <DependentUpon>Rep_FacturacionxCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaVentasAmbos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaVentasAmbos.Designer.cs">
+      <DependentUpon>ExpRep_VenEstadisticaVentasAmbos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_RPlaneacionCteA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_RPlaneacionCteA.designer.cs">
+      <DependentUpon>Rep_RPlaneacionCteA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_RPlaneacionCteTodos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_RPlaneacionCteTodos.designer.cs">
+      <DependentUpon>Rep_RPlaneacionCteTodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_Valuacion_CtasMarg.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Valuacion_CtasMarg.Designer.cs">
+      <DependentUpon>Rep_Valuacion_CtasMarg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb1Rik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb1Rik.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaUb1Rik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaVentasAmbos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaVentasAmbos.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaVentasAmbos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CargosPdtesxTer1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CargosPdtesxTer1.Designer.cs">
+      <DependentUpon>ExpRep_CargosPdtesxTer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CargosPdtesxTer1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CargosPdtesxTer1.Designer.cs">
+      <DependentUpon>Rep_CargosPdtesxTer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpSubCumpVentaC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpSubCumpVentaC.Designer.cs">
+      <DependentUpon>ExpSubCumpVentaC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpSubCumpVentaC1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpSubCumpVentaC1.Designer.cs">
+      <DependentUpon>ExpSubCumpVentaC1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpSubCumpVentaC2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpSubCumpVentaC2.Designer.cs">
+      <DependentUpon>ExpSubCumpVentaC2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpSubCumpVentaC2_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpSubCumpVentaC2_1.Designer.cs">
+      <DependentUpon>ExpSubCumpVentaC2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpSubCumpVentaC4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpSubCumpVentaC4.Designer.cs">
+      <DependentUpon>ExpSubCumpVentaC4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpSubImproductividad.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpSubImproductividad.Designer.cs">
+      <DependentUpon>ExpSubImproductividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpSubRelacionCobranza.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpSubRelacionCobranza.Designer.cs">
+      <DependentUpon>ExpSubRelacionCobranza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerImproductivos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerImproductivos.Designer.cs">
+      <DependentUpon>ExpRep_SerImproductivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpspRep_VenEstadoResultado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpspRep_VenEstadoResultado.Designer.cs">
+      <DependentUpon>ExpspRep_VenEstadoResultado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada1by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada1by.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada1by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes.Designer.cs">
+      <DependentUpon>ExpRepCobCarteraClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes1ax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes1ax.Designer.cs">
+      <DependentUpon>ExpRepCobCarteraClientes1ax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes1bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes1bx.Designer.cs">
+      <DependentUpon>ExpRepCobCarteraClientes1bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes1by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes1by.Designer.cs">
+      <DependentUpon>ExpRepCobCarteraClientes1by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes2ax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes2ax.Designer.cs">
+      <DependentUpon>ExpRepCobCarteraClientes2ax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes2ay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRepCobCarteraClientes2ay.Designer.cs">
+      <DependentUpon>ExpRepCobCarteraClientes2ay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRepDeficit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRepDeficit.Designer.cs">
+      <DependentUpon>ExpRepDeficit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRepInvKardex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRepInvKardex.Designer.cs">
+      <DependentUpon>ExpRepInvKardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRepTransito.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRepTransito.Designer.cs">
+      <DependentUpon>ExpRepTransito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobRelacionCobranzaFto1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobRelacionCobranzaFto1.Designer.cs">
+      <DependentUpon>ExpRep_CobRelacionCobranzaFto1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobRelacionCobranzaFto2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobRelacionCobranzaFto2.Designer.cs">
+      <DependentUpon>ExpRep_CobRelacionCobranzaFto2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobRelacionCobranzaFtoR1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobRelacionCobranzaFtoR1.Designer.cs">
+      <DependentUpon>ExpRep_CobRelacionCobranzaFtoR1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobRelacionCobranzaFtoR2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobRelacionCobranzaFtoR2.Designer.cs">
+      <DependentUpon>ExpRep_CobRelacionCobranzaFtoR2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobRotacionCartera1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobRotacionCartera1.Designer.cs">
+      <DependentUpon>ExpRep_CobRotacionCartera1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobRotacionCartera2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobRotacionCartera2.Designer.cs">
+      <DependentUpon>ExpRep_CobRotacionCartera2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada1a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada1a.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada1bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada1bx.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada1bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada1c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada1c.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada1c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada2bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada2bx.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada2bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada2by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada2by.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada2by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada2c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada2c.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada2c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada2_a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada2_a.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada2_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada3a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada3a.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada3a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada3bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada3bx.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada3bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada3by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada3by.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada3by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada3c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada3c.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada3c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada4bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada4bx.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada4bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada4by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada4by.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada4by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada4c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada4c.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada4c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada4_a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada4_a.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada4_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada5bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada5bx.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada5bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada5by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada5by.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada5by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada5c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada5c.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada5c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada5_a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CumpVentaInstalada5_a.Designer.cs">
+      <DependentUpon>ExpRep_CumpVentaInstalada5_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_ExcesosInventarios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_ExcesosInventarios.Designer.cs">
+      <DependentUpon>ExpRep_ExcesosInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_excesosInventarios2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_excesosInventarios2.Designer.cs">
+      <DependentUpon>ExpRep_excesosInventarios2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_FacFacturasCanceladas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_FacFacturasCanceladas.Designer.cs">
+      <DependentUpon>ExpRep_FacFacturasCanceladas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_FacPedidosPendientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_FacPedidosPendientes.Designer.cs">
+      <DependentUpon>ExpRep_FacPedidosPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_FacPedidosPendientes_Det.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_FacPedidosPendientes_Det.Designer.cs">
+      <DependentUpon>ExpRep_FacPedidosPendientes_Det.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_FacRegistroFacturacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_FacRegistroFacturacion.Designer.cs">
+      <DependentUpon>ExpRep_FacRegistroFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_FacRegistroPedidos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_FacRegistroPedidos.Designer.cs">
+      <DependentUpon>ExpRep_FacRegistroPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones1A.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones1A.Designer.cs">
+      <DependentUpon>ExpRep_InvControlRemisiones1A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones1B.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones1B.Designer.cs">
+      <DependentUpon>ExpRep_InvControlRemisiones1B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones2.Designer.cs">
+      <DependentUpon>ExpRep_InvControlRemisiones2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones2a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones2a.Designer.cs">
+      <DependentUpon>ExpRep_InvControlRemisiones2a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones2b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones2b.Designer.cs">
+      <DependentUpon>ExpRep_InvControlRemisiones2b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvControlRemisiones3.Designer.cs">
+      <DependentUpon>ExpRep_InvControlRemisiones3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvCumplimientoEntregas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvCumplimientoEntregas.Designer.cs">
+      <DependentUpon>ExpRep_InvCumplimientoEntregas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvCumplimientoEntregas2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvCumplimientoEntregas2.Designer.cs">
+      <DependentUpon>ExpRep_InvCumplimientoEntregas2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvDiferenciasInventarios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvDiferenciasInventarios.Designer.cs">
+      <DependentUpon>ExpRep_InvDiferenciasInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvOrdenCompra.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvOrdenCompra.Designer.cs">
+      <DependentUpon>ExpRep_InvOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion.Designer.cs">
+      <DependentUpon>ExpRep_InvRotacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion2.Designer.cs">
+      <DependentUpon>ExpRep_InvRotacion2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion3.Designer.cs">
+      <DependentUpon>ExpRep_InvRotacion3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion4b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvRotacion4b.Designer.cs">
+      <DependentUpon>ExpRep_InvRotacion4b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvTipoMovimiento.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvTipoMovimiento.Designer.cs">
+      <DependentUpon>ExpRep_InvTipoMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_InvValorizacionInventarios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_InvValorizacionInventarios.Designer.cs">
+      <DependentUpon>ExpRep_InvValorizacionInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RentabilidadClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RentabilidadClientes.Designer.cs">
+      <DependentUpon>ExpRep_RentabilidadClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RentabilidadClientes_SubCF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RentabilidadClientes_SubCF.Designer.cs">
+      <DependentUpon>ExpRep_RentabilidadClientes_SubCF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_RentabilidadClientes_SubProd.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_RentabilidadClientes_SubProd.Designer.cs">
+      <DependentUpon>ExpRep_RentabilidadClientes_SubProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerAmortizacion1a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerAmortizacion1a.Designer.cs">
+      <DependentUpon>ExpRep_SerAmortizacion1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerAmortizacion1b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerAmortizacion1b.Designer.cs">
+      <DependentUpon>ExpRep_SerAmortizacion1b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerAmortizacion2a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerAmortizacion2a.Designer.cs">
+      <DependentUpon>ExpRep_SerAmortizacion2a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerAmortizacion2b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerAmortizacion2b.Designer.cs">
+      <DependentUpon>ExpRep_SerAmortizacion2b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerAmortizacionSisP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerAmortizacionSisP.Designer.cs">
+      <DependentUpon>ExpRep_SerAmortizacionSisP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerBaseInstalada.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerBaseInstalada.Designer.cs">
+      <DependentUpon>ExpRep_SerBaseInstalada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerImproductivos2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerImproductivos2.Designer.cs">
+      <DependentUpon>ExpRep_SerImproductivos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerNoConformidades.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerNoConformidades.Designer.cs">
+      <DependentUpon>ExpRep_SerNoConformidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerProductividadSisPropietarios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerProductividadSisPropietarios.Designer.cs">
+      <DependentUpon>ExpRep_SerProductividadSisPropietarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerProductividadSisPropietariosPeriodos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerProductividadSisPropietariosPeriodos.Designer.cs">
+      <DependentUpon>ExpRep_SerProductividadSisPropietariosPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerProductividadSisPropietariosPeriodos2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerProductividadSisPropietariosPeriodos2.Designer.cs">
+      <DependentUpon>ExpRep_SerProductividadSisPropietariosPeriodos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerRutaServicio1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerRutaServicio1.Designer.cs">
+      <DependentUpon>ExpRep_SerRutaServicio1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerRutaServicio2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerRutaServicio2.Designer.cs">
+      <DependentUpon>ExpRep_SerRutaServicio2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerServicioTecnico.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerServicioTecnico.Designer.cs">
+      <DependentUpon>ExpRep_SerServicioTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerServicioTecnico1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerServicioTecnico1.Designer.cs">
+      <DependentUpon>ExpRep_SerServicioTecnico1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerServicioTecnico2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerServicioTecnico2.Designer.cs">
+      <DependentUpon>ExpRep_SerServicioTecnico2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_SerServicioTecnico3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_SerServicioTecnico3.Designer.cs">
+      <DependentUpon>ExpRep_SerServicioTecnico3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_Valuacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_Valuacion.Designer.cs">
+      <DependentUpon>ExpRep_Valuacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenDimensionClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenDimensionClientes.Designer.cs">
+      <DependentUpon>ExpRep_VenDimensionClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb1.Designer.cs">
+      <DependentUpon>ExpRep_VenEstadisticaUb1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb1a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb1a.Designer.cs">
+      <DependentUpon>ExpRep_VenEstadisticaUb1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb1ab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb1ab.Designer.cs">
+      <DependentUpon>ExpRep_VenEstadisticaUb1ab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb1b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb1b.Designer.cs">
+      <DependentUpon>ExpRep_VenEstadisticaUb1b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb2.Designer.cs">
+      <DependentUpon>ExpRep_VenEstadisticaUb2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb2b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb2b.Designer.cs">
+      <DependentUpon>ExpRep_VenEstadisticaUb2b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaUb3.Designer.cs">
+      <DependentUpon>ExpRep_VenEstadisticaUb3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaVentas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenEstadisticaVentas.Designer.cs">
+      <DependentUpon>ExpRep_VenEstadisticaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenPronosticoCierre1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenPronosticoCierre1.Designer.cs">
+      <DependentUpon>ExpRep_VenPronosticoCierre1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenPronosticoCierre2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenPronosticoCierre2.Designer.cs">
+      <DependentUpon>ExpRep_VenPronosticoCierre2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenPronosticoCierre3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenPronosticoCierre3.Designer.cs">
+      <DependentUpon>ExpRep_VenPronosticoCierre3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenRetencionClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenRetencionClientes.Designer.cs">
+      <DependentUpon>ExpRep_VenRetencionClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilbrutaUnitaria.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilbrutaUnitaria.Designer.cs">
+      <DependentUpon>ExpRep_VenUtilbrutaUnitaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilidadBruta1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilidadBruta1.Designer.cs">
+      <DependentUpon>ExpRep_VenUtilidadBruta1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilidadBruta2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilidadBruta2.Designer.cs">
+      <DependentUpon>ExpRep_VenUtilidadBruta2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilidadBruta3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilidadBruta3.Designer.cs">
+      <DependentUpon>ExpRep_VenUtilidadBruta3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilidadBruta4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenUtilidadBruta4.Designer.cs">
+      <DependentUpon>ExpRep_VenUtilidadBruta4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenVentas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenVentas.Designer.cs">
+      <DependentUpon>ExpRep_VenVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_VenVentasU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_VenVentasU.Designer.cs">
+      <DependentUpon>ExpRep_VenVentasU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobCoberturaCobranza.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobCoberturaCobranza.Designer.cs">
+      <DependentUpon>ExpRep_CobCoberturaCobranza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_ClienteProducto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_ClienteProducto.Designer.cs">
+      <DependentUpon>ExpRep_ClienteProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobCargosCreditos1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobCargosCreditos1.Designer.cs">
+      <DependentUpon>ExpRep_CobCargosCreditos1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobCargosCreditos2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobCargosCreditos2.Designer.cs">
+      <DependentUpon>ExpRep_CobCargosCreditos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos1a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos1a.Designer.cs">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos1b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos1b.Designer.cs">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos1b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos2a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos2a.Designer.cs">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos2a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos2b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobAntiguedadSaldos2b.Designer.cs">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos2b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CargosPdtesxTer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CargosPdtesxTer.Designer.cs">
+      <DependentUpon>ExpRep_CargosPdtesxTer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobResumenTer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobResumenTer.Designer.cs">
+      <DependentUpon>ExpRep_CobResumenTer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobResumenSuc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobResumenSuc.Designer.cs">
+      <DependentUpon>ExpRep_CobResumenSuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobResumenRik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobResumenRik.Designer.cs">
+      <DependentUpon>ExpRep_CobResumenRik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpRep_CobResumenMes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpRep_CobResumenMes.Designer.cs">
+      <DependentUpon>ExpRep_CobResumenMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvTipoMovimiento.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvTipoMovimiento.Designer.cs">
+      <DependentUpon>Rep_InvTipoMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaVentasRep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaVentasRep.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaVentasRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VentaNORentableRIK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VentaNORentableRIK.designer.cs">
+      <DependentUpon>Rep_VentaNORentableRIK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VentaNORentableRIKTerr.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VentaNORentableRIKTerr.designer.cs">
+      <DependentUpon>Rep_VentaNORentableRIKTerr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VentaNORentableRIKTerrCte.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VentaNORentableRIKTerrCte.designer.cs">
+      <DependentUpon>Rep_VentaNORentableRIKTerrCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenUtilidadBruta3Rik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenUtilidadBruta3Rik.designer.cs">
+      <DependentUpon>Rep_VenUtilidadBruta3Rik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SubCumpVentaC2_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubCumpVentaC2_1.Designer.cs">
+      <DependentUpon>SubCumpVentaC2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerProductividadSisPropietariosPeriodos2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerProductividadSisPropietariosPeriodos2.Designer.cs">
+      <DependentUpon>Rep_SerProductividadSisPropietariosPeriodos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepTransito.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepTransito.Designer.cs">
+      <DependentUpon>RepTransito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemisionContratoComodatoElectronico.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RemisionContratoComodatoElectronico.Designer.cs">
+      <DependentUpon>RemisionContratoComodatoElectronico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones2b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones2b.Designer.cs">
+      <DependentUpon>Rep_InvControlRemisiones2b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones2a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones2a.Designer.cs">
+      <DependentUpon>Rep_InvControlRemisiones2a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobResumenRik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobResumenRik.Designer.cs">
+      <DependentUpon>Rep_CobResumenRik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobResumenTer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobResumenTer.Designer.cs">
+      <DependentUpon>Rep_CobResumenTer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobResumenSuc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobResumenSuc.Designer.cs">
+      <DependentUpon>Rep_CobResumenSuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobResumenMes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobResumenMes.Designer.cs">
+      <DependentUpon>Rep_CobResumenMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubImproductividad.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubImproductividad.Designer.cs">
+      <DependentUpon>SubImproductividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerImproductivos2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerImproductivos2.Designer.cs">
+      <DependentUpon>Rep_SerImproductivos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerImproductivos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerImproductivos.Designer.cs">
+      <DependentUpon>Rep_SerImproductivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenVentasU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenVentasU.Designer.cs">
+      <DependentUpon>Rep_VenVentasU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepDeficit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepDeficit.Designer.cs">
+      <DependentUpon>RepDeficit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenVentas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenVentas.Designer.cs">
+      <DependentUpon>Rep_VenVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubRelacionCobranza.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubRelacionCobranza.Designer.cs">
+      <DependentUpon>SubRelacionCobranza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CargosPdtesxTer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CargosPdtesxTer.Designer.cs">
+      <DependentUpon>Rep_CargosPdtesxTer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_ClienteProducto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_ClienteProducto.Designer.cs">
+      <DependentUpon>Rep_ClienteProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubCumpVentaC5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubCumpVentaC5.Designer.cs">
+      <DependentUpon>SubCumpVentaC5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubCumpVentaC4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubCumpVentaC4.Designer.cs">
+      <DependentUpon>SubCumpVentaC4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubCumpVentaC2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubCumpVentaC2.Designer.cs">
+      <DependentUpon>SubCumpVentaC2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubCumpVentaC1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubCumpVentaC1.Designer.cs">
+      <DependentUpon>SubCumpVentaC1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada4c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada4c.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada4c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada2c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada2c.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada2c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada4by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada4by.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada4by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada4bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada4bx.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada4bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada2bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada2bx.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada2bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada2by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada2by.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada2by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada5bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada5bx.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada5bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada5_a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada5_a.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada5_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada4_a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada4_a.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada4_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada2_a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada2_a.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada2_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerAmortizacion1b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerAmortizacion1b.Designer.cs">
+      <DependentUpon>Rep_SerAmortizacion1b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerAmortizacion1a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerAmortizacion1a.Designer.cs">
+      <DependentUpon>Rep_SerAmortizacion1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerAmortizacion2b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerAmortizacion2b.Designer.cs">
+      <DependentUpon>Rep_SerAmortizacion2b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerAmortizacion2a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerAmortizacion2a.Designer.cs">
+      <DependentUpon>Rep_SerAmortizacion2a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobRelacionCobranzaFtoR2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobRelacionCobranzaFtoR2.Designer.cs">
+      <DependentUpon>Rep_CobRelacionCobranzaFtoR2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobRelacionCobranzaFtoR1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobRelacionCobranzaFtoR1.Designer.cs">
+      <DependentUpon>Rep_CobRelacionCobranzaFtoR1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada5by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada5by.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada5by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemisionContratoComodatoActualizacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RemisionContratoComodatoActualizacion.Designer.cs">
+      <DependentUpon>RemisionContratoComodatoActualizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobCargosCreditos2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobCargosCreditos2.Designer.cs">
+      <DependentUpon>Rep_CobCargosCreditos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_ExcesosInventarios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_ExcesosInventarios.Designer.cs">
+      <DependentUpon>Rep_ExcesosInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerServicioTecnico.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerServicioTecnico.Designer.cs">
+      <DependentUpon>Rep_SerServicioTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_Valuacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_Valuacion.Designer.cs">
+      <DependentUpon>Rep_Valuacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenPronosticoCierre3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenPronosticoCierre3.Designer.cs">
+      <DependentUpon>Rep_VenPronosticoCierre3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenPronosticoCierre2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenPronosticoCierre2.Designer.cs">
+      <DependentUpon>Rep_VenPronosticoCierre2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenPronosticoCierre1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenPronosticoCierre1.Designer.cs">
+      <DependentUpon>Rep_VenPronosticoCierre1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenUtilidadBruta4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenUtilidadBruta4.Designer.cs">
+      <DependentUpon>Rep_VenUtilidadBruta4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenUtilidadBruta3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenUtilidadBruta3.Designer.cs">
+      <DependentUpon>Rep_VenUtilidadBruta3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenDimensionClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenDimensionClientes.Designer.cs">
+      <DependentUpon>Rep_VenDimensionClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenUtilidadBruta2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenUtilidadBruta2.Designer.cs">
+      <DependentUpon>Rep_VenUtilidadBruta2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobCoberturaCobranza.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobCoberturaCobranza.Designer.cs">
+      <DependentUpon>Rep_CobCoberturaCobranza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerServicioTecnico3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerServicioTecnico3.Designer.cs">
+      <DependentUpon>Rep_SerServicioTecnico3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerServicioTecnico2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerServicioTecnico2.Designer.cs">
+      <DependentUpon>Rep_SerServicioTecnico2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenUtilidadBruta1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenUtilidadBruta1.Designer.cs">
+      <DependentUpon>Rep_VenUtilidadBruta1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerServicioTecnico1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerServicioTecnico1.Designer.cs">
+      <DependentUpon>Rep_SerServicioTecnico1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobRotacionCartera.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobRotacionCartera.Designer.cs">
+      <DependentUpon>Rep_CobRotacionCartera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobRotacionCartera2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobRotacionCartera2.Designer.cs">
+      <DependentUpon>Rep_CobRotacionCartera2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="spRep_CobRotacionCarteraF2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="spRep_CobRotacionCarteraF2.Designer.cs">
+      <DependentUpon>spRep_CobRotacionCarteraF2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerProductividadSisPropietariosPeriodos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerProductividadSisPropietariosPeriodos.Designer.cs">
+      <DependentUpon>Rep_SerProductividadSisPropietariosPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerBaseInstalada.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerBaseInstalada.Designer.cs">
+      <DependentUpon>Rep_SerBaseInstalada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones3.Designer.cs">
+      <DependentUpon>Rep_InvControlRemisiones3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones2.Designer.cs">
+      <DependentUpon>Rep_InvControlRemisiones2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobCargosCreditos1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobCargosCreditos1.Designer.cs">
+      <DependentUpon>Rep_CobCargosCreditos1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerNoConformidades.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerNoConformidades.Designer.cs">
+      <DependentUpon>Rep_SerNoConformidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobRelacionCobranzaFto1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobRelacionCobranzaFto1.Designer.cs">
+      <DependentUpon>Rep_CobRelacionCobranzaFto1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobRelacionCobranzaFto2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobRelacionCobranzaFto2.Designer.cs">
+      <DependentUpon>Rep_CobRelacionCobranzaFto2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerProductividadSisPropietarios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerProductividadSisPropietarios.Designer.cs">
+      <DependentUpon>Rep_SerProductividadSisPropietarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaVentas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaVentas.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos2b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos2b.Designer.cs">
+      <DependentUpon>Rep_CobAntiguedadSaldos2b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos2a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos2a.Designer.cs">
+      <DependentUpon>Rep_CobAntiguedadSaldos2a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos1b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos1b.Designer.cs">
+      <DependentUpon>Rep_CobAntiguedadSaldos1b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos1a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CobAntiguedadSaldos1a.Designer.cs">
+      <DependentUpon>Rep_CobAntiguedadSaldos1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenRetencionClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenRetencionClientes.Designer.cs">
+      <DependentUpon>Rep_VenRetencionClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb3.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaUb3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb2b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb2b.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaUb2b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb2.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaUb2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb1ab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb1ab.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaUb1ab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb1b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb1b.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaUb1b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvCumplimientoEntregas2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvCumplimientoEntregas2.Designer.cs">
+      <DependentUpon>Rep_InvCumplimientoEntregas2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvCumplimientoEntregas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvCumplimientoEntregas.Designer.cs">
+      <DependentUpon>Rep_InvCumplimientoEntregas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb1.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaUb1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerAmortizacionSisP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerAmortizacionSisP.Designer.cs">
+      <DependentUpon>Rep_SerAmortizacionSisP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_RentabilidadClientes_SubProd.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_RentabilidadClientes_SubProd.Designer.cs">
+      <DependentUpon>Rep_RentabilidadClientes_SubProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_RentabilidadClientes_SubCF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_RentabilidadClientes_SubCF.Designer.cs">
+      <DependentUpon>Rep_RentabilidadClientes_SubCF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_RentabilidadClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_RentabilidadClientes.Designer.cs">
+      <DependentUpon>Rep_RentabilidadClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada5c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada5c.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada5c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada3c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada3c.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada3c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada3by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada3by.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada3by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada3bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada3bx.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada3bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada3a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada3a.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada3a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada1c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada1c.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada1c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes2ay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes2ay.Designer.cs">
+      <DependentUpon>RepCobCarteraClientes2ay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes2ax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes2ax.Designer.cs">
+      <DependentUpon>RepCobCarteraClientes2ax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes1by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes1by.Designer.cs">
+      <DependentUpon>RepCobCarteraClientes1by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes1bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes1bx.Designer.cs">
+      <DependentUpon>RepCobCarteraClientes1bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada1by.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada1by.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada1by.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada1bx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada1bx.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada1bx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada1a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_CumpVentaInstalada1a.Designer.cs">
+      <DependentUpon>Rep_CumpVentaInstalada1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes.Designer.cs">
+      <DependentUpon>RepCobCarteraClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes1ax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepCobCarteraClientes1ax.Designer.cs">
+      <DependentUpon>RepCobCarteraClientes1ax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_FacFacturasCanceladas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_FacFacturasCanceladas.Designer.cs">
+      <DependentUpon>Rep_FacFacturasCanceladas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones1A.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones1A.Designer.cs">
+      <DependentUpon>Rep_InvControlRemisiones1A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones1B.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvControlRemisiones1B.Designer.cs">
+      <DependentUpon>Rep_InvControlRemisiones1B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvDiferenciasInventarios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvDiferenciasInventarios.Designer.cs">
+      <DependentUpon>Rep_InvDiferenciasInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvOrdenCompra.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvOrdenCompra.Designer.cs">
+      <DependentUpon>Rep_InvOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvRotacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvRotacion.Designer.cs">
+      <DependentUpon>Rep_InvRotacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvRotacion2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvRotacion2.Designer.cs">
+      <DependentUpon>Rep_InvRotacion2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvRotacion3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvRotacion3.Designer.cs">
+      <DependentUpon>Rep_InvRotacion3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvRotacion4a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvRotacion4a.Designer.cs">
+      <DependentUpon>Rep_InvRotacion4a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvRotacion4b.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvRotacion4b.Designer.cs">
+      <DependentUpon>Rep_InvRotacion4b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerRutaServicio2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerRutaServicio2.Designer.cs">
+      <DependentUpon>Rep_SerRutaServicio2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_SerRutaServicio1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_SerRutaServicio1.Designer.cs">
+      <DependentUpon>Rep_SerRutaServicio1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevParcial_Imprimir.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DevParcial_Imprimir.Designer.cs">
+      <DependentUpon>DevParcial_Imprimir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PedidoProximosImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PedidoProximosImpresion.Designer.cs">
+      <DependentUpon>PedidoProximosImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProFacturaRuta_FacPro.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProFacturaRuta_FacPro.Designer.cs">
+      <DependentUpon>ProFacturaRuta_FacPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EntSalImprimir.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EntSalImprimir.Designer.cs">
+      <DependentUpon>EntSalImprimir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaRevCobImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FacturaRevCobImpresion.Designer.cs">
+      <DependentUpon>FacturaRevCobImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotaCargoImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NotaCargoImpresion.Designer.cs">
+      <DependentUpon>NotaCargoImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FacturaImpresion.Designer.cs">
+      <DependentUpon>FacturaImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenCompraImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrdenCompraImpresion.Designer.cs">
+      <DependentUpon>OrdenCompraImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PagoImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PagoImpresion.Designer.cs">
+      <DependentUpon>PagoImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PagoListado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PagoListado.Designer.cs">
+      <DependentUpon>PagoListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PedidoImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PedidoImpresion.Designer.cs">
+      <DependentUpon>PedidoImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProFacturaRuta_Cte.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProFacturaRuta_Cte.Designer.cs">
+      <DependentUpon>ProFacturaRuta_Cte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProFacturaRuta_Pro.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProFacturaRuta_Pro.Designer.cs">
+      <DependentUpon>ProFacturaRuta_Pro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReclamacionesImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReclamacionesImpresion.Designer.cs">
+      <DependentUpon>ReclamacionesImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemisionContratoComodato.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RemisionContratoComodato.Designer.cs">
+      <DependentUpon>RemisionContratoComodato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemisionImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RemisionImpresion.Designer.cs">
+      <DependentUpon>RemisionImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepInvKardex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RepInvKardex.Designer.cs">
+      <DependentUpon>RepInvKardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePrueba.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportePrueba.Designer.cs">
+      <DependentUpon>ReportePrueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_FacPedidosPendientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_FacPedidosPendientes.Designer.cs">
+      <DependentUpon>Rep_FacPedidosPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_FacPedidosPendientes_Det.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_FacPedidosPendientes_Det.Designer.cs">
+      <DependentUpon>Rep_FacPedidosPendientes_Det.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_FacRegistroFacturacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_FacRegistroFacturacion.Designer.cs">
+      <DependentUpon>Rep_FacRegistroFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_FacRegistroPedidos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_FacRegistroPedidos.Designer.cs">
+      <DependentUpon>Rep_FacRegistroPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_InvValorizacionInventarios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_InvValorizacionInventarios.Designer.cs">
+      <DependentUpon>Rep_InvValorizacionInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb1a.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenEstadisticaUb1a.Designer.cs">
+      <DependentUpon>Rep_VenEstadisticaUb1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_VenUtilbrutaUnitaria.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_VenUtilbrutaUnitaria.Designer.cs">
+      <DependentUpon>Rep_VenUtilbrutaUnitaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="spRep_CobRotacionCarteraF1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="spRep_CobRotacionCarteraF1.Designer.cs">
+      <DependentUpon>spRep_CobRotacionCarteraF1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="spRep_VenEstadoResultado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="spRep_VenEstadoResultado.Designer.cs">
+      <DependentUpon>spRep_VenEstadoResultado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubCumpVentaC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubCumpVentaC.Designer.cs">
+      <DependentUpon>SubCumpVentaC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubRep_DetalleRemisionMeta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubRep_DetalleRemisionMeta.Designer.cs">
+      <DependentUpon>SubRep_DetalleRemisionMeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubTablaProductos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubTablaProductos.Designer.cs">
+      <DependentUpon>SubTablaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubTablaProductos2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubTablaProductos2.Designer.cs">
+      <DependentUpon>SubTablaProductos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubTablaProductos2VP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubTablaProductos2VP.designer.cs">
+      <DependentUpon>SubTablaProductos2VP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubTablaProductosVP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubTablaProductosVP.designer.cs">
+      <DependentUpon>SubTablaProductosVP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranAlmacenImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TranAlmacenImpresion.designer.cs">
+      <DependentUpon>TranAlmacenImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValProyectoImpresion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ValProyectoImpresion.Designer.cs">
+      <DependentUpon>ValProyectoImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValProyectoImpresion_SubCF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ValProyectoImpresion_SubCF.Designer.cs">
+      <DependentUpon>ValProyectoImpresion_SubCF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValProyectoImpresion_SubProd.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ValProyectoImpresion_SubProd.Designer.cs">
+      <DependentUpon>ValProyectoImpresion_SubProd.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AcuerdoImpresion.resx">
+      <DependentUpon>AcuerdoImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CedulaVisita_RSC_Asesor.resx">
+      <DependentUpon>CedulaVisita_RSC_Asesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CedulaVisita_RSC_Asesor_F01.resx">
+      <DependentUpon>CedulaVisita_RSC_Asesor_F01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CedulaVisita_RSC_Asesor_F02.resx">
+      <DependentUpon>CedulaVisita_RSC_Asesor_F02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component1.resx">
+      <DependentUpon>Component1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EspRep_RPlaneacionCteTodos.resx" />
+    <EmbeddedResource Include="ExpRepTransitoKardex.resx">
+      <DependentUpon>ExpRepTransitoKardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CargosPdtesxRik.resx">
+      <DependentUpon>ExpRep_CargosPdtesxRik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_FacRegistroFacturacionB.resx">
+      <DependentUpon>ExpRep_FacRegistroFacturacionB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvKardex.resx">
+      <DependentUpon>ExpRep_InvKardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvRotacion4Consig.resx">
+      <DependentUpon>ExpRep_InvRotacion4Consig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvRotacion5.resx">
+      <DependentUpon>ExpRep_InvRotacion5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RCitasAgendadas.resx">
+      <DependentUpon>ExpRep_RCitasAgendadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RemisionVencidaBCENTRAL.resx">
+      <DependentUpon>ExpRep_RemisionVencidaBCENTRAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RPlaneacionCteA.resx">
+      <DependentUpon>ExpRep_RPlaneacionCteA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RPlaneacionCteTodos.resx">
+      <DependentUpon>ExpRep_RPlaneacionCteTodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenEstadisticaUb1Rik.resx">
+      <DependentUpon>ExpRep_VenEstadisticaUb1Rik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenUtilidadBruta3Rik.resx">
+      <DependentUpon>ExpRep_VenUtilidadBruta3Rik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaAlmacenCobroImpresion.resx">
+      <DependentUpon>FacturaAlmacenCobroImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaSvtaImpresion.resx">
+      <DependentUpon>FacturaSvtaImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobEstCarteraDetalle_SW.resx">
+      <DependentUpon>RepCobEstCarteraDetalle_SW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobEstCarteraResumenCte_SW.resx">
+      <DependentUpon>RepCobEstCarteraResumenCte_SW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobEstCartera_SW.resx">
+      <DependentUpon>RepCobEstCartera_SW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobEstDetalleBitacora_SW.resx">
+      <DependentUpon>RepCobEstDetalleBitacora_SW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobEstDetalleDocumento_SW.resx">
+      <DependentUpon>RepCobEstDetalleDocumento_SW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobEstDetalleRastreo_SW.resx">
+      <DependentUpon>RepCobEstDetalleRastreo_SW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepComisiones.resx">
+      <DependentUpon>RepComisiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepComisionesCob.resx">
+      <DependentUpon>RepComisionesCob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepComisionesEA.resx">
+      <DependentUpon>RepComisionesEA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepComisionesEdoCon.resx">
+      <DependentUpon>RepComisionesEdoCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepComisionesEdoConEA.resx">
+      <DependentUpon>RepComisionesEdoConEA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepComisionesEdoRes.resx">
+      <DependentUpon>RepComisionesEdoRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepComisionesPPP.resx">
+      <DependentUpon>RepComisionesPPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCumplimientoVIDet.resx">
+      <DependentUpon>RepCumplimientoVIDet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCumplimientoVIDet_Pdcto.resx">
+      <DependentUpon>RepCumplimientoVIDet_Pdcto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCumplimientoVIGnral.resx">
+      <DependentUpon>RepCumplimientoVIGnral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCumplimientoVISemanal.resx">
+      <DependentUpon>RepCumplimientoVISemanal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCumplimientoVISemDeta.resx">
+      <DependentUpon>RepCumplimientoVISemDeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepEstadisticaAnticipada.resx">
+      <DependentUpon>RepEstadisticaAnticipada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepFacturasSAT.resx">
+      <DependentUpon>RepFacturasSAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepKardexAmortizacion.resx">
+      <DependentUpon>RepKardexAmortizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepKardexInversion.resx">
+      <DependentUpon>RepKardexInversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepListaPrecios.resx">
+      <DependentUpon>RepListaPrecios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepPedidoVI.resx">
+      <DependentUpon>RepPedidoVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepPrecioConvenio.resx">
+      <DependentUpon>RepPrecioConvenio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepPrecioConvenioLista.resx">
+      <DependentUpon>RepPrecioConvenioLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepPrecioConvenioListaDet.resx">
+      <DependentUpon>RepPrecioConvenioListaDet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepTransitoKardex.resx">
+      <DependentUpon>RepTransitoKardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CargosPdtesxRik.resx">
+      <DependentUpon>Rep_CargosPdtesxRik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CCG_DetalleRemisiones.resx">
+      <DependentUpon>Rep_CCG_DetalleRemisiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CCG_MonitoreoDesviaciones.resx">
+      <DependentUpon>Rep_CCG_MonitoreoDesviaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_excesosInventarios2.es-MX.resx">
+      <DependentUpon>Rep_excesosInventarios2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_excesosInventarios2.resx">
+      <DependentUpon>Rep_excesosInventarios2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvKardex.resx">
+      <DependentUpon>Rep_InvKardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvRotacion5.resx">
+      <DependentUpon>Rep_InvRotacion5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RemisionVencidaB.resx">
+      <DependentUpon>ExpRep_RemisionVencidaB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RemisionVencidaA.resx">
+      <DependentUpon>ExpRep_RemisionVencidaA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_PickingListCliente.resx">
+      <DependentUpon>Rep_PickingListCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_PickingListCompleto.resx">
+      <DependentUpon>Rep_PickingListCompleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_PickingListConcentrado.resx">
+      <DependentUpon>Rep_PickingListConcentrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_ProgramaReparto.resx">
+      <DependentUpon>Rep_ProgramaReparto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_RCitasAgendadas.resx">
+      <DependentUpon>Rep_RCitasAgendadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_RemisionVencidaB.resx">
+      <DependentUpon>Rep_RemisionVencidaB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvRotacion4a.resx">
+      <DependentUpon>ExpRep_InvRotacion4a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_NcreditoTipo.resx">
+      <DependentUpon>Rep_NcreditoTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RelacionFacturacion.resx">
+      <DependentUpon>ExpRep_RelacionFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RelacionFacturacionTer.resx">
+      <DependentUpon>ExpRep_RelacionFacturacionTer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_RelacionFacturacionTer.resx">
+      <DependentUpon>Rep_RelacionFacturacionTer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_NcreditoTipo.resx">
+      <DependentUpon>ExpRep_NcreditoTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_RemisionVencidaA.resx">
+      <DependentUpon>Rep_RemisionVencidaA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_RelacionFacturacion.resx">
+      <DependentUpon>Rep_RelacionFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_ProductosAsignados.resx">
+      <DependentUpon>Rep_ProductosAsignados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_ProductosAsignados.resx">
+      <DependentUpon>ExpRep_ProductosAsignados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_FacRegistroFacturacionBts.resx">
+      <DependentUpon>ExpRep_FacRegistroFacturacionBts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_FacRegistroFacturacionBts.resx">
+      <DependentUpon>Rep_FacRegistroFacturacionBts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_FacturacionxCte.resx">
+      <DependentUpon>ExpRep_FacturacionxCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobAntiguedadSaldos1bBts.resx">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos1bBts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobAntiguedadSaldos1aBts.resx">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos1aBts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobAntiguedadSaldos1bBts.resx">
+      <DependentUpon>Rep_CobAntiguedadSaldos1bBts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobAntiguedadSaldos1aBts.resx">
+      <DependentUpon>Rep_CobAntiguedadSaldos1aBts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_FacturacionxCte.resx">
+      <DependentUpon>Rep_FacturacionxCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenEstadisticaVentasAmbos.resx">
+      <DependentUpon>ExpRep_VenEstadisticaVentasAmbos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_RPlaneacionCteA.resx">
+      <DependentUpon>Rep_RPlaneacionCteA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_RPlaneacionCteTodos.resx">
+      <DependentUpon>Rep_RPlaneacionCteTodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Valuacion_CtasMarg.resx">
+      <DependentUpon>Rep_Valuacion_CtasMarg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenEstadisticaUb1Rik.resx">
+      <DependentUpon>Rep_VenEstadisticaUb1Rik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenEstadisticaVentasAmbos.resx">
+      <DependentUpon>Rep_VenEstadisticaVentasAmbos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CargosPdtesxTer1.resx">
+      <DependentUpon>ExpRep_CargosPdtesxTer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CargosPdtesxTer1.resx">
+      <DependentUpon>Rep_CargosPdtesxTer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpSubCumpVentaC.resx">
+      <DependentUpon>ExpSubCumpVentaC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpSubCumpVentaC1.resx">
+      <DependentUpon>ExpSubCumpVentaC1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpSubCumpVentaC2.resx">
+      <DependentUpon>ExpSubCumpVentaC2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpSubCumpVentaC2_1.resx">
+      <DependentUpon>ExpSubCumpVentaC2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpSubCumpVentaC4.resx">
+      <DependentUpon>ExpSubCumpVentaC4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpSubImproductividad.resx">
+      <DependentUpon>ExpSubImproductividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpSubRelacionCobranza.resx">
+      <DependentUpon>ExpSubRelacionCobranza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerImproductivos.resx">
+      <DependentUpon>ExpRep_SerImproductivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpspRep_VenEstadoResultado.resx">
+      <DependentUpon>ExpspRep_VenEstadoResultado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada1by.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada1by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRepCobCarteraClientes.resx">
+      <DependentUpon>ExpRepCobCarteraClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRepCobCarteraClientes1ax.resx">
+      <DependentUpon>ExpRepCobCarteraClientes1ax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRepCobCarteraClientes1bx.resx">
+      <DependentUpon>ExpRepCobCarteraClientes1bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRepCobCarteraClientes1by.resx">
+      <DependentUpon>ExpRepCobCarteraClientes1by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRepCobCarteraClientes2ax.resx">
+      <DependentUpon>ExpRepCobCarteraClientes2ax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRepCobCarteraClientes2ay.resx">
+      <DependentUpon>ExpRepCobCarteraClientes2ay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRepDeficit.resx">
+      <DependentUpon>ExpRepDeficit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRepInvKardex.resx">
+      <DependentUpon>ExpRepInvKardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRepTransito.resx">
+      <DependentUpon>ExpRepTransito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobRelacionCobranzaFto1.resx">
+      <DependentUpon>ExpRep_CobRelacionCobranzaFto1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobRelacionCobranzaFto2.resx">
+      <DependentUpon>ExpRep_CobRelacionCobranzaFto2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobRelacionCobranzaFtoR1.resx">
+      <DependentUpon>ExpRep_CobRelacionCobranzaFtoR1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobRelacionCobranzaFtoR2.resx">
+      <DependentUpon>ExpRep_CobRelacionCobranzaFtoR2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobRotacionCartera1.resx">
+      <DependentUpon>ExpRep_CobRotacionCartera1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobRotacionCartera2.resx">
+      <DependentUpon>ExpRep_CobRotacionCartera2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada1a.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada1bx.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada1bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada1c.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada1c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada2bx.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada2bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada2by.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada2by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada2c.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada2c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada2_a.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada2_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada3a.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada3a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada3bx.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada3bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada3by.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada3by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada3c.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada3c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada4bx.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada4bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada4by.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada4by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada4c.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada4c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada4_a.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada4_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada5bx.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada5bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada5by.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada5by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada5c.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada5c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CumpVentaInstalada5_a.resx">
+      <DependentUpon>ExpRep_CumpVentaInstalada5_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_ExcesosInventarios.resx">
+      <DependentUpon>ExpRep_ExcesosInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_excesosInventarios2.es-MX.resx">
+      <DependentUpon>ExpRep_excesosInventarios2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_excesosInventarios2.resx">
+      <DependentUpon>ExpRep_excesosInventarios2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_FacFacturasCanceladas.resx">
+      <DependentUpon>ExpRep_FacFacturasCanceladas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_FacPedidosPendientes.resx">
+      <DependentUpon>ExpRep_FacPedidosPendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_FacPedidosPendientes_Det.resx">
+      <DependentUpon>ExpRep_FacPedidosPendientes_Det.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_FacRegistroFacturacion.resx">
+      <DependentUpon>ExpRep_FacRegistroFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_FacRegistroPedidos.resx">
+      <DependentUpon>ExpRep_FacRegistroPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvControlRemisiones1A.resx">
+      <DependentUpon>ExpRep_InvControlRemisiones1A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvControlRemisiones1B.resx">
+      <DependentUpon>ExpRep_InvControlRemisiones1B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvControlRemisiones2.resx">
+      <DependentUpon>ExpRep_InvControlRemisiones2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvControlRemisiones2a.resx">
+      <DependentUpon>ExpRep_InvControlRemisiones2a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvControlRemisiones2b.resx">
+      <DependentUpon>ExpRep_InvControlRemisiones2b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvControlRemisiones3.resx">
+      <DependentUpon>ExpRep_InvControlRemisiones3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvCumplimientoEntregas.resx">
+      <DependentUpon>ExpRep_InvCumplimientoEntregas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvCumplimientoEntregas2.resx">
+      <DependentUpon>ExpRep_InvCumplimientoEntregas2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvDiferenciasInventarios.resx">
+      <DependentUpon>ExpRep_InvDiferenciasInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvOrdenCompra.resx">
+      <DependentUpon>ExpRep_InvOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvRotacion.resx">
+      <DependentUpon>ExpRep_InvRotacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvRotacion2.resx">
+      <DependentUpon>ExpRep_InvRotacion2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvRotacion3.resx">
+      <DependentUpon>ExpRep_InvRotacion3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvRotacion4b.resx">
+      <DependentUpon>ExpRep_InvRotacion4b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvTipoMovimiento.resx">
+      <DependentUpon>ExpRep_InvTipoMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_InvValorizacionInventarios.resx">
+      <DependentUpon>ExpRep_InvValorizacionInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RentabilidadClientes.resx">
+      <DependentUpon>ExpRep_RentabilidadClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RentabilidadClientes_SubCF.resx">
+      <DependentUpon>ExpRep_RentabilidadClientes_SubCF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_RentabilidadClientes_SubProd.resx">
+      <DependentUpon>ExpRep_RentabilidadClientes_SubProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerAmortizacion1a.resx">
+      <DependentUpon>ExpRep_SerAmortizacion1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerAmortizacion1b.resx">
+      <DependentUpon>ExpRep_SerAmortizacion1b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerAmortizacion2a.resx">
+      <DependentUpon>ExpRep_SerAmortizacion2a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerAmortizacion2b.resx">
+      <DependentUpon>ExpRep_SerAmortizacion2b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerAmortizacionSisP.resx">
+      <DependentUpon>ExpRep_SerAmortizacionSisP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerBaseInstalada.resx">
+      <DependentUpon>ExpRep_SerBaseInstalada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerImproductivos2.resx">
+      <DependentUpon>ExpRep_SerImproductivos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerNoConformidades.resx">
+      <DependentUpon>ExpRep_SerNoConformidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerProductividadSisPropietarios.resx">
+      <DependentUpon>ExpRep_SerProductividadSisPropietarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerProductividadSisPropietariosPeriodos.resx">
+      <DependentUpon>ExpRep_SerProductividadSisPropietariosPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerProductividadSisPropietariosPeriodos2.resx">
+      <DependentUpon>ExpRep_SerProductividadSisPropietariosPeriodos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerRutaServicio1.resx">
+      <DependentUpon>ExpRep_SerRutaServicio1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerRutaServicio2.resx">
+      <DependentUpon>ExpRep_SerRutaServicio2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerServicioTecnico.resx">
+      <DependentUpon>ExpRep_SerServicioTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerServicioTecnico1.resx">
+      <DependentUpon>ExpRep_SerServicioTecnico1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerServicioTecnico2.resx">
+      <DependentUpon>ExpRep_SerServicioTecnico2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_SerServicioTecnico3.resx">
+      <DependentUpon>ExpRep_SerServicioTecnico3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_Valuacion.resx">
+      <DependentUpon>ExpRep_Valuacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenDimensionClientes.resx">
+      <DependentUpon>ExpRep_VenDimensionClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenEstadisticaUb1.resx">
+      <DependentUpon>ExpRep_VenEstadisticaUb1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenEstadisticaUb1a.resx">
+      <DependentUpon>ExpRep_VenEstadisticaUb1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenEstadisticaUb1ab.resx">
+      <DependentUpon>ExpRep_VenEstadisticaUb1ab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenEstadisticaUb1b.resx">
+      <DependentUpon>ExpRep_VenEstadisticaUb1b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenEstadisticaUb2.resx">
+      <DependentUpon>ExpRep_VenEstadisticaUb2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenEstadisticaUb2b.resx">
+      <DependentUpon>ExpRep_VenEstadisticaUb2b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenEstadisticaUb3.resx">
+      <DependentUpon>ExpRep_VenEstadisticaUb3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenEstadisticaVentas.resx">
+      <DependentUpon>ExpRep_VenEstadisticaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenPronosticoCierre1.resx">
+      <DependentUpon>ExpRep_VenPronosticoCierre1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenPronosticoCierre2.resx">
+      <DependentUpon>ExpRep_VenPronosticoCierre2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenPronosticoCierre3.resx">
+      <DependentUpon>ExpRep_VenPronosticoCierre3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenRetencionClientes.resx">
+      <DependentUpon>ExpRep_VenRetencionClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenUtilbrutaUnitaria.resx">
+      <DependentUpon>ExpRep_VenUtilbrutaUnitaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenUtilidadBruta1.resx">
+      <DependentUpon>ExpRep_VenUtilidadBruta1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenUtilidadBruta2.resx">
+      <DependentUpon>ExpRep_VenUtilidadBruta2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenUtilidadBruta3.resx">
+      <DependentUpon>ExpRep_VenUtilidadBruta3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenUtilidadBruta4.resx">
+      <DependentUpon>ExpRep_VenUtilidadBruta4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenVentas.resx">
+      <DependentUpon>ExpRep_VenVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_VenVentasU.resx">
+      <DependentUpon>ExpRep_VenVentasU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobCoberturaCobranza.resx">
+      <DependentUpon>ExpRep_CobCoberturaCobranza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_ClienteProducto.resx">
+      <DependentUpon>ExpRep_ClienteProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobCargosCreditos1.resx">
+      <DependentUpon>ExpRep_CobCargosCreditos1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobCargosCreditos2.resx">
+      <DependentUpon>ExpRep_CobCargosCreditos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobAntiguedadSaldos1a.resx">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobAntiguedadSaldos1b.resx">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos1b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobAntiguedadSaldos2a.resx">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos2a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobAntiguedadSaldos2b.resx">
+      <DependentUpon>ExpRep_CobAntiguedadSaldos2b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CargosPdtesxTer.resx">
+      <DependentUpon>ExpRep_CargosPdtesxTer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobResumenTer.resx">
+      <DependentUpon>ExpRep_CobResumenTer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobResumenSuc.resx">
+      <DependentUpon>ExpRep_CobResumenSuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobResumenRik.resx">
+      <DependentUpon>ExpRep_CobResumenRik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpRep_CobResumenMes.resx">
+      <DependentUpon>ExpRep_CobResumenMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvTipoMovimiento.resx">
+      <DependentUpon>Rep_InvTipoMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VentaNORentableRIK.resx">
+      <DependentUpon>Rep_VentaNORentableRIK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VentaNORentableRIKTerr.resx">
+      <DependentUpon>Rep_VentaNORentableRIKTerr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VentaNORentableRIKTerrCte.resx">
+      <DependentUpon>Rep_VentaNORentableRIKTerrCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenUtilidadBruta3Rik.resx">
+      <DependentUpon>Rep_VenUtilidadBruta3Rik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubCumpVentaC2_1.resx">
+      <DependentUpon>SubCumpVentaC2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerProductividadSisPropietariosPeriodos2.resx">
+      <DependentUpon>Rep_SerProductividadSisPropietariosPeriodos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepTransito.resx">
+      <DependentUpon>RepTransito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemisionContratoComodatoElectronico.resx">
+      <DependentUpon>RemisionContratoComodatoElectronico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvControlRemisiones2b.resx">
+      <DependentUpon>Rep_InvControlRemisiones2b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvControlRemisiones2a.resx">
+      <DependentUpon>Rep_InvControlRemisiones2a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobResumenRik.resx">
+      <DependentUpon>Rep_CobResumenRik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobResumenTer.resx">
+      <DependentUpon>Rep_CobResumenTer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobResumenSuc.resx">
+      <DependentUpon>Rep_CobResumenSuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobResumenMes.resx">
+      <DependentUpon>Rep_CobResumenMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubImproductividad.resx">
+      <DependentUpon>SubImproductividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerImproductivos2.resx">
+      <DependentUpon>Rep_SerImproductivos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerImproductivos.resx">
+      <DependentUpon>Rep_SerImproductivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenVentasU.resx">
+      <DependentUpon>Rep_VenVentasU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepDeficit.resx">
+      <DependentUpon>RepDeficit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenVentas.resx">
+      <DependentUpon>Rep_VenVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubRelacionCobranza.resx">
+      <DependentUpon>SubRelacionCobranza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CargosPdtesxTer.resx">
+      <DependentUpon>Rep_CargosPdtesxTer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_ClienteProducto.resx">
+      <DependentUpon>Rep_ClienteProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubCumpVentaC5.resx">
+      <DependentUpon>SubCumpVentaC5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubCumpVentaC4.resx">
+      <DependentUpon>SubCumpVentaC4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubCumpVentaC2.resx">
+      <DependentUpon>SubCumpVentaC2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubCumpVentaC1.resx">
+      <DependentUpon>SubCumpVentaC1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada4c.resx">
+      <DependentUpon>Rep_CumpVentaInstalada4c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada2c.resx">
+      <DependentUpon>Rep_CumpVentaInstalada2c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada4by.resx">
+      <DependentUpon>Rep_CumpVentaInstalada4by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada4bx.resx">
+      <DependentUpon>Rep_CumpVentaInstalada4bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada2bx.resx">
+      <DependentUpon>Rep_CumpVentaInstalada2bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada2by.resx">
+      <DependentUpon>Rep_CumpVentaInstalada2by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada5bx.resx">
+      <DependentUpon>Rep_CumpVentaInstalada5bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada5_a.resx">
+      <DependentUpon>Rep_CumpVentaInstalada5_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada4_a.resx">
+      <DependentUpon>Rep_CumpVentaInstalada4_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada2_a.resx">
+      <DependentUpon>Rep_CumpVentaInstalada2_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerAmortizacion1b.resx">
+      <DependentUpon>Rep_SerAmortizacion1b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerAmortizacion1a.resx">
+      <DependentUpon>Rep_SerAmortizacion1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerAmortizacion2b.resx">
+      <DependentUpon>Rep_SerAmortizacion2b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerAmortizacion2a.resx">
+      <DependentUpon>Rep_SerAmortizacion2a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobRelacionCobranzaFtoR2.resx">
+      <DependentUpon>Rep_CobRelacionCobranzaFtoR2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobRelacionCobranzaFtoR1.resx">
+      <DependentUpon>Rep_CobRelacionCobranzaFtoR1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada5by.resx">
+      <DependentUpon>Rep_CumpVentaInstalada5by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemisionContratoComodatoActualizacion.resx">
+      <DependentUpon>RemisionContratoComodatoActualizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobCargosCreditos2.resx">
+      <DependentUpon>Rep_CobCargosCreditos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_ExcesosInventarios.resx">
+      <DependentUpon>Rep_ExcesosInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerServicioTecnico.resx">
+      <DependentUpon>Rep_SerServicioTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_Valuacion.resx">
+      <DependentUpon>Rep_Valuacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenPronosticoCierre3.resx">
+      <DependentUpon>Rep_VenPronosticoCierre3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenPronosticoCierre2.resx">
+      <DependentUpon>Rep_VenPronosticoCierre2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenPronosticoCierre1.resx">
+      <DependentUpon>Rep_VenPronosticoCierre1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenUtilidadBruta4.resx">
+      <DependentUpon>Rep_VenUtilidadBruta4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenUtilidadBruta3.resx">
+      <DependentUpon>Rep_VenUtilidadBruta3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenDimensionClientes.resx">
+      <DependentUpon>Rep_VenDimensionClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenUtilidadBruta2.resx">
+      <DependentUpon>Rep_VenUtilidadBruta2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobCoberturaCobranza.resx">
+      <DependentUpon>Rep_CobCoberturaCobranza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerServicioTecnico3.resx">
+      <DependentUpon>Rep_SerServicioTecnico3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerServicioTecnico2.resx">
+      <DependentUpon>Rep_SerServicioTecnico2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenUtilidadBruta1.resx">
+      <DependentUpon>Rep_VenUtilidadBruta1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerServicioTecnico1.resx">
+      <DependentUpon>Rep_SerServicioTecnico1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobRotacionCartera.resx">
+      <DependentUpon>Rep_CobRotacionCartera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobRotacionCartera2.resx">
+      <DependentUpon>Rep_CobRotacionCartera2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spRep_CobRotacionCarteraF2.resx">
+      <DependentUpon>spRep_CobRotacionCarteraF2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerProductividadSisPropietariosPeriodos.resx">
+      <DependentUpon>Rep_SerProductividadSisPropietariosPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerBaseInstalada.resx">
+      <DependentUpon>Rep_SerBaseInstalada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvControlRemisiones3.resx">
+      <DependentUpon>Rep_InvControlRemisiones3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvControlRemisiones2.resx">
+      <DependentUpon>Rep_InvControlRemisiones2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobCargosCreditos1.resx">
+      <DependentUpon>Rep_CobCargosCreditos1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerNoConformidades.resx">
+      <DependentUpon>Rep_SerNoConformidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobRelacionCobranzaFto1.resx">
+      <DependentUpon>Rep_CobRelacionCobranzaFto1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobRelacionCobranzaFto2.resx">
+      <DependentUpon>Rep_CobRelacionCobranzaFto2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerProductividadSisPropietarios.resx">
+      <DependentUpon>Rep_SerProductividadSisPropietarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenEstadisticaVentas.resx">
+      <DependentUpon>Rep_VenEstadisticaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobAntiguedadSaldos2b.resx">
+      <DependentUpon>Rep_CobAntiguedadSaldos2b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobAntiguedadSaldos2a.resx">
+      <DependentUpon>Rep_CobAntiguedadSaldos2a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobAntiguedadSaldos1b.resx">
+      <DependentUpon>Rep_CobAntiguedadSaldos1b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CobAntiguedadSaldos1a.resx">
+      <DependentUpon>Rep_CobAntiguedadSaldos1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenRetencionClientes.resx">
+      <DependentUpon>Rep_VenRetencionClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenEstadisticaUb3.resx">
+      <DependentUpon>Rep_VenEstadisticaUb3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenEstadisticaUb2b.resx">
+      <DependentUpon>Rep_VenEstadisticaUb2b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenEstadisticaUb2.resx">
+      <DependentUpon>Rep_VenEstadisticaUb2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenEstadisticaUb1ab.resx">
+      <DependentUpon>Rep_VenEstadisticaUb1ab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenEstadisticaUb1b.resx">
+      <DependentUpon>Rep_VenEstadisticaUb1b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvCumplimientoEntregas2.resx">
+      <DependentUpon>Rep_InvCumplimientoEntregas2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvCumplimientoEntregas.resx">
+      <DependentUpon>Rep_InvCumplimientoEntregas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenEstadisticaUb1.resx">
+      <DependentUpon>Rep_VenEstadisticaUb1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerAmortizacionSisP.resx">
+      <DependentUpon>Rep_SerAmortizacionSisP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_RentabilidadClientes_SubProd.resx">
+      <DependentUpon>Rep_RentabilidadClientes_SubProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_RentabilidadClientes_SubCF.resx">
+      <DependentUpon>Rep_RentabilidadClientes_SubCF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_RentabilidadClientes.resx">
+      <DependentUpon>Rep_RentabilidadClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada5c.resx">
+      <DependentUpon>Rep_CumpVentaInstalada5c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada3c.resx">
+      <DependentUpon>Rep_CumpVentaInstalada3c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada3by.resx">
+      <DependentUpon>Rep_CumpVentaInstalada3by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada3bx.resx">
+      <DependentUpon>Rep_CumpVentaInstalada3bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada3a.resx">
+      <DependentUpon>Rep_CumpVentaInstalada3a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada1c.resx">
+      <DependentUpon>Rep_CumpVentaInstalada1c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobCarteraClientes2ay.resx">
+      <DependentUpon>RepCobCarteraClientes2ay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobCarteraClientes2ax.resx">
+      <DependentUpon>RepCobCarteraClientes2ax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobCarteraClientes1by.resx">
+      <DependentUpon>RepCobCarteraClientes1by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobCarteraClientes1bx.resx">
+      <DependentUpon>RepCobCarteraClientes1bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada1by.resx">
+      <DependentUpon>Rep_CumpVentaInstalada1by.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada1bx.resx">
+      <DependentUpon>Rep_CumpVentaInstalada1bx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_CumpVentaInstalada1a.resx">
+      <DependentUpon>Rep_CumpVentaInstalada1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobCarteraClientes.resx">
+      <DependentUpon>RepCobCarteraClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepCobCarteraClientes1ax.resx">
+      <DependentUpon>RepCobCarteraClientes1ax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_FacFacturasCanceladas.resx">
+      <DependentUpon>Rep_FacFacturasCanceladas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvControlRemisiones1A.resx">
+      <DependentUpon>Rep_InvControlRemisiones1A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvControlRemisiones1B.resx">
+      <DependentUpon>Rep_InvControlRemisiones1B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvDiferenciasInventarios.resx">
+      <DependentUpon>Rep_InvDiferenciasInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvOrdenCompra.resx">
+      <DependentUpon>Rep_InvOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvRotacion.resx">
+      <DependentUpon>Rep_InvRotacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvRotacion2.resx">
+      <DependentUpon>Rep_InvRotacion2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvRotacion3.resx">
+      <DependentUpon>Rep_InvRotacion3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvRotacion4a.resx">
+      <DependentUpon>Rep_InvRotacion4a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvRotacion4b.resx">
+      <DependentUpon>Rep_InvRotacion4b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerRutaServicio2.resx">
+      <DependentUpon>Rep_SerRutaServicio2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_SerRutaServicio1.resx">
+      <DependentUpon>Rep_SerRutaServicio1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevParcial_Imprimir.resx">
+      <DependentUpon>DevParcial_Imprimir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedidoProximosImpresion.resx">
+      <DependentUpon>PedidoProximosImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProFacturaRuta_FacPro.resx">
+      <DependentUpon>ProFacturaRuta_FacPro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntSalImprimir.resx">
+      <DependentUpon>EntSalImprimir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaRevCobImpresion.resx">
+      <DependentUpon>FacturaRevCobImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotaCargoImpresion.resx">
+      <DependentUpon>NotaCargoImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaImpresion.resx">
+      <DependentUpon>FacturaImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenCompraImpresion.resx">
+      <DependentUpon>OrdenCompraImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagoImpresion.resx">
+      <DependentUpon>PagoImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagoListado.resx">
+      <DependentUpon>PagoListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedidoImpresion.resx">
+      <DependentUpon>PedidoImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProFacturaRuta_Cte.resx">
+      <DependentUpon>ProFacturaRuta_Cte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProFacturaRuta_Pro.resx">
+      <DependentUpon>ProFacturaRuta_Pro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReclamacionesImpresion.resx">
+      <DependentUpon>ReclamacionesImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemisionContratoComodato.resx">
+      <DependentUpon>RemisionContratoComodato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemisionImpresion.resx">
+      <DependentUpon>RemisionImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepInvKardex.resx">
+      <DependentUpon>RepInvKardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePrueba.resx">
+      <DependentUpon>ReportePrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_FacPedidosPendientes.resx">
+      <DependentUpon>Rep_FacPedidosPendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_FacPedidosPendientes_Det.resx">
+      <DependentUpon>Rep_FacPedidosPendientes_Det.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_FacRegistroFacturacion.resx">
+      <DependentUpon>Rep_FacRegistroFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_FacRegistroPedidos.resx">
+      <DependentUpon>Rep_FacRegistroPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_InvValorizacionInventarios.resx">
+      <DependentUpon>Rep_InvValorizacionInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenEstadisticaUb1a.resx">
+      <DependentUpon>Rep_VenEstadisticaUb1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_VenUtilbrutaUnitaria.resx">
+      <DependentUpon>Rep_VenUtilbrutaUnitaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spRep_CobRotacionCarteraF1.resx">
+      <DependentUpon>spRep_CobRotacionCarteraF1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spRep_VenEstadoResultado.resx">
+      <DependentUpon>spRep_VenEstadoResultado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubCumpVentaC.resx">
+      <DependentUpon>SubCumpVentaC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubRep_DetalleRemisionMeta.resx">
+      <DependentUpon>SubRep_DetalleRemisionMeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubTablaProductos.resx">
+      <DependentUpon>SubTablaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubTablaProductos2.resx">
+      <DependentUpon>SubTablaProductos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubTablaProductos2VP.resx">
+      <DependentUpon>SubTablaProductos2VP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubTablaProductosVP.resx">
+      <DependentUpon>SubTablaProductosVP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranAlmacenImpresion.resx">
+      <DependentUpon>TranAlmacenImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValProyectoImpresion.resx">
+      <DependentUpon>ValProyectoImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValProyectoImpresion_SubCF.resx">
+      <DependentUpon>ValProyectoImpresion_SubCF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValProyectoImpresion_SubProd.resx">
+      <DependentUpon>ValProyectoImpresion_SubProd.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocios\CapaNegocios.csproj">
+      <Project>{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}</Project>
+      <Name>CapaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="ClassDiagram5.cd" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

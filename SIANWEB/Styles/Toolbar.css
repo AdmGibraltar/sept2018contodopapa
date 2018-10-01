@@ -1,0 +1,469 @@
+﻿/*Menu superior*/
+.aceptarToolbar .rtbIcon, .mail:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1707px;
+	width: 16px;
+	height: 16px;
+}
+.modificar .rtbIcon, .mail:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -782px;
+	width: 16px;
+	height: 16px;
+}
+.mail .rtbIcon, .mail:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -880px;
+	width: 16px;
+	height: 16px;
+}
+.delete .rtbIcon, .delete:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -944px;
+	width: 16px;
+	height: 16px;
+}
+.undo .rtbIcon, .undo:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 1px -392px;
+	width: 16px;
+	height: 16px;
+}
+.save .rtbIcon, .save:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1622px;
+	width: 16px;
+	height: 16px;
+}
+.new .rtbIcon, .new:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat -3px -1315px;
+	width: 16px;
+	height: 16px;
+}
+.print .rtbIcon, .print:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 3px -189px;
+	width: 22px;
+	height: 20px;
+}
+.trash .rtbIcon, .trash:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1301px;
+	width: 16px;
+	height: 17px;
+}
+.next .rtbIcon, .next:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1346px;
+	width: 16px;
+	height: 16px;
+}
+
+.up .rtbIcon, .up:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1753px;
+	width: 16px;
+	height: 16px;
+}
+
+.down .rtbIcon, .down:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1728px;
+	width: 16px;
+	height: 16px;
+}
+
+.saveas .rtbIcon, .saveas:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1780px;
+	width: 16px;
+	height: 16px;
+}
+
+.last .rtbIcon, .last:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1807px;
+	width: 16px;
+	height: 16px;
+}
+.facRemision .rtbIcon, .last:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1807px;
+	width: 16px;
+	height: 16px;
+}
+.facPedido .rtbIcon, .down:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1728px;
+	width: 16px;
+	height: 16px;
+}
+.remPedido .rtbIcon, .up:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1753px;
+	width: 16px;
+	height: 16px;
+}
+.descExcel .rtbIcon, .up:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1753px;
+	width: 16px;
+	height: 16px;
+}
+.Excel .rtbIcon, .up:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -125px;
+	width: 16px;
+	height: 16px;
+}
+.facEspecial .rtbIcon, .next:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1346px;
+	width: 16px;
+	height: 16px;
+}
+.add .rtbIcon, .next:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -293px;
+	width: 16px;
+	height: 16px;
+}
+/*Menu Izquierdo*/
+
+.clientesRP .rpImage
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -540px;
+	height: 24px;
+	width: 24px;
+	margin-left: 10px;
+}
+
+.clientesRP .rpText
+{
+	font-weight: normal;
+}
+.agendaRP .rpImage
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -323px;
+	height: 24px;
+	width: 24px;
+	margin-left: 10px;
+}
+.agendaRP .rpText
+{
+	font-weight: normal;
+}
+.compromisosRP .rpImage
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -580px;
+	height: 24px;
+	width: 24px;
+	margin-left: 10px;
+}
+.compromisosRP .rpText
+{
+	font-weight: normal;
+}
+.directorioRP .rpImage
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -658px;
+	height: 24px;
+	width: 24px;
+	margin-left: 10px;
+}
+.directorioRP .rpText
+{
+	font-weight: normal;
+}
+.oportunidadesRP .rpImage
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1376px;
+	height: 24px;
+	width: 24px;
+	margin-left: 10px;
+}
+.oportunidadesRP .rpText
+{
+	font-weight: normal;
+}
+.campañasRP .rpImage
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -471px;
+	height: 24px;
+	width: 24px;
+	margin-left: 10px;
+}
+.campañasRP .rpText
+{
+	font-weight: normal;
+}
+.correoRP .rpImage
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -842px;
+	height: 24px;
+	width: 24px;
+	margin-left: 10px;
+}
+.correoRP .rpText
+{
+	font-weight: normal;
+}
+
+
+/*Menu de herramientas*/
+.avisoH
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1238px;
+	width: 25px;
+	height: 25px;
+}
+
+.compromisoH
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1278px;
+	width: 24px;
+	height: 24px;
+}
+
+.passwordH
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1450px;
+	width: 24px;
+	height: 24px;
+}
+
+.confH
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -622px;
+	width: 24px;
+	height: 24px;
+}
+.temasH
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1489px;
+	width: 24px;
+	height: 24px;
+}
+
+.plantillasH
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1528px;
+	width: 24px;
+	height: 24px;
+}
+
+.scompromisosH
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -225px;
+	width: 24px;
+	height: 24px;
+}
+
+
+/*Correo*/
+.correoC .rtbIcon, .correoC:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -812px;
+	width: 16px;
+	height: 16px;
+}
+
+.responderC .rtbIcon, .responderC:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1204px;
+	width: 16px;
+	height: 16px;
+}
+
+
+
+/*Correo*/
+.correoC .rtbIcon, .correoC:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -812px;
+	width: 16px;
+	height: 16px;
+}
+
+.dscargarC .rtbIcon, .dscargarC:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -751px;
+	width: 16px;
+	height: 16px;
+}
+
+.vaciarC
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -1418px;
+	width: 16px;
+	height: 16px;
+}
+
+/*Otros*/
+.buscar20
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1830px;
+	width: 20px;
+	height: 20px;
+}
+.email_grid
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 2px -880px;
+	width: 20px;
+	height: 20px;
+}
+.edit
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -785px;
+	width: 16px;
+	height: 16px;
+}
+.imprimir
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat -2px -193px;
+	width: 16px;
+	height: 16px;
+}
+.baja
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -947px;
+	width: 16px;
+	height: 16px;
+}
+.enviar
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1349px;
+	width: 16px;
+	height: 16px;
+}
+.borrar
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -696px;
+	width: 16px;
+	height: 16px;
+}
+
+.aceptar
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1709px;
+	height: 16px;
+}
+
+.error
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -946px;
+	width: 16px;
+	height: 16px;
+}
+.add16
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -295px;
+	width: 16px;
+	height: 16px;
+}
+.graficar
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1082px;
+	width: 24px;
+	height: 24px;
+}
+.rojo
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1591px;
+	width: 16px;
+	height: 16px;
+}
+
+.amarillo
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -365px;
+	width: 16px;
+	height: 16px;
+}
+
+.blanco
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -427px;
+	width: 16px;
+	height: 16px;
+}
+.add16
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -295px;
+	width: 16px;
+	height: 16px;
+}
+.verdetalle
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -264px;
+	width: 16px;
+	height: 16px;
+}
+
+
+
+
+
+
+/*encuestas*/
+.usuarioEN .rtsImg
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1678px;
+	width: 16px;
+	height: 16px;
+}
+
+.distribuidoresEN .rtsImg
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -70px;
+	width: 16px;
+	height: 16px;
+}
+.clientesEN .rtsImg
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -39px;
+	width: 16px;
+	height: 16px;
+}
+.otrosEN .rtsImg
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -159px;
+	width: 16px;
+	height: 16px;
+}
+/* ComboBox */
+.rojoComp .rcbImage
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1591px;
+	width: 16px;
+	height: 16px;
+}
+
+.amarilloComp .rcbImage
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -365px;
+	width: 16px;
+	height: 16px;
+}
+
+.blancoComp .rcbImage
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -427px;
+	width: 16px;
+	height: 16px;
+}
+
+
+.link
+{
+	cursor: hand;
+}
+
+
+.question .rtbIcon, .down:hover .rtbIcon
+{
+	background: transparent url(../Imagenes/Sprite01.png) no-repeat 0px -1855px;
+	width: 16px;
+	height: 16px;
+}

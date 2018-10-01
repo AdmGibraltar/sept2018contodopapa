@@ -1,0 +1,98 @@
+﻿.rcbHeader ul,
+.rcbFooter ul,
+.rcbItem ul, .rcbHovered ul, .rcbDisabled ul
+{
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.col1, .col2, .col3, .col4
+{
+    float: left;
+    width: 80px;
+    margin: 0;
+    padding: 0 5px 0 0;
+    line-height: 14px;
+}
+
+.col50
+{
+    float: left;
+    width: 50px;
+    margin: 0;
+    padding: 0 5px 0 0;
+    line-height: 14px;
+}
+
+
+
+.col120
+{
+    float: left;
+    width: 120px;
+    margin: 0;
+    padding: 0 5px 0 0;
+    line-height: 14px;
+}
+
+.col150
+{
+    float: left;
+    width: 150px;
+    margin: 0;
+    padding: 0 5px 0 0;
+    line-height: 14px;
+}
+
+.col180
+{
+    float: left;
+    width: 180px;
+    margin: 0;
+    padding: 0 5px 0 0;
+    line-height: 14px;
+}
+
+.col200
+{
+    float: left;
+    width: 200px;
+    margin: 0;
+    padding: 0 5px 0 0;
+    line-height: 14px;
+}
+
+
+
+
+label,
+.selection-result
+{
+    font: 13px 'Segoe UI', Arial, sans-serif;
+    color: #4888a2;
+}
+
+label
+{
+    padding: 0 10px 0 0;
+}
+
+.button
+{
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.selection-result
+{
+    padding: 10px 0 10px 0;
+    display: block;
+}
+
+div.bigModuleBottom
+{
+    padding-top: 25px;
+}

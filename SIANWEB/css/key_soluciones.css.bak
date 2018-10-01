@@ -1,0 +1,153 @@
+﻿
+.form-group
+{
+    margin-bottom:10px !important; 
+}
+
+.modal-footer 
+{
+    border-top: none;
+    margin-top: 10px !important; 
+    padding: 10px !important; 
+}
+
+.pa4 
+{
+    margin :5px !important; 
+}
+
+.PARAM
+{   
+    border-right: 1px solid #333;
+    margin-bottom: 5px;
+    padding-right :5px;
+}
+
+.PADDING10
+{
+    padding-left:10px !important;
+    padding-right:10px !important;
+
+}
+
+.PADDING5
+{
+    padding:5px !important;
+}
+
+.PADDING_TB_10
+{
+    padding-bottom :10px !important;
+    padding-top:10px !important;
+}
+
+
+.VAL_BOTTOM
+{
+    display: inline-block;
+    vertical-align: bottom;
+    float: none;
+}
+
+.MARGIN_BOTTOM5 
+{
+    margin-bottom:5px !important;
+}
+
+.MARGIN_BT5 
+{
+    margin-bottom:5px !important;
+    margin-top:5px !important;
+}
+
+.MARGIN_BOTTOM0
+{
+    margin-bottom:0px !important;
+}
+
+.panel-heading 
+{
+    padding:5px !important;
+}
+
+h2 
+{
+    margin-top:10px !important; 
+}
+
+h3 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.ROWPAD 
+{
+    padding-left:5px!important;
+    padding-right:5px!important;
+}
+
+.row
+{
+    padding-left:5px!important;
+    padding-right:5px!important;
+}
+
+.fuente_parrafo 
+{
+    font-size: 14pt;   
+    text-align: justify;
+    text-justify: inter-word;    
+}
+
+.marcado
+{
+  font-weight:bold;
+}
+
+#dvLoading {
+	background:transparent  url(../../Img/ajax-loader.gif) no-repeat center center;
+	height: 50px;
+	width: 250px;
+	position: fixed;
+	z-index: 1000;
+	left: 50%;
+	top: 40%;
+	margin: -25px 0 0 -25px;
+}
+
+
+.Loading {
+	background:transparent  url(../../Img/ajax-loader.gif) no-repeat center center;
+	height: 50px;
+	width: 250px;
+	/*position: fixed;*/
+	z-index: 1000;
+	/*left: 50%;*/
+	/*top: 40%;*/
+	/*margin: -25px 0 0 -25px;*/
+}
+
+
+.mt5 
+{
+    margin-top:5px;
+}
+
+.table_ter 
+{
+    width:500px;
+    padding:15px!important;
+    margin:0 auto;    
+    margin-top:5px;
+    margin-bottom: 5px!important;
+    height:85px;
+}
+
+/*
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 
+{    
+    padding-left: 2px!important;
+    padding-right: 2px!important;
+}
+
+*/

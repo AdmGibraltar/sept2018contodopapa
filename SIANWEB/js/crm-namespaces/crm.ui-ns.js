@@ -1,0 +1,2 @@
+﻿crm.ui = function () {
+};

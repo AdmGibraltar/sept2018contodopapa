@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JQuery One Page Nav</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-inner">
+        <div class="container">
+          <p class="navbar-text navbar-left nombre-plugin">JQuery One Page Nav</p>
+          <p class="navbar-text navbar-left link-post"><a href="http://blog.endeos.com/crear-tu-web-con-diseno-one-page" class="navbar-link">Volver al artículo</a></p>
+        </div>
+      </div>
+    </nav>
+    <!-- /NAV BAR -->
+	
+	<!-- JQUERY NAV BAR -->
+	<div id="container-nav-div" class="container col-xs-12 container-nav">
+      <nav class="navbar navbar-default menu-onepage" role="navigation">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>  
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul id="onepage-nav" class="nav navbar-nav">
+			<li><a href="#onepage-intro">Intro</a></li>
+			<li><a href="#onepage-menu">El menú</a></li>
+			<li><a href="#onepage-secciones">Las secciones</a></li>
+			<li><a href="#onepage-script">Script</a></li>
+			<li><a href="#onepage-adv-script">Script avanzado</a></li>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	</div>
+	<!-- /jQUERY NAV BAR -->
+
+    <!-- MAIN CONTENT -->
+    <div class="container col-xs-12">
+      <div class="row">
+        <div id="onepage-intro" class="section">
+			<h2>Intro</h2>
+			<hr>
+			<p>Una vez más jQuery nos facilita enormemente el desarrollo de páginas web. Con este plugin podrás 
+			crear una página como la de esta demo, con diseño One Page.</p> 
+
+			<p>En Endeos te enseñamos cómo:</p> 
+			<ul>
+				<li><p> - En primer lugar toca plantearse qué secciones quieres en la web</p></li>
+				<li><p> - A continuación se puede crear la estructura del menú de navegación</p></li>
+				<li><p> - El siguiente paso será introducir el contenido de cada sección</p></li>
+				<li><p> - Finalmente, implementaremos la funcionalidad haciendo la llamada al plugin</p></li>
+			</ul>
+        </div>
+      </div>
+	  
+	  <div class="row">
+        <div id="onepage-menu" class="section">
+			<h2>El menú</h2>
+			<hr>
+			<p>Definiremos un menú con la siguiente estructura:</p>
+			<blockquote>
+			<p>
+			&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;ul id='nav'&gt;</span> <br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;li&gt;</span><br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;a href='#apartado-a'&gt;</span>Apartado A<span class="html-code">&lt;/a&gt;</span><br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;/li&gt;</span> <br/><br/>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;li&gt;</span><br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;a href='#apartado-b'&gt;</span>Apartado B<span class="html-code">&lt;/a&gt;</span><br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;/li&gt;</span> <br/><br/>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;li&gt;</span><br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;a href='#apartado-c'&gt;</span>Apartado C<span class="html-code">&lt;/a&gt;</span><br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;/li&gt; </span><br/>
+			&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;/ul&gt;</span>
+			<p>
+			</blockquote>
+        </div>
+      </div>
+	  
+	  <div class="row">
+        <div id="onepage-secciones" class="section">
+			<h2>Las secciones</h2>
+			<hr>
+			<p>Para las secciones definiremos la siguiente estructura:</p>
+			<blockquote>
+			<p>
+			&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;div class='section' id='apartado-a'&gt;</span> <br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contenido de la sección A<br/>
+			&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;/div&gt;</span><br/><br/>
+			
+			&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;div class='section' id='apartado-b'&gt;</span> <br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contenido de la sección B<br/>
+			&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;/div&gt;</span><br/><br/>
+			
+			&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;div class='section' id='apartado-c'&gt;</span> <br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contenido de la sección C<br/>
+			&nbsp;&nbsp;&nbsp; <span class="html-code">&lt;/div&gt;</span>
+			</p>
+			</blockquote>
+			<p>Es importante que el atributo 'id' de cada sección coincida con el que hemos puesto en los enlaces del menú.</p>
+        </div>
+      </div>
+	  
+	  <div class="row">
+        <div id="onepage-script" class="section">
+			<h2>Script</h2>
+			<hr>
+			<p>La llamada al plugin la haremos en nuestro fichero de funciones javascript de la siguiente manera:</p>
+			<blockquote>
+			<p>
+			&nbsp;&nbsp;&nbsp; $(document).ready(function() {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('#nav').onePageNav();<br/>
+			&nbsp;&nbsp;&nbsp; });
+			</p>
+			</blockquote>
+			<p>A llamar a la función debemos indicar el identificador que hemos definido en la etiqueta &lt;ul&gt; del menú.</p>
+        </div>
+      </div>
+	  
+	  <div class="row">
+        <div id="onepage-adv-script" class="section">
+			<h2>Script avanzado</h2>
+			<hr>
+			<p>Si necesitamos personalizar el funcionamiento del plugin, podemos pasarle parámetros a la función:</p>
+			<blockquote>
+			<p>
+			&nbsp;&nbsp;&nbsp; $(document).ready(function() {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('#nav').onePageNav({<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nombre_parámetro: valor_entero ,<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nombre_parámetro: 'valor_string' ,<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nombre_parámetro: valor<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br/>
+			&nbsp;&nbsp;&nbsp; });
+			</p>
+			</blockquote>
+			<p>Todos los parámetros están explicados en el post.</p>
+        </div>
+      </div>
+    </div>
+    <!-- /MAIN CONTENT -->
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.nav.js"></script>
+	<script src="js/functions.js"></script>
+	
+  </body>
+</html>

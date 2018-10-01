@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetListFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLoginKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCEmisor" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_CD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCSuc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListFacturaResult" type="tns:ArrayOfInvoiceList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInvoiceList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InvoiceList" nillable="true" type="tns:InvoiceList" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InvoiceList">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SucursalCorta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Documento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Serie" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folio_Documento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha_Documento" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hora_Documento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Importe_Total_Documento" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rfc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArchivoPDF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArchivoXML" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsGroupHeader" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLoginKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Cd" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCEmisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Serie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCSuc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFacturaResult" type="tns:ArrayOfInvoiceContainer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInvoiceContainer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InvoiceContainer" nillable="true" type="tns:InvoiceContainer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InvoiceContainer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AcredorNombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AcredorRFC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PDFFile" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="XMLFile" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="PDFHash" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XMLHash" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PutAsigFacGastos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLoginKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCEmisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Serie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Emp" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Cd" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_U" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="U_Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="U_Correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCSuc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PutAsigFacGastosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PutAsigFacGastosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelAsigFacGastos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLoginKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCEmisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Serie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Emp" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Cd" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_U" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCSuc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelAsigFacGastosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DelAsigFacGastosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRFCList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLoginKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Prefix" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCSuc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRFCListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRFCListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKey">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetListFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListFactura" />
+  </wsdl:message>
+  <wsdl:message name="GetListFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFactura" />
+  </wsdl:message>
+  <wsdl:message name="GetFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PutAsigFacGastosSoapIn">
+    <wsdl:part name="parameters" element="tns:PutAsigFacGastos" />
+  </wsdl:message>
+  <wsdl:message name="PutAsigFacGastosSoapOut">
+    <wsdl:part name="parameters" element="tns:PutAsigFacGastosResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelAsigFacGastosSoapIn">
+    <wsdl:part name="parameters" element="tns:DelAsigFacGastos" />
+  </wsdl:message>
+  <wsdl:message name="DelAsigFacGastosSoapOut">
+    <wsdl:part name="parameters" element="tns:DelAsigFacGastosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRFCListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRFCList" />
+  </wsdl:message>
+  <wsdl:message name="GetRFCListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRFCListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKeySoapIn">
+    <wsdl:part name="parameters" element="tns:GetKey" />
+  </wsdl:message>
+  <wsdl:message name="GetKeySoapOut">
+    <wsdl:part name="parameters" element="tns:GetKeyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsBuzonWebSoap">
+    <wsdl:operation name="GetListFactura">
+      <wsdl:input message="tns:GetListFacturaSoapIn" />
+      <wsdl:output message="tns:GetListFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFactura">
+      <wsdl:input message="tns:GetFacturaSoapIn" />
+      <wsdl:output message="tns:GetFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PutAsigFacGastos">
+      <wsdl:input message="tns:PutAsigFacGastosSoapIn" />
+      <wsdl:output message="tns:PutAsigFacGastosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelAsigFacGastos">
+      <wsdl:input message="tns:DelAsigFacGastosSoapIn" />
+      <wsdl:output message="tns:DelAsigFacGastosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRFCList">
+      <wsdl:input message="tns:GetRFCListSoapIn" />
+      <wsdl:output message="tns:GetRFCListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <wsdl:input message="tns:GetKeySoapIn" />
+      <wsdl:output message="tns:GetKeySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsBuzonWebSoap" type="tns:wsBuzonWebSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetListFactura">
+      <soap:operation soapAction="http://tempuri.org/GetListFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFactura">
+      <soap:operation soapAction="http://tempuri.org/GetFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutAsigFacGastos">
+      <soap:operation soapAction="http://tempuri.org/PutAsigFacGastos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelAsigFacGastos">
+      <soap:operation soapAction="http://tempuri.org/DelAsigFacGastos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRFCList">
+      <soap:operation soapAction="http://tempuri.org/GetRFCList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <soap:operation soapAction="http://tempuri.org/GetKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsBuzonWebSoap12" type="tns:wsBuzonWebSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetListFactura">
+      <soap12:operation soapAction="http://tempuri.org/GetListFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFactura">
+      <soap12:operation soapAction="http://tempuri.org/GetFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutAsigFacGastos">
+      <soap12:operation soapAction="http://tempuri.org/PutAsigFacGastos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelAsigFacGastos">
+      <soap12:operation soapAction="http://tempuri.org/DelAsigFacGastos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRFCList">
+      <soap12:operation soapAction="http://tempuri.org/GetRFCList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <soap12:operation soapAction="http://tempuri.org/GetKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsBuzonWeb">
+    <wsdl:port name="wsBuzonWebSoap" binding="tns:wsBuzonWebSoap">
+      <soap:address location="http://189.206.150.18/wsBuzonWeb/wsBuzonWeb.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsBuzonWebSoap12" binding="tns:wsBuzonWebSoap12">
+      <soap12:address location="http://189.206.150.18/wsBuzonWeb/wsBuzonWeb.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

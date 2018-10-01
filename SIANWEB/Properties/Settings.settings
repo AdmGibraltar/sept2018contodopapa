@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SIANWEB.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SIANWEB_sian_cfd_Service2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://10.1.0.23/wssianweb/Service1.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_WebReference_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://148.244.244.207/wssianweb/service1.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_sian_cfd_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://148.244.244.207/wssianweb/service1.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_OrdendeCompra_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://207.248.253.104/OrdenCompra/Service1.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_WS_CFDICancelacion_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://189.206.32.29/WSCancelacion/service1.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_wsBuzonWeb_wsBuzonWeb" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://189.206.150.18/wsBuzonWeb/wsBuzonWeb.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_WsMacola_wsMacola" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://207.248.253.104/wsmacola/wsmacola.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_RemElectronica_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.intranetkey.com/ImprimeRemision/service1.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_WS_PagosExternos_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://13.84.160.245:6846/Service1.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_WS_Producto_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.intranetkey.com/wsProductoCN/Service1.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_WS_RemElectronicaCtaNacional_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.intranetkey.com/GuardaRemision/Service1.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_WS_CuentaNacional_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.intranetkey.com/wsCuentaNacional/Service1.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_EnviaCuentaNacional_EnviaCuentaNacional" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.intranetkey.com/wsCuentaNacional/EnviaCuentaNacional.asmx</Value>
+    </Setting>
+    <Setting Name="SIANWEB_wsTerritorio_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://40.84.229.61/wsterritorios/service1.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

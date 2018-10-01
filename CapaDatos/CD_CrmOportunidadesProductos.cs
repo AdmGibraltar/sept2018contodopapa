@@ -1,0 +1,464 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using CapaEntidad;
+using CapaModelo;
+using System.Data.Entity;
+using System.Data.SqlClient;
+using System.Data;
+
+namespace CapaDatos
+{
+    public class CD_CrmOportunidadesProductos
+    {
+
+        public int Update_CrmOportunidadesProductos(
+            int Id_Emp, int Id_Cd, int Id_Op, int Id_Val, int Id_Cte, int Id_Prd, decimal Cantidad, 
+            int AplDilucion, decimal DilucionA, decimal DilucionC, 
+            string CPT_ProductoActual, string CPT_SituacionActual, string CPT_VentajasKey, 
+            string CPT_RecursoImagenProductoActual, string CPT_RecursoImagensolucionKey,
+            decimal COP_CostoEnUso,
+            string conexion)
+        {
+            CapaDatos.CD_Datos CapaDatos = new CapaDatos.CD_Datos(conexion);
+            SqlDataReader dr = null;
+            int AfecteRows=0;
+
+            try
+            {                
+
+                string[] Parametros = {  
+                                         "@Id_Emp",
+                                         "@Id_Cd",
+                                         "@Id_Op",
+                                         "@Id_Val",
+                                         "@Id_Cte",
+                                         "@Id_Prd",
+                                         "@Cantidad",
+                                         "@AplDilucion",
+                                         "@DilucionA",
+                                         "@DilucionC",
+                                         "@CPT_ProductoActual",
+                                         "@CPT_SituacionActual",                                           
+                                         "@CPT_VentajasKey",
+                                         "@CPT_RecursoImagenProductoActual",
+                                         "@CPT_RecursoImagensolucionKey",
+                                         "@COP_CostoEnUso"
+                                      };
+
+                
+                object[] Valores = {   
+                                       Id_Emp,
+                                       Id_Cd,
+                                       Id_Op,
+                                       Id_Val,
+                                       Id_Cte,
+                                       Id_Prd,
+                                       Cantidad,
+                                       AplDilucion,
+                                       DilucionA,
+                                       DilucionC,
+                                        CPT_ProductoActual == null ? "" : CPT_ProductoActual ,
+                                       CPT_SituacionActual == null ? "" : CPT_SituacionActual,
+                                       CPT_VentajasKey == null ? "" : CPT_VentajasKey,
+                                       CPT_RecursoImagenProductoActual == null ? "" : CPT_RecursoImagenProductoActual,
+                                       CPT_RecursoImagensolucionKey == null ? "" : CPT_RecursoImagensolucionKey,
+                                       COP_CostoEnUso
+                                   };
+
+                SqlCommand sqlcmd = CapaDatos.GenerarSqlCommand("spCrmOportunidadesProductos_Update", ref dr, Parametros, Valores);
+
+                if (dr.Read())
+                {
+                    AfecteRows = Convert.ToInt32(dr.GetValue(dr.GetOrdinal("AfectedRows")));
+                }
+
+                dr.Close();
+
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                AfecteRows = -1;
+            }
+            return AfecteRows;
+        }
+
+
+        /// <summary>
+        /// Devuelve el conjunto de productos asociados a un proyecto
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución perteneciente a la empresa idEmp</param>
+        /// <param name="idOp">Identificador del proyecto pertenenciente al cliente idCte</param>
+        /// <param name="idCte">Identificador del cliente registrado en el centro de distribución idCd</param>
+        /// <param name="cadenaConexionEF">Cadena de conexión a la fuente de datos con formato compatible con entity Framework</param>
+        /// <returns>CrmOportunidadesProducto[]</returns>
+        public IEnumerable<CrmOportunidadesProducto> ConsultarPorOportunidadYCliente(int idEmp, int idCd, int idOp, int idCte, string cadenaConexionEF)
+        {
+            IEnumerable<CrmOportunidadesProducto> ret = null;
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(cadenaConexionEF))
+            {
+                var productos = (from p in ctx.CrmOportunidadesProductos
+                                 where p.Id_Emp == idEmp && p.Id_Cd == idCd && p.Id_Op == idOp && p.Id_Cte == idCte
+                                 select p);
+                CargarProductosActuales(idEmp, idCd, productos, ctx.ProductoPrecios);
+                Func<CrmOportunidadesProducto, CrmOportunidadesProducto> sel = (cop) =>
+                                 {
+                                     cop.Descripcion = cop.CatProducto.Prd_Descripcion;
+                                     cop.Nombre = cop.CatProducto.Prd_Descripcion;
+
+                                     cop.Ruta = string.Format("{0}/{1}/{2}/{3}/{4}", cop.CatUEN.Uen_Descripcion, cop.CatSegmento.Seg_Descripcion, cop.CatArea.Area_Descripcion, cop.CatSolucion.Sol_Descripcion, cop.CatAplicacion.Apl_Descripcion);
+                                     cop.ProductoSerializable = cop.CatProducto;
+                                     return cop;
+                                 };
+                var p2=productos.Select(sel).ToList();
+                ret = p2;
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Devuelve el conjunto de productos asociados a un proyecto
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución perteneciente a la empresa idEmp</param>
+        /// <param name="idOp">Identificador del proyecto pertenenciente al cliente idCte</param>
+        /// <param name="idCte">Identificador del cliente registrado en el centro de distribución idCd</param>
+        /// <param name="icdCtx">Contexto de la conexión a la fuente de datos</param>
+        /// <returns>CrmOportunidadesProducto[]</returns>
+        public IEnumerable<CrmOportunidadesProducto> ConsultarPorOportunidadYCliente(int idEmp, int idCd, int idOp, int idCte, ICD_Contexto icdCtx)
+        {
+            IEnumerable<CrmOportunidadesProducto> ret = null;
+            sianwebmty_gEntities ctx = ((ICD_Contexto<sianwebmty_gEntities>)icdCtx).Contexto;
+
+            var productos = (from p in ctx.CrmOportunidadesProductos
+                             where p.Id_Emp == idEmp && p.Id_Cd == idCd && p.Id_Op == idOp && p.Id_Cte == idCte
+                             select p);
+            Func<CrmOportunidadesProducto, CrmOportunidadesProducto> sel = (cop) =>
+            {
+                cop.Descripcion = cop.CatProducto.Prd_Descripcion;
+                cop.Nombre = cop.CatProducto.Prd_Descripcion;
+
+                cop.Ruta = string.Format("{0}/{1}/{2}/{3}/{4}", cop.CatUEN.Uen_Descripcion, cop.CatSegmento.Seg_Descripcion, cop.CatArea.Area_Descripcion, cop.CatSolucion.Sol_Descripcion, cop.CatAplicacion.Apl_Descripcion);
+                cop.ProductoSerializable = cop.CatProducto;
+                return cop;
+            };
+            var p2 = productos.Select(sel).ToList();
+            ret = p2;
+            return ret;
+        }
+
+        public CrmOportunidadesProducto Insertar(CrmOportunidadesProducto crmOportunidadesProducto, string cadenaConexionEF)
+        {
+            CrmOportunidadesProducto result = null;
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(cadenaConexionEF))
+            {
+                result=ctx.CrmOportunidadesProductos.Add(crmOportunidadesProducto);
+                ctx.SaveChanges();
+                ctx.Entry(result).Reference(cop => cop.CatProducto).Load();
+                ctx.Entry(result).Reference(cop => cop.CatUEN).Load();
+                ctx.Entry(result).Reference(cop => cop.CatSegmento).Load();
+                ctx.Entry(result).Reference(cop => cop.CatArea).Load();
+                ctx.Entry(result).Reference(cop => cop.CatSolucion).Load();
+                ctx.Entry(result).Reference(cop => cop.CatAplicacion).Load();
+
+                result.Descripcion = result.CatProducto.Prd_Descripcion;
+                result.Nombre = result.CatProducto.Prd_Descripcion;
+
+                result.Ruta = string.Format("{0}/{1}/{2}/{3}/{4}", result.CatUEN.Uen_Descripcion, result.CatSegmento.Seg_Descripcion, result.CatArea.Area_Descripcion, result.CatSolucion.Sol_Descripcion, result.CatAplicacion.Apl_Descripcion);
+                result.ProductoSerializable = result.CatProducto;
+            }
+            return result;
+        }
+
+        public int YaExisteProducto(CrmOportunidadesProducto Obj, ICD_Contexto icdCtx)
+        {
+            //int result = 0;
+            sianwebmty_gEntities ctx = ((ICD_Contexto<sianwebmty_gEntities>)icdCtx).Contexto;
+
+            var productos = (from p in ctx.CrmOportunidadesProductos
+                             where p.Id_Emp == Obj.Id_Emp && p.Id_Cd == Obj.Id_Cd && p.Id_Op == Obj.Id_Op && p.Id_Cte == Obj.Id_Cte && p.Id_Prd == Obj.Id_Prd && p.Id_Apl == Obj.Id_Apl
+                             select p).ToList();
+
+            return productos.Count();
+        }
+     
+        /// <summary>
+        /// Versión transaccional de [Insertar]
+        /// </summary>
+        /// <param name="crmOportunidadesProducto">Instancia de [CrmOportunidadesProductos]</param>
+        /// <param name="icdCtx">Contexto de conexión a la fuente de datos</param>
+        /// <returns>CrmOportunidadesProducto</returns>
+        /// 
+        public CrmOportunidadesProducto Insertar(CrmOportunidadesProducto crmOportunidadesProducto, ICD_Contexto icdCtx, ref int iResultado)
+        {
+            CrmOportunidadesProducto result = null;
+            iResultado = 1; // Si
+            int YaExiteElProducto = this.YaExisteProducto(crmOportunidadesProducto, icdCtx);
+
+            if (YaExiteElProducto > 0)
+            {
+                iResultado= 2;  // No lo agega y marca intento de duplicacion 
+            }
+            else
+            {                
+                sianwebmty_gEntities ctx = ((ICD_Contexto<sianwebmty_gEntities>)icdCtx).Contexto;
+                result = ctx.CrmOportunidadesProductos.Add(crmOportunidadesProducto);
+                //ctx.SaveChanges();
+                ctx.Entry(result).Reference(cop => cop.CatProducto).Load();
+                ctx.Entry(result).Reference(cop => cop.CatUEN).Load();
+                ctx.Entry(result).Reference(cop => cop.CatSegmento).Load();
+                ctx.Entry(result).Reference(cop => cop.CatArea).Load();
+                ctx.Entry(result).Reference(cop => cop.CatSolucion).Load();
+                ctx.Entry(result).Reference(cop => cop.CatAplicacion).Load();
+
+                result.Descripcion = result.CatProducto.Prd_Descripcion;
+                result.Nombre = result.CatProducto.Prd_Descripcion;
+
+                result.Ruta = string.Format("{0}/{1}/{2}/{3}/{4}", result.CatUEN.Uen_Descripcion, result.CatSegmento.Seg_Descripcion, result.CatArea.Area_Descripcion, result.CatSolucion.Sol_Descripcion, result.CatAplicacion.Apl_Descripcion);
+                result.ProductoSerializable = result.CatProducto;
+                iResultado = 3;
+            }
+
+            return result;
+        }
+
+        public void Actualizar(CrmOportunidadesProducto crmOportunidadesProducto, string cadenaConexionEF)
+        {
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(cadenaConexionEF))
+            {
+                var regs = (from cop in ctx.CrmOportunidadesProductos
+                            where cop.Id_Emp == crmOportunidadesProducto.Id_Emp && cop.Id_Cd == crmOportunidadesProducto.Id_Cd && cop.Id_Cte == crmOportunidadesProducto.Id_Cte && cop.Id_Rik == crmOportunidadesProducto.Id_Rik && cop.Id_Op == crmOportunidadesProducto.Id_Op && cop.Id_Prd == crmOportunidadesProducto.Id_Prd
+                            select cop).ToList();
+                if (regs.Count > 0)
+                {
+                    var reg = regs[0];
+                    reg.COP_Cantidad = crmOportunidadesProducto.COP_Cantidad;
+                    reg.COP_Dilucion = crmOportunidadesProducto.COP_Dilucion;
+                    ctx.SaveChanges();
+                }
+            }
+        }
+
+        public void Actualizar(IEnumerable<CrmOportunidadesProducto> crmOportunidadesProductos, string cadenaConexionEF)
+        {
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(cadenaConexionEF))
+            {
+                foreach (var crmOportunidadesProducto in crmOportunidadesProductos)
+                {
+                    var regs = (from cop in ctx.CrmOportunidadesProductos
+                                where cop.Id_Emp == crmOportunidadesProducto.Id_Emp && cop.Id_Cd == crmOportunidadesProducto.Id_Cd && cop.Id_Cte == crmOportunidadesProducto.Id_Cte && cop.Id_Rik == crmOportunidadesProducto.Id_Rik && cop.Id_Op == crmOportunidadesProducto.Id_Op && cop.Id_Prd == crmOportunidadesProducto.Id_Prd
+                                select cop).ToList();
+                    if (regs.Count > 0)
+                    {
+                        var reg = regs[0];
+                        reg.COP_Cantidad = crmOportunidadesProducto.COP_Cantidad;
+                        reg.COP_Dilucion = crmOportunidadesProducto.COP_Dilucion;
+                        
+                    }
+                }
+                //Esta validación se debe de mover a la capa de negocios
+                if (crmOportunidadesProductos.Count() > 0)
+                {
+                    ctx.SaveChanges();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Método dedicado para ser usado con el fin de actualizar solo los atributos modificados desde la edición 
+        /// de la propuesta tecno/económica
+        /// 
+        /// </summary>
+        /// <param name="crmOportunidadesProductos">Conjunto de productos asociados a la propuesta a modificar</param>
+        /// <param name="cadenaConexionEF">Cadena de conexión con formato compatible para EF.</param>
+        public void ActualizarDesdePropuesta(IEnumerable<CrmOportunidadesProducto> crmOportunidadesProductos, string cadenaConexionEF)
+        {
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(cadenaConexionEF))
+            {
+                foreach (var crmOportunidadesProducto in crmOportunidadesProductos)
+                {
+                    var regs = (from cop in ctx.CrmOportunidadesProductos
+                                where cop.Id_Emp == crmOportunidadesProducto.Id_Emp && 
+                                cop.Id_Cd == crmOportunidadesProducto.Id_Cd && 
+                                cop.Id_Cte == crmOportunidadesProducto.Id_Cte && 
+                                cop.Id_Rik == crmOportunidadesProducto.Id_Rik && 
+                                cop.Id_Op == crmOportunidadesProducto.Id_Op && 
+                                cop.Id_Prd == crmOportunidadesProducto.Id_Prd
+
+                                select cop).ToList();
+                    if (regs.Count > 0)
+                    {
+                        var reg = regs[0];
+                        reg.COP_DilucionAntecedente = crmOportunidadesProducto.COP_DilucionAntecedente;
+                        reg.COP_DilucionConsecuente = crmOportunidadesProducto.COP_DilucionConsecuente;
+                        reg.COP_ConsumoMensual = crmOportunidadesProducto.COP_ConsumoMensual;
+                    }
+                }
+                //Esta validación se debe de mover a la capa de negocios
+                if (crmOportunidadesProductos.Count() > 0)
+                {
+                    ctx.SaveChanges();
+                }
+            }
+        }
+
+        public void Eliminar(int idEmp, int idCd, int idCte, int idRik, int idOp, int idPrd, string cadenaConexionEF)
+        {
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(cadenaConexionEF))
+            {
+                var regs = (from cop in ctx.CrmOportunidadesProductos
+                            where cop.Id_Emp == idEmp && cop.Id_Cd == idCd && cop.Id_Cte == idCte && cop.Id_Rik == idRik && cop.Id_Op == idOp && cop.Id_Prd == idPrd
+                            select cop).ToList();
+                if(regs.Count>0)
+                {
+                    var reg=regs[0];
+                    ctx.CrmOportunidadesProductos.Remove(reg);
+                    ctx.SaveChanges();
+                }
+            }
+        }
+
+        public IEnumerable<CrmOportunidadesProducto> ConsultarProductosDePropuesta(int idEmp, int idCd, int idRik, int idCte, int idVal, string cadenaConexionEF)
+        {
+            IEnumerable<CrmOportunidadesProducto> resultado = null;
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(cadenaConexionEF))
+            {
+                resultado = (from cop in ctx.CrmOportunidadesProductos
+                                 join cvo in ctx.CrmValuacionOportunidades
+                                 on new { 
+                                    Id_Emp = cop.Id_Emp, 
+                                    Id_Cd = cop.Id_Cd, 
+                                    Id_Op = cop.Id_Op, 
+                                    Id_Cte = cop.Id_Cte, 
+                                    Id_Rik = cop.Id_Rik 
+                                 } equals new { 
+                                    Id_Emp = cvo.Id_Emp, 
+                                    Id_Cd = cvo.Id_Cd, 
+                                    Id_Op = cvo.Id_Op, 
+                                    Id_Cte = cvo.Id_Cte, 
+                                    Id_Rik = cvo.Id_Rik 
+                                 }
+                                 where cop.Id_Emp == idEmp && cop.Id_Cd == idCd && cop.Id_Cte == idCte && cvo.Id_Val == idVal
+                                 select cop).ToList().Select(cop => { 
+                                     cop.ProductoSerializable = cop.CatProducto; return cop; }
+                                 ).ToList();
+                if (resultado.Count() > 0)
+                {
+                    var prods = (from pa in ctx.ProductoPrecios
+                                 where pa.Id_Emp==idEmp && 
+                                 pa.Id_Cd==idCd && 
+                                 pa.Id_Pre == 1 && 
+                                 pa.Prd_Actual && 
+                                 pa.Prd_FechaInicio < DateTime.Now && 
+                                 pa.Prd_FechaFin > DateTime.Now
+                                 select pa).ToList();
+                    foreach (var r in resultado)
+                    {
+                        var pas = (from p in prods
+                                  where p.Id_Prd == r.Id_Prd
+                                  select p).ToList();
+                        if (pas.Count > 0)
+                        {
+                            r.ProductoActual = pas[0];
+                        }
+
+                    }
+                }
+            }
+            return resultado;
+        }
+
+        //
+        //
+        // Regresas los productos de la propuesta técnica según valuación.
+        //
+        //
+        public IEnumerable<CrmOportunidadesProducto> ConsultarProductosDePropuesta(int idEmp, int idCd, int idRik, int idCte, int idVal, ICD_Contexto icdCtx)
+        {
+            IEnumerable<CrmOportunidadesProducto> resultado = null;
+            sianwebmty_gEntities ctx = ((ICD_Contexto<sianwebmty_gEntities>)icdCtx).Contexto;
+            resultado = (from cop in ctx.CrmOportunidadesProductos
+                         join cvo in ctx.CrmValuacionOportunidades
+                         on new { 
+                             Id_Emp = cop.Id_Emp, 
+                             Id_Cd = cop.Id_Cd, 
+                             Id_Op = cop.Id_Op, 
+                             Id_Cte = cop.Id_Cte, 
+                             Id_Rik = cop.Id_Rik
+                         } equals new { 
+                             Id_Emp = cvo.Id_Emp, 
+                             Id_Cd = cvo.Id_Cd, 
+                             Id_Op = cvo.Id_Op, 
+                             Id_Cte = cvo.Id_Cte, 
+                             Id_Rik = cvo.Id_Rik }
+                         where cop.Id_Emp == idEmp && cop.Id_Cd == idCd && cop.Id_Cte == idCte && cvo.Id_Val == idVal
+                         select cop).ToList().Select(cop => { cop.ProductoSerializable = cop.CatProducto; return cop; }).ToList();
+
+            foreach (var x in resultado)
+            {                
+                if (x.COP_ConsumoMensual <= 0)
+                {
+                    x.COP_ConsumoMensual = x.COP_Cantidad ; // x.COP_Cantidad;
+                }
+            }
+            //resultado[0].COP_ConsumoMensual = 9; RFH
+
+            if (resultado.Count() > 0)
+            {
+                var prods = (from pa in ctx.ProductoPrecios
+                             where pa.Id_Emp == idEmp && 
+                             pa.Id_Cd == idCd && 
+                             pa.Id_Pre == 1 && 
+                             pa.Prd_Actual && 
+                             pa.Prd_FechaInicio < DateTime.Now && 
+                             pa.Prd_FechaFin > DateTime.Now
+                             select pa).ToList();
+                foreach (var r in resultado)
+                {
+                    var pas = (from p in prods
+                               where p.Id_Prd == r.Id_Prd
+                               select p).ToList();
+                    if (pas.Count > 0)
+                    {
+                        r.ProductoActual = pas[0];
+                    }
+
+                }
+            }
+            return resultado;
+        }
+
+        /// <summary>
+        /// Carga la propiedad ProductoActual de cada elemento en el conjunto oportunidadesProductos.
+        /// </summary>
+        /// <param name="idEmp">int. Identificador de la empresa</param>
+        /// <param name="idCd">int. Identificador del centro de distribución</param>
+        /// <param name="oportunidadesProductos">IEnumerable[CrmOportunidadesProducto]. Conjunto de elementos a cargar la propiedad ProductoActual.</param>
+        /// <param name="set">DbSet[ProductoPrecio]. Entidad ProductoPrecio</param>
+        protected void CargarProductosActuales(int idEmp, int idCd, IEnumerable<CrmOportunidadesProducto> oportunidadesProductos, DbSet<ProductoPrecio> set)
+        {
+            var prods = (from pa in set
+                         where pa.Id_Emp == idEmp && 
+                         pa.Id_Cd == idCd && 
+                         pa.Id_Pre == 1 && 
+                         pa.Prd_Actual && 
+                         pa.Prd_FechaInicio < DateTime.Now && 
+                         pa.Prd_FechaFin > DateTime.Now
+                         select pa).ToList();
+            foreach (var r in oportunidadesProductos)
+            {
+                var pas = (from p in prods
+                           where p.Id_Prd == r.Id_Prd
+                           select p).ToList();
+                if (pas.Count > 0)
+                {
+                    r.ProductoActual = pas[0];
+                }
+
+            }
+        }
+    }
+}

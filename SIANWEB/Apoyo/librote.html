@@ -1,0 +1,1418 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0048)http://www.20thingsilearned.com/es-ES/foreword/1 -->
+<html lang="en" manifest="/es-ES/cache.manifest?v=49" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- 
+    20 Things I Learned About Browsers and the Web
+    Built by Fi (www.f-i.com) for the Google Chrome Team.
+    
+    @author Hakim El Hattab
+    @author Erik Kallevig
+    @author Jon Gray
+    -->
+    
+  
+  <meta name="keywords" content="navegadores, web, navigadores, Internet, google, cookies, gogle, computación en nube, libro html5, computacion en nube, libro en html5, aplicaciones web, javascript, aplcaciones web, código javascript, phishing, malware, phising, software malintencionado, internet, seguridad online, intrenet, protección online, seguridad online, aplicaciones web, segrudad online, progamas web, html, html5, htl, lenguaje html5, complementos, extensiones del navegador, complmentos, extensiones del navegador web, privacidad online, software libre, privcidad online, código abierto, christoph niemann, cristoph niemann, qué es la web, que es la web, qué es interne, que es internet, browsers, web, google, cookies, cloud computing, html5 book, web apps, javascript, phishing, malware, internet, online security, online safety, web apps, web applications, html, html5, plugins, browser extensions, online privacy, open source, christoph niemann, what is the web, what is the internet">
+  <meta name="author" content="Google, Inc.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width = 1000">
+  <meta name="description" content="Cosas que siempre has querido saber sobre Internet pero no te atrevías a preguntar. Obtén información sobre Internet y los navegadores a través de esta experiencia interactiva creada por Google e ilustrada por Christoph Niemann.">
+  
+      
+      
+  <link rel="image_src" href="./encuesta_files/front-cover.jpg">
+  
+  <title>Ejemplo de encuesta</title>
+  
+  <link type="text/css" href="./encuesta_files/twentythings.min.css" rel="stylesheet" media="screen"><link type="text/css" href="./encuesta_files/print.css" rel="stylesheet" media="print">  
+    
+    <script src="./encuesta_files/cb=gapi.loaded_1" async=""></script><script src="./encuesta_files/cb=gapi(1).loaded_0" async=""></script><script type="text/javascript" async="" src="./encuesta_files/ga.js.download"></script><script type="text/javascript"> 
+      document.write('<link rel="stylesheet" type="text/css" media="all" href="/css/hideOnLoad.css" />');
+      
+      if( window.location.hash.match('\/') ) {
+        window.location = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + window.location.hash.slice(1);
+      }
+
+      var SERVER_VARIABLES = {
+        PAGE: "Página",
+        PAGES:  "Páginas",
+        THING:  "COSA",
+        FOREWORD:  "PRÓLOGO",
+        LANG: "es-ES",
+        SITE_VERSION: 49,
+        FACEBOOK_MESSAGE: "Una divertida guía de Google sobre cosas que siempre has querido saber sobre Internet y los navegadores (pero que no te atrevías a preguntar)",
+        FACEBOOK_MESSAGE_SINGLE: "Algo interesante que he aprendido hoy gracias a la guía de Google sobre Internet y los navegadores",
+        TWITTER_MESSAGE: "Una divertida guía de Google sobre cosas que siempre has querido saber sobre Internet y los navegadores:",
+        TWITTER_MESSAGE_SINGLE: "Algo interesante que he aprendido hoy gracias a la guía de Google sobre Internet y los navegadores: ",
+        BUZZ_MESSAGE: "Una divertida guía de Google sobre cosas que siempre has querido saber sobre Internet y los navegadores (pero que no te atrevías a preguntar): http://goo.gl/20things",
+        BUZZ_MESSAGE_SINGLE: "Algo interesante que he aprendido hoy gracias a la guía de Google sobre Internet y los navegadores: ",
+        SOLID_BOOK_COLOR: "#5873a0"      };
+      
+      // Set language for use by Google +1 button.
+      window.___gcfg = {lang: SERVER_VARIABLES.LANG};
+    </script><link rel="stylesheet" type="text/css" media="all" href="./encuesta_files/hideOnLoad.css">
+
+  
+
+</head>
+<body class="es-ES book" style="overflow-x: hidden; overflow-y: auto;">
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19264787-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>  
+    
+  
+  
+  <header style="width: 1339px;">
+    <h1>
+	<a class="logo" href="#">Ejemplo de encuesta</a></h1>
+  
+	<nav>
+      <ul>
+        <li class="table-of-things"><a href="http://www.20thingsilearned.com/table-of-things">ÍNDICE</a></li>
+        <li class="divider1"></li>
+        <li class="about"><a href="http://www.20thingsilearned.com/foreword/1">PRÓLOGO</a></li>
+        <li class="divider2"></li>
+        <li class="credits"><a href="http://www.20thingsilearned.com/credits">RECONOCIMIENTOS</a></li>
+        <li class="divider2"></li>
+      </ul>
+    </nav>
+	<!--
+    <div id="language-selector">
+      <div id="language-selector-title"><a>
+      español (ES)      </a></div>
+      <div id="language-selector-list">
+        <ul>
+		<--
+          <li data-locale="cs-CZ"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">čeština</a></li>
+		  <li data-locale="de-DE"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">Deutsch</a></li>
+		-- >
+		  <li data-locale="en-GB"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">English (UK)</a></li>
+		  <li data-locale="en-US"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">English (US)</a></li>
+		  <li data-locale="es-419"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">español (Latinoamérica y el Caribe)</a></li>
+		  <li data-locale="es-ES"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">español (ES)</a></li>
+		  <li data-locale="fil-PH"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">Filipino</a></li>
+		  <li data-locale="fr-FR"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">français</a></li>
+		  <li data-locale="in-ID"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">Bahasa Indonesia</a></li>
+		  <li data-locale="it-IT"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">italiano</a></li>
+		  <li data-locale="ja-JP"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">日本語</a></li>
+		  <li data-locale="nl-NL"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">Nederlands</a></li>
+		  <li data-locale="pl-PL"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">polski</a></li>
+		  <li data-locale="pt-BR"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">português</a></li>
+		  <li data-locale="ru-RU"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">русский</a></li>
+		  <li data-locale="zh-CN"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">中文（简体中文）</a></li>
+		  <li data-locale="zh-TW"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#">中文 (繁體中文)</a></li>
+		</ul>
+      </div>
+    </div>
+	-->
+    
+    <!-- Input type="search" is currently too inconsistent across browsers and platforms -->
+    <input id="search-field" type="text" value="Buscar en el texto" style="">
+  </header>
+  
+  <!-- Holds search results -->
+  <div id="search-dropdown" style="left: 1105px; top: 43px;">
+    <div class="fader">
+      <div class="background-top"></div>
+      <div class="background-bottom"></div>
+      <div class="results">
+        <div class="things">
+          <h4><span>Buscar en el texto</span></h4>
+          <hr>
+        </div>
+        <div class="keywords">
+          <h4><span>PALABRAS CLAVE</span></h4>
+          <hr>
+        </div>
+        <div class="empty">No se ha encontrado ningún resultado.</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Left side grey overlay that masks out the book -->
+  <div id="grey-mask" style="left: 0px;"></div>
+  
+  <div id="book" style="left: -570.5px; top: 80px; margin: 0px; opacity: 1; display: block;">
+    <div id="shadow">
+      <div class="shadow-left"></div>
+      <div class="shadow-right"></div>
+    </div>
+    <div id="spine">
+      <div class="spine-top"></div>
+      <div class="spine-bottom"></div>
+    </div>
+    <div id="front-cover-bookmark" style="display: none;">
+      <div class="content">
+        <p>¿Qué es una cookie? ¿Cómo puedo protegerme en la Web? Y sobre todo: ¿qué ocurre si mi portátil pasa a mejor vida?</p>
+		<p>Para descubrir cosas que siempre has querido saber sobre Internet, pero no te atrevías a preguntar, sigue leyendo.</p>        <a href="http://www.20thingsilearned.com/es-ES/foreword" class="open-book">ABRIR LIBRO</a>
+        <canvas id="flip-intro" width="89" height="69"></canvas>
+      </div>
+    </div>
+    <div id="sharer" style="display: none;">
+      <div class="background-top"></div>
+      <div class="background-bottom"></div>
+      <div class="content">
+        <ul>
+          <li class="facebook"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#" title="Facebook"></a></li>
+          <li class="twitter"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#" title="Twitter"></a></li>
+          <li class="gplus"><div id="___plusone_16" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 24px; height: 15px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 24px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" tabindex="0" vspace="0" width="100%" id="I14_1532534052371" name="I14_1532534052371" src="./encuesta_files/fastbutton.html" data-gapiattached="true" title="G+"></iframe></div></li>
+          <li class="print"><a href="http://www.20thingsilearned.com/es-ES/foreword/print" target="_blank" title="Imprimir">Imprimir</a></li>
+        </ul>
+        <p class="index">COSA<span style="">1</span></p>
+        <p class="instruction">COMPARTIR</p>
+      </div>
+    </div>
+    <div id="front-cover" style="display: none;">
+      <img src="./encuesta_files/front-cover.jpg" width="830" height="520">
+    </div>
+    <div id="back-cover" style="display: none;">
+      <img src="./encuesta_files/back-cover.jpg" data-src-flipped="/css/images/back-cover-flipped.jpg" width="830" height="520">
+    </div>
+    <div id="page-shadow-overlay" style="opacity: -0.294135; display: none;"></div>
+    <div id="pages">
+			
+			<section class="template-start-7 title-foreword page-1 globalPage-1" style="z-index: 499; width: 758.475px; display: block;" id="original"><div class="page"><div class="page-title"><h2>Prólogo de las 20 cosas</h2></div><div class="image1"><img src="./encuesta_files/cloud01.png" data-src="/media/illustrations/cloud01.png"><canvas width="240" height="200" style="position: absolute; left: 292.5px; top: 80px;"></canvas></div>
+<div class="left">
+	<p class="drop-cap">Hoy en día, mucha gente depende de Internet para acceder a la información del mundo y conectar con los demás en todo tipo de situaciones de forma instantánea.</p>
+</div>
+<div class="right">
+	<p>Estas experiencias online tan enriquecedoras son posibles gracias a una Web abierta a la que cualquier usuario puede acceder a través de un navegador web desde cualquier dispositivo que</p>
+</div>
+<span class="pageNumber">1</span></div></section>
+<section class="template-inner-6 title-foreword page-2 globalPage-2 current" style="z-index: 498; display: block; width: 800px;"><div class="page">﻿
+<div class="left">
+	<p class="continuation"></p>
+	<div data-sm-radio-button="" class="radio-button-container ">
+		<input id="194070468_2413565679" name="194070468" type="radio" class="radio-button-input " value="2413565679">
+		<label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="194070468_2413565679">
+		<span class="radio-button-display "></span>
+		<span class="radio-button-label-text question-body-font-theme user-generated ">Extremadamente importante</span>
+		</label>
+	</div>
+	<div data-sm-radio-button="" class="radio-button-container ">   
+		<input id="194070468_2413565681" name="194070468" type="radio" class="radio-button-input " value="2413565681">
+		<label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="194070468_2413565681">
+			<span class="radio-button-display "></span>
+			<span class="radio-button-label-text question-body-font-theme user-generated ">Muy importante</span>
+		</label>
+	</div>
+	<input type="radio" id="tres" name="P1" />Un poco importante<br/>
+	<input type="radio" id="cuatro" name="P1" />Ligeramente importante<br/>
+	<input type="radio" id="Radio1" name="P1" />Nada importante<br/>
+	
+	<p></p>
+	<p></p>
+</div>
+<div class="right">
+	<p>A continuación, se exploran los elementos fundamentales de las páginas web (como HTML y JavaScript) y se analiza cómo han ido evolucionado los sitios web para llegar a ser lo que son hoy en día. También se presentan los navegadores actuales y se describe cómo ayudan a que los usuarios naveguen por la Web de una forma más segura.</p>
+	<p>Por último, se discuten las innovaciones de los navegadores y de las tecnologías web que creemos que nos proporcionarán experiencias online aún más rápidas y atractivas en el futuro.</p>
+	<p><br><br><br><br><br><br></p>
+	<p></p>
+</div><span class="pageNumber">2</span></div></section><section class="template-inner-7 title-foreword page-3 globalPage-3" style="z-index: 497; display: block; width: 800px;"><div class="page">﻿<p>Formar parte del universo de la Web puede ser una experiencia liberadora y llena de posibilidades, pero también requiere saber ciertas cosas para hacer un uso adecuado de ella. Del mismo modo que necesitamos tener una información básica sobre el lugar en el que vivimos (seguridad, supermercados, tiendas, etc.), cada vez es más importante conocer una serie de datos relacionados con nuestra "vida virtual". Por eso hemos elaborado esta esta guía. Muchos de los ejemplos utilizados para ilustrar las funciones y características de los navegadores se suelen referir a Chrome, nuestro navegador de código abierto. Esperamos que disfrutes leyendo esta guía tanto como disfrutamos nosotros al crearla.</p>
+<p class="continuation">¡Buen viaje por la Web!</p>
+<div class="spacer"></div>
+<p class="continuation"><em>El equipo de Google Chrome, con un agradecimiento especial a Christoph Niemann por sus ilustraciones</em></p>
+<p class="continuation"><em>Noviembre de 2010</em></p><span class="pageNumber">3</span></div></section><section class="template-start-7 title-what-is-the-internet page-1 globalPage-4" style="z-index: 496; display: none; width: 800px;"><div class="page"><div class="page-title"><h2>¿Qué es Internet?</h2><h3>o de paquetes va la cosa</h3></div><div class="image1"><img src="./encuesta_files/internet01.png" data-src="/media/illustrations/internet01.png"><canvas width="120" height="80" style="position: absolute; left: 522.5px; top: 237px;"></canvas></div>
+<div class="left">
+	<p class="drop-cap">¿Qué es exactamente Internet? Para algunas personas, Internet es el espacio que utilizan para mantenerse en contacto con sus amigos, leer las noticias, comprar y jugar. Otros relacionan Internet con proveedores de ancho de banda o con los cables subterráneos o</p>
+</div>
+<div class="right">
+	<p class="continuation">de fibra óptica que transfieren datos entre ciudades y otras partes del mundo. ¿Cuál de estas dos opciones es la correcta?</p>
+	<p>Para encontrar la respuesta, debemos remontarnos a los orígenes de Internet en 1974, año en el que unos brillantes investigadores </p>
+</div>
+<span class="pageNumber">4</span></div></section><section class="template-inner-5 title-what-is-the-internet page-2 globalPage-5" style="z-index: 495; display: none; width: 800px;"><div class="page">﻿<div class="left">
+	<p class="continuation">informáticos inventaron la llamada "familia de protocolos de Internet" o TCP/IP (por sus siglas en inglés, Protocolo de control de transmisión/Protocolo de Internet). Este sistema de protocolos creó un conjunto de reglas que permitían que unos ordenadores se comunicaran con otros y pudieran intercambiar información entre ellos.</p>
+	<p>El sistema TCP/IP funciona en cierto modo como la comunicación humana: al hablar, el lenguaje se estructura mediante una serie de reglas gramaticales para que las personas se entiendan y puedan intercambiar ideas. Del mismo modo, el sistema TCP/IP establece las reglas que garantizan que los dispositivos interconectados se comuniquen correctamente y puedan intercambiar la información que reciben. Internet nació cuando ese grupo de dispositivos interconectados pasó de ocupar una sala a un gran número de salas, después un gran número de edificios y, por último, un gran número de ciudades y de países.</p>
+</div>
+<div class="right">
+	<p>Los creadores de Internet descubrieron que los datos y la información se podían enviar con mayor eficacia si se dividían en fragmentos más pequeños, se enviaban por separado y se volvían a unir. Esos fragmentos se denominan <strong>paquetes</strong>. Por tanto, cuando se envía un mensaje de correo electrónico a través de Internet, el mensaje primero se divide en paquetes, que se envían al destinatario y se vuelven a unir tras recibirlos. Lo mismo ocurre al ver vídeos en sitios web como YouTube:</p>
+</div><span class="pageNumber">5</span></div></section><section class="template-inner-2 title-what-is-the-internet page-3 globalPage-6" style="z-index: 494; display: none; width: 800px;"><div class="page">﻿<div class="left">
+<p class="continuation">los archivos de vídeo están divididos en paquetes de datos que se pueden enviar desde varios servidores de YouTube distribuidos a lo largo del mundo y que se vuelven a unir para generar el vídeo que se ve a través del navegador.</p>
+	<p>¿Qué hay de la velocidad? Si comparamos el tráfico de Internet con la corriente de un río, el <strong>ancho de banda</strong> de Internet equivaldría a la cantidad de agua que fluye por un río cada segundo. Por tanto, cuando los ingenieros hablan del "ancho de banda", en realidad se refieren a la cantidad de datos que se pueden enviar por segundo a través de tu conexión a Internet. En otras palabras, el ancho de banda es la velocidad de tu conexión. Actualmente se pueden utilizar conexiones más rápidas con una mejor infraestructura física (por ejemplo, con cables de fibra óptica que permiten enviar la información casi a la velocidad de la luz).</p>
+</div>
+<div class="right">
+<p class="continuation">Además, hoy día existen sistemas de codificación que codifican mejor la información en el propio medio físico, incluso en medios más antiguos como los cables de cobre.</p>
+	<p>Internet es un sistema fascinante de una gran complejidad técnica, pero para muchos usuarios es simplemente un sitio que utilizan fácilmente sin llegar a pensar siquiera en los cables y en las operaciones matemáticas que hacen posible su funcionamiento. Internet también es la piedra angular que constituye la base de la apasionante Web que conocemos hoy día: con una conexión a Internet, podemos acceder a un universo abierto y en permanente expansión de aplicaciones y páginas web interconectadas. De hecho, ¡incluso es probable que actualmente haya tantas páginas web como neuronas en el cerebro o estrellas en la Vía Láctea!</p>
+</div><span class="pageNumber">6</span></div></section><section class="template-inner-2 title-what-is-the-internet page-4 globalPage-7" style="z-index: 493; display: none; width: 0px;"><div class="page"><div class="left">
+<p class="continuation">En los dos próximos capítulos, veremos cómo se utiliza la Web hoy en día a través de la llamada computación en la nube y de las aplicaciones web.</p>
+</div><span class="pageNumber">7</span></div></section><section class="template-start-5 title-cloud-computing page-1 globalPage-8" style="z-index: 492; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Computación en la nube</h2><h3>o por qué no pasa nada si tu portátil pasa a mejor vida</h3></div><div class="left">
+	<p class="drop-cap">La informática moderna de la era de Internet ofrece posibilidades de todo tipo, e incluso algunas son ciertamente asombrosas. Cuando abres tu portátil en casa y te sientas a ver un vídeo de YouTube o a hacer una búsqueda en Internet, en realidad estás accediendo a la potencia de miles de ordenadores interconectados que te ofrecen toda esta información desde lugares remotos distribuidos por todo el mundo. ¡Es como tener un superordenador gigante a tu entera disposición gracias a Internet!</p>
+</div>
+<div class="right">
+	<div class="image1"><img src="./encuesta_files/cloud03.png" data-src="/media/illustrations/cloud03.png"></div>
+	<p>Este fenómeno es lo que se suele llamar <i>cloud computing</i> o computación en la nube. Hoy en día, leemos las noticias, escuchamos música, hacemos compras, vemos la televisión y guardamos nuestros archivos en Internet. Algunos de nosotros vivimos en ciudades en las que prácticamente todos los museos, los bancos y las administraciones públicas tienen un sitio web. </p>
+</div>
+<span class="pageNumber">8</span></div></section><section class="template-inner-5 title-cloud-computing page-2 globalPage-9" style="z-index: 491; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation">¿Qué consecuencias tiene esto para nuestra vida? Gracias a la computación en la nube, pasamos menos tiempo haciendo colas o hablando por teléfono, ya que a través de estos sitios web podemos realizar diversas operaciones, como pagar facturas o hacer reservas. El traslado de muchas de nuestras tareas diarias a la Web nos permite vivir mejor en el mundo real.
+</p><p>La computación en la nube también tiene otras ventajas. Hace no tanto tiempo, teníamos miedo de perder documentos, fotos y archivos si le pasaba algo al ordenador, como cuando era infectado por un virus o le fallaba algún componente físico. Sin embargo, en la actualidad nuestros datos han traspasado las fronteras del ordenador personal y se han trasladado a "la nube" de Internet. Si subes tus fotos y archivos importantes a Internet y utilizas un servicio de correo electrónico basado en la Web como Gmail o Correo Yahoo!, no tienes de qué preocuparte si un día descubres que tu ordenador ha pasado a mejor vida, ya que todos tus datos estarán a salvo en la Web y podrás acceder a ellos desde cualquier ordenador con conexión a Internet en cualquier lugar del mundo.</p>
+</div>
+<div class="right" style="bottom:14px;">
+	<div class="image1"><img src="./encuesta_files/cloud02.png" data-src="/media/illustrations/cloud02.png"></div>
+</div><span class="pageNumber">9</span></div></section><section class="template-start-5 title-web-apps page-1 globalPage-10" style="z-index: 490; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Aplicaciones web</h2><h3>o en los árboles de Internet ahora crecen aplicaciones</h3></div><div class="left"><div class="image1" style="margin-top:20px;"><img src="./encuesta_files/webapps01.png" data-src="/media/illustrations/webapps01.png"><canvas width="300" height="260" style="position: absolute; left: 65px; top: 252px;"></canvas></div></div>
+<div class="right">
+	<div class="image2"><img src="./encuesta_files/webapps02.png" data-src="/media/illustrations/webapps02.png"></div>
+	<p class="drop-cap">Si juegas online, utilizas un editor de fotos online o servicios web como Google Maps, Twitter, Amazon, YouTube o Facebook, entonces eres uno de los usuarios activos del maravilloso mundo de las aplicaciones web.</p>
+	<p>Pero ¿qué es<i></i> exactamente una aplicación web y por qué deberían interesarnos?</p>
+</div>
+<span class="pageNumber">10</span></div></section><section class="template-inner-2 title-web-apps page-2 globalPage-11" style="z-index: 489; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p>Las aplicaciones también se denominan "programas" o "software". Tradicionalmente servían para realizar tareas complejas de todo tipo, como llevar la contabilidad o escribir textos. En el mundo virtual de los navegadores web y los teléfonos inteligentes, las aplicaciones suelen ser programas más sencillos destinados a llevar a cabo una única tarea. Concretamente, las aplicaciones web ejecutan estas tareas dentro del navegador y su uso es muy sencillo e interactivo.</p>
+	<p>Google Maps es un buen ejemplo de aplicación web, ya que es una aplicación que se centra en una sola tarea: ofrecer funciones útiles relacionadas con los mapas a través de un navegador web. Google Maps permite acercar y alejar un mapa, moverte por él, buscar una universidad o una cafetería, mostrar indicaciones para llegar a un lugar en coche... ¡y mucho más!</p>
+</div>
+<div class="right">
+	<p class="continuation">Toda la información que necesitas se muestra en la aplicación web de forma dinámica. Esto nos lleva a las cuatro ventajas del mundo de las aplicaciones web:</p>
+	<h4>1. Puedes acceder a tus datos desde cualquier lugar</h4>
+	<p class="continuation">En las aplicaciones de siempre, los datos se suelen almacenar en el disco duro del ordenador. Si te vas de vacaciones y dejas el ordenador en casa, no podrás acceder a tu correo electrónico, ni a tus fotos ni a tus archivos cuando lo necesitas. Sin embargo, en el nuevo mundo de las aplicaciones web, tu correo y todos tus datos se almacenan online en la Web, así que puedes acceder a ellos a través de un navegador web desde cualquier ordenador que tenga conexión a Internet.</p>
+	<h4>2. Siempre tendrás la última versión de las aplicaciones</h4>
+</div><span class="pageNumber">11</span></div></section><section class="template-inner-2 title-web-apps page-3 globalPage-12" style="z-index: 488; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p class="continuation">¿Quieres saber qué versión de YouTube estás utilizando ahora? ¿Y cuál estarás utilizando mañana? La respuesta es sencilla: siempre será la última versión. Las aplicaciones web se actualizan automáticamente, por lo que la única versión que se utiliza siempre es la última, que cuenta con todas las mejoras y las funciones más recientes. No es necesario instalar manualmente nuevas versiones periódicamente. Por supuesto, tampoco hay que realizar un largo proceso de instalación para utilizar las aplicaciones web.</p>
+	<h4>3. Las aplicaciones web funcionan en cualquier dispositivo que tenga un navegador web</h4>
+	<p class="continuation">Algunos programas solo funcionan en determinados sistemas o dispositivos. Por ejemplo, muchos programas creados para PC no funcionan en ordenadores Mac. Además, mantener el ordenador actualizado con el software adecuado puede costar tiempo y </p>
+</div>
+<div class="right">
+<p class="continuation">dinero. Por el contrario, la Web es una plataforma abierta a la que cualquiera puede acceder desde un dispositivo conectado a Internet que tenga un navegador web, ya sea un ordenador de sobremesa, un portátil o un teléfono móvil. Esto significa que cualquier persona puede utilizar sus aplicaciones web favoritas aunque esté utilizando el portátil de un amigo o el ordenador de un cibercafé.</p>
+	<h4>4. Las aplicaciones web son más seguras</h4>
+	<p class="continuation">Las aplicaciones web se ejecutan en el navegador, por lo que nunca tendrás que descargarlas. Esta separación entre la aplicación y el ordenador permite que las aplicaciones web no puedan interferir en otras tareas del ordenador ni en su rendimiento general. Por tanto, estarás mucho más protegido contra amenazas como los virus, el software malintencionado y los programas espía.</p>
+</div><span class="pageNumber">12</span></div></section><section class="template-start-2 title-html page-1 globalPage-13" style="z-index: 487; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>HTML, JavaScript, CSS y otros lenguajes</h2><h3>o este AJAX no juega al fútbol</h3></div><p class="drop-cap">Las páginas web se escriben en HTML, el lenguaje de programación que indica a los navegadores cómo deben estructurar y presentar el contenido de una página web. En otras palabras, el HTML proporciona los cimientos de la Web. Durante mucho tiempo, esos cimientos fueron bastante básicos y estáticos, ya que consistían en líneas de texto, enlaces e imágenes.</p>
+<p>Actualmente, podemos jugar online al ajedrez o movernos fácilmente por un mapa de nuestro barrio sin esperar a que toda la página vuelva a cargarse cada vez que movemos una pieza de ajedrez o nos desplazamos a un lugar diferente del mapa.</p>
+<div class="image1"><img src="./encuesta_files/html01.png" data-src="/media/illustrations/html01.png"></div>
+<span class="pageNumber">13</span></div></section><section class="template-inner-4 title-html page-2 globalPage-14" style="z-index: 486; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p>La idea de crear páginas web dinámicas empezó cuando se inventó el lenguaje JavaScript. Cuando los navegadores más importantes incorporaron las funcionalidades de JavaScript, las páginas web empezaron a ofrecer una interactividad mucho mayor y en tiempo real. Por ejemplo, si rellenas un formulario online y pulsas el botón de enviar, la página web puede utilizar JavaScript para comprobar la información introducida en tiempo real y mostrarte un mensaje de alerta de forma casi instantánea si no has rellenado el formulario correctamente.</p>
+	<div class="image1"><img src="./encuesta_files/html02.png" data-src="/media/illustrations/html02.png"></div>
+</div>
+<div class="right">
+	<div class="image2"><img src="./encuesta_files/html03.png" data-src="/media/illustrations/html03.png"></div>
+	<p>Sin embargo, la Web dinámica que conocemos hoy día realmente empezó a funcionar cuando la interfaz XHR (XMLHttpRequest) se incorporó a JavaScript y se empezó a utilizar en aplicaciones web como Microsoft Outlook para la Web, Gmail y Google Maps. La interfaz XHR permitía modificar partes independientes de una página web (como un juego, un mapa, un vídeo o una pequeña encuesta) sin tener que volver a cargar toda la </p>
+</div><span class="pageNumber">14</span></div></section><section class="template-inner-4 title-html page-3 globalPage-15" style="z-index: 485; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<div class="image1"><img src="./encuesta_files/html04.png" data-src="/media/illustrations/html04.png"></div>
+<p class="continuation">página. Gracias a la interfaz XHR, actualmente las aplicaciones web son más rápidas y tienen una mayor velocidad de respuesta.</p>
+	<p>La apariencia de las páginas web también ha mejorado gracias a la incorporación de las hojas de estilo en cascada (Cascading Style Sheets, CSS). CSS ofrece a los programadores una forma</p>
+</div>
+<div class="right">
+<p class="continuation"> fácil y eficaz de definir el diseño de una página web y mejorar su apariencia con distintos elementos (colores, esquinas redondeadas, gradientes, animaciones...).</p>
+	<p>Los programadores web suelen referirse a esta potente combinación de JavaScript, XHR, CSS y otra serie de tecnologías web con el nombre de AJAX (Asynchronous JavaScript and XML, JavaScript asíncrono y XML). El lenguaje HTML también ha seguido evolucionando con la incorporación de nuevas funciones y mejoras a las nuevas versiones del estándar HTML.</p>
+	<p>La Web actual ha evolucionado a raíz de los constantes esfuerzos de todos los expertos en tecnología, los innovadores, los programadores y las organizaciones que crean estas tecnologías web y garantizan su compatibilidad con navegadores web como Internet Explorer, Firefox, Safari y Google Chrome.</p>
+</div><span class="pageNumber">15</span></div></section><section class="template-inner-2 title-html page-4 globalPage-16" style="z-index: 484; display: none; width: 0px;"><div class="page"><div class="left">
+<p class="continuation">Esta interacción entre las tecnologías web y los navegadores ha convertido la Web en una plataforma de construcción sencilla y abierta para los desarrolladores web con la que pueden crear una gran cantidad de aplicaciones web útiles y divertidas que utilizamos diariamente.</p>
+</div><span class="pageNumber">16</span></div></section><section class="template-start-2 title-html5 page-1 globalPage-17" style="z-index: 483; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>HTML5</h2><h3>o en el principio no había &lt;video&gt;</h3></div><p class="drop-cap">Más de 20 años después de la aparición del lenguaje HTML, seguimos preguntándonos qué es la Web y qué podría llegar a ser. Como usuarios, ¿qué clase de funciones y de aplicaciones consideraríamos divertidas, útiles o indispensables? ¿Qué herramientas necesitan los desarrolladores para crear estos sitios tan increíbles y estas aplicaciones tan chulas? Y, por último, ¿cómo se pueden integrar estas genialidades en un navegador web?</p>
+
+<p>Estas preguntas han conducido a la evolución de la última versión del lenguaje HTML, conocida como HTML5. Esta nueva versión ofrece un conjunto de funciones que permiten que los desarrolladores y los diseñadores web creen una nueva generación de </p>
+<div class="image1"><img src="./encuesta_files/html501.png" data-src="/media/illustrations/html501.png"></div>
+<span class="pageNumber">17</span></div></section><section class="template-inner-2 title-html5 page-2 globalPage-18" style="z-index: 482; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p class="continuation">aplicaciones online increíbles. Pensemos, por ejemplo, en la etiqueta &lt;video&gt; de HTML5. Antiguamente, el vídeo no era uno de los elementos principales de la Web (de hecho, prácticamente no se utilizaba); los usuarios de Internet instalaban unos programas de software adicionales llamados "complementos" para poder ver vídeos en el navegador web. Sin embargo, pronto se descubrió que la gente quería ver los vídeos sin complicaciones. La incorporación de la etiqueta &lt;video&gt; a HTML5 permite que los vídeos se inserten y se reproduzcan fácilmente en las páginas web sin tener que instalar ningún programa adicional.</p>
+	<p>HTML5 ofrece otras funciones muy útiles, como la opción de arrastrar y soltar y la posibilidad de que los usuarios interactúen con aplicaciones web incluso sin tener conexión a Internet. En Gmail, por ejemplo, basta con arrastrar un archivo del ordenador hasta la </p>
+</div>
+<div class="right">
+	<p class="continuation">ventana del navegador para adjuntar instantáneamente un archivo a un mensaje de correo electrónico.</p>
+	<p>HTML5, al igual que la propia Web, evoluciona continuamente en función de las necesidades de los usuarios y de la imaginación de los desarrolladores. Al tratarse de un estándar abierto, HTML5 incorpora algunas de las principales ventajas de la Web, ya que funciona en cualquier lugar y en cualquier dispositivo que tenga instalado un navegador. Sin embargo, del mismo modo que las retransmisiones para televisión de alta definición (HDTV) solo se pueden ver en televisores compatibles con esta tecnología, se debe utilizar un navegador actualizado y compatible con HTML5 para poder disfrutar de las ventajas que ofrecen los sitios y las aplicaciones que utilizan funciones de HTML5. </p>
+</div><span class="pageNumber">18</span></div></section><section class="template-inner-2 title-html5 page-3 globalPage-19" style="z-index: 481; display: none; width: 0px;"><div class="page"><div class="left">
+<p class="continuation">Afortunadamente, existe una gran cantidad de navegadores web y, a diferencia de los televisores, los navegadores se pueden descargar gratuitamente.</p>
+</div><span class="pageNumber">19</span></div></section><section class="template-start-7 title-threed page-1 globalPage-20" style="z-index: 480; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>3D en el navegador</h2><h3>o navegar por las profundidades</h3></div><div class="image1"><img src="./encuesta_files/3d01.png" data-src="/media/illustrations/3d01.png"></div>
+<div class="left">
+	<p class="drop-cap">Las animaciones y los gráficos 3D pueden ser algo realmente único al ofrecer todo tipo de detalles: luces y sombras, reflejos, texturas realistas... Sin embargo, hasta ahora ha sido difícil ofrecer una experiencia 3D verdaderamente atractiva, especialmente a través de Internet.</p>
+</div>
+<div class="right">
+	<p>¿Por qué? Principalmente, porque para ofrecer una experiencia 3D en juegos y en otras aplicaciones se requiere una inmensa cantidad de datos para mostrar formas y texturas complejas. Antiguamente, estas grandes cantidades de datos requerían más ancho de banda de Internet y</p>
+</div>
+<span class="pageNumber">20</span></div></section><section class="template-inner-6 title-threed page-2 globalPage-21" style="z-index: 479; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p class="continuation">más potencia de procesamiento de lo que podían soportar la mayoría de los sistemas comunes. Por suerte, todo eso ha cambiado recientemente: ha llegado la era de disfrutar del 3D en el navegador.</p>
+	<p>La banda ancha actual por fin cubre las necesidades de velocidad de Internet, pues ahora muchas casas y oficinas cuentan con conexiones a Internet muchísimo más rápidas que las conexiones que había hace diez años. Así pues, ahora es posible enviar a través de Internet las grandes cantidades de datos que hacen falta para ofrecer una experiencia 3D realista en el navegador. Además, los ordenadores que se utilizan en la actualidad son mucho más potentes que los de hace unos años: la memoria y los procesadores han mejorado tanto que incluso un ordenador portátil o de sobremesa normal actual puede mostrar gráficos 3D a pesar de su complejidad.</p>
+</div>
+<div class="right">
+	<p>Tener un gran ancho de banda o una elevada potencia de procesamiento no sirven de nada si no están acompañados de avances significativos en las funciones del navegador web. Muchos navegadores actuales han adoptado tecnologías web abiertas como WebGL y 3D CSS. Gracias a estas tecnologías, los desarrolladores web pueden crear efectos 3D increíbles para sus aplicaciones y ofrecer a los usuarios la posibilidad de disfrutar de todo estos efectos sin tener que usar complementos adicionales. Además, muchos navegadores actuales utilizan una técnica conocida como "aceleración de hardware", que permite que el navegador utilice la unidad de procesamiento de gráficos (GPU) para acelerar los cálculos necesarios para mostrar tanto el contenido web habitual en 2D como el contenido web en formato 3D.<br><br><br></p>
+</div><span class="pageNumber">21</span></div></section><section class="template-inner-7 title-threed page-3 globalPage-22" style="z-index: 478; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p>¿Pero por qué es tan importante usar el 3D en el navegador? Porque ahora, junto a HTML5, JavaScript y otras tecnologías innovadoras, los desarrolladores web tienen todo lo necesario para crear una nueva generación de aplicaciones web increíbles. De este modo, los usuarios pueden ver la información que les interesa de nuevas maneras y divertirse más en la Web con juegos y entornos 3D mucho más interactivos.</p>
+	<p>Y lo que es más importante: la incorporación de la tecnología 3D al navegador viene acompañada de todas las ventajas de las aplicaciones web. Así pues, los usuarios pueden compartir las últimas aplicaciones, personalizarlas y colaborar en ellas junto con otros usuarios de todo el mundo. En definitiva, lo que se consigue es que <i>todos</i> puedan disfrutar aún más de lo que hacen en la Web.</p>
+</div><span class="pageNumber">22</span></div></section><section class="template-start-4 title-old-vs-new-browsers page-1 globalPage-23" style="z-index: 477; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Un madrigal de navegadores</h2><h3>o navegadores antiguos vs. navegadores actuales</h3></div><div class="image1"><img src="./encuesta_files/oldvsnewbrowsers01.png" data-src="/media/illustrations/oldvsnewbrowsers01.png"></div>
+<p><span>Los navegadores antiguos y los actuales</span><span>no pueden convivir en hermandad.</span><span>Los actuales son más prestos, seguros y ofrecen más funcionalidad,</span><span>mas los antiguos son más lentos y ofrecen poca confiabilidad:</span><span>¡cualquier amenaza podrá con su alta vulnerabilidad!</span><span class="reference">(nuestras disculpas a Shakespeare)</span></p>
+<span class="pageNumber">23</span></div></section><section class="template-inner-2 title-old-vs-new-browsers page-2 globalPage-24" style="z-index: 476; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p>La mayoría de la gente no sabe hasta qué punto un navegador web antiguo y obsoleto puede afectar a su experiencia online, especialmente en lo relativo a la seguridad. Al igual que no nos atreveríamos a conducir durante años un coche viejo con los neumáticos totalmente desgastados, que tuviera mal los frenos y un motor poco fiable, debemos evitar asumir semejantes riesgos con el navegador web que utilizamos diariamente para navegar por Internet y usar aplicaciones de la Web.</p>
+	<p>Instalar un navegador actual (como la última versión de Mozilla Firefox, Apple Safari, Microsoft Internet Explorer, Opera o Google Chrome) es importante por tres razones:</p>
+<p>En primer lugar, los navegadores antiguos son vulnerables a los ataques, ya no suelen estar actualizados con las funciones y los </p>
+</div>
+<div class="right">
+	<p class="continuation">parches de seguridad más recientes. Las vulnerabilidades del navegador pueden conducir al robo de contraseñas, a que se instale software malitencionado sin que el usuario se dé cuenta o incluso a que haya consecuencias aún peores. Un navegador actualizado protege contra amenazas para la seguridad como el phishing (suplantación de identidad) y el software malintencionado.</p>
+	<p>En segundo lugar, hay que tener en cuenta que la Web evoluciona rápidamente. Muchas de las últimas funciones de los sitios y de las aplicaciones web actuales no funcionan en los navegadores antiguos. Solo los navegadores actualizados cuentan con las mejoras de velocidad necesarias para abrir páginas web y ejecutar aplicaciones rápidamente. Además, solo ellos son compatibles con tecnologías web actuales como HTML5, CSS3 y JavaScript acelerado.</p>
+</div><span class="pageNumber">24</span></div></section><section class="template-inner-3 title-old-vs-new-browsers page-3 globalPage-25" style="z-index: 475; display: none; width: 0px;"><div class="page"><div class="image1"><img src="./encuesta_files/oldvsnewbrowsers02.png" data-src="/media/illustrations/oldvsnewbrowsers02.png"></div>
+<p>En tercer y último lugar, los navegadores antiguos frenan las innovaciones de la Web. Si muchos usuarios de Internet se aferran a los navegadores antiguos, los desarrolladores web se ven forzados a diseñar sitios web que funcionen tanto con las tecnologías antiguas como con las nuevas. Al disponer de tiempo y de recursos limitados, terminan desarrollando aplicaciones compatibles con los navegadores antiguos en vez de crear la siguiente generación de aplicaciones web, que serían mucho más útiles e innovadoras. Imaginemos lo que pasaría si se pidiera a los ingenieros de caminos de hoy en día que diseñaran una autopista de alta velocidad que pudiera ser totalmente segura para un seiscientos.</p><span class="pageNumber">25</span></div></section><section class="template-inner-2 title-old-vs-new-browsers page-4 globalPage-26" style="z-index: 474; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation">Por el mismo motivo, los navegadores obsoletos son negativos para los usuarios en general y para la innovación en la Web.</p>
+	<p>No se puede echar la culpa a nadie directamente por seguir utilizando su antiguo navegador. En algunos casos, no se puede actualizar el navegador. Si compruebas que no puedes actualizar el navegador en el ordenador de tu empresa, habla con el administrador del departamento de informática. Si no puedes actualizar una versión antigua de Internet Explorer, el complemento Google Chrome Frame te permitirá disfrutar de las ventajas de algunas funciones de las aplicaciones web más actuales, ya que incorporará funciones de Google Chrome a Internet Explorer.</p>
+	<p>Los navegadores antiguos y obsoletos son perjudiciales para los usuarios e impiden la innovación en toda la Web.</p>
+</div>
+<div class="right">
+	<div class="image1"><img src="./encuesta_files/oldvsnewbrowsers03.png" data-src="/media/illustrations/oldvsnewbrowsers03.png"></div>
+	<p class="note continuation">Nota del editor: Para comprobar qué navegador utilizas, consulta la página <a href="http://www.whatbrowser.org/">www.whatbrowser.org</a>.</p>
+</div><span class="pageNumber">26</span></div></section><section class="template-inner-2 title-old-vs-new-browsers page-5 globalPage-27" style="z-index: 473; display: none; width: 0px;"><div class="page"><div class="left">
+<p class="continuation">Solo tienes que dedicar un momento a comprobar si tienes instalada la versión más reciente de tu navegador web actual.</p>
+</div><span class="pageNumber">27</span></div></section><section class="template-start-7 title-plugins page-1 globalPage-28" style="z-index: 472; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Complementos</h2><h3>o los ingredientes de tu pizza favorita</h3></div><div class="image1"><img src="./encuesta_files/plugins.png" data-src="/media/illustrations/plugins.png"></div>
+<div class="left">
+	<p class="drop-cap">En los comienzos de la Web, las primeras versiones de HTML no podían mostrar contenido complejo (por ejemplo, vídeos). Lo máximo que se podía ver eran imágenes, enlaces y texto.</p>
+	<p>Así pues, se inventaron complementos para</p>
+</div>
+<div class="right">
+	<p class="continuation">solucionar las limitaciones del primer HTML y poder mostrar contenido más interactivo. Un complemento es un software adicional especializado en procesar un determinado tipo de contenido. Por ejemplo, se puede descargar e instalar un complemento como Adobe Flash</p>
+</div>
+<span class="pageNumber">28</span></div></section><section class="template-inner-2 title-plugins page-2 globalPage-29" style="z-index: 471; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation"> Player para ver una página web que contenga un vídeo o un juego interactivo.</p>
+	<p>¿En qué medida interactúa un complemento con un navegador? Curiosamente, la interacción es prácticamente nula. La forma de usar un complemento se parece bastante a cuando se muestra una imagen dentro de otra en televisión: el navegador define un espacio independiente en la página web para el complemento y, a continuación, se muestra ahí. El complemento puede actuar libremente en ese espacio con independencia del navegador.</p>
+	<p>Esta independencia permite que un determinado complemento pueda funcionar en muchos navegadores distintos. Sin embargo, esto también los convierte en unos de los principales blancos de los ataques contra la seguridad de los navegadores. Un equipo puede ser aún más vulnerable a los ataques contra la</p>
+</div>
+<div class="right">
+<p class="continuation">seguridad si se utilizan complementos que no estén actualizados, porque estos complementos no contienen los últimos parches de seguridad.</p>
+	<p>El modelo de complemento que se utiliza actualmente se parece bastante al que se utilizaba en los primeros tiempos de la Web. Sin embargo, la comunidad web está buscando nuevas formas de modernizar los complementos: por ejemplo, integrar los complementos de una forma más transparente para que sea posible buscar su contenido y hacer clic en él y para que ese contenido pueda interactuar con los demás componentes de la página web. Y lo que es más importante: algunos desarrolladores de navegadores y de complementos colaboran actualmente para proteger a los usuarios de los riesgos para la seguridad. Por ejemplo, los equipos de Google Chrome y de Adobe Flash Player han trabajado conjuntamente para integrar Flash Player en el </p>
+</div><span class="pageNumber">29</span></div></section><section class="template-inner-2 title-plugins page-3 globalPage-30" style="z-index: 470; display: none; width: 0px;"><div class="page"><div class="left">
+<p class="continuation">navegador. El sistema de actualización automática de Chrome permite garantizar que el complemento Flash Player esté siempre actualizado con los parches y con las correcciones de seguridad más recientes.</p>
+</div><span class="pageNumber">30</span></div></section><section class="template-start-5 title-browser-extensions page-1 globalPage-31" style="z-index: 469; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Extensiones del navegador </h2><h3>o superpoderes para tu navegador</h3></div><div class="left">
+	
+	<p class="drop-cap">Las extensiones del navegador permiten "ampliar" el navegador añadiéndole nuevas funciones.<i></i></p>
+	
+	<p>De esta forma, cada usuario puede personalizar su navegador con las funciones que considere más importantes. Las extensiones son una especie de herramientas que permiten añadir superpoderes extra a los que ya tiene el navegador.</p>
+	
+	<p>Estos superpoderes pueden ser más o menos espectaculares según las necesidades de </p>
+</div>
+<div class="right">
+	<p class="continuation">cada usuario. Por ejemplo, se podría instalar una extensión de conversión de monedas para que se muestre un nuevo botón en la barra de direcciones del navegador que permita convertir todos los precios que aparezcan en una página a la moneda especificada. Esta extensión podría ser muy útil para los apasionados de los viajes que planifican y </p>
+	
+	<div class="image1"><img src="./encuesta_files/browserextensions.png" data-src="/media/illustrations/browserextensions.png"></div>
+</div>
+<span class="pageNumber">31</span></div></section><section class="template-inner-5 title-browser-extensions page-2 globalPage-32" style="z-index: 468; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation">realizan reservas a través de Internet. Este tipo de extensiones permiten aplicar la misma clase de funciones a todas las páginas web que se visitan.</p>
+	<p>Las extensiones del navegador también pueden funcionar fuera de las páginas web. Por ejemplo, se podría añadir una extensión en la barra del navegador que compruebe automáticamente si se han recibido nuevos mensajes en la cuenta de correo del usuario y lo avise cada vez que llegue uno. Este tipo de extensión siempre funcionaría en segundo plano y el usuario no tendría que iniciar sesión en su cuenta de correo en una ventana independiente para comprobar si han llegado nuevos mensajes.</p>
+</div>
+<div class="right">
+	<p>Cuando aparecieron las extensiones de los navegadores, los desarrolladores solían tener que crearlas en lenguajes de programación poco frecuentes o en lenguajes complejos como C++, lo que requería una gran cantidad de trabajo, de tiempo y de conocimientos avanzados. Al añadir más código al navegador, también aumentaban los riesgos para la seguridad, ya que el navegador era más vulnerable. Debido al extraño código que había que utilizar en algunas ocasiones, las extensiones provocaban fallos en el navegador. </p>
+	
+	<p>En la actualidad, la mayoría de los navegadores admiten extensiones creadas en los lenguajes de programación sencillos y básicos de la Web: HTML, JavaScript y CSS. </p>
+</div><span class="pageNumber">32</span></div></section><section class="template-inner-2 title-browser-extensions page-3 globalPage-33" style="z-index: 467; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation">Las extensiones modernas utilizan los mismos lenguajes en los que se crean la mayoría de las páginas y las aplicaciones web actuales, por lo que se parecen mucho más a ellas. En consecuencia, ahora son más rápidas y fáciles de crear, más seguras y cada vez más compatibles con los estándares web que deberían utilizar.</p>
+	<p>Para descubrir nuevas extensiones, puedes visitar la galería de extensiones de tu navegador. Esta galería contiene miles de extensiones que permiten desde explorar la Web con mayor eficacia (por ejemplo, extensiones para resaltar y escribir notas en páginas web al investigar sobre algún tema) hasta simplemente pasar un buen rato (como las extensiones que muestran las novedades deportivas de las jugadas más emocionantes en la interfaz del navegador).</p>
+</div>
+<div class="right">
+</div><span class="pageNumber">33</span></div></section><section class="template-start-7 title-sync page-1 globalPage-34" style="z-index: 466; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Sincronización del navegador</h2><h3>o por qué no pasa nada si tu portátil pasa a mejor vida (II)</h3></div><div class="image1"><img src="./encuesta_files/sync01.png" data-src="/media/illustrations/sync01.png"></div>
+<div class="left">
+	<p class="drop-cap">Así que vives en las nubes, ¿eh? Utilizas aplicaciones web para el correo electrónico, para la música y para casi cualquier otra cosa. Guardas archivos, fotos y documentos importantes en la Web, donde se quedan almacenados para que puedas acceder a ellos </p>
+</div>
+<div class="right">
+<p class="continuation">desde cualquier ordenador con conexión a Internet en cualquier parte del mundo.</p>
+	<p>Si de repente hay una subida de tensión y ves que tu ordenador echa humo, ¡que no cunda el pánico! Busca otro dispositivo con conexión a Internet y podrás volver a disponer de toda esa</p>
+</div>
+<span class="pageNumber">34</span></div></section><section class="template-inner-2 title-sync page-2 globalPage-35" style="z-index: 465; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation"> información vital que tan inteligentemente decidiste guardar online.</p>
+	<p>Pero un momento: ¿qué pasa con los marcadores, las preferencias y las extensiones del navegador que utilizas diariamente? ¿Pasaron a la historia cuando tu ordenador pasó a mejor vida?</p>
+	<p>La respuesta a esta pregunta solía ser "sí". Antiguamente, habrías tenido que buscar de nuevo todas tus extensiones favoritas y volver a incluir en marcadores todos los sitios web que con tanto esmero habías marcado. ¡Pero ahora las cosas han cambiado! Muchos de los navegadores actuales, como Firefox y Chrome, han empezado a incorporar una función de <strong>sincronización</strong>. Esta función te permite guardar la configuración del navegador online (en la "nube") para que no se pierda ni siquiera si tu ordenador se desintegra.</p>
+
+</div>
+<div class="right">
+	<p>La función de sincronización también te puede facilitar las cosas si utilizas varios ordenadores (por ejemplo, un portátil en el trabajo y un ordenador de sobremesa en casa), ya que evita que tengas que volver a crear manualmente los marcadores de tus sitios web favoritos o volver a configurar el navegador en todos tus ordenadores. Los cambios que realices en el navegador de un ordenador que tenga habilitada la función de sincronización aparecerán automáticamente en los demás ordenadores sincronizados en cuestión de segundos.</p>
+	<p>En Chrome, por ejemplo, la función de sincronización guarda todos los marcadores, las extensiones, las preferencias y los temas en la cuenta de Google del usuario. Por tanto, si utilizas otro ordenador con conexión a Internet, lo único que tienes que hacer es abrir Chrome y acceder a tu cuenta de Google a través de la</p>
+</div><span class="pageNumber">35</span></div></section><section class="template-inner-2 title-sync page-3 globalPage-36" style="z-index: 464; display: none; width: 0px;"><div class="page"><div class="left">
+<p class="continuation"> función de sincronización del navegador y... ¡tachán!<i></i> Toda la configuración de tu navegador estará a tu disposición en el nuevo ordenador.</p>
+	<p>Independientemente de la cantidad de ordenadores que uses, siempre que tengas una conexión a Internet y un navegador actual que esté sincronizado en la nube, podrás tener acceso a todo el material que necesitas, incluso si todos tus ordenadores se ponen de acuerdo a la vez con las leyes de Murphy para dejar de funcionar.</p>
+</div><span class="pageNumber">36</span></div></section><section class="template-start-5 title-browser-cookies page-1 globalPage-37" style="z-index: 463; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Cookies del navegador</h2><h3>o si te he visto sí me acuerdo</h3></div><div class="left">
+	
+	<p class="drop-cap"><i>Cookie</i> (galleta en inglés) no parece un nombre muy adecuado para algo tecnológico, pero son fundamentales para ofrecer a los usuarios de Internet una función muy útil: recordar algunas cosas que hemos hecho en los sitios web.</p>
+	
+	<p>Una <i>cookie</i> es un pequeño fragmento de texto que los sitios web envían al navegador cuando reciben una visita. Las <i>cookies</i> contienen información que los usuarios pueden querer que se recuerde, como la preferencia del idioma y otros ajustes.</p>
+</div>
+<div class="right">
+	<p>El navegador almacena estos datos y los usa cada vez que se vuelve a visitar un sitio web para que la visita sea más agradable y personalizada. Por ejemplo, si visitas un sitio web sobre películas e indicas que te encantan las comedias, las <i>cookies</i> enviadas pueden recordar esa información y hacer que aparezcan comedias al principio de la página la próxima vez que visites ese sitio.<br><br></p>
+	
+	<div class="image1"><img src="./encuesta_files/cookies01.png" data-src="/media/illustrations/cookies01.png"></div>
+	
+</div>
+<span class="pageNumber">37</span></div></section><section class="template-inner-2 title-browser-cookies page-2 globalPage-38" style="z-index: 462; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p>Los carritos de la compra de las tiendas online también utilizan <i>cookies</i>. Por ejemplo, si buscas películas en DVD en un sitio para comprar películas, es posible que puedas añadir películas al carrito sin registrarte o iniciar sesión. Como las <i>cookies</i> se guardan en el navegador, las películas que añadas al carrito no se olvidarán aunque se pase de una página a otra. Las <i>cookies</i> también se pueden utilizar en la publicidad online para recordar los intereses de los usuarios y mostrarles anuncios relacionados cuando navegan por la Web.</p>
+	
+	<p>Algunos usuarios prefieren no usar <i>cookies</i>, así que la mayoría de los navegadores actuales permiten configurar cómo se administran. Para controlar mejor la privacidad, se pueden establecer reglas sobre cómo se administran las <i>cookies</i> en cada sitio web. Esto permite que cada usuario elija los </p>
+</div>
+<div class="right">
+	<p class="continuation">sitios en los que confía y pueda autorizar únicamente las <i>cookies</i> de esos sitios (el resto se bloqueará). Al haber muchos tipos de <i>cookies</i> (como las "<i>cookies</i> de sesión", que solo almacenan información durante el tiempo que dura una determinada sesión del navegador, y las "<i>cookies</i> permanentes", que almacenan información para varias sesiones), los navegadores actuales suelen ofrecer controles avanzados que permiten especificar preferencias para diferentes tipos de <i>cookies</i> (por ejemplo, aceptar las <i>cookies</i> permanentes como <i>cookies</i> de sesión).</p>
+	
+	<p>El navegador Google Chrome ofrece un elemento extra en el menú de opciones: un enlace directo al administrador de configuración de almacenamiento de Adobe Flash Player. Este enlace permite gestionar los datos locales que almacena Adobe Flash Player (también conocidos como <i>cookies</i> de Flash), </p>
+</div><span class="pageNumber">38</span></div></section><section class="template-inner-2 title-browser-cookies page-3 globalPage-39" style="z-index: 461; display: none; width: 0px;"><div class="page"><div class="left">
+<p class="continuation">que pueden contener información sobre las aplicaciones y los sitios web basados en Flash que se han visitado. Las <i>cookies</i> de Flash se pueden administrar igual de fácil que las <i>cookies</i> del navegador.</p>
+</div><span class="pageNumber">39</span></div></section><section class="template-start-7 title-browser-privacy page-1 globalPage-40" style="z-index: 460; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Navegadores y privacidad</h2><h3>o el algodón no engaña</h3></div><div class="image1"><img src="./encuesta_files/browserprivacy01.png" data-src="/media/illustrations/browserprivacy01.png"></div>
+<div class="left">
+	<p class="drop-cap">La seguridad y la privacidad son dos cuestiones íntimamente relacionadas, pero tienen sus diferencias.</p>
+	
+	<p>Por ejemplo, en una casa, las alarmas y las cerraduras de las puertas protegen el hogar de </p>
+</div>
+<div class="right">
+	<p class="continuation">los ladrones, mientras que las cortinas y las persianas preservan la privacidad de la vivienda al ocultarla de las miradas de los transeúntes.</p>
+	
+	<p> Del mismo modo, la seguridad del navegador ofrece protección frente a software </p>
+</div>
+<span class="pageNumber">40</span></div></section><section class="template-inner-2 title-browser-privacy page-2 globalPage-41" style="z-index: 459; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation">malintencionado, el phishing y otro tipo de ataques que se realizan a través de la Web, mientras que las funciones de privacidad permiten mantener la privacidad de lo que uno hace al navegar por Internet.</p>
+	<p>Veamos con más detalle en qué consiste la privacidad. Imagina la siguiente situación: si una persona que corre diariamente varios kilómetros lleva un GPS que registra la información de los recorridos que realiza cada día, en el dispositivo se irá creando un registro histórico de datos de los lugares por los que ha pasado, la distancia recorrida, la velocidad media y las calorías quemadas.</p>
+	
+	<p>Del mismo modo, al navegar por la Web, se crea un registro parecido de datos del navegador que se almacena localmente en el ordenador, es decir, un historial de los sitios que se han visitado, las cookies que se han </p>
+</div>
+<div class="right">
+<p class="continuation">enviado al navegador y los archivos que se han descargado. Si el usuario escoge que el navegador recuerde los datos de los formularios o las contraseñas, esa información también se almacena en el ordenador.</p>
+	<p>Algunos usuarios no saben que estos datos se pueden borrar fácilmente en cualquier momento a través del menú de preferencias o de opciones (según cuál sea el navegador utilizado). De hecho, las últimas versiones de los navegadores más actuales ofrecen también un modo de navegación "privada" o de "incógnito". Por ejemplo, si se utiliza el modo de incógnito de Chrome, las páginas web visitadas no aparecerán en el historial de navegación. Además, al cerrar todas las ventanas de la sesión de navegación de incógnito, se eliminarán todas las cookies nuevas. Este modo es recomendable para aquellos usuarios que comparten su equipo</p>
+</div>
+<span class="pageNumber">41</span></div></section><section class="template-inner-4 title-browser-privacy page-3 globalPage-42" style="z-index: 458; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation">con otras personas o que utilizan ordenadores públicos como, por ejemplo, los de una biblioteca local o un cibercafé.</p>
+	<p>Todas estas funciones de privacidad del navegador permiten controlar los datos de navegación de forma local en el ordenador o controlar datos específicos que el navegador envía a los sitios web. La configuración de privacidad del navegador no permite controlar otros datos del usuario que puedan tener estos sitios web (por ejemplo, la información enviada anteriormente a un sitio web).</p>
+	
+	<p>Hay algunas formas de limitar parte de la información que reciben los sitios web durante las visitas. Muchos navegadores permiten controlar las preferencias de privacidad de cada sitio de forma independiente y elegir opciones correspondientes a datos específicos referentes a cookies, JavaScript, los complementos, etc. Por ejemplo, se pueden establecer reglas para que </p>
+
+</div>
+<div class="right">
+
+<p class="continuation">solo se permitan las cookies de una lista específica de sitios en los que se confíe e indicar al navegador que bloquee las cookies de todos los demás sitios.</p>
+
+<p>Siempre es difícil conseguir un equilibrio entre la privacidad y la eficacia. Recopilar datos globales reales y comentarios de los usuarios puede ser muy útil para mejorar los productos y la experiencia de los usuarios. La clave está en encontrar un buen equilibrio entre ambos elementos manteniendo al mismo tiempo un alto nivel de privacidad.</p>
+
+<p>Un ejemplo real son las cookies del navegador. Por una parte, las cookies permiten que un sitio web que se visita con frecuencia pueda recordar el contenido del carrito de la compra, mantener abierta la sesión y ofrecer al usuario una experiencia más útil y personalizada basada en sus visitas anteriores. Por otra parte, al permitir las cookies de un sitio</p>
+
+</div><span class="pageNumber">42</span></div></section><section class="template-inner-4 title-browser-privacy page-4 globalPage-43" style="z-index: 457; display: none; width: 0px;"><div class="page"><div class="left">
+
+<p class="continuation"> web, ese sitio puede recopilar y recordar información sobre esas visitas anteriores. Las cookies se pueden bloquear en cualquier momento. Para ajustar las opciones de privacidad del navegador, se puede modificar la configuración de la privacidad a través del menú de preferencias u opciones del navegador.</p>
+
+</div><span class="pageNumber">43</span></div></section><section class="template-start-2 title-malware page-1 globalPage-44" style="z-index: 456; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Software malintencionado, phishing y riesgos para la seguridad</h2><h3>o no es oro todo lo que reluce</h3></div><p class="drop-cap">Cuando utilizas un cajero automático, lo más probable es que eches un vistazo a tu alrededor para asegurarte de que no haya nadie intentando ver tu número PIN (o robarte el dinero). De hecho, incluso es posible que, antes de utilizar el cajero, intentes comprobar que sea auténtico. Cuando navegas por la Web y realizas transacciones a través de Internet, debes tener en cuenta dos riesgos para la seguridad: el software malintencionado y el <i>phishing</i>.</p>
+<div class="image1"><img src="./encuesta_files/malware01.png" data-src="/media/illustrations/malware01.png"></div>
+<span class="pageNumber">44</span></div></section><section class="template-inner-5 title-malware page-2 globalPage-45" style="z-index: 455; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p class="continuation">Estos ataques son obra de individuos u organizaciones que tienen la intención de robar información personal o de acceder sin autorización a un ordenador. ¿Pero qué son exactamente los ataques de <i>phishing</i> y de software malintencionado?</p>
+	<p>El <i>phishing</i> consiste en una suplantación de identidad, realizada normalmente a través de un sitio web falso y que tiene la finalidad de obtener información personal de forma fraudulenta. Se denomina <i>phishing</i> (pesca) porque quienes llevan a cabo esta práctica lanzan un "cebo" electrónico y esperan a que alguien "pique". En una típica estafa de <i>phishing</i>, el atacante envía un mensaje de correo electrónico que parece proceder de un banco o de algún servicio web que la víctima suele utilizar. El asunto del mensaje podría ser, por ejemplo, "Urgente: actualice su información bancaria". Ese correo electrónico podría contener enlaces que parezcan dirigir al sitio web del banco de la víctima, pero que en realidad lleven a un sitio web fraudulento. Una vez que el usuario acceda a ese sitio, se le pedirá que inicie sesión en él y, sin darse cuenta, podrá revelar a los estafadores el número de su cuenta bancaria, así como números de tarjetas de crédito, contraseñas y otros datos confidenciales.</p>
+</div>
+<div class="right">
+	<p>El software malintencionado es software dañino que se instala en el ordenador de un usuario, normalmente sin saberlo. Un ejemplo podría ser un antivirus que fuera en realidad un virus. Incluso es posible acceder a una página y que se instale software en el ordenador sin que el usuario confirme nada.</p>
+</div><span class="pageNumber">45</span></div></section><section class="template-inner-2 title-malware page-3 globalPage-46" style="z-index: 454; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p>En realidad, este software está diseñado para robar números de tarjetas de crédito o contraseñas del ordenador del usuario o, en algunos casos, para causar daños en él. Una vez que el software malintencionado se ha instalado en un ordenador, no solo es difícil de eliminar sino que puede acceder libremente a todos los datos y archivos que encuentre, enviar esa información a cualquier lugar y, generalmente, causar estragos en el ordenador.</p>
+	<p>La forma principal de defenderse de los ataques de <i>phishing</i> y de software malintencionado es tener un navegador moderno y actualizado. Por ejemplo, la mayoría de los navegadores actuales permiten analizar páginas web para buscar indicios de software malintencionado y recibir una alerta si se detecta algún programa de este tipo.</p>
+</div>
+<div class="right">
+<p>Por otra parte, los atacantes no siempre pueden emplear mecanismos sofisticados para dañar los ordenadores, pero sí que pueden buscar formas ingeniosas de engañar a las víctimas para hacer que tomen una decisión equivocada. En los siguientes capítulos, veremos cómo se pueden tomar mejores decisiones para protegerse al navegar por Internet y cómo pueden contribuir a esta protección los navegadores y otras tecnologías web.</p>
+</div><span class="pageNumber">46</span></div></section><section class="template-start-2 title-browser-protection page-1 globalPage-47" style="z-index: 453; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Cómo te protegen los navegadores actuales del phishing y del software malintencionado</h2><h3>o más vale prevenir que curar</h3></div><p class="drop-cap">Un navegador actualizado protege contra los ataques de <i>phishing</i> y de software malintencionado que se pueden producir al navegar por la Web. Para ello, lo que hace es reducir los siguientes tres tipos de riesgos para la seguridad que podría haber al navegar por Internet.</p>
+
+<h4>Riesgo 1: frecuencia con la que se entra en contacto con un atacante</h4>
+
+<p class="continuation">Puede haber riesgo de exposición a un atacante a través de sitios web falsos malintencionados, e incluso a través de sitios web conocidos que se hayan hackeado. La mayoría de los navegadores </p>
+
+<div class="image1"><img src="./encuesta_files/browserprotection01.png" data-src="/media/illustrations/browserprotection01.png"></div>
+<span class="pageNumber">47</span></div></section><section class="template-inner-2 title-browser-protection page-2 globalPage-48" style="z-index: 452; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation">actuales hacen un examen previo de cada una de las páginas web que se visitan y muestran una alerta si detectan que alguna página puede ser malintencionada. De esta forma, el usuario puede decidir si de verdad quiere visitar una página con conocimiento de causa.</p>
+	<p>Por ejemplo, Google Chrome utiliza la tecnología de navegación segura, que también emplean otros navegadores actuales. Al explorar la Web, se examina cada página rápidamente para comprobar si aparece en una lista de posibles sitios web de <i>phishing</i> y software malintencionado. Esta lista se guarda y se mantiene localmente en el ordenador del usuario para proteger su privacidad al navegar por Internet. Si se detecta una coincidencia con la lista local, el navegador solicita más información a Google. Esta solicitud se realiza en segundo plano y el navegador no la envía en texto sin formato.</p>
+</div>
+<div class="right">
+<p>Si Google comprueba que existe una coincidencia, Chrome muestra una página roja para advertir que la página que se quiere visitar puede ser peligrosa.</p>
+	<h4>Riesgo 2: vulnerabilidad del navegador ante un ataque</h4>
+	<p class="continuation">Los navegadores antiguos que no se han actualizado pueden tener vulnerabilidades en su seguridad de las que pueden aprovecharse los atacantes. Cualquier software no actualizado, ya sea el sistema operativo, el navegador o los complementos, puede presentar la misma vulnerabilidad. Por ese motivo, es muy importante utilizar la última versión del navegador e instalar puntualmente los parches de seguridad en el sistema operativo y en todos los complementos de forma que siempre estén actualizados.</p>
+</div><span class="pageNumber">48</span></div></section><section class="template-inner-2 title-browser-protection page-3 globalPage-49" style="z-index: 451; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p>Algunos navegadores buscan actualizaciones automáticamente y se instalan cuando el usuario lo confirma. Chrome y otros navegadores van más allá, ya que se actualizan automáticamente sin la intervención del usuario. El navegador busca actualizaciones periódicamente e instala de forma automática la última versión sin que el usuario tenga que dejar de navegar. Además, Chrome ha integrado Adobe Flash Player y un visor de PDF en el navegador para que estos dos populares complementos también se actualicen automáticamente.</p>
+	<h4>Riesgo 3: daño causado si un atacante descubre vulnerabilidades en el navegador</h4>
+	
+	<p class="continuation">Algunos navegadores actuales como Chrome e Internet Explorer disponen de una capa adicional de protección denominada "zona de pruebas". Del mismo modo que una caja de arena tiene paredes que evitan que se salga la arena, la zona de pruebas de un navegador</p>
+</div>
+<div class="right">
+<p class="continuation">crea un entorno protegido contra el software malintencionado y contra otro tipo de amenazas que pueden infectar el ordenador. Si se abre una página web malintencionada, la zona de pruebas del navegador evita que el código dañino salga del navegador y se instale en el disco duro. Por tanto, ese código no puede leer ni modificar los datos del ordenador, ni causar ningún otro daño en ellos.</p>
+
+	<div class="image1"><img src="./encuesta_files/browserprotection02.png" data-src="/media/illustrations/browserprotection02.png"></div>
+</div><span class="pageNumber">49</span></div></section><section class="template-inner-2 title-browser-protection page-4 globalPage-50" style="z-index: 450; display: none; width: 0px;"><div class="page"><div class="left">
+
+	<p>En resumen, los navegadores actuales pueden proteger contra las amenazas de la seguridad de Internet del siguiente modo: en primer lugar, comprobando si los sitios web que se van a visitar pueden ser sitios de <i>phishing</i> o incluir software malintencionado; en segundo lugar, ofreciendo notificaciones de actualizaciones o actualizaciones automáticas cuando hay disponible una versión más reciente y más segura del navegador; y, en tercer lugar, utilizando la zona de pruebas del navegador para evitar que el código dañino cause daños en el ordenador.</p>
+	
+	<p>En los siguientes capítulos veremos cómo las direcciones web pueden ayudar a tomar decisiones acertadas sobre los sitios web que se visitan.</p>
+</div><span class="pageNumber">50</span></div></section><section class="template-start-7 title-url page-1 globalPage-51" style="z-index: 449; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Aprende a leer las URL para proteger tu seguridad</h2><h3>u oro parece, plata no es</h3></div><div class="image1"><img src="./encuesta_files/url01.png" data-src="/media/illustrations/url01.png"></div>
+<div class="left">
+	<p class="drop-cap">Un localizador de recursos uniforme (más conocido como URL) es algo que puede parecer complicado, pero en realidad no es más que la dirección web que se introduce en</p>
+</div>
+<div class="right">
+<p class="continuation">el navegador para acceder a una determinada página o aplicación web.</p>
+	<p>Cuando se introduce una URL, se accede al sitio web que se encuentra alojado en un </p>
+</div>
+<span class="pageNumber">51</span></div></section><section class="template-inner-2 title-url page-2 globalPage-52" style="z-index: 448; display: none; width: 0px;"><div class="page">﻿<div class="left" style="width: 576px;">
+	<p class="continuation">servidor de alguna parte del mundo. Ese sitio web se transporta a través de kilómetros de cables hasta la conexión local a Internet del usuario y, por último, se muestra en el navegador del ordenador. A continuación se muestran algunos ejemplos de URL:</p>
+	<div class="url-image"><img src="./encuesta_files/url_b1.png" data-src="/media/illustrations/url_b1.png"></div>
+	<p class="continuation">Permite acceder al sitio web de noticias de la British Broadcasting Corporation (".co.uk" indica que el dominio está registrado en el Reino Unido).</p>
+	<div class="url-image"><img src="./encuesta_files/url_b2.png" data-src="/media/illustrations/url_b2.png"></div>
+	<p class="continuation">Permite acceder al motor de búsqueda de Google.</p>
+	<div class="url-image"><img src="./encuesta_files/url_b3.png" data-src="/media/illustrations/url_b3.png"></div>
+	<p class="continuation">Permite acceder al Museo Nacional Del Prado (".es" indica que el dominio de este museo de arte de Madrid está registrado en España).</p>
+	<div class="url-image"><img src="./encuesta_files/url_b4.png" data-src="/media/illustrations/url_b4.png"></div>
+	<p class="continuation">Permite acceder al sitio web del Bank of America ("https://" indica que ese sitio utiliza una conexión encriptada).</p>
+</div>
+<div class="right">
+</div><span class="pageNumber">52</span></div></section><section class="template-inner-2 title-url page-3 globalPage-53" style="z-index: 447; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p>Es normal no pararse a pensar en las URL, ya que las introducimos todos los días en el navegador sin más. Sin embargo, conocer el significado de las distintas partes de una URL puede ayudarnos a protegernos de ataques contra la seguridad o de estafas de <i>phishing</i>.</p>
+	<p class="continuation">Observemos los elementos de la URL del siguiente ejemplo:</p>
+	<div class="url-breakdown">
+		<span class="url">http://www.google.com/maps</span> <span class="figure-1">esquema</span> <span class="figure-2">nombre de <i>host</i></span> <span class="figure-3">ruta</span> <span class="figure-4">dominio de nivel superior</span>
+	</div>
+	<p>La primera parte de la URL se llama <strong>esquema</strong>. En el ejemplo anterior, HTTP es el esquema y corresponde a la forma abreviada de <i>HyperText Transfer Protocol</i> (Protocolo de transferencia de hipertexto).</p>
+</div>
+<div class="right">
+	<p>Lo que aparece a continuación ("www.google.com") es el nombre del <strong><i>host</i></strong> en el que se aloja el sitio web. Cuando un particular o una empresa crea un nuevo sitio web, registra este nombre de host a su nombre. El nombre de <i>host</i> solo lo puede utilizar su propietario. Esto es muy importante, como veremos a continuación.</p>
+	<p>Una URL puede incluir una <strong>ruta</strong> adicional detrás del nombre de host que permita acceder a una página específica de dicho <i>host</i> (como si se accediera directamente a un capítulo o a una página de un libro). Volviendo al ejemplo anterior, la ruta le indica al servidor <i>host</i> que se quiere acceder a la aplicación web de mapas que se encuentra en www.google.com, es decir, a Google Maps. A veces, la ruta aparece delante del nombre de <i>host</i> como un subdominio (por ejemplo, "maps.google.com").</p>
+</div><span class="pageNumber">53</span></div></section><section class="template-inner-6 title-url page-4 globalPage-54" style="z-index: 446; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p>Hablemos ahora de la seguridad. Una forma de saber si te estás dirigiendo de cabeza a un sitio web impostor o de <i>phishing</i> es observar detenidamente la URL que aparece en la barra de direcciones del navegador. Presta especial atención al nombre de <i>host</i> y recuerda que solo el propietario legítimo puede utilizar un determinado nombre de <i>host</i>.</p>
+	<p>Por ejemplo, si haces clic en un enlace que esperas que te conduzca al sitio web del Banco de España:</p>
+	<h4>URL LEGÍTIMA</h4>
+	<ul>
+		<li>www.<span class="highlight">bde</span>.es es una URL legítima, ya que el nombre de <i>host</i> es correcto.</li>
+		<li>www.<span class="highlight">bde</span>.es/webbde/es/secciones/sobreelbanco también es una URL legítima, ya que el nombre de <i>host</i> es correcto. La ruta de la URL conduce a una página secundaria con información sobre el banco.</li>
+	</ul>
+</div>
+<div class="right">
+	<h4>URL SOSPECHOSA</h4>
+	<ul>
+		<li><span class="highlight">bde</span>.xyz.es no es la URL del sitio web del Banco de España, ya que "bde" aparece como subdominio del sitio web xyz.es.</li>
+		<li>www.xyz.es/<span class="highlight">bde</span> tampoco es la URL del sitio web del Banco de España, ya que "bde" aparece como una ruta dentro del dominio  www.xyz.es.</li>
+	</ul>
+	<p>Si vas a utilizar el sitio web de un banco o realizar una transacción a través de Internet y necesitas facilitar información confidencial como tu contraseña o el número de tu cuenta, mira primero la barra de direcciones y asegúrate de que el esquema sea "<strong>https://</strong>" y de que aparezca un icono de candado en la barra de direcciones del navegador. "https://" indica que la transferencia de datos entre el servidor y el navegador se está realizando con una conexión segura.</p>
+</div><span class="pageNumber">54</span></div></section><section class="template-inner-2 title-url page-5 globalPage-55" style="z-index: 445; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p>Si se utiliza una conexión segura, la URL completa del sitio web del Banco de España debería ser la siguiente: <strong>https://</strong>www.bde.es. Las conexiones seguras protegen contra ataques de fraude y contra cualquier otro intento de interceptar información confidencial enviada. La presencia del esquema "https://" es una buena señal; sin embargo, sigue siendo importante comprobar el nombre de <i>host</i> de la URL para asegurarse de que se va a acceder a un sitio web legítimo (no serviría de nada tener una conexión segura con un sitio web fraudulento).</p>
+	<p>En el siguiente capítulo veremos cómo una URL introducida en la barra de direcciones del navegador conduce a la página web correcta.</p>
+</div>
+<div class="right">
+	<div class="image1"><img src="./encuesta_files/url02.png" data-src="/media/illustrations/url02.png"></div>
+</div><span class="pageNumber">55</span></div></section><section class="template-start-7 title-dns page-1 globalPage-56" style="z-index: 444; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>DNS y direcciones IP</h2><h3>o la cabina telefónica fantasma</h3></div><div class="image1"><img src="./encuesta_files/dns01.png" data-src="/media/illustrations/dns01.png"></div>
+<div class="left">
+	<p class="drop-cap">¿Nunca te has preguntado cómo encuentra el navegador la página web correcta cuando introduces una URL en la barra de direcciones? Cada URL (por ejemplo, www.google.com) tiene su propia dirección IP</p>
+</div>
+<div class="right">
+	<p class="continuation">(Protocolo de Internet). Este es un ejemplo de dirección IP: <strong>74.125.19.147</strong>.</p>
+	<p>Una dirección IP se compone de una serie de números que indican dónde se encuentra un determinado dispositivo en Internet, ya sea</p>
+</div>
+<span class="pageNumber">56</span></div></section><section class="template-inner-5 title-dns page-2 globalPage-57" style="z-index: 443; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p class="continuation">en el servidor de google.com o en tu ordenador. La dirección IP es algo así como el número de teléfono de una casa: al igual que el número de teléfono le indica al operador a qué casa debe dirigir la llamada, la dirección IP le indica al ordenador con qué otro dispositivo de Internet debe comunicarse para enviar y recibir datos.</p>
+	<p>El navegador no puede identificar automáticamente una dirección IP entre los 35.000 millones (o más) de dispositivos del planeta que hay conectados a Internet. Tiene que buscarla a través de lo que se conoce como sistema de nombres de dominio. El sistema de nombres de dominio es, básicamente, la "guía telefónica" de la Web: al igual que una guía de teléfonos traduce un nombre como "Pizzería Acme" en el número de teléfono al que hay que llamar para ponerse en contacto con esa pizzería, el sistema de nombres de dominio traduce una URL o una dirección web (como www.google.com) en la dirección IP con la que se debe contactar (por ejemplo, 74.125.19.147) para acceder a la información deseada (en este caso, a la página principal de Google).</p>
+</div>
+<div class="right">
+	<p>Cuando se introduce google.com en el navegador web, el navegador busca la dirección IP de ese dominio a través de un sistema de nombres de dominio, se comunica con ella, espera una respuesta para confirmar la conexión y, a continuación, envía la solicitud de la página web de google.com a esa dirección IP.<br><br></p>
+</div><span class="pageNumber">57</span></div></section><section class="template-inner-2 title-dns page-3 globalPage-58" style="z-index: 442; display: none; width: 800px;"><div class="page">﻿<div class="left">
+<p class="continuation">Por último, el servidor de Google correspondiente a esa dirección IP envía la página web solicitada a la dirección IP del ordenador desde el que se ha realizado la solicitud para que la página se muestre en el navegador.</p>
+	<p>En muchos sentidos, obtener una página web y cargarla en el navegador se parece bastante a realizar una llamada telefónica. Al llamar por teléfono, lo más habitual es buscar el número, marcarlo, esperar a que cojan el teléfono, decir "hola Fulanito" y esperar una respuesta antes de iniciar la conversación. A veces, hay que volver a marcar si hay algún problema de conexión. En la Web ocurre un proceso similar en una fracción de segundo; lo único que ve el usuario es que ha introducido www.google.com y que aparece la página principal de Google en el navegador.</p>
+</div>
+<div class="right">
+	<p>En el siguiente capítulo veremos cómo se puede verificar la identidad de un sitio web que se ha cargado en el navegador a través del <strong>certificado de validación ampliada</strong>.</p>
+</div><span class="pageNumber">58</span></div></section><section class="template-start-5 title-identity page-1 globalPage-59" style="z-index: 441; display: none; width: 800px;"><div class="page"><div class="page-title"><h2>Validación de las identidades online</h2><h3>o "Documentación, por favor"</h3></div><div class="left">
+	<p class="drop-cap">En el mundo real puedes ver a las personas con las que compartes información, así como hablar con ellas cara a cara o en un lugar de confianza como un banco. De esa forma, podemos saber si deberíamos confiar en ellas.</p>
+	<p>Sin embargo, en Internet puede ser difícil saber quién está detrás de un sitio web. Las pistas visuales en las que normalmente nos basamos pueden ser falsas.</p>
+</div>
+<div class="right">
+	<p>Por ejemplo, una página web falsa podría copiar el logotipo, el icono y el diseño del sitio web de un banco al igual que alguien podría tener una tienda a modo de tapadera.</p>
+<p>Afortunadamente, hay algunas herramientas que ayudan a determinar si un </p>
+	
+	<div class="image1"><img src="./encuesta_files/identity01.png" data-src="/media/illustrations/identity01.png"></div>
+</div>
+<span class="pageNumber">59</span></div></section><section class="template-inner-5 title-identity page-2 globalPage-60" style="z-index: 440; display: none; width: 800px;"><div class="page">﻿<div class="left">
+<p class="continuation">sitio web es auténtico o no. Algunos sitios web cuentan con un <strong>certificado de validación ampliada</strong> que permite saber el nombre de la organización a la que pertenece el sitio web. Los certificados de validación ampliada proporcionan la información necesaria para asegurarse de que no se está confiando información a un sitio falso.</p>
+	<p>A continuación se ofrece un ejemplo que ilustra el funcionamiento de este sistema de seguridad en el navegador. En el sitio web de un banco que se ha verificado con el sistema de certificados de validación ampliada, el nombre del banco aparece en la barra de direcciones en un cuadro verde entre el icono de candado y la dirección web:</p>
+	<div class="image1"><img src="./encuesta_files/identity02.png" data-src="/media/illustrations/identity02.png"></div>
+	<span class="image-description">Ejemplo del indicador de seguridad en Chrome</span>
+</div>
+<div class="right">
+	<p>En la mayoría de los navegadores, se puede encontrar el indicador de validación ampliada mirando el nombre de la organización en la sección verde de la barra de direcciones del navegador.</p>
+</div><span class="pageNumber">60</span></div></section><section class="template-inner-7 title-identity page-3 globalPage-61" style="z-index: 439; display: none; width: 800px;"><div class="page"><p class="continuation"> También se puede hacer clic en el indicador para ver la información de seguridad del sitio web y examinar su certificado digital.</p>
+﻿<p>Antes de recibir un certificado de validación ampliada, el propietario de un sitio web debe superar una serie de pruebas para confirmar su identidad legal y de que se trata del verdadero propietario. En el ejemplo anterior, el certificado de validación ampliada de bankofamerica.com verifica que, en efecto, el sitio web pertenece al Bank of America. Este certificado se puede considerar un elemento que vincula el nombre de dominio de la dirección web a una identidad del mundo real.</p>
+<p>Lo más sensato es compartir información sensible únicamente con sitios web que pertenezcan a organizaciones en las que se confíe. La próxima vez que vayas a realizar una transacción de forma online, presta atención a la información de seguridad del sitio web. Te alegrarás de haberlo hecho.</p><span class="pageNumber">61</span></div></section><section class="template-start-7 title-page-load page-1 globalPage-62" style="z-index: 438; display: none; width: 800px;"><div class="page"><div class="page-title"><h2>La evolución hacia una Web más rápida</h2><h3>o imágenes, vídeos y JavaScript a toda pastilla</h3></div><div class="image1"><img src="./encuesta_files/pageload01.png" data-src="/media/illustrations/pageload01.png"><canvas width="220" height="100" style="position: absolute; left: 247px; top: 277px;"></canvas></div>
+<div class="left">
+	<p class="drop-cap">La Web actual es un apasionante espacio interactivo y visual lleno de imágenes, fotos, vídeos y fantásticas aplicaciones web. </p>
+</div>
+<div class="right">
+	<p class="continuation">Algunas de las experiencias más intensas de la Web están relacionadas con imágenes y vídeos: desde álbumes de fotos de vacaciones en familia compartidos hasta vídeos online de</p>
+</div>
+<span class="pageNumber">62</span></div></section><section class="template-inner-2 title-page-load page-2 globalPage-63" style="z-index: 437; display: none; width: 800px;"><div class="page">﻿<div class="left">
+<p class="continuation">reporteros de guerra retransmitidos desde zonas bélicas.</p>
+	<p>Esto dista mucho de los enlaces y del texto simple con los que comenzó la Web, y significa que cada vez que el navegador carga una página web, se deben procesar más datos y código complejo.</p>
+	<p>¿Qué cantidad adicional de datos y de código hay que procesar y cuál es exactamente la complejidad del código? A continuación se muestran algunos datos sorprendentes en respuesta a esta pregunta:</p>
+	<ul>
+		<li>Las imágenes y las fotos constituyen actualmente el <strong>65% de la información</strong> (cantidad de bytes por página) de una página web normal.</li>
+		<li>Cada día se suben <strong>35 horas de vídeo</strong> a YouTube por minuto (es como si se estrenaran 130.000 nuevas películas de cine</li>
+	</ul>
+</div>
+<div class="right">
+<p class="continuation">semanalmente, aunque con un poco menos de palomitas...).</p>
+<ul>
+		<li>Los programas de JavaScript han pasado de tener unas cuantas líneas de código fuente a incluir <strong>varios cientos de kilobytes</strong> que se deben procesar cada vez que se carga una aplicación o una página web.</li>
+</ul>
+	<p>Teniendo en cuenta estos datos, ¿no es posible que este creciente flujo de datos ralentice la carga de las páginas en el navegador? ¿Acabará saturándose Internet y teniendo que dar marcha atrás dentro de poco?</p>
+	<p>Probablemente no. Las imágenes y las fotos se convirtieron en elementos comunes de la Web cuando los especialistas informáticos descubrieron formas de comprimirlos en archivos de menor tamaño que se podían enviar y descargar con más facilidad.</p>
+</div><span class="pageNumber">63</span></div></section><section class="template-inner-6 title-page-load page-3 globalPage-64" style="z-index: 436; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation">Los más populares de esos primeros sistemas de compresión de archivos fueron GIF y JPEG. Paralelamente, se fueron creando complementos para corregir las primeras limitaciones de la tecnología HTML para poder insertar y reproducir vídeos en páginas web.</p>
+	<p>Actualmente, la incorporación de la etiqueta &lt;video&gt; a HTML5 permite que los vídeos se inserten y se reproduzcan fácilmente en las páginas web. Google también colabora con la comunidad web en WebM, un proyecto destinado a la creación de un formato de vídeo de código abierto que se adapte a las condiciones de ancho de banda y potencia de procesamiento de la Web. Esto permitirá que los vídeos se puedan ver en cualquier dispositivo, ya sea en el ordenador de una casa de campo de un pueblo de Irlanda o en un teléfono inteligente en Nairobi.</p>
+
+</div>
+<div class="right">
+	<p>No obstante, es cierto que las páginas web que contienen muchas fotos u otro tipo de imágenes de gran tamaño pueden tardar bastante en cargarse. Por ese motivo, algunos ingenieros de Google han estado probando nuevos sistemas para comprimir aún más las imágenes manteniendo la misma resolución y calidad. ¿Cuáles son los primeros resultados? Pues lo cierto es que son muy prometedores. Se ha creado un nuevo formato de imagen llamado WebP que reduce el tamaño medio de los archivos de imagen en un 39%.</p>
+	<p>También se han vuelto a diseñar los motores que ejecutan código JavaScript en los navegadores web actuales para que puedan procesar el código más rápido que nunca. Estos rápidos motores JavaScript, como el motor V8 de Google Chrome, se han convertido en componentes esenciales de cualquier navegador web actual.</p>
+</div><span class="pageNumber">64</span></div></section><section class="template-inner-2 title-page-load page-4 globalPage-65" style="z-index: 435; display: none; width: 0px;"><div class="page">﻿<div class="left">
+<p class="continuation">Eso significa que la próxima generación de aplicaciones web basadas en JavaScript, que sin duda serán de gran utilidad, no se verá afectada por la complejidad de una mayor cantidad de código JavaScript.</p>
+	<p>Otra técnica utilizada por navegadores actuales como Chrome para obtener y cargar páginas web de una forma mucho más rápida es el sistema conocido como "resolución previa de DNS". El proceso de traducción de una dirección web en una dirección IP a través de una búsqueda DNS, o viceversa, se suele denominar "resolución". Con la resolución previa de DNS, Chrome busca simultáneamente todos los demás enlaces de una página web y los traduce en direcciones IP en segundo plano. Por tanto, cuando el usuario hace clic en uno de los enlaces de la página, el navegador está preparado para dirigirlo a la nueva página de forma</p>
+</div>
+<div class="right">
+<p class="continuation">instantánea. Con el tiempo, Chrome también va recordando las visitas realizadas de forma que, al volver a visitar una página web a la que se ha accedido anteriormente, el navegador sepa automáticamente cuáles son los elementos y enlaces de la página web que debe resolver por adelantado.</p>
+	<p>Es posible que llegue el momento en el que, <i>antes</i> de que se cargue una página, los navegadores sean capaces de predecir no solo los enlaces que se deben resolver, sino también los elementos del sitio web (imágenes o vídeos, por ejemplo) que se deben extraer. Así aumentará aún más la velocidad de la Web.</p>
+	<p>Esperamos que pronto se puedan cargar nuevas páginas en el navegador tan rápido como se pasan las hojas de un álbum de fotos.</p>
+</div><span class="pageNumber">65</span></div></section><section class="template-start-7 title-open-source page-1 globalPage-66" style="z-index: 434; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>Navegadores y software libre</h2><h3>o a hombros de gigantes</h3></div><div class="image1"><img src="./encuesta_files/opensource01.png" data-src="/media/illustrations/opensource01.png"></div>
+<div class="left">
+	<p class="drop-cap">La Web actual se basa en el trabajo de formidables tecnólogos, pensadores, desarrolladores y organizaciones que siguen ampliando las fronteras de la innovación y compartiendo sus descubrimientos.</p>
+	<p>Este espíritu de compartir constituye la </p>
+</div>
+<div class="right">
+	<p class="continuation">esencia del software libre (también llamado de código abierto). El software libre se caracteriza por poner a disposición de todo el mundo los entresijos que lo hacen funcionar (el "código fuente") y porque se crea con un sistema abierto y de colaboración.</p>
+</div>
+<span class="pageNumber">66</span></div></section><section class="template-inner-6 title-open-source page-2 globalPage-67" style="z-index: 433; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p class="continuation">Cualquier persona puede consultar el código fuente, ver cómo funciona, modificarlo, añadirle funciones y reutilizarlo en otros productos o servicios.</p>
+	<p>El software libre desempeña un papel esencial en muchos componentes de la Web, incluidos los navegadores web actuales. El lanzamiento de Mozilla Firefox, un conocido navegador de código abierto, preparó el terreno para muchas de las increíbles innovaciones que se produjeron en los navegadores. Google Chrome se creó con algunos componentes de Mozilla Firefox y con el motor de renderización de código abierto WebKit, entre otras cosas. Siguiendo la misma línea, Chrome se creó con código abierto para que toda la comunidad web pudiera utilizar las innovaciones de este navegador en sus propios productos, e incluso mejorar el código fuente original de Chrome.</p>
+</div>
+<div class="right">
+	<p>Los desarrolladores web y los usuarios no son los únicos que se benefician de los navegadores de código abierto más rápidos, sencillos y seguros que se van creando. Algunas empresas como Google también se benefician de compartir sus ideas de forma abierta. Si se utilizan navegadores mejores, también puede mejorar la experiencia de navegación por Internet de todos los usuarios, ya que, al sentirse más satisfechos, explorarán la Web aún más. Usar mejores navegadores también permite que las empresas creen aplicaciones web que incorporen las funciones más avanzadas, algo que también puede aumentar la satisfacción de los usuarios.</p>
+	<p>Los navegadores no son los únicos componentes de la Web que pueden utilizar código abierto. Si hablas con cualquier grupo de desarrolladores web, probablemente te <br><br></p>
+</div><span class="pageNumber">67</span></div></section><section class="template-inner-2 title-open-source page-3 globalPage-68" style="z-index: 432; display: none; width: 0px;"><div class="page"><div class="left">
+<p class="continuation">digan, por ejemplo, que utilizan un servidor HTTP Apache de código abierto para el alojamiento y el servicio de sus sitios web o que han desarrollado su código en ordenadores que funcionan con el sistema operativo de código abierto Linux. La buena labor de la comunidad de software libre sigue ayudando a mejorar aún más la Web y a sentar unos buenos cimientos para la próxima generación.</p>
+</div><span class="pageNumber">68</span></div></section><section class="template-start-5 title-conclusion page-1 globalPage-69" style="z-index: 431; display: none; width: 0px;"><div class="page"><div class="page-title"><h2>19 cosas más tarde...</h2><h3>o estar en las nubes no es tan malo</h3></div><div class="left">
+	<p class="continuation">...y así llegamos al punto número 20. Hagamos un repaso.</p>
+	<p>Actualmente, la Web es un espacio colorido, visual, práctico, loco, dinámico, abierto a la amistad, divertido e increíblemente útil. Muchos de nosotros vivimos en <a href="http://www.20thingsilearned.com/cloud-computing/1">la nube</a> gracias a <a href="http://www.20thingsilearned.com/what-is-the-internet/1">Internet</a>: leemos las noticias, vemos películas, chateamos con amigos y realizamos nuestras tareas diarias online a través de aplicaciones directamente desde el navegador. Las <a href="http://www.20thingsilearned.com/web-apps/1">aplicaciones web</a> nos permiten realizar esta actividad desde cualquier lugar del mundo, incluso si nos</p>
+</div>
+<div class="right">
+<p class="continuation">dejamos el portátil en casa.</p>
+	<p>Todo esto es posible gracias a la evolución de ciertos estándares web como <a href="http://www.20thingsilearned.com/html/1">HTML, JavaScript y CSS</a>, así como de los <a href="http://www.20thingsilearned.com/plugins/1">complementos de los navegadores</a>. Ahora hay nuevas funciones en <a href="http://www.20thingsilearned.com/html5/1">HTML5</a> que están ayudando a los desarrolladores a crear la siguiente generación de aplicaciones web completamente originales.</p>
+	<div class="image1"><img src="./encuesta_files/conclusion01.png" data-src="/media/illustrations/conclusion01.png"></div>
+
+</div>
+<span class="pageNumber">69</span></div></section><section class="template-inner-2 title-conclusion page-2 globalPage-70" style="z-index: 430; display: none; width: 0px;"><div class="page">﻿<div class="left">
+	<p class="continuation">¿Qué otras cosas se están preparando en "las nubes"?</p>
+	<ul>
+		<li>Ahora hace falta un <a href="http://www.20thingsilearned.com/old-vs-new-browsers/1">navegador actual</a> que pueda sacar el máximo partido de las últimas funciones de la Web.</li>
+		<li>Los navegadores actuales también <a href="http://www.20thingsilearned.com/browser-protection/1">ofrecen protección</a> contra <a href="http://www.20thingsilearned.com/malware/1">el <i>phishing</i> y el software malintencionado</a>.</li>
+		<li>El <a href="http://www.20thingsilearned.com/open-source/1">código abierto</a> ha permitido tener mejores navegadores y una Web más rápida, completa y compleja. Y las nuevas ideas relacionadas con el software libre hacen que el futuro de la Web sea aún más brillante.</li>
+		<li>¿Qué nos depara ese futuro? <a href="http://www.20thingsilearned.com/threed/1">3D en el navegador</a>, <a href="http://www.20thingsilearned.com/page-load/1">más velocidad</a> y <a href="http://www.20thingsilearned.com/sync/1">sincronizar</a> todos los dispositivos, entre otras <a href="http://www.20thingsilearned.com/dns/1">cosas</a>.</li>
+		<li>Ser un usuario de la Web bien informado requiere alguna formación autodidacta (por 
+</li></ul></div>
+<div class="right">
+<p class="continuation">ejemplo, para aprender a controlar la <a href="http://www.20thingsilearned.com/browser-privacy/1">configuración de privacidad</a> del navegador sobre diversos tipos de contenido, como las <a href="http://www.20thingsilearned.com/browser-cookies/1"><i>cookies</i></a>).</p>
+<ul>
+		<li>También se consigue una mayor seguridad en la Web prestando atención a determinadas pistas visuales del navegador, como las URL a las que se accede para comprobar si dirigen a páginas "https://" con <a href="http://www.20thingsilearned.com/url/1">conexión segura</a> o con <a href="http://www.20thingsilearned.com/identity/1">validación ampliada</a>.</li>
+	</ul>
+	<p>¿Cómo podríamos concluir? Ante todo, <strong>utiliza un navegador actual</strong> o instala un navegador nuevo y comprueba si se adapta mejor a tus necesidades de navegación.</p>
+	<p><strong>La Web va a seguir evolucionando a un ritmo vertiginoso.</strong> Apoya el uso de tecnologías web avanzadas como HTML5, CSS3 y WebGL, ya que ayudarán a la</p>
+</div><span class="pageNumber">70</span></div></section><section class="template-inner-2 title-conclusion page-3 globalPage-71" style="z-index: 429; display: none; width: 0px;"><div class="page"><div class="left">
+<p class="continuation">comunidad web a imaginar y crear un futuro lleno de increíbles e innovadoras aplicaciones web.</p>
+	<p><strong>Por último, prueba cosas nuevas.</strong> La Web es un espacio que cada día te puede ofrecer cosas nuevas y emocionantes, así que no dudes en probar a realizar tareas que pensabas que no se podían hacer online, como buscar el árbol genealógico de tus antepasados remontándote diez generaciones atrás o ver en tiempo real la imagen de una webcam de un campamento de alpinistas del Himalaya. ¡Nunca sabes qué puedes encontrarte!</p>
+</div><span class="pageNumber">71</span></div></section><section class="template-3 title-theend page-1 globalPage-72" style="z-index: 428; display: none; width: 0px;"><div class="page"><div class="page-title"><h2></h2></div><span class="pageNumber">72</span></div></section></div>
+			<div id="left-page" style="width: 830px; display: block;">
+				<img src="./encuesta_files/left-page.jpg" data-src-flipped="/css/images/left-page-flipped.jpg" width="830" height="520">
+			</div>
+			<div id="right-page">
+				<div id="paperstack">
+					<div class="paper s1" style="opacity: 1;"></div>
+					<div class="paper s2" style="opacity: 1;"></div>
+					<div class="paper s3" style="opacity: 1;"></div>
+					<div class="paper s4" style="opacity: 1;"></div>
+					<div class="paper s5" style="opacity: 1;"></div>
+					<div class="paper s6" style="opacity: 1;"></div>
+					<div class="paper s7" style="opacity: 1;"></div>
+					<div class="shadow" style="opacity: 1; margin-left: -2px;"></div>
+				</div>
+				<img src="./encuesta_files/right-page.jpg" width="830" height="520">
+			</div>
+		<canvas id="pageflip" width="1700" height="680" style="position: absolute; top: -80px; left: -20px; z-index: 1010;"></canvas></div>
+		
+		<nav id="chapter-nav" style="left: 264.5px; top: 600px; display: block;">
+			<p>20 cosas</p>
+			<ul>
+											
+				<li class="what-is-the-internet read">
+					<a href="http://www.20thingsilearned.com/what-is-the-internet" class="cnItem" title="¿Qué es Internet?" data-title="¿Qué es Internet?" data-subtitle="o de paquetes va la cosa" data-article="what-is-the-internet" data-globalstartpage="4" data-globalendpage="6" data-numberofpages="3">
+						<div class="illustration"></div>
+						<span>1</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/what-is-the-internet" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">¿Qué es Internet?</p>
+							<p class="pagenumber">4-6</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">1</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="cloud-computing read">
+					<a href="http://www.20thingsilearned.com/cloud-computing" class="cnItem" title="Computación en la nube" data-title="Computación en la nube" data-subtitle="o por qué no pasa nada si tu portátil pasa a mejor vida" data-article="cloud-computing" data-globalstartpage="7" data-globalendpage="8" data-numberofpages="2">
+						<div class="illustration"></div>
+						<span>2</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/cloud-computing" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Computación en la nube</p>
+							<p class="pagenumber">7-8</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">2</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="web-apps read">
+					<a href="http://www.20thingsilearned.com/web-apps" class="cnItem" title="Aplicaciones web" data-title="Aplicaciones web" data-subtitle="o en los árboles de Internet ahora crecen aplicaciones" data-article="web-apps" data-globalstartpage="9" data-globalendpage="11" data-numberofpages="3">
+						<div class="illustration"></div>
+						<span>3</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/web-apps" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Aplicaciones web</p>
+							<p class="pagenumber">9-11</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">3</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="html">
+					<a href="http://www.20thingsilearned.com/html" class="cnItem" title="HTML, JavaScript, CSS y otros lenguajes" data-title="HTML, JavaScript, CSS y otros lenguajes" data-subtitle="o este AJAX no juega al fútbol" data-article="html" data-globalstartpage="12" data-globalendpage="14" data-numberofpages="3">
+						<div class="illustration"></div>
+						<span>4</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/html" style="top: -72px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">HTML, JavaScript, CSS y otros lenguajes</p>
+							<p class="pagenumber">12-14</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">4</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="html5">
+					<a href="http://www.20thingsilearned.com/html5" class="cnItem" title="HTML5" data-title="HTML5" data-subtitle="o en el principio no había &lt;video&gt;" data-article="html5" data-globalstartpage="15" data-globalendpage="16" data-numberofpages="2">
+						<div class="illustration"></div>
+						<span>5</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/html5" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">HTML5</p>
+							<p class="pagenumber">15-16</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">5</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="threed">
+					<a href="http://www.20thingsilearned.com/threed" class="cnItem" title="3D en el navegador" data-title="3D en el navegador" data-subtitle="o navegar por las profundidades" data-article="threed" data-globalstartpage="17" data-globalendpage="19" data-numberofpages="3">
+						<div class="illustration"></div>
+						<span>6</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/threed" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">3D en el navegador</p>
+							<p class="pagenumber">17-19</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">6</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="old-vs-new-browsers">
+					<a href="http://www.20thingsilearned.com/old-vs-new-browsers" class="cnItem" title="Un madrigal de navegadores" data-title="Un madrigal de navegadores" data-subtitle="o navegadores antiguos vs. navegadores actuales" data-article="old-vs-new-browsers" data-globalstartpage="20" data-globalendpage="23" data-numberofpages="4">
+						<div class="illustration"></div>
+						<span>7</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/old-vs-new-browsers" style="top: -72px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Un madrigal de navegadores</p>
+							<p class="pagenumber">20-23</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">7</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="plugins">
+					<a href="http://www.20thingsilearned.com/plugins" class="cnItem" title="Complementos" data-title="Complementos" data-subtitle="o los ingredientes de tu pizza favorita" data-article="plugins" data-globalstartpage="24" data-globalendpage="25" data-numberofpages="2">
+						<div class="illustration"></div>
+						<span>8</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/plugins" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Complementos</p>
+							<p class="pagenumber">24-25</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">8</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="browser-extensions">
+					<a href="http://www.20thingsilearned.com/browser-extensions" class="cnItem" title="Extensiones del navegador " data-title="Extensiones del navegador " data-subtitle="o superpoderes para tu navegador" data-article="browser-extensions" data-globalstartpage="26" data-globalendpage="28" data-numberofpages="3">
+						<div class="illustration"></div>
+						<span>9</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/browser-extensions" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Extensiones del navegador </p>
+							<p class="pagenumber">26-28</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">9</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="sync">
+					<a href="http://www.20thingsilearned.com/sync" class="cnItem" title="Sincronización del navegador" data-title="Sincronización del navegador" data-subtitle="o por qué no pasa nada si tu portátil pasa a mejor vida (II)" data-article="sync" data-globalstartpage="29" data-globalendpage="30" data-numberofpages="2">
+						<div class="illustration"></div>
+						<span>10</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/sync" style="top: -72px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Sincronización del navegador</p>
+							<p class="pagenumber">29-30</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">10</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="browser-cookies">
+					<a href="http://www.20thingsilearned.com/browser-cookies" class="cnItem" title="Cookies del navegador" data-title="Cookies del navegador" data-subtitle="o si te he visto sí me acuerdo" data-article="browser-cookies" data-globalstartpage="31" data-globalendpage="32" data-numberofpages="2">
+						<div class="illustration"></div>
+						<span>11</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/browser-cookies" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Cookies del navegador</p>
+							<p class="pagenumber">31-32</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">11</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="browser-privacy read">
+					<a href="http://www.20thingsilearned.com/browser-privacy" class="cnItem" title="Navegadores y privacidad" data-title="Navegadores y privacidad" data-subtitle="o el algodón no engaña" data-article="browser-privacy" data-globalstartpage="33" data-globalendpage="36" data-numberofpages="4">
+						<div class="illustration"></div>
+						<span>12</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/browser-privacy" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Navegadores y privacidad</p>
+							<p class="pagenumber">33-36</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">12</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="malware read">
+					<a href="http://www.20thingsilearned.com/malware" class="cnItem" title="Software malintencionado, phishing y riesgos para la seguridad" data-title="Software malintencionado, phishing y riesgos para la seguridad" data-subtitle="o no es oro todo lo que reluce" data-article="malware" data-globalstartpage="37" data-globalendpage="39" data-numberofpages="3">
+						<div class="illustration"></div>
+						<span>13</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/malware" style="top: -83px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Software malintencionado, phishing y riesgos para la seguridad</p>
+							<p class="pagenumber">37-39</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">13</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="browser-protection read">
+					<a href="http://www.20thingsilearned.com/browser-protection" class="cnItem" title="Cómo te protegen los navegadores actuales del phishing y del software malintencionado" data-title="Cómo te protegen los navegadores actuales del phishing y del software malintencionado" data-subtitle="o más vale prevenir que curar" data-article="browser-protection" data-globalstartpage="40" data-globalendpage="42" data-numberofpages="3">
+						<div class="illustration"></div>
+						<span>14</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/browser-protection" style="top: -94px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Cómo te protegen los navegadores actuales del phishing y del software malintencionado</p>
+							<p class="pagenumber">40-42</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">14</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="url">
+					<a href="http://www.20thingsilearned.com/url" class="cnItem" title="Aprende a leer las URL para proteger tu seguridad" data-title="Aprende a leer las URL para proteger tu seguridad" data-subtitle="u oro parece, plata no es" data-article="url" data-globalstartpage="43" data-globalendpage="47" data-numberofpages="5">
+						<div class="illustration"></div>
+						<span>15</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/url" style="top: -72px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Aprende a leer las URL para proteger tu seguridad</p>
+							<p class="pagenumber">43-47</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">15</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="dns">
+					<a href="http://www.20thingsilearned.com/dns" class="cnItem" title="DNS y direcciones IP" data-title="DNS y direcciones IP" data-subtitle="o la cabina telefónica fantasma" data-article="dns" data-globalstartpage="48" data-globalendpage="50" data-numberofpages="3">
+						<div class="illustration"></div>
+						<span>16</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/dns" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">DNS y direcciones IP</p>
+							<p class="pagenumber">48-50</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">16</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="identity read">
+					<a href="http://www.20thingsilearned.com/identity" class="cnItem" title="Validación de las identidades online" data-title="Validación de las identidades online" data-subtitle="o &quot;Documentación, por favor&quot;" data-article="identity" data-globalstartpage="51" data-globalendpage="53" data-numberofpages="3">
+						<div class="illustration"></div>
+						<span>17</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/identity" style="top: -72px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Validación de las identidades online</p>
+							<p class="pagenumber">51-53</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">17</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="page-load read">
+					<a href="http://www.20thingsilearned.com/page-load" class="cnItem" title="La evolución hacia una Web más rápida" data-title="La evolución hacia una Web más rápida" data-subtitle="o imágenes, vídeos y JavaScript a toda pastilla" data-article="page-load" data-globalstartpage="54" data-globalendpage="57" data-numberofpages="4">
+						<div class="illustration"></div>
+						<span>18</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/page-load" style="top: -72px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">La evolución hacia una Web más rápida</p>
+							<p class="pagenumber">54-57</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">18</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="open-source">
+					<a href="http://www.20thingsilearned.com/open-source" class="cnItem" title="Navegadores y software libre" data-title="Navegadores y software libre" data-subtitle="o a hombros de gigantes" data-article="open-source" data-globalstartpage="58" data-globalendpage="59" data-numberofpages="2">
+						<div class="illustration"></div>
+						<span>19</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/open-source" style="top: -72px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">Navegadores y software libre</p>
+							<p class="pagenumber">58-59</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">19</p>
+						</div>
+					</a>
+				</li>
+				
+														
+				<li class="conclusion">
+					<a href="http://www.20thingsilearned.com/conclusion" class="cnItem" title="19 cosas más tarde..." data-title="19 cosas más tarde..." data-subtitle="o estar en las nubes no es tan malo" data-article="conclusion" data-globalstartpage="60" data-globalendpage="61" data-numberofpages="2">
+						<div class="illustration"></div>
+						<span>20</span>
+					</a>
+					<a class="over" href="http://www.20thingsilearned.com/conclusion" style="top: -61px;">
+						<div class="description" style="opacity: 0;">
+							<p class="title">19 cosas más tarde...</p>
+							<p class="pagenumber">60-61</p>
+						</div>
+						<div class="small-book">
+							<div class="illustration"></div>
+							<p class="index">20</p>
+						</div>
+					</a>
+				</li>
+				
+							
+			</ul>
+		</nav>
+		
+		<div id="overlay">
+			<div class="bookmark" style="left: 669.5px; top: 340px; margin: 0px;">
+				<div class="content">
+					<a class="close" href="http://www.20thingsilearned.com/es-ES/foreword/1#">CERRAR</a>
+					<h3>¿SEGUIR LECTURA?</h3>
+					<p>Puedes seleccionar la página por la que te quedaste la última vez o empezar a leer desde el principio.</p>
+					<a class="action resume" href="http://www.20thingsilearned.com/es-ES/foreword/1#">CONTINUAR<br>LECTURA</a>
+					<a class="action restart" href="http://www.20thingsilearned.com/es-ES/foreword/1#">EMPEZAR<br>DE NUEVO</a>
+				</div>
+			</div>
+			
+			<div class="print">
+					<a class="close" href="http://www.20thingsilearned.com/es-ES/foreword/1#">CERRAR</a>
+					<a class="printBook" href="http://www.20thingsilearned.com/es-ES/all/print" _blank"="">
+						<h2>Imprimir libro</h2>
+						<p>Imprimir el libro (solo en tamaño folio o A4)</p>
+					</a>
+					<a class="downloadPdf" target="_blank" href="http://www.20thingsilearned.com/media/20ThingsILearnedaboutBrowsersandtheWeb.pdf">
+						<h2>Descargar PDF</h2>
+						<p>Descargar el libro en formato PDF. Tamaño: 3,3 MB</p>
+					</a>
+			</div>
+		</div>
+		
+		<div id="credits" style="left: 349.5px; top: 85px; margin: 0px;">
+			<div class="header">
+				<h2><span>RECONOCIMIENTOS</span></h2>
+				<hr>
+			</div>
+			<div class="people">
+				<ul>
+					<li><h3>Ilustraciones</h3><a href="http://www.christophniemann.com/" target="_blank">Christoph Niemann</a></li>
+					<li><h3>Redacción y edición</h3>Min Li Chan, Fritz Holznagel, Michael Krantz</li>
+					<li><h3>Supervisión del proyecto</h3>Min Li Chan &amp; <br>The Google Chrome Team</li>
+					<li><h3>Diseño</h3><a href="http://f-i.com/" target="_blank">Fi</a><br><a href="http://monocubed.com/" target="_blank">Paul Truong</a></li>
+					<li><h3>Desarrollo</h3><a href="http://f-i.com/" target="_blank">Fi</a></li>
+				</ul>
+				<h4>Agradecimientos especiales</h4>
+				<p class="special-thanks">Brian Rakowski, Ian Fette, Chris DiBona, Alex Russell, Erik Kay, Jim Roskind, Mike Belshe, Dimitri Glazkov, Henry Bridge, Gregor Hochmuth, Jeffrey Chang, Mark Larson, Aaron Boodman, Wieland Holfelder, Jochen Eisinger, Bernhard Bauer, Adam Barth, Cory Ferreria, Erik Arvidsson, John Abd-Malek, Carlos Pizano, Justin Schuh, Wan-Teh Chang, Vangelis Kokkevis, Mike Jazayeri, Brad Chen, Darin Fisher, Johanna Wittig,  Maxim Lobanov, Marion Fabing Nicolas, Jana Vorechovska, Daniele De Santis, Laura van Nigtevegt, Wojtek Cyprys, Dudley Carr, Richard Rabbat, Ji Lee, Glen Murphy, Valdean Klump, Aaron Koblin, Paul Irish, John Fu, Chris Wright, Sarah Nahm, Christos Apartoglou, Meredith Papp, Eric Antonow, Eitan Bencuya, Jay Nancarrow, Ben Lee, Gina Weakley, Linus Upson, Sundar Pichai &amp; The Google Chrome Team</p>
+				<p class="html5-logo">Creado en HTML5<img src="./encuesta_files/HTML5_Badge_32.png" title="Built in HTML5"></p>
+			</div>
+			<hr>
+			<div class="share">
+				<p>Comparte con tus amigos y familiares esta guía y las cosas que has aprendido con ella. www.20thingsilearned.com</p>
+				<ul>
+					<li class="facebook"><a href="http://www.facebook.com/sharer.php?u=http://20thingsilearned.com&amp;t=20%20Things%20I%20learned%20About%20Browsers%20and%20the%20Web" title="Facebook"><span class="icon"></span><span class="text">Compartir en</span></a></li>
+					<li class="twitter"><a href="http://twitter.com/share?original_referer=http://20thingsilearned.com&amp;text=20%20Things%20I%20learned%20About%20Browsers%20and%20the%20Web&amp;url=http://20thingsilearned.com" title="Twitter"><span class="icon"></span><span class="text">Compartir en</span></a></li>
+					<li class="gplus"><div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 38px; height: 24px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 38px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I1_1532471546419" name="I1_1532471546419" src="./encuesta_files/fastbutton(1).html" data-gapiattached="true" title="G+"></iframe></div></li>
+				</ul>
+			</div>
+		</div>
+		
+			<div id="pagination-prev" class="" style="top: 320px; left: 0px;"><a href="http://www.20thingsilearned.com/es-ES/foreword/1"><div class="arrow">LOCALE_PREVIOUS_PAGE</div></a><div class="page-progress" style="display: none;"><p class="thing">PRÓLOGO</p><p class="number">Página <span>1/3</span></p></div></div>
+	<div id="pagination-next" class="" style="top: 320px; right: auto; left: 1297px;"><a href="http://www.20thingsilearned.com/es-ES/foreword"><div class="arrow">LOCALE_NEXT_PAGE</div></a><div class="page-progress"><p class="thing">PRÓLOGO</p><p class="number">Página <span>2/3</span></p></div></div>
+		
+		<div id="table-of-contents" style="width: 1339px; opacity: 0; display: none;">
+			<div class="center" style="left: 186.5px; top: 65px; margin: 0px;">
+				<div class="header" style="opacity: 0;">
+					<a class="go-back" href="http://www.20thingsilearned.com/">Atrás</a>
+					<h2><span>Índice</span></h2>
+					<hr>
+				</div>
+				<ul>
+									
+							<li class="what-is-the-internet read" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/what-is-the-internet" data-article="what-is-the-internet">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 1</p>
+									</div>
+									<h3>¿Qué es Internet?</h3>
+									<p>o de paquetes va la cosa</p>
+								</a>
+							</li>
+									
+							<li class="cloud-computing read" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/cloud-computing" data-article="cloud-computing">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 2</p>
+									</div>
+									<h3>Computación en la nube</h3>
+									<p>o por qué no pasa nada si tu portátil pasa a mejor vida</p>
+								</a>
+							</li>
+									
+							<li class="web-apps read" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/web-apps" data-article="web-apps">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 3</p>
+									</div>
+									<h3>Aplicaciones web</h3>
+									<p>o en los árboles de Internet ahora crecen aplicaciones</p>
+								</a>
+							</li>
+									
+							<li class="html" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/html" data-article="html">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 4</p>
+									</div>
+									<h3>HTML, JavaScript, CSS y otros lenguajes</h3>
+									<p>o este AJAX no juega al fútbol</p>
+								</a>
+							</li>
+									
+							<li class="html5" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/html5" data-article="html5">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 5</p>
+									</div>
+									<h3>HTML5</h3>
+									<p>o en el principio no había &lt;video&gt;</p>
+								</a>
+							</li>
+									
+							<li class="threed" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/threed" data-article="threed">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 6</p>
+									</div>
+									<h3>3D en el navegador</h3>
+									<p>o navegar por las profundidades</p>
+								</a>
+							</li>
+									
+							<li class="old-vs-new-browsers" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/old-vs-new-browsers" data-article="old-vs-new-browsers">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 7</p>
+									</div>
+									<h3>Un madrigal de navegadores</h3>
+									<p>o navegadores antiguos vs. navegadores actuales</p>
+								</a>
+							</li>
+									
+							<li class="plugins" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/plugins" data-article="plugins">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 8</p>
+									</div>
+									<h3>Complementos</h3>
+									<p>o los ingredientes de tu pizza favorita</p>
+								</a>
+							</li>
+									
+							<li class="browser-extensions" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/browser-extensions" data-article="browser-extensions">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 9</p>
+									</div>
+									<h3>Extensiones del navegador </h3>
+									<p>o superpoderes para tu navegador</p>
+								</a>
+							</li>
+									
+							<li class="sync" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/sync" data-article="sync">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 10</p>
+									</div>
+									<h3>Sincronización del navegador</h3>
+									<p>o por qué no pasa nada si tu portátil pasa a mejor vida (II)</p>
+								</a>
+							</li>
+									
+							<li class="browser-cookies" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/browser-cookies" data-article="browser-cookies">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 11</p>
+									</div>
+									<h3>Cookies del navegador</h3>
+									<p>o si te he visto sí me acuerdo</p>
+								</a>
+							</li>
+									
+							<li class="browser-privacy read" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/browser-privacy" data-article="browser-privacy">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 12</p>
+									</div>
+									<h3>Navegadores y privacidad</h3>
+									<p>o el algodón no engaña</p>
+								</a>
+							</li>
+									
+							<li class="malware read" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/malware" data-article="malware">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 13</p>
+									</div>
+									<h3>Software malintencionado, phishing y riesgos para la seguridad</h3>
+									<p>o no es oro todo lo que reluce</p>
+								</a>
+							</li>
+									
+							<li class="browser-protection read" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/browser-protection" data-article="browser-protection">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 14</p>
+									</div>
+									<h3>Cómo te protegen los navegadores actuales del phishing y del software malintencionado</h3>
+									<p>o más vale prevenir que curar</p>
+								</a>
+							</li>
+									
+							<li class="url" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/url" data-article="url">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 15</p>
+									</div>
+									<h3>Aprende a leer las URL para proteger tu seguridad</h3>
+									<p>u oro parece, plata no es</p>
+								</a>
+							</li>
+									
+							<li class="dns" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/dns" data-article="dns">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 16</p>
+									</div>
+									<h3>DNS y direcciones IP</h3>
+									<p>o la cabina telefónica fantasma</p>
+								</a>
+							</li>
+									
+							<li class="identity read" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/identity" data-article="identity">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 17</p>
+									</div>
+									<h3>Validación de las identidades online</h3>
+									<p>o "Documentación, por favor"</p>
+								</a>
+							</li>
+									
+							<li class="page-load read" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/page-load" data-article="page-load">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 18</p>
+									</div>
+									<h3>La evolución hacia una Web más rápida</h3>
+									<p>o imágenes, vídeos y JavaScript a toda pastilla</p>
+								</a>
+							</li>
+									
+							<li class="open-source" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/open-source" data-article="open-source">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 19</p>
+									</div>
+									<h3>Navegadores y software libre</h3>
+									<p>o a hombros de gigantes</p>
+								</a>
+							</li>
+									
+							<li class="conclusion" style="opacity: 0;">
+								<a href="http://www.20thingsilearned.com/conclusion" data-article="conclusion">
+									<div class="medium-book">
+										<div class="illustration"></div>
+										<p>COSA 20</p>
+									</div>
+									<h3>19 cosas más tarde...</h3>
+									<p>o estar en las nubes no es tan malo</p>
+								</a>
+							</li>
+								</ul>
+			</div>
+		</div>	
+		<footer style="width: 1339px; top: 655px; margin: 0px;">		
+			<span class="curator">Publicado por el equipo de <a href="http://www.google.com/chrome?brand=CHJN">Google Chrome</a>. ©2010 Google Inc. Todos los derechos reservados.</span>
+			<div class="right-side">
+				<div class="divider"></div>
+				<div class="sharing">
+					<p>COMPARTIR LIBRO</p>
+					<input type="text" class="clipboard-notification" value="http://20thingsilearned.com/" readonly="readonly">
+					<ul>
+						<li class="facebook"><a href="http://www.facebook.com/sharer.php?u=http://20thingsilearned.com&amp;t=20%20Things%20I%20learned%20About%20Browsers%20and%20the%20Web" title="Facebook"></a></li>
+						<li class="twitter"><a href="http://twitter.com/share?original_referer=http://20thingsilearned.com&amp;text=20%20Things%20I%20learned%20About%20Browsers%20and%20the%20Web&amp;url=http://20thingsilearned.com" title="Twitter"></a></li>
+						<li class="gplus"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 24px; height: 15px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 24px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" tabindex="0" vspace="0" width="100%" id="I0_1532471546412" name="I0_1532471546412" src="./encuesta_files/fastbutton(2).html" data-gapiattached="true" title="G+"></iframe></div></li>
+						<li class="url"><a href="http://www.20thingsilearned.com/es-ES/foreword/1#"></a></li>
+					</ul>
+				</div>
+				<div class="divider"></div>
+				<div class="print">
+					<a href="http://www.20thingsilearned.com/es-ES/all/print" target="_blank"><span class="icon"></span>IMPRIMIR LIBRO</a>
+				</div>
+									<div class="divider"></div>
+					<div class="lights-wrapper">
+						
+					<div class="lights">
+							<a href="http://www.20thingsilearned.com/es-ES/foreword/1#"><span class="icon">CONTRASTE</span></a>
+						</div></div>
+					<div class="divider"></div>
+					<div class="fullscreen-wrapper" style="">
+						
+					<div class="fullscreen">
+							<a href="http://www.20thingsilearned.com/es-ES/foreword/1#"><span class="icon"></span>PANTALLA COMPLETA</a>
+						</div></div>
+							</div>
+		</footer>
+		
+    <script type="text/javascript" src="./encuesta_files/plusone.js.download" gapi_processed="true"></script>
+				
+  		<script type="text/javascript" src="./encuesta_files/twentythings.min.js.download"></script>
+  		<script type="text/javascript">
+  			TT.initialize();
+  		</script>
+		
+					
+		
+	
+<iframe name="oauth2relay1672506553" id="oauth2relay1672506553" src="./encuesta_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><span style="border-radius: 3px !important; text-indent: 20px !important; width: auto !important; padding: 0px 4px 0px 0px !important; text-align: center !important; font: bold 11px/20px &quot;Helvetica Neue&quot;, Helvetica, sans-serif !important; color: rgb(255, 255, 255) !important; background: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==&quot;) 3px 50% / 14px 14px no-repeat rgb(189, 8, 28) !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: none !important; -webkit-font-smoothing: antialiased !important; top: 90px; left: 270px;">Guardar</span><span style="border-radius: 12px; width: 24px !important; height: 24px !important; background: url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxtYXNrIGlkPSJtIj48cmVjdCBmaWxsPSIjZmZmIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiByeT0iNiIvPjxyZWN0IGZpbGw9IiMwMDAiIHg9IjUiIHk9IjUiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgcng9IjEiIHJ5PSIxIi8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMTAiIHk9IjAiIHdpZHRoPSI0IiBoZWlnaHQ9IjI0Ii8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0Ii8+PC9tYXNrPjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNmZmYiIG1hc2s9InVybCgjbSkiLz48L3N2Zz4=&quot;) 50% 50% / 14px 14px no-repeat rgba(0, 0, 0, 0.4) !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: none !important; top: 88px; left: 1058px;"></span></body></html>

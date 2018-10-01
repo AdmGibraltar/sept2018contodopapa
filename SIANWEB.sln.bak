@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIANWEB", "SIANWEB\SIANWEB.csproj", "{7F8B6093-0045-4FC7-8566-DB8B2956AED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidad", "CapaEntidad\CapaEntidad.csproj", "{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocios", "CapaNegocios\CapaNegocios.csproj", "{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaReportes", "LibreriaReportes\LibreriaReportes.csproj", "{F7536F05-1224-4663-88D8-7B7539698D4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaModelo", "CapaModelo\CapaModelo.csproj", "{2BC31D08-F359-413A-B104-C24BAB47E81B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F8B6093-0045-4FC7-8566-DB8B2956AED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F8B6093-0045-4FC7-8566-DB8B2956AED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F8B6093-0045-4FC7-8566-DB8B2956AED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F8B6093-0045-4FC7-8566-DB8B2956AED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E51465B-9C5D-43F3-8BFB-A5D36B0A3308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F1CBBBC-7A12-43B0-8CCD-709BCA8250A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC381CD-C5D5-4FAC-850C-6C1E2277451D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7536F05-1224-4663-88D8-7B7539698D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7536F05-1224-4663-88D8-7B7539698D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7536F05-1224-4663-88D8-7B7539698D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7536F05-1224-4663-88D8-7B7539698D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC31D08-F359-413A-B104-C24BAB47E81B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC31D08-F359-413A-B104-C24BAB47E81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC31D08-F359-413A-B104-C24BAB47E81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC31D08-F359-413A-B104-C24BAB47E81B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D0C85AA-F210-408C-8AB6-A0F5A9E5FCC7}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = 
+		SccProjectUniqueName0 = SIANWEB\\SIANWEB.csproj
+		SccAuxPath0 = http://10.1.0.111:8080/tfs/informaticaycomunicaciones
+		SccLocalPath0 = SIANWEB
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

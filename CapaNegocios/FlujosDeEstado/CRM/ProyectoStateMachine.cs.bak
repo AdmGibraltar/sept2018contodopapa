@@ -1,0 +1,664 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using CapaNegocios.StateMachine;
+using CapaModelo;
+using CapaDatos;
+using CapaEntidad;
+
+namespace CapaNegocios.FlujosDeEstado.CRM
+{
+    /// <summary>
+    /// Representa la máquina de estados de un proyecto
+    /// </summary>
+    public class ProyectoStateMachine
+        : BaseStateMachine<ProyectoState, ProyectoTransition>
+    {
+        public ProyectoStateMachine(CrmOportunidade proyecto, Sesion s)
+        {
+            Sesion = s;
+            Proyecto = proyecto;
+            BuildGraph();
+            Cargar();
+        }
+
+        /// <summary>
+        /// Obtiene o establece la instancia de un proyecto.
+        /// </summary>
+        public CrmOportunidade Proyecto
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Valuación asociada al proyecto
+        /// </summary>
+        public CrmValuacionOportunidade CrmValuacionOportunidade
+        {
+            get
+            {
+                if (_CrmValuacionOportunidade == null)
+                {
+                    CN_CrmValuacionOportunidades cnCrmValuacionOportunidades = new CN_CrmValuacionOportunidades();
+                    _CrmValuacionOportunidade = cnCrmValuacionOportunidades.ObtenerPorProyecto(Sesion, Proyecto.Id_Cte.Value, Proyecto.Id_Op, Transaction);
+
+                }
+                return _CrmValuacionOportunidade;
+            }
+        }
+
+        /// <summary>
+        /// Sesión del llamador
+        /// </summary>
+        public Sesion Sesion
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Transacción de negocio
+        /// </summary>
+        public IBusinessTransaction Transaction
+        {
+            get;
+            set;
+        }
+
+        protected CrmValuacionOportunidade _CrmValuacionOportunidade = null;
+
+        public Action<Acys> AlCrearAcys
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Determina el estado actual dada la información de la instancia en [Proyecto]
+        /// </summary>
+        protected void Cargar()
+        {
+            if (Proyecto.Estatus != null)
+            {
+                foreach (var state in _states)
+                {
+                    ProyectoState ps = (ProyectoState)state;
+                    if (ps.EstadoId == Proyecto.Estatus.Value)
+                    {
+                        _currentState = ps;
+                        return;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Construye la gráfica de la máquina de estados
+        /// </summary>
+        protected void BuildGraph()
+        {
+            int Paso = 0;
+
+            //Creación de estados
+            var analisisState = CreateState();
+            analisisState.EstadoId = 1;
+            _currentState = analisisState;
+
+            //Este estado crea la valuación
+            var presentacionState = CreateState();
+            presentacionState.EstadoId = 2;
+
+            //Este estado crea las propuestas
+            var negociacionState = CreateState();
+            negociacionState.EstadoId = 3;
+
+            //Este estado crea el ACYS
+            var cierreState = CreateState();
+            cierreState.EstadoId = 4;
+
+            var rechazadoState = CreateState();
+            rechazadoState.EstadoId = 5;
+
+            Paso=1;
+
+            /*Configuración de Estados*/
+            presentacionState.OnEnter = () =>
+            {
+                //Se establece [Vap_Estatus2] a 2 (en fase de presentación)
+                CD_CrmOportunidad cdrmOportunidad = new CD_CrmOportunidad();
+                try
+                {
+                    if (Proyecto.Presentacion == null)
+                    {
+                        cdrmOportunidad.ActualizarCampoPresentacion(Sesion.Id_Emp, Sesion.Id_Cd, Proyecto.Id_Op, DateTime.Now, Transaction.DataContext);
+                    }
+                    cdrmOportunidad.ActualizarCampoEstado(Sesion.Id_Emp, Sesion.Id_Cd, Proyecto.Id_Op, presentacionState.EstadoId, Transaction.DataContext);
+                }catch(Exception ex)
+                {
+                    //TODO: arrojar excepcion personalizada del estado
+                    throw ex;
+                }
+            };
+
+            Paso = 2;
+
+            negociacionState.OnEnter = () =>
+            {
+                //Se establece [Vap_Estatus2] a 3 (en fase de presentación)
+                //Aquí se crea la propuesta tecno-económica
+                CD_CrmOportunidad cdrmOportunidad = new CD_CrmOportunidad();
+                try
+                {
+                    if (Proyecto.Negociacion == null)
+                    {
+                        cdrmOportunidad.ActualizarCampoNegociacion(Sesion.Id_Emp, Sesion.Id_Cd, Proyecto.Id_Op, DateTime.Now, Transaction.DataContext);
+                    }
+                    cdrmOportunidad.ActualizarCampoEstado(Sesion.Id_Emp, Sesion.Id_Cd, Proyecto.Id_Op, negociacionState.EstadoId, Transaction.DataContext);
+                    CN_CrmPropuestaTecnica cnCrmPropuestaTecnica = new CN_CrmPropuestaTecnica();
+                    
+                    CN_CrmValuacionOportunidades cnCrmValuacionOportunidades = new CN_CrmValuacionOportunidades();
+                    var valuacion = cnCrmValuacionOportunidades.ObtenerPorProyecto(Sesion, Proyecto.Id_Cte.Value, Proyecto.Id_Op, Transaction);
+                    if (valuacion != null)
+                    {
+                        cnCrmPropuestaTecnica.GenerarAPartirDeValuacion(Sesion, valuacion.Id_Val, Transaction);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //TODO: arrojar excepcion personalizada del estado
+                    throw ex;
+                }
+            };
+
+            Paso = 3;
+
+            cierreState.OnEnter = () =>
+            {
+                //Se establece [Vap_Estatus2] a 4 (en fase de presentación)
+                CD_CrmOportunidad cdrmOportunidad = new CD_CrmOportunidad();
+                CN_CapValuacionProyecto cnCapValuacionProyecto = new CN_CapValuacionProyecto();
+                try
+                {
+                    if (Proyecto.Cierre == null)
+                    {
+                        cdrmOportunidad.ActualizarCampoCierre(Sesion.Id_Emp, Sesion.Id_Cd, Proyecto.Id_Op, DateTime.Now, Transaction.DataContext);
+                    }
+                    cdrmOportunidad.ActualizarCampoEstado(Sesion.Id_Emp, Sesion.Id_Cd, Proyecto.Id_Op, cierreState.EstadoId, Transaction.DataContext);
+
+                    //Se genera el registro del ACYS a partir del listado de productos asociadas a la valuación
+                    var valuacion = cnCapValuacionProyecto.Obtener(Sesion, CrmValuacionOportunidade.Id_Val, Transaction);
+                    var acys = GenerarACYS(Sesion, valuacion, Transaction);
+                    //CN_CapAcys cnCapAcys = new CN_CapAcys(); //RFH
+                    CN_CapAcys cnCapAcys = new CN_CapAcys(Transaction);
+                    int verificador = 0;
+                    var productos = ObtenerListadoDeProductos(valuacion, Sesion, Transaction);
+                    //En este punto se debe de condicionar el procesamiento del ACYS del cliente.
+                    //En caso de que el cliente no tenga asociado un ACYS al territorio especificado, se crea uno; de forma contraria, se
+                    //complementa el ACYS con los nuevos productos
+
+                    //if (cnCapAcys.ClieneTieneACYS_RFH(Sesion, valuacion.Id_Cte, valuacion.Id_Ter.Value, Transaction)) //RFH
+                    if (cnCapAcys.ClieneTieneACYS(Sesion, valuacion.Id_Cte, valuacion.Id_Ter.Value))
+                    {
+                        //El cliente tiene ACYS: complementar la definición del ACYS actual con el listado de productos que 
+                        //provienen de la propuesta
+                        CN_CapAcysDet cnCapAcysDet = new CN_CapAcysDet(Transaction);
+                        var acysDeCliente = cnCapAcys.ObtenerParaCliente(Sesion, valuacion.Id_Cte, valuacion.Id_Ter.Value, Transaction);
+                        var productosExistentes = cnCapAcysDet.ObtenerProductosDeACYS(Sesion, acysDeCliente.Id_Acs, acysDeCliente.Id_Cte.Value, acysDeCliente.Id_Ter.Value, Transaction);
+                        int maxId = 0;
+                        try
+                        {
+                            maxId = productosExistentes.Max(p => p.Id_AcsDet);
+                        }
+                        catch (Exception ex)
+                        {
+                            maxId = 0;
+                        }
+
+                        int siguienteId = maxId + 1;
+                        int ultimoId = siguienteId + productos.Count;
+                        List<CapAcysDet> productosDeACYS = new List<CapAcysDet>();
+                        for (int pId = siguienteId, idx = 0; pId < ultimoId; pId++, idx++)
+                        {
+                            productosDeACYS.Add(new CapAcysDet()
+                            {
+                                Id_Emp = acysDeCliente.Id_Emp,
+                                Id_Cd = acysDeCliente.Id_Cd,
+                                Id_AcsDet = pId,
+                                Id_Acs = acysDeCliente.Id_Acs,
+                                Id_AcsVersion = acys.Id_AcsVersion,
+                                Id_Prd = productos[idx].Id_Prd,
+                                Acs_Cantidad = productos[idx].Acys_Cantidad,
+                                Acs_Documento = productos[idx].Acs_Doc,
+                                Acs_Sabado = productos[idx].Acys_Sabado,
+                                Acs_Viernes = productos[idx].Acys_Viernes,
+                                Acs_Jueves = productos[idx].Acys_Jueves,
+                                Acs_Miercoles = productos[idx].Acys_Miercoles,
+                                Acs_Martes = productos[idx].Acys_Martes,
+                                Acs_Lunes = productos[idx].Acys_Lunes,
+                                Acs_Frecuencia = productos[idx].Acys_Frecuencia,
+                                Acs_Precio = productos[idx].Prd_Precio,
+                                Acs_ConsigFechaInicio = productos[idx].Acys_FechaInicio,
+                                Acs_ConsigFechaFin = productos[idx].Acys_FechaFin,
+                                Acs_canTTotal = productos[idx].Acys_CantTotal,
+                                Id_TG = productos[idx].Id_TG,
+                                Id_Ter = valuacion.Id_Ter.Value // RFH 04 04 2018
+                            });
+                        }
+                        cnCapAcysDet.AgregarProductosAACYS(productosDeACYS);
+                    }
+                    else
+                    {
+                        //El cliente aun no tiene ACYS, se genera uno nuevo.
+                        cnCapAcys.Insertar(acys, productos, Sesion.Emp_Cnx, null, ref verificador, new List<Asesoria>(), new List<Producto>(), new List<Producto>(), new List<AcysDatosGarantia>(), "", Transaction);
+                    }
+                    
+                    cnCapAcys.AsociarValuacion(Sesion, acys.Id_Acs, CrmValuacionOportunidade.Id_Val, Transaction);
+
+                    //Se revisa si el cliente asociado a la valuación es un prospecto. En dado caso, transformarlo a cliente.
+                    CN_CrmProspecto cnCrmProspecto = new CN_CrmProspecto();
+                    try
+                    {
+                        cnCrmProspecto.ConvertirACliente(Sesion, valuacion.Id_Cte, Transaction);
+                    }
+                    catch (CN_CrmProspecto.ConvertirAClienteClienteYaEsProspectoException cacpe)
+                    {
+                        //Si ya es cliente no hay problema, podemos seguir
+                    }
+                    catch (Exception ex)
+                    {
+                        //Algo inesperado resultó en una complicación. Arrojar y manejar.
+                        throw ex;
+                    }
+                 
+                    AlCrearAcys(acys);
+                }
+                catch (Exception ex)
+                {
+                    //TODO: arrojar excepcion personalizada del estado
+                    throw ex;
+                }
+
+            };
+
+            Paso = 4;
+
+            /*Configuración de Transiciones*/
+            //ruta feliz
+            var Transition_AnalisisPresentacion = CreateTransition(analisisState, presentacionState);
+            var Transition_PresentacionANegociacion = CreateTransition(presentacionState, negociacionState);
+            var Transition_NegociacionACierre = CreateTransition(negociacionState, cierreState);
+
+            //Transiciones a estado de rechazo
+            var Rechazado_AnalisisA = CreateTransition(analisisState, rechazadoState);
+            var Rechazado_PresentacionA = CreateTransition(presentacionState, rechazadoState);
+            var Rechazado_NegociacionA = CreateTransition(negociacionState, rechazadoState);
+
+            //Se presenta cuando se detectan productos capturados en el proyecto
+            Transition_AnalisisPresentacion.Evaluator = () =>
+            {
+                return Transition_AnalisisPresentacion.Proyecto.CrmOportunidadesProducto.Count() > 0;
+            };
+
+            Paso = 5;
+
+            /*Si se espera que esta condición se cumpla en la misma llamada de actualización cuando se genera 
+             * la valuación, se debe tener cuidado de generar la valuación en 
+            [Execute] del estado Presentación, es decir, [Execute] debe llamarse antes de las evaluaciones de transición.*/
+            Transition_PresentacionANegociacion.Evaluator = () =>
+            {
+                CN_CrmValuacionOportunidades cnCrmValuacionOportunidades = new CN_CrmValuacionOportunidades();
+                var valuacion = cnCrmValuacionOportunidades.ObtenerPorProyecto(Sesion, Proyecto.Id_Cte.Value, Proyecto.Id_Op, Transaction);
+                valuacion = cnCrmValuacionOportunidades.ObtenerPorProyecto(Sesion, Proyecto.Id_Cte.Value, Proyecto.Id_Op, Transaction);
+                if (valuacion != null)
+                {
+                    CN_CapValProyecto cnCapValProyecto = new CN_CapValProyecto();
+                    var v = cnCapValProyecto.ObtenerPorId(Sesion, valuacion.Id_Val, Transaction);
+                    /*TODO: debe preguntar si el resultado de la valuación es aceptable; por ahora se deja en 2, para que la valuación pueda ser aceptada, y la utilidad remanente pueda modificarse desde la base de datos.
+                     * Revisar si en el proceso de guardar una aprobación se puede correr de nuevo la validación del estado del proyecto
+                     */
+                    return v.Vap_Estatus=="A" && v.Vap_Estatus2==3;
+                }
+                return false;
+            };
+
+            Paso = 6;
+
+            //Se presenta cuando se detecta que la propuesta ha sido aceptada
+            Transition_NegociacionACierre.Evaluator = () =>
+            {
+                CN_CrmValuacionOportunidades cnCrmValuacionOportunidades = new CN_CrmValuacionOportunidades();
+                var valuacion = cnCrmValuacionOportunidades.ObtenerPorProyecto(Sesion, Proyecto.Id_Cte.Value, Proyecto.Id_Op, Transaction);
+                if (valuacion != null)
+                {
+                    // RFH
+                    if (valuacion.CapValProyectoSerializable != null)
+                    {
+                        return valuacion.CapValProyectoSerializable.Vap_Estatus2 == 4;
+                    }
+                    //
+                    //return valuacion.CapValProyectoSerializable.Vap_Estatus2 == 4;               
+                }
+                return false;
+            };
+
+            Paso = 7;
+
+            Rechazado_AnalisisA.Evaluator = () =>
+            {
+                return false;
+            };
+
+            Paso = 8;
+
+            Rechazado_PresentacionA.Evaluator = () =>
+            {
+                return false;
+            };
+
+            Paso =9;
+
+            Rechazado_NegociacionA.Evaluator = () =>
+            {
+                return false;
+            };
+
+            InitialState = analisisState;
+        }
+
+        protected override ProyectoTransition CreateTransition(ProyectoState source, ProyectoState destination)
+        {
+            var transition = new ProyectoTransition(source, destination);
+            transition.Proyecto = Proyecto;
+            source.Transitions.Add(transition);
+            return transition;
+        }
+
+        protected override ProyectoState _CreateState()
+        {
+            var proyectoState = new ProyectoState();
+            proyectoState.Proyecto = Proyecto;
+            return proyectoState;
+        }
+
+        /// <summary>
+        /// Genera la estructura lógica de un acys a partir de una valuación.
+        /// </summary>
+        /// <param name="s">Sesión del usuario en operación</param>
+        /// <param name="valuacion">Instancia de la entidad [CapValProyecto]</param>
+        /// <returns>Acys. En caso exitoso; null en caso contrario</returns>
+        protected Acys GenerarACYS(Sesion s, CapValProyecto valuacion)
+        {
+            Acys acys = new Acys();
+
+            PrepararSeccionGeneralACYS(s, valuacion, acys);
+            PrepararSeccionVisitasACYS(acys);
+            PrepararSeccionContactosACYS(acys);
+            return acys;
+        }
+
+        /// <summary>
+        /// Genera la estructura lógica de un acys a partir de una valuación.
+        /// </summary>
+        /// <param name="s">Sesión del usuario en operación</param>
+        /// <param name="valuacion">Instancia de la entidad [CapValProyecto]</param>
+        /// <returns>Acys. En caso exitoso; null en caso contrario</returns>
+        protected Acys GenerarACYS(Sesion s, CapValProyecto valuacion, IBusinessTransaction ibt)
+        {
+            Acys acys = new Acys();
+
+            PrepararSeccionGeneralACYS(s, valuacion, acys);
+            PrepararSeccionVisitasACYS(acys);
+            PrepararSeccionContactosACYS(acys);
+            return acys;
+        }
+
+        /// <summary>
+        /// Inicializa la parte de la estructura lógica del acys que pertenece a la sección general.
+        /// </summary>
+        /// <param name="s">Sesión del usuario en operación</param>
+        /// <param name="valuacion">Instancia de la entidad [CapValProyecto]</param>
+        /// <param name="acys">Instancia de la entidad [CapAcys]</param>
+        protected void PrepararSeccionGeneralACYS(Sesion s, CapValProyecto valuacion, Acys acys)
+        {
+            acys.Id_Emp = s.Id_Emp;
+            acys.Id_Cd = s.Id_Cd;
+            if (valuacion.Id_Ter == null)
+            {
+                throw new ValuacionSinTerritorioException();
+            }
+            CN_CatCliente cnCatCliente = new CN_CatCliente();
+            var cliente = cnCatCliente.Obtener(s, valuacion.Id_Cte);
+            acys.Id_Ter = valuacion.Id_Ter.Value;
+            acys.Id_Rik = s.Id_Rik;
+            acys.Id_Cte = valuacion.Id_Cte;
+            acys.Cte_Nombre = cliente.Cte_NomComercial;
+            acys.Id_AcsVersion = 1;
+            acys.Acs_Fecha = DateTime.Now;
+            acys.Acs_FechaInicioDocumento = DateTime.Now;
+            acys.Acs_FechaFinDocumento = DateTime.Now;
+            acys.Acs_Proveedor = "Sin especificar";
+            acys.Acs_RutaEntrega = 0;
+            acys.Acs_RutaServicio = 0;
+            acys.Acs_VigenciaIni = DateTime.Now;
+            acys.Acs_Semana = 0;
+            acys.Acs_RecPedCorreo = false;
+
+            acys.Acs_RecPedFax = false;
+            acys.Acs_RecPedTel = false;
+            acys.Acs_RecPedRep = false;
+            acys.Acs_RecPedOtroStr = string.Empty;
+
+            acys.Acs_PedidoEncargadoEnviar = string.Empty;
+            acys.Acs_PedidoPuesto = string.Empty;
+            acys.Acs_PedidoTelefono = string.Empty;
+            acys.Acs_PedidoEmail = string.Empty;
+
+
+            acys.Acs_ReqOrdenCompra = false;
+            acys.Acs_RecDocReposicion = false;
+            acys.Acs_RecDocFolio = false;
+            acys.Acs_RecDocOtro = string.Empty;
+            acys.Id_U = s.Id_U;
+        }
+
+        /// <summary>
+        /// Inicializa la parte de la estructura lógica del acys que pertenece a la sección general.
+        /// </summary>
+        /// <param name="s">Sesión del usuario en operación</param>
+        /// <param name="valuacion">Instancia de la entidad [CapValProyecto]</param>
+        /// <param name="acys">Instancia de la entidad [CapAcys]</param>
+        protected void PrepararSeccionGeneralACYS(Sesion s, CapValProyecto valuacion, Acys acys, IBusinessTransaction ibt)
+        {
+            acys.Id_Emp = s.Id_Emp;
+            acys.Id_Cd = s.Id_Cd;
+            if (valuacion.Id_Ter == null)
+            {
+                throw new ValuacionSinTerritorioException();
+            }
+            CN_CatCliente cnCatCliente = new CN_CatCliente();
+            var cliente = cnCatCliente.Obtener(s, valuacion.Id_Cte, ibt);
+            acys.Id_Ter = valuacion.Id_Ter.Value;
+            acys.Id_Rik = s.Id_Rik;
+            acys.Id_Cte = valuacion.Id_Cte;
+            acys.Cte_Nombre = cliente.Cte_NomComercial;
+            acys.Id_AcsVersion = 1;
+            acys.Acs_Fecha = DateTime.Now;
+            acys.Acs_FechaInicioDocumento = DateTime.Now;
+            acys.Acs_FechaFinDocumento = DateTime.Now;
+            acys.Acs_Proveedor = "Sin especificar";
+            acys.Acs_RutaEntrega = 0;
+            acys.Acs_RutaServicio = 0;
+            acys.Acs_VigenciaIni = DateTime.Now;
+            acys.Acs_Semana = 0;
+            acys.Acs_RecPedCorreo = false;
+
+            acys.Acs_RecPedFax = false;
+            acys.Acs_RecPedTel = false;
+            acys.Acs_RecPedRep = false;
+            acys.Acs_RecPedOtroStr = string.Empty;
+
+            acys.Acs_PedidoEncargadoEnviar = string.Empty;
+            acys.Acs_PedidoPuesto = string.Empty;
+            acys.Acs_PedidoTelefono = string.Empty;
+            acys.Acs_PedidoEmail = string.Empty;
+
+
+            acys.Acs_ReqOrdenCompra = false;
+            acys.Acs_RecDocReposicion = false;
+            acys.Acs_RecDocFolio = false;
+            acys.Acs_RecDocOtro = string.Empty;
+            acys.Id_U = s.Id_U;
+        }
+
+        /// <summary>
+        /// Inicializa la parte lógica del acys que refleja la sección de visitas
+        /// </summary>
+        /// <param name="acys">Instancia de la entidad [CapAcys]</param>
+        protected void PrepararSeccionVisitasACYS(Acys acys)
+        {
+            acys.Vis_Frecuencia = 0;
+            acys.Acs_VisitaOtro = string.Empty;
+
+            acys.Acs_ReqServAsesoria = false;
+            acys.Acs_ReqServTecnicoRelleno = false;
+            acys.Acs_ReqServMantenimiento = false;
+
+            string Modalidad = "A";
+            acys.Acs_Modalidad = Modalidad;
+
+            acys.IdCte_DirEntrega = 0;
+        }
+
+        /// <summary>
+        /// Inicializa la parte lógica del acys que reflaja la sección de contactos.
+        /// </summary>
+        /// <param name="acys">Instancia de la entidad [CapAcys]</param>
+        protected void PrepararSeccionContactosACYS(Acys acys)
+        {
+            acys.Acs_Notas = string.Empty;
+
+            acys.Acs_ContactoRepVenta = 0;
+            acys.Acs_ContactoRepVentaTel = string.Empty;
+            acys.Acs_ContactoRepVentaEmail = string.Empty;
+
+            acys.Acs_ContactoRepServ = 0;
+            acys.Acs_ContactoRepServTel = string.Empty;
+            acys.Acs_ContactoRepServEmail = string.Empty;
+
+
+            acys.Acs_ContactoJefServ = 0;
+            acys.Acs_ContactoJefServTel = string.Empty;
+            acys.Acs_ContactoJefServEmail = string.Empty;
+
+
+            acys.Acs_ContactoAseServ = 0;
+            acys.Acs_ContactoAseServTel = string.Empty;
+            acys.Acs_ContactoAseServEmail = string.Empty;
+
+            acys.Acs_ContactoJefOper = 0;
+            acys.Acs_ContactoJefOperTel = string.Empty;
+            acys.Acs_ContactoJefOperEmail = string.Empty;
+
+
+            acys.Acs_ContactoCAlmRep = 0;
+            acys.Acs_ContactoCAlmRepTel = string.Empty;
+            acys.Acs_ContactoCAlmRepEmail = string.Empty;
+
+            acys.Acs_ContactoCServTec = 0;
+            acys.Acs_ContactoCServTecTel = string.Empty;
+            acys.Acs_ContactoCServTecEmail = string.Empty;
+
+            acys.Acs_ContactoCCreCob = 0;
+            acys.Acs_ContactoCCreCobTel = string.Empty;
+            acys.Acs_ContactoCCreCobEmail = string.Empty;
+
+
+            acys.Acs_Contacto2 = string.Empty;
+            acys.Acs_Telefono2 = 0;
+            acys.Acs_Correo2 = string.Empty;
+
+            acys.Acs_Contacto3 = string.Empty;
+            acys.Acs_Telefono3 = 0;
+            acys.Acs_Correo3 = string.Empty;
+
+            acys.Acs_Contacto4 = string.Empty;
+            acys.Acs_Telefono4 = 0;
+            acys.Acs_Correo4 = string.Empty;
+
+            acys.Acs_Contacto5 = string.Empty;
+            acys.Acs_Telefono5 = 0;
+            acys.Acs_Correo5 = string.Empty;
+
+            acys.Acs_Contacto6 = string.Empty;
+            acys.Acs_Telefono6 = 0;
+            acys.Acs_Correo6 = string.Empty;
+
+        }
+
+        /// <summary>
+        /// Regresa el listado de productos asociados a una valuación, preparados para ser asociados a la estructura lógica del ACYS.
+        /// </summary>
+        /// <param name="valuacion">Instancia de la entidad [CapValProyecto]</param>
+        /// <param name="s">Sesión del usuario en operación</param>
+        /// <returns>AcysPrd[]. Conjunto de productos asociados a una valuación en una llamada satisfactoria; null de otro modo</returns>
+        protected List<AcysPrd> ObtenerListadoDeProductos(CapValProyecto valuacion, Sesion s, IBusinessTransaction ibt)
+        {
+            CN_CapValProyecto cnCapValProyecto = new CN_CapValProyecto();
+            var dets = cnCapValProyecto.ObtenerDetalle(s, valuacion.Id_Vap, ibt);
+            List<AcysPrd> productos = new List<AcysPrd>();
+            CN_CatProducto cnCatProducto = new CN_CatProducto();
+            foreach (var cvpd in dets)
+            {
+                var producto = cnCatProducto.ObtenerPorId(s, cvpd.Id_Prd, ibt);
+                AcysPrd prd = new AcysPrd()
+                {
+                    Acs_Doc = string.Empty,
+                    Acys_Cantidad = cvpd.Vap_Cantidad,
+                    Acys_CantTotal = cvpd.Vap_Cantidad,
+                    Acys_FechaFin = DateTime.Now,
+                    Acys_FechaInicio = DateTime.Now,
+                    Acys_Frecuencia = 1,
+                    Acys_Jueves = false,
+                    Acys_Lunes = false,
+                    Acys_Martes = false,
+                    Acys_Miercoles = false,
+                    Acys_Sabado = false,
+                    Acys_UltACtp = 0,
+                    Acys_UltSCtp = 0,
+                    Acys_Viernes = false,
+                    Id_Prd = cvpd.Id_Prd,
+                    Id_TG = 0,
+                    Prd_Descripcion = producto.Prd_Descripcion,
+                    Prd_Precio = cvpd.Vap_Precio,
+                    Prd_Presentacion = producto.Prd_Presentacion,
+                    Prd_UniNom = producto.Prd_UniNe
+                };
+                productos.Add(prd);
+            }
+
+            return productos;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected log4net.ILog Logger
+        {
+            get
+            {
+                return log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            }
+        }
+
+        public class ValuacionSinTerritorioException
+            : Exception
+        {
+            public ValuacionSinTerritorioException()
+                : base("Generación de ACYS cancelada. La valuación no cuenta con un territorio asociado.")
+            {
+            }
+        }
+    }
+}

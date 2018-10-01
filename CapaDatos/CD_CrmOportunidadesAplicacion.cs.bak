@@ -1,0 +1,253 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using CapaModelo;
+
+namespace CapaDatos
+{
+    public class CD_CrmOportunidadesAplicacion
+    {
+        /// <summary>
+        /// Inserta un registro en la entidad CrmOportunidadesAplicacion
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución</param>
+        /// <param name="idOp">Identificador de la oportunidad (proyecto)</param>
+        /// <param name="idApl">Identificador de la aplicación</param>
+        /// <param name="conexionEF">Cadena de conexión compatible con EF</param>
+        public void Insertar(int idEmp, int idCd, int idOp, int idApl, decimal? vpo, string conexionEF)
+        {
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(conexionEF))
+            {
+                ctx.CrmOportunidadesAplicacions.Add(new CrmOportunidadesAplicacion() { Id_Emp=idEmp, Id_Cd=idCd, Id_Op=idOp, Id_Apl=idApl, CrmOpAp_VPO=vpo });
+                ctx.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// Inserta un registro en la entidad CrmOportunidadesAplicacion. Versión transaccional.
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución</param>
+        /// <param name="idOp">Identificador de la oportunidad (proyecto)</param>
+        /// <param name="idApl">Identificador de la aplicación</param>
+        /// <param name="contextoDatos">Contexto de conexión al repositorio</param>
+        public void Insertar(int idEmp, int idCd, int idOp, int idApl, decimal? vpo, ICD_Contexto contextoDatos)
+        {
+            sianwebmty_gEntities ctx = ((CD_ContextoDefault)contextoDatos).Contexto;
+            ctx.CrmOportunidadesAplicacions.Add(new CrmOportunidadesAplicacion() { Id_Emp = idEmp, Id_Cd = idCd, Id_Op = idOp, Id_Apl = idApl, CrmOpAp_VPO = vpo });
+        }
+
+
+
+        /// <summary>
+        /// Inserta un registro en la entidad CrmOportunidadesAplicacion
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución</param>
+        /// <param name="idOp">Identificador de la oportunidad (proyecto)</param>
+        /// <param name="idApl">Identificador de la aplicación</param>
+        /// <param name="contextoDatos">Contexto de datos para las operaciones en la fuente de datos</param>
+        public void Insertar(int idEmp, int idCd, int idOp, int idApl, ICD_Contexto contextoDatos)
+        {
+            sianwebmty_gEntities ctx = (contextoDatos as CD_ContextoDefault).Contexto;
+            ctx.CrmOportunidadesAplicacions.Add(new CrmOportunidadesAplicacion() { Id_Emp = idEmp, Id_Cd = idCd, Id_Op = idOp, Id_Apl = idApl });
+        }
+
+        /// <summary>
+        /// Inserta un registro en la entidad CrmOportunidadesAplicacion. Esta versión inserta un lote de aplicaciones en una sola llamada.
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución</param>
+        /// <param name="idOp">Identificador de la oportunidad (proyecto)</param>
+        /// <param name="idApl">Identificadores de la aplicación</param>
+        /// <param name="conexionEF">Cadena de conexión compatible con EF</param>
+        public void Insertar(int idEmp, int idCd, int idOp, int[] idApls, string conexionEF)
+        {
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(conexionEF))
+            {
+                foreach (var idApl in idApls)
+                {
+                    ctx.CrmOportunidadesAplicacions.Add(new CrmOportunidadesAplicacion() { Id_Emp = idEmp, Id_Cd = idCd, Id_Op = idOp, Id_Apl = idApl });
+                }
+                ctx.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idEmp"></param>
+        /// <param name="idCd"></param>
+        /// <param name="idOp"></param>
+        /// <param name="idApl"></param>
+        /// <param name="vpo"></param>
+        /// <param name="conexionEF"></param>
+        public void Actualizar(int idEmp, int idCd, int idOp, int idApl, decimal vpo, string conexionEF)
+        {
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(conexionEF))
+            {
+                var aps = (from ap in ctx.CrmOportunidadesAplicacions
+                           where ap.Id_Emp==idEmp && ap.Id_Cd==idCd && ap.Id_Op==idOp && ap.Id_Apl==idApl
+                           select ap).ToList();
+                if (aps.Count > 0)
+                {
+                    var ap = aps[0];
+                    ap.CrmOpAp_VPO = vpo;
+                    ctx.SaveChanges();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idEmp"></param>
+        /// <param name="idCd"></param>
+        /// <param name="idOp"></param>
+        /// <param name="idApl"></param>
+        /// <param name="vpo"></param>
+        /// <param name="conexionEF"></param>
+        public void Actualizar(int idEmp, int idCd, int idOp, CrmOportunidadesAplicacion[] crmOportunidadesAplicaciones, string conexionEF)
+        {
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(conexionEF))
+            {
+                var aps = (from ap in ctx.CrmOportunidadesAplicacions
+                           where ap.Id_Emp == idEmp && ap.Id_Cd == idCd && ap.Id_Op == idOp
+                           select ap).ToList();
+                aps = (from ap in aps
+                       join opAp in crmOportunidadesAplicaciones
+                       on new { Id_Emp = ap.Id_Emp, Id_Cd = ap.Id_Cd, Id_Op = ap.Id_Op, Id_Apl = ap.Id_Apl } equals new { Id_Emp = opAp.Id_Emp, Id_Cd = opAp.Id_Cd, Id_Op = opAp.Id_Op, Id_Apl = opAp.Id_Apl }
+                       select new { FromDS = ap, UpdateData = opAp }).ToList().Select(crmOpAp =>
+                       {
+                           crmOpAp.FromDS.CrmOpAp_VPO = crmOpAp.UpdateData.CrmOpAp_VPO;
+                           return crmOpAp.FromDS;
+                       }).ToList();
+                if (aps.Count > 0)
+                {
+                    ctx.SaveChanges();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Elimina una aplicación asociada a un proyecto
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución</param>
+        /// <param name="idOp">Identificador del proyecto</param>
+        /// <param name="idApl">Identificadore de la aplicacion</param>
+        /// <param name="conexionEF">Cadena de conexión a la fuente de datos compatible con EF</param>
+        public void Eliminar(int idEmp, int idCd, int idOp, int idApl, string conexionEF)
+        {
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(conexionEF))
+            {
+                var aplicaciones = (from a in ctx.CrmOportunidadesAplicacions
+                                    where a.Id_Emp == idEmp && a.Id_Cd == idCd && a.Id_Op == idOp && a.Id_Apl==idApl
+                                    select a).ToList();
+                if (aplicaciones.Count > 0)
+                {
+                    ctx.CrmOportunidadesAplicacions.Remove(aplicaciones[0]);
+                    ctx.SaveChanges();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Elimina un conjunto de aplicaciones asociadas a un proyecto
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución</param>
+        /// <param name="idOp">Identificador del proyecto</param>
+        /// <param name="idApls">Conjunto de identificadores de las aplicaciones</param>
+        /// <param name="conexionEF">Cadena de conexión a la fuente de datos compatible con EF</param>
+        public void Eliminar(int idEmp, int idCd, int idOp, int[] idApls, string conexionEF)
+        {
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(conexionEF))
+            {
+                var aplicaciones = (from a in ctx.CrmOportunidadesAplicacions
+                                    where a.Id_Emp == idEmp && a.Id_Cd == idCd && a.Id_Op == idOp && idApls.Contains(a.Id_Apl)
+                                    select a).ToList();
+                if (aplicaciones.Count > 0)
+                {
+                    ctx.CrmOportunidadesAplicacions.RemoveRange(aplicaciones);
+                    ctx.SaveChanges();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Elimina un conjunto de aplicaciones asociadas a un proyecto
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución</param>
+        /// <param name="idOp">Identificador del proyecto</param>
+        /// <param name="idApls">Conjunto de identificadores de las aplicaciones</param>
+        /// <param name="conexionEF">Cadena de conexión a la fuente de datos compatible con EF</param>
+        public void Eliminar(int idEmp, int idCd, int idOp, int[] idApls, ICD_Contexto contextoDatos)
+        {
+            sianwebmty_gEntities ctx = (contextoDatos as CD_ContextoDefault).Contexto;
+            var aplicaciones = (from a in ctx.CrmOportunidadesAplicacions
+                                where a.Id_Emp == idEmp && a.Id_Cd == idCd && a.Id_Op == idOp && idApls.Contains(a.Id_Apl)
+                                select a).ToList();
+            if (aplicaciones.Count > 0)
+            {
+                ctx.CrmOportunidadesAplicacions.RemoveRange(aplicaciones);
+                ctx.SaveChanges();
+            }
+        }
+
+        public IEnumerable<CrmOportunidadesAplicacion> ConsultarPorOportunidad(int idEmp, int idCd, int idRik, int idOp, string conexionEF)
+        {
+            IEnumerable<CrmOportunidadesAplicacion> result = null;
+            using (sianwebmty_gEntities ctx = new sianwebmty_gEntities(conexionEF))
+            {
+                var res = (from opAp in ctx.CrmOportunidadesAplicacions
+                           where opAp.Id_Emp == idEmp && opAp.Id_Cd == idCd && opAp.Id_Op == idOp
+                           select opAp).ToList();
+                result = res;
+            }
+            return result;
+        }
+
+        public IEnumerable<CrmOportunidadesAplicacion> ConsultarPorOportunidad(int idEmp, int idCd, int idRik, int idOp, ICD_Contexto icdCtx)
+        {
+            IEnumerable<CrmOportunidadesAplicacion> result = null;
+            sianwebmty_gEntities ctx = ((ICD_Contexto<sianwebmty_gEntities>)icdCtx).Contexto;
+            var res = (from opAp in ctx.CrmOportunidadesAplicacions
+                       where opAp.Id_Emp == idEmp && opAp.Id_Cd == idCd && opAp.Id_Op == idOp
+                       select opAp).ToList();
+            result = res;
+            return result;
+        }
+
+        /// <summary>
+        /// Elimina las asociaciones de aplicación con un proyecto.
+        /// </summary>
+        /// <param name="idEmp">int. Identificador de la empresa.</param>
+        /// <param name="idCd">int. Identificador del centro de distribución.</param>
+        /// <param name="idRik">int. Identificador del representante.</param>
+        /// <param name="idOp">int. Identificador de la oportunidad.</param>
+        /// <param name="ctx">sianwebmty_gEntities (DBContext). Contexto de conexión a la base de datos de entity framework.</param>
+        internal void Eliminar(int idEmp, int idCd, int idRik, int idOp, sianwebmty_gEntities ctx)
+        {
+            var aplicaciones = (from a in ctx.CrmOportunidadesAplicacions
+                                where a.Id_Emp == idEmp && a.Id_Cd == idCd && a.Id_Op == idOp
+                                select a).ToList();
+        }
+
+        /// <summary>
+        /// Inserta un registro en la entidad CrmOportunidadesAplicacion. Esta versión utiliza un contexto existente con la finalidad de mantener una operación transaccional. Por lo tanto, esta versión del método no llama [SaveChanges] del parámetro ctx.
+        /// </summary>
+        /// <param name="idEmp">Identificador de la empresa</param>
+        /// <param name="idCd">Identificador del centro de distribución</param>
+        /// <param name="idOp">Identificador de la oportunidad (proyecto)</param>
+        /// <param name="idApl">Identificador de la aplicación</param>
+        /// <param name="ctx">Contexto de EF</param>
+        internal void Insertar(int idEmp, int idCd, int idOp, int idApl, sianwebmty_gEntities ctx)
+        {
+            ctx.CrmOportunidadesAplicacions.Add(new CrmOportunidadesAplicacion() { Id_Emp = idEmp, Id_Cd = idCd, Id_Op = idOp, Id_Apl = idApl });
+        }
+    }
+}
